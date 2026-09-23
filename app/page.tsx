@@ -1,6 +1,7 @@
 "use client";
 
 import { StandortMap, TerminConsent } from "@/components/InteractiveSections";
+import { KontaktFormular } from "@/components/KontaktFormular";
 import { useMobileMenu } from "@/components/MobileMenu";
 import { FaqItem } from "@/components/FaqAccordion";
 
@@ -236,6 +237,19 @@ export default function HomePage() {
       </div>
     </div>
     <div className="loc-note">Persönliche Termine im gesamten <strong>Umkreis Hannover</strong> – oder bequem per Video-Call. Sag uns einfach, was dir lieber ist.</div>
+  </div>
+</section>
+
+<section className="kontakt-section" id="kontakt">
+  <div className="wrap">
+    <span className="eyebrow" style={{ justifyContent: "center" }}>
+      Unverbindliche Anfrage
+    </span>
+    <h2 style={{ textAlign: "center" }}>Lieber erst unverbindlich anfragen?</h2>
+    <p className="lead" style={{ margin: "10px auto 32px", textAlign: "center" }}>
+      Sag uns kurz, worum es geht, wir melden uns bei dir zurück.
+    </p>
+    <KontaktFormular />
   </div>
 </section>
 
