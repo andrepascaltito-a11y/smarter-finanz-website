@@ -1492,3 +1492,114 @@ git add docs/superpowers/plans/2026-09-23-gewerbe-privat-formular-livetest.md
 git commit -m "Livetest-Ergebnis fuer das Kontaktformular dokumentieren"
 git push origin main
 ```
+
+---
+
+### Task 9: E-Mail-Benachrichtigung bei Gewerbe-Anfragen
+
+Ergaenzung nach dem finalen Whole-Branch-Review vom 2026-09-23: eine Gewerbe-Anfrage erzeugt bisher nur eine Notiz an einer von 21.341 Firmen oder eine neue, unauffaellige Firma, ohne dass Andre das bemerkt. Andre hat sich fuer eine E-Mail-Benachrichtigung per bestehendem Gmail-Konto (SMTP, kein neuer Dienst) entschieden. Dieser Task muss vor dem Livetest in Task 8 erledigt sein.
+
+**Files:**
+- Create: `lib/mailer.ts`
+- Modify: `app/api/lead/route.ts`
+
+**Interfaces:**
+- Consumes: `GewerbePayload` aus `lib/types.ts`.
+- Produces: `sendGewerbeBenachrichtigung(payload: GewerbePayload): Promise<void>`, aufgerufen aus der Route nach einem erfolgreichen `forwardToEspoCrm`-Aufruf im Gewerbe-Zweig.
+
+- [ ] **Step 1: nodemailer als Abhaengigkeit ergaenzen**
+
+```bash
+npm install nodemailer
+npm install --save-dev @types/nodemailer
+```
+
+- [ ] **Step 2: lib/mailer.ts**
+
+```typescript
+// Benachrichtigungs-Mail bei einer Gewerbe-Anfrage, per Gmail-SMTP mit dem
+// bestehenden Konto. Aktiv sobald SMTP_USER und SMTP_APP_PASSWORD gesetzt
+// sind, sonst No-op (gleiches Muster wie forwardToEspoCrm).
+
+import nodemailer from "nodemailer";
+
+import type { GewerbePayload } from "@/lib/types";
+
+export async function sendGewerbeBenachrichtigung(payload: GewerbePayload): Promise<void> {
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_APP_PASSWORD;
+  const to = process.env.NOTIFY_EMAIL_TO || user;
+
+  if (!user || !pass) {
+    if (process.env.NODE_ENV !== "production") {
+      console.warn(
+        "[mailer] SMTP_USER/SMTP_APP_PASSWORD nicht gesetzt, Benachrichtigung uebersprungen.",
+      );
+    }
+    return;
+  }
+
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: { user, pass },
+  });
+
+  const text =
+    `Neue Gewerbe-Anfrage ueber die Website.\n\n` +
+    `Firma: ${payload.firmenname}\n` +
+    `Ansprechpartner: ${payload.ansprechpartnerVorname} ${payload.ansprechpartnerNachname}\n` +
+    `Telefon: ${payload.telefon}\n` +
+    `E-Mail: ${payload.email}\n` +
+    (payload.branche ? `Branche: ${payload.branche}\n` : "");
+
+  await transporter.sendMail({
+    from: user,
+    to,
+    subject: `Neue Gewerbe-Anfrage: ${payload.firmenname}`,
+    text,
+  });
+}
+```
+
+- [ ] **Step 3: In app/api/lead/route.ts einbinden**
+
+`sendGewerbeBenachrichtigung` importieren. Direkt nach dem bestehenden `try { await forwardToEspoCrm(payload); } catch (...) {...}`-Block ergaenzen: wenn `payload.art === "gewerbe"`, `sendGewerbeBenachrichtigung(payload)` aufrufen, ebenfalls in einem eigenen try/catch, das einen Fehler nur loggt und niemals die Antwort an den Besucher beeinflusst (exakt dasselbe Fehlerbehandlungs-Prinzip wie bei `forwardToEspoCrm`). Die E-Mail wird unabhaengig davon verschickt, ob die CRM-Weiterleitung geklappt hat, ein CRM-Fehler soll die Benachrichtigung nicht verhindern.
+
+```typescript
+if (payload.art === "gewerbe") {
+  try {
+    await sendGewerbeBenachrichtigung(payload);
+  } catch (err) {
+    console.error(
+      "[lead] Gewerbe-Benachrichtigung fehlgeschlagen:",
+      err instanceof Error ? err.message : err,
+    );
+  }
+}
+```
+
+- [ ] **Step 4: Typpruefung**
+
+```bash
+npx tsc --noEmit
+```
+
+Erwartet: keine Fehler.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add package.json package-lock.json lib/mailer.ts app/api/lead/route.ts
+git commit -m "E-Mail-Benachrichtigung bei Gewerbe-Anfragen per Gmail-SMTP ergaenzen"
+```
+
+NICHT pushen.
+
+- [ ] **Step 6: Manuelle Vercel-Konfiguration (Teil von Andres Schritten in Task 8)**
+
+Andre generiert in seinem Google-Konto ein App-Passwort (Google-Konto, Sicherheit, App-Passwoerter, setzt 2FA voraus) und setzt in Vercel unter dem Projekt `smarter-finanz-website`, Umgebung "Production and Preview":
+- `SMTP_USER` = die Absender-Gmail-Adresse (z.B. a.tito@smarterfinanz.de, falls das ueber Gmail laeuft, sonst das tatsaechlich genutzte Gmail-Konto)
+- `SMTP_APP_PASSWORD` = das generierte App-Passwort
+- `NOTIFY_EMAIL_TO` = die Zieladresse fuer die Benachrichtigung (kann gleich `SMTP_USER` sein)
+
+Diese drei Werte niemals ins Repo, nur als Vercel-Umgebungsvariable.
