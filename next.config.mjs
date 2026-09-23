@@ -6,7 +6,7 @@ const devEval = process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : "";
 const csp = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline'${devEval}`,
-  "style-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "img-src 'self' data:",
   "font-src 'self' data: https://fonts.gstatic.com",
   "connect-src 'self'",
