@@ -84,7 +84,7 @@ export default function Page() {
       Erfüllung gesetzlicher Aufbewahrungspflichten erforderlich ist.
     </p>
 
-    <p style={{marginTop: '28px', fontSize: '13px', color: 'var(--muted)'}}>Stand: August 2026</p>
+    <p style={{marginTop: '28px', fontSize: '13px', color: 'var(--muted)'}}>Stand: September 2026</p>
 
     <footer>
       <a href="/impressum">Impressum</a> · <a href="/">Startseite</a>
