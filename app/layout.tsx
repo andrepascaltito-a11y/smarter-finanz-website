@@ -7,7 +7,7 @@ const structuredData = {
   "@type": "InsuranceAgency",
   name: "Smarter Finanz",
   description:
-    "Unabhängige Finanz und Versicherungsberatung auf Augenhöhe im Raum Hannover.",
+    "Unabhängige Finanz- und Versicherungsberatung auf Augenhöhe im Raum Hannover.",
   url: "https://www.smarterfinanz.de/",
   telephone: "+49 170 8784889",
   email: "a.tito@smarterfinanz.de",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.smarterfinanz.de"),
   title: "Smarter Finanz – Finanzberatung auf Augenhöhe | Versicherungsmakler Raum Hannover",
   description:
-    "Smarter Finanz: unabhängige Finanz und Versicherungsberatung im Raum Hannover. Weniger Steuern, klug Vermögen aufbauen, Versicherungen optimieren, ehrlich, transparent, auf Augenhöhe. Kostenloses Erstgespräch.",
+    "Smarter Finanz: unabhängige Finanz- und Versicherungsberatung im Raum Hannover. Weniger Steuern, klug Vermögen aufbauen, Versicherungen optimieren – ehrlich, transparent, auf Augenhöhe. Kostenloses Erstgespräch.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
