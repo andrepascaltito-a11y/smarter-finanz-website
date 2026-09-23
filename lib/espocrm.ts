@@ -44,6 +44,9 @@ async function forwardPrivatperson(
 
 // Sucht eine Firma per Namensfilter. "Eindeutig" bedeutet: genau ein Treffer,
 // dieselbe Regel wie in Kais lade_firma (kai_crm.py im FairKV-OS-Vault).
+// Wichtig: null bedeutet ausschliesslich "Anfrage erfolgreich, aber nicht
+// genau ein Treffer". Bei einer fehlgeschlagenen Anfrage (!res.ok) wird ein
+// Error geworfen, damit forwardGewerbe daraus keine Dublette anlegt.
 async function findeEindeutigeFirma(
   base: string,
   headers: Record<string, string>,
@@ -55,7 +58,10 @@ async function findeEindeutigeFirma(
     select: "id,name",
   });
   const res = await fetch(`${base}/api/v1/Account?${params.toString()}`, { headers });
-  if (!res.ok) return null;
+  if (!res.ok) {
+    const text = await res.text().catch(() => "");
+    throw new Error(`EspoCRM Account-Suche antwortete mit ${res.status}: ${text.slice(0, 500)}`);
+  }
   const data = (await res.json()) as { list?: { id: string }[] };
   const treffer = data.list ?? [];
   return treffer.length === 1 ? treffer[0].id : null;

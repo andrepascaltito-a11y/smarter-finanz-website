@@ -4,12 +4,22 @@ import { CONSENT_TEXT, CONSENT_VERSION } from "@/lib/consent";
 import { forwardToEspoCrm } from "@/lib/espocrm";
 import { checkRateLimit } from "@/lib/ratelimit";
 import { isValidEmail, isValidGermanPhone, isValidName } from "@/lib/validation";
-import type { GewerbePayload, LeadPayload, PrivatpersonPayload } from "@/lib/types";
+import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const MIN_FILL_MS = 3000;
+
+// Identisch zum Thema-Union-Typ in lib/types.ts. Dort gibt es keine Laufzeit-
+// Liste dieser Werte, daher hier lokal dupliziert fuer die Server-Validierung.
+const ERLAUBTE_THEMEN: Thema[] = [
+  "Steueroptimierung",
+  "Versicherungsvergleich",
+  "Altersvorsorge und Investment",
+  "Finanzierung und Umschuldung",
+  "Sonstiges",
+];
 
 function tooLong(v: unknown, max: number): boolean {
   return typeof v === "string" && v.length > max;
@@ -20,6 +30,7 @@ function validatePrivatperson(body: Partial<PrivatpersonPayload>): string[] {
   if (!body.vorname || !isValidName(body.vorname)) errors.push("vorname ungueltig");
   if (!body.nachname || !isValidName(body.nachname)) errors.push("nachname ungueltig");
   if (tooLong(body.vorname, 80) || tooLong(body.nachname, 80)) errors.push("name zu lang");
+  if (!body.thema || !ERLAUBTE_THEMEN.includes(body.thema)) errors.push("thema ungueltig");
   return errors;
 }
 
@@ -48,6 +59,37 @@ function validate(body: Partial<LeadPayload>): string[] {
   if (body.art === "gewerbe") errors.push(...validateGewerbe(body));
 
   return errors;
+}
+
+// Trimmt alle vom Nutzer eingegebenen String-Felder, bevor sie an EspoCRM
+// weitergeleitet werden. isValidEmail/isValidName pruefen zwar bereits den
+// getrimmten Wert, weitergeleitet wurde bisher aber der ungetrimmte Rohwert
+// (fuehrende/folgende Leerzeichen koennen bei EspoCRM einen stillen
+// Validierungsfehler ausloesen bzw. bei firmenname einen Firmensuche-Treffer
+// verhindern und so eine Dublette erzeugen, siehe lib/espocrm.ts).
+function trimLeadPayload(payload: LeadPayload): LeadPayload {
+  const email = payload.email.trim();
+  const telefon = payload.telefon.trim();
+
+  if (payload.art === "privatperson") {
+    return {
+      ...payload,
+      email,
+      telefon,
+      vorname: payload.vorname.trim(),
+      nachname: payload.nachname.trim(),
+    };
+  }
+
+  return {
+    ...payload,
+    email,
+    telefon,
+    firmenname: payload.firmenname.trim(),
+    ansprechpartnerVorname: payload.ansprechpartnerVorname.trim(),
+    ansprechpartnerNachname: payload.ansprechpartnerNachname.trim(),
+    branche: payload.branche.trim(),
+  };
 }
 
 function clientIp(req: Request): string {
@@ -98,7 +140,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const payload = { ...body } as LeadPayload;
+  const payload = trimLeadPayload({ ...body } as LeadPayload);
   // Serverseitig kanonisiert: Client-Werte fuer Consent-Text/Version werden
   // ignoriert, Zeitpunkt ist der Empfang der Anfrage (Formular ist einstufig,
   // Checkbox-Klick und Absenden liegen praktisch im selben Moment).

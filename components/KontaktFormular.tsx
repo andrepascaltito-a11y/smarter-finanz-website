@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 
+import { CONSENT_TEXT } from "@/lib/consent";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
+
+// CONSENT_TEXT ist die einzige Quelle der Wahrheit fuer den Einwilligungstext
+// (auch das, was als DSGVO-Nachweis ins CRM geschrieben wird). Der Link zur
+// Datenschutzerklaerung wird an der passenden Stelle im Satz eingebettet,
+// ohne den Wortlaut zu veraendern.
+const CONSENT_LINK_TEXT = "Datenschutzerklärung";
+const [CONSENT_TEXT_BEFORE_LINK, CONSENT_TEXT_AFTER_LINK] = CONSENT_TEXT.split(CONSENT_LINK_TEXT);
 
 const THEMEN: Thema[] = [
   "Steueroptimierung",
@@ -140,6 +148,7 @@ export function KontaktFormular() {
               <label htmlFor="thema">Thema</label>
               <select
                 id="thema"
+                required
                 value={thema}
                 onChange={(e) => setThema(e.target.value as Thema)}
               >
@@ -229,8 +238,9 @@ export function KontaktFormular() {
             onChange={(e) => setConsent(e.target.checked)}
           />
           <span>
-            Ja, ich möchte kostenlos und unverbindlich kontaktiert werden. Es gilt die{" "}
-            <a href="/datenschutz">Datenschutzerklärung</a>.
+            {CONSENT_TEXT_BEFORE_LINK}
+            <a href="/datenschutz">{CONSENT_LINK_TEXT}</a>
+            {CONSENT_TEXT_AFTER_LINK}
           </span>
         </label>
 

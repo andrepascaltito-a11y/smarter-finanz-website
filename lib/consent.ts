@@ -5,7 +5,7 @@
 export const CONSENT_VERSION = "smarterfinanz-consent-2026-09-v1";
 
 export const CONSENT_TEXT =
-  "Ja, ich moechte kostenlos und unverbindlich telefonisch, per E-Mail und per WhatsApp " +
+  "Ja, ich möchte kostenlos und unverbindlich telefonisch, per E-Mail und per WhatsApp " +
   "beraten werden. Ich willige ein, dass Smarter Finanz mich dazu unter den angegebenen " +
-  "Kontaktdaten kontaktiert. Diese Einwilligung kann ich jederzeit mit Wirkung fuer die " +
-  "Zukunft widerrufen. Es gilt die Datenschutzerklaerung.";
+  "Kontaktdaten kontaktiert. Diese Einwilligung kann ich jederzeit mit Wirkung für die " +
+  "Zukunft widerrufen. Es gilt die Datenschutzerklärung.";
