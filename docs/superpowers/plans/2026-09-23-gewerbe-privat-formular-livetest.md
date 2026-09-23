@@ -24,14 +24,13 @@ der CRM-Weiterleitung (Antwort war immer `{"ok":true}`). Fix in `FairKV/lib/espo
 (Commit `28bb05e`), noch am selben Tag deployt und live erneut verifiziert (Lead
 korrekt angelegt, danach als Testdaten wieder entfernt).
 
-## Offener Punkt
+## E-Mail-Benachrichtigung (Task 9)
 
-Die E-Mail-Benachrichtigung bei Gewerbe-Anfragen (Task 9) schlägt aktuell fehl:
-`Invalid login: 535-5.7.8 Username and Password not accepted`. Vermutlich wurde das
-App-Passwort unter einem anderen Google-Konto als `SMTP_USER`
-(andre.pascal.tito@gmail.com) erzeugt. CRM-Weiterleitung ist davon nicht betroffen
-(eigener try/catch-Block), betrifft nur die zusätzliche E-Mail. Muss noch geklärt
-werden, bevor Task 9 als vollständig funktionsfähig gilt.
+Erster Test schlug mit `Invalid login: 535-5.7.8 Username and Password not accepted`
+fehl: `SMTP_USER` war fälschlich auf `andre.pascal.tito@gmail.com` gesetzt, das
+App-Passwort wurde aber unter dem Hauptkonto `a.tito@pflegerleicht.de` erzeugt
+(smarterfinanz ist dort nur ein Alias). Nach Korrektur von `SMTP_USER` in Vercel und
+Redeploy: erneuter Gewerbe-Test bestanden, keine Fehlermeldung mehr in den Logs.
 
 Alle Testeinträge wurden nach der Verifikation wieder aus dem CRM entfernt (2 Test-Leads
-in FairKV, 1 Test-Lead + 1 Test-Firma + 1 Test-Notiz in der smarter-finanz-website-Instanz).
+in FairKV, 2 Test-Firmen + 1 Test-Notiz in der smarter-finanz-website-Instanz).
