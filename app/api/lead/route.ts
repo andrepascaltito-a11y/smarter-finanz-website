@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 import { CONSENT_TEXT, CONSENT_VERSION } from "@/lib/consent";
 import { forwardToEspoCrm } from "@/lib/espocrm";
+import { sendGewerbeBenachrichtigung } from "@/lib/mailer";
 import { checkRateLimit } from "@/lib/ratelimit";
 import { isValidEmail, isValidGermanPhone, isValidName } from "@/lib/validation";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
@@ -155,6 +156,17 @@ export async function POST(req: Request) {
       "[lead] EspoCRM-Weiterleitung fehlgeschlagen:",
       err instanceof Error ? err.message : err,
     );
+  }
+
+  if (payload.art === "gewerbe") {
+    try {
+      await sendGewerbeBenachrichtigung(payload);
+    } catch (err) {
+      console.error(
+        "[lead] Gewerbe-Benachrichtigung fehlgeschlagen:",
+        err instanceof Error ? err.message : err,
+      );
+    }
   }
 
   return NextResponse.json({ ok: true });
