@@ -39,11 +39,16 @@ export default function Page() {
 
     <h2>3. Kontaktaufnahme</h2>
     <p>
-      Wenn du uns per E-Mail oder Telefon kontaktierst, verarbeiten wir die von dir mitgeteilten
-      Daten (z. B. Name, Kontaktdaten, Inhalt deiner Anfrage), um deine Anfrage zu beantworten.
-      Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO. Die Daten werden gelöscht, sobald
-      sie für den Zweck nicht mehr erforderlich sind, soweit keine gesetzlichen Aufbewahrungspflichten
-      entgegenstehen.
+      Wenn du uns über das Kontaktformular, per E-Mail, Telefon oder WhatsApp kontaktierst,
+      verarbeiten wir die von dir mitgeteilten Daten (z. B. Name, Kontaktdaten, bei einer
+      Gewerbe-Anfrage zusätzlich Firmenname und Branche, Inhalt deiner Anfrage), um deine Anfrage
+      zu beantworten und dich zu kontaktieren. Beim Kontaktformular ist Rechtsgrundlage deine
+      ausdrückliche Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO, die du jederzeit mit Wirkung für
+      die Zukunft widerrufen kannst, in den übrigen Fällen Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO.
+      Deine Angaben speichern wir in unserem CRM-System (eigener Server innerhalb der EU), um deine
+      Anfrage zu bearbeiten und den Kontaktverlauf nachvollziehen zu können. Die Daten werden
+      gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind, soweit keine gesetzlichen
+      Aufbewahrungspflichten entgegenstehen.
     </p>
 
     <h2>4. Terminbuchung über Google-Kalender</h2>
