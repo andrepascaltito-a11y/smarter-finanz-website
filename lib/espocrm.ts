@@ -9,6 +9,13 @@ import type { GewerbePayload, LeadPayload, PrivatpersonPayload } from "@/lib/typ
 // FairKV-Website (lib/espocrm.ts dort, DEFAULT_ASSIGNED_USER_ID).
 const DEFAULT_ASSIGNED_USER_ID = "6a4526fc06043f992";
 
+// EspoCRM-Datetime-Felder verlangen "Y-m-d H:i:s" (UTC) und lehnen ISO 8601
+// (mit "T"/Millisekunden/"Z") mit einem 400 ab – deshalb hier konvertieren,
+// statt das rohe ISO-Format von consentTimestamp durchzureichen.
+function toEspoDatetime(iso: string): string {
+  return new Date(iso).toISOString().replace("T", " ").replace(/\.\d{3}Z$/, "");
+}
+
 function headersFor(apiKey: string): Record<string, string> {
   return { "Content-Type": "application/json", "X-Api-Key": apiKey };
 }
@@ -27,7 +34,7 @@ async function forwardPrivatperson(
     description: payload.thema ? `Thema: ${payload.thema}` : null,
     // Dieselben drei Custom Fields, die auch die FairKV-Website auf dem
     // Lead-Entity befuellt (DSGVO-Nachweis, welcher Wortlaut wann eingewilligt wurde).
-    consentZeitpunkt: payload.consentTimestamp,
+    consentZeitpunkt: payload.consentTimestamp ? toEspoDatetime(payload.consentTimestamp) : null,
     consentVersion: payload.consentTextVersion,
     consentText: payload.consentText,
   };
