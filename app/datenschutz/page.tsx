@@ -42,13 +42,23 @@ export default function Page() {
       Wenn du uns über das Kontaktformular, per E-Mail, Telefon oder WhatsApp kontaktierst,
       verarbeiten wir die von dir mitgeteilten Daten (z. B. Name, Kontaktdaten, bei einer
       Gewerbe-Anfrage zusätzlich Firmenname und Branche, Inhalt deiner Anfrage), um deine Anfrage
-      zu beantworten und dich zu kontaktieren. Beim Kontaktformular ist Rechtsgrundlage deine
-      ausdrückliche Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO, die du jederzeit mit Wirkung für
-      die Zukunft widerrufen kannst, in den übrigen Fällen Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO.
-      Deine Angaben speichern wir in unserem CRM-System (eigener Server innerhalb der EU), um deine
-      Anfrage zu bearbeiten und den Kontaktverlauf nachvollziehen zu können. Die Daten werden
-      gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind, soweit keine gesetzlichen
+      zu beantworten und dich zu kontaktieren. Rechtsgrundlage für die Bearbeitung deiner Anfrage ist
+      Art. 6 Abs. 1 lit. b DSGVO, soweit sie auf eine Beratung oder einen Vertragsabschluss gerichtet
+      ist, im Übrigen unser berechtigtes Interesse an der Beantwortung von Anfragen gemäß Art. 6
+      Abs. 1 lit. f DSGVO. Wenn du das Kontaktformular nutzt, holen wir zusätzlich deine
+      ausdrückliche Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO ein, dich über die angegebenen
+      Kontaktdaten per Telefon, E-Mail und WhatsApp zu kontaktieren. Du erteilst sie über die
+      Checkbox im Formular und kannst sie jederzeit mit Wirkung für die Zukunft widerrufen; der
+      Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung. Deine Angaben
+      speichern wir in unserem CRM-System (eigener Server innerhalb der EU), um deine Anfrage zu
+      bearbeiten und den Kontaktverlauf nachvollziehen zu können. Die Daten werden gelöscht, sobald
+      sie für den Zweck nicht mehr erforderlich sind, soweit keine gesetzlichen
       Aufbewahrungspflichten entgegenstehen.
+    </p>
+    <p>
+      <strong>Widerspruchsrecht:</strong> Soweit wir deine Daten aufgrund berechtigter Interessen
+      (Art. 6 Abs. 1 lit. f DSGVO) verarbeiten, kannst du aus Gründen, die sich aus deiner besonderen
+      Situation ergeben, jederzeit widersprechen. Gegen Werbung kannst du jederzeit widersprechen.
     </p>
 
     <h2>4. Terminbuchung über Google-Kalender</h2>
@@ -84,7 +94,7 @@ export default function Page() {
       Erfüllung gesetzlicher Aufbewahrungspflichten erforderlich ist.
     </p>
 
-    <p style={{marginTop: '28px', fontSize: '13px', color: 'var(--muted)'}}>Stand: September 2026</p>
+    <p style={{marginTop: '28px', fontSize: '13px', color: 'var(--muted)'}}>Stand: Oktober 2026</p>
 
     <footer>
       <a href="/impressum">Impressum</a> · <a href="/">Startseite</a>
