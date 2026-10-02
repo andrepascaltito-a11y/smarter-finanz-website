@@ -49,7 +49,9 @@ export default function Page() {
       ausdrückliche Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO ein, dich über die angegebenen
       Kontaktdaten per Telefon, E-Mail und WhatsApp zu kontaktieren. Du erteilst sie über die
       Checkbox im Formular und kannst sie jederzeit mit Wirkung für die Zukunft widerrufen; der
-      Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung. Deine Angaben
+      Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung. Nach einem
+      Widerruf kontaktieren wir dich über diese Kanäle nicht mehr und löschen deine Angaben, soweit
+      keine Aufbewahrung nötig ist, zum Beispiel für den Nachweis der Einwilligung. Deine Angaben
       speichern wir in unserem CRM-System (eigener Server innerhalb der EU), um deine Anfrage zu
       bearbeiten und den Kontaktverlauf nachvollziehen zu können. Die Daten werden gelöscht, sobald
       sie für den Zweck nicht mehr erforderlich sind, soweit keine gesetzlichen
@@ -90,8 +92,15 @@ export default function Page() {
 
     <h2>7. Speicherdauer</h2>
     <p>
-      Wir speichern personenbezogene Daten nur so lange, wie es für die genannten Zwecke oder zur
-      Erfüllung gesetzlicher Aufbewahrungspflichten erforderlich ist.
+      Wenn keine Beratung oder kein Vertrag zustande kommt, löschen wir deine Angaben aus einer
+      Anfrage 12 Monate nach der letzten Bearbeitung. Kommt es zu einer Beratung oder einem
+      Vertrag, speichern wir deine Daten so lange, wie es dafür und für gesetzliche
+      Aufbewahrungspflichten erforderlich ist.
+    </p>
+    <p>
+      Zum Nachweis deiner Einwilligung speichern wir Name, Telefonnummer, den Wortlaut der
+      Einwilligung und den Zeitpunkt bis zu fünf Jahre ab Erteilung der Einwilligung (Art. 6 Abs. 1
+      lit. c DSGVO in Verbindung mit § 7a Abs. 2 UWG, hilfsweise Art. 6 Abs. 1 lit. f DSGVO).
     </p>
 
     <p style={{marginTop: '28px', fontSize: '13px', color: 'var(--muted)'}}>Stand: Oktober 2026</p>
