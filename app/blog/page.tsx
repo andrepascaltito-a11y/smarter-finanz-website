@@ -7,7 +7,7 @@ import { publishedPosts } from "../../lib/blog";
 export const metadata: Metadata = {
   title: "Blog für Selbstständige und Kleinbetriebe | Smarter Finanz",
   description:
-    "Ehrliche Antworten zu Versicherungen, Steuern und Vermögen für Selbstständige und kleine Betriebe. Ohne Verkaufsdruck.",
+    "Sachliche Antworten zu Versicherungen, Steuern und Vermögen für Selbstständige und kleine Betriebe.",
   alternates: { canonical: "/blog" },
 };
 
@@ -19,7 +19,7 @@ export default function Page() {
       <main>
         <h1>Blog</h1>
         <p className={legal.lead}>
-          Ehrliche Antworten zu Versicherungen, Steuern und Vermögen für Selbstständige und kleine Betriebe.
+          Sachliche Antworten zu Versicherungen, Steuern und Vermögen für Selbstständige und kleine Betriebe.
         </p>
         <ul className={styles.list}>
           {posts.map((p) => (
