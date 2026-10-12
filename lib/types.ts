@@ -11,10 +11,14 @@ interface BasisPayload {
   email: string;
   telefon: string;
   consent: boolean;
+  // Zustimmung zur Bereitstellung der Erstinformation ueber die Website (§ 16 Abs. 2 Nr. 2 VersVermV).
+  erstinfoZustimmung: boolean;
   // Server setzt diese Felder serverseitig, Client-Werte werden ignoriert.
   consentTimestamp?: string;
   consentTextVersion?: string;
   consentText?: string;
+  erstinfoVersion?: string;
+  erstinfoTimestamp?: string;
   // Anti-Spam (serverseitig ausgewertet, nicht weitergeleitet).
   hp?: string;
   formStartedAt?: number;

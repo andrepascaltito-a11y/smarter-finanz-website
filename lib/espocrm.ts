@@ -31,7 +31,9 @@ async function forwardPrivatperson(
     emailAddress: payload.email,
     phoneNumber: toE164Phone(payload.telefon),
     assignedUserId: DEFAULT_ASSIGNED_USER_ID,
-    description: payload.thema ? `Thema: ${payload.thema}` : null,
+    description:
+      (payload.thema ? `Thema: ${payload.thema}` : "") +
+      `\nErstinformation: Zustimmung zur Bereitstellung ueber die Website ${payload.erstinfoVersion} am ${payload.erstinfoTimestamp}`,
     // Dieselben drei Custom Fields, die auch die FairKV-Website auf dem
     // Lead-Entity befuellt (DSGVO-Nachweis, welcher Wortlaut wann eingewilligt wurde).
     consentZeitpunkt: payload.consentTimestamp ? toEspoDatetime(payload.consentTimestamp) : null,
@@ -84,7 +86,8 @@ async function schreibeNotiz(
     `Website-Kontakt: ${payload.ansprechpartnerVorname} ${payload.ansprechpartnerNachname}, ` +
     `Telefon ${toE164Phone(payload.telefon)}, E-Mail ${payload.email}` +
     (payload.branche ? `, Branche: ${payload.branche}` : "") +
-    ` (Einwilligung ${payload.consentTextVersion} am ${payload.consentTimestamp} erteilt)`;
+    ` (Einwilligung ${payload.consentTextVersion} am ${payload.consentTimestamp} erteilt;` +
+    ` Erstinformation-Zustimmung ${payload.erstinfoVersion} am ${payload.erstinfoTimestamp})`;
   const res = await fetch(`${base}/api/v1/Note`, {
     method: "POST",
     headers,

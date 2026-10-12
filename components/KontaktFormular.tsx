@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { CONSENT_TEXT } from "@/lib/consent";
+import { CONSENT_TEXT, ERSTINFO_TEXT } from "@/lib/consent";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
 
 // CONSENT_TEXT ist die einzige Quelle der Wahrheit fuer den Einwilligungstext
@@ -34,6 +34,7 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
   const [email, setEmail] = useState("");
   const [telefon, setTelefon] = useState("");
   const [consent, setConsent] = useState(false);
+  const [erstinfoZustimmung, setErstinfoZustimmung] = useState(false);
   const [hp, setHp] = useState("");
   const [startedAt] = useState(() => Date.now());
   const [status, setStatus] = useState<SubmitState>("idle");
@@ -44,7 +45,7 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
     setStatus("submitting");
     setErrorMessage(null);
 
-    const basis = { email, telefon, consent, hp, formStartedAt: startedAt };
+    const basis = { email, telefon, consent, erstinfoZustimmung, hp, formStartedAt: startedAt };
     const payload: LeadPayload =
       art === "privatperson"
         ? ({
@@ -85,7 +86,7 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
   if (status === "success") {
     return (
       <p className="kontakt-status success">
-        Danke für deine Anfrage. Wir melden uns in Kürze bei dir.
+        Danke für deine Anfrage. Wir melden uns in Kürze bei dir. Die Erstinformation schicken wir dir per E-Mail.
       </p>
     );
   }
@@ -241,6 +242,18 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
             {CONSENT_TEXT_BEFORE_LINK}
             <a href="/datenschutz">{CONSENT_LINK_TEXT}</a>
             {CONSENT_TEXT_AFTER_LINK}
+          </span>
+        </label>
+
+        <label className="consent-row">
+          <input
+            type="checkbox"
+            required
+            checked={erstinfoZustimmung}
+            onChange={(e) => setErstinfoZustimmung(e.target.checked)}
+          />
+          <span>
+            {ERSTINFO_TEXT} <a href="/erstinformation" target="_blank" rel="noopener">Erstinformation ansehen</a>
           </span>
         </label>
 

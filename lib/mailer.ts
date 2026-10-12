@@ -4,6 +4,7 @@
 
 import nodemailer from "nodemailer";
 
+import { ERSTINFO_MAIL_TEXT } from "@/lib/erstinformation";
 import type { GewerbePayload } from "@/lib/types";
 
 export async function sendGewerbeBenachrichtigung(payload: GewerbePayload): Promise<void> {
@@ -39,4 +40,24 @@ export async function sendGewerbeBenachrichtigung(payload: GewerbePayload): Prom
     subject: `Neue Gewerbe-Anfrage: ${payload.firmenname}`,
     text,
   });
+}
+
+// Bestaetigungsmail an den Kunden mit der Erstinformation (§ 16 Abs. 2 Nr. 2 VersVermV:
+// Adresse und genaue Fundstelle werden elektronisch mitgeteilt). Gibt true zurueck, wenn versendet.
+export async function sendErstinformation(to: string): Promise<boolean> {
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_APP_PASSWORD;
+  if (!user || !pass) {
+    console.warn("[mailer] SMTP nicht konfiguriert, Erstinformations-Mail NICHT versendet.");
+    return false;
+  }
+  const transporter = nodemailer.createTransport({ service: "gmail", auth: { user, pass } });
+  await transporter.sendMail({
+    from: user,
+    to,
+    replyTo: user,
+    subject: "Deine Erstinformation von Smarter Finanz",
+    text: ERSTINFO_MAIL_TEXT,
+  });
+  return true;
 }

@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 
-import { CONSENT_TEXT, CONSENT_VERSION } from "@/lib/consent";
+import { CONSENT_TEXT, CONSENT_VERSION, ERSTINFO_VERSION } from "@/lib/consent";
 import { forwardToEspoCrm } from "@/lib/espocrm";
-import { sendGewerbeBenachrichtigung } from "@/lib/mailer";
+import { sendErstinformation, sendGewerbeBenachrichtigung } from "@/lib/mailer";
 import { checkRateLimit } from "@/lib/ratelimit";
 import { isValidEmail, isValidGermanPhone, isValidName } from "@/lib/validation";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
@@ -53,6 +53,7 @@ function validate(body: Partial<LeadPayload>): string[] {
   if (!body.email || !isValidEmail(body.email)) errors.push("email ungueltig");
   if (!body.telefon || !isValidGermanPhone(body.telefon)) errors.push("telefon ungueltig");
   if (body.consent !== true) errors.push("consent fehlt (muss true sein)");
+  if (body.erstinfoZustimmung !== true) errors.push("erstinfoZustimmung fehlt (muss true sein)");
   if (tooLong(body.email, 254)) errors.push("email zu lang");
   if (tooLong(body.telefon, 32)) errors.push("telefon zu lang");
 
@@ -148,12 +149,24 @@ export async function POST(req: Request) {
   payload.consentText = CONSENT_TEXT;
   payload.consentTextVersion = CONSENT_VERSION;
   payload.consentTimestamp = new Date().toISOString();
+  payload.erstinfoVersion = ERSTINFO_VERSION;
+  payload.erstinfoTimestamp = payload.consentTimestamp;
 
   try {
     await forwardToEspoCrm(payload);
   } catch (err) {
     console.error(
       "[lead] EspoCRM-Weiterleitung fehlgeschlagen:",
+      err instanceof Error ? err.message : err,
+    );
+  }
+
+  try {
+    const sent = await sendErstinformation(payload.email);
+    if (!sent) console.error("[lead] Erstinformation nicht versendet (SMTP fehlt), bitte manuell nachsenden:", payload.email);
+  } catch (err) {
+    console.error(
+      "[lead] Erstinformations-Mail fehlgeschlagen:",
       err instanceof Error ? err.message : err,
     );
   }
