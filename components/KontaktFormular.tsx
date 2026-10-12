@@ -22,8 +22,8 @@ const THEMEN: Thema[] = [
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
-export function KontaktFormular() {
-  const [art, setArt] = useState<"privatperson" | "gewerbe">("privatperson");
+export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: "privatperson" | "gewerbe" }) {
+  const [art, setArt] = useState<"privatperson" | "gewerbe">(defaultArt);
   const [vorname, setVorname] = useState("");
   const [nachname, setNachname] = useState("");
   const [thema, setThema] = useState<Thema | "">("");

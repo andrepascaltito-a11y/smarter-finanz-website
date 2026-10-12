@@ -53,7 +53,7 @@ export default async function Page({ params }: Props) {
         <div className={styles.cta}>
           <strong>Kostenloser Gewerbe-Check</strong>
           <p>Wir schauen gemeinsam auf deinen Betrieb, ohne Verkaufsdruck.</p>
-          <a href="/#kontakt">Jetzt anfragen</a>
+          <a href="/#anfrage">Jetzt anfragen</a>
         </div>
       </main>
     </div>
