@@ -95,7 +95,7 @@ export default function Page() {
     <p>André Pascal Tito, Anschrift wie oben.</p>
 
     <footer>
-      <a href="/datenschutz">Datenschutzerklärung</a> · <a href="/">Startseite</a>
+      <a href="/datenschutz">Datenschutzerklärung</a> · <a href="/erstinformation">Erstinformation</a> · <a href="/">Startseite</a>
     </footer>
   </main>
     </div>

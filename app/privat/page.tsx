@@ -279,7 +279,7 @@ export default function HomePage() {
         <li><a href="#leistungen">Dienstleistungen</a></li><li><a href="#unternehmer">Termin für Unternehmer</a></li>
       </ul></div>
       <div><h4>Rechtliches</h4><ul>
-        <li><a href="/blog">Blog</a></li><li><a href="/impressum">Impressum</a></li><li><a href="/datenschutz">Datenschutzerklärung</a></li>
+        <li><a href="/blog">Blog</a></li><li><a href="/impressum">Impressum</a></li><li><a href="/erstinformation">Erstinformation</a></li><li><a href="/datenschutz">Datenschutzerklärung</a></li>
       </ul></div>
       <div><h4>Kontakt</h4><ul>
         <li><a href="tel:+491708784889">+49 170 8784889</a></li>

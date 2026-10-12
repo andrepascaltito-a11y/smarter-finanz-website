@@ -106,7 +106,7 @@ export default function Page() {
     <p style={{marginTop: '28px', fontSize: '13px', color: 'var(--muted)'}}>Stand: Oktober 2026</p>
 
     <footer>
-      <a href="/impressum">Impressum</a> · <a href="/">Startseite</a>
+      <a href="/impressum">Impressum</a> · <a href="/erstinformation">Erstinformation</a> · <a href="/">Startseite</a>
     </footer>
   </main>
     </div>

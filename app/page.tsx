@@ -126,6 +126,7 @@ export default function Page() {
             <a href="/privat">Privatkunden</a>
             <a href="/blog">Blog</a>
             <a href="/impressum">Impressum</a>
+            <a href="/erstinformation">Erstinformation</a>
             <a href="/datenschutz">Datenschutzerklärung</a>
           </nav>
         </div>
