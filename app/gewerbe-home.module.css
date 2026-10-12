@@ -18,3 +18,4 @@
 .foot nav { display: flex; flex-wrap: wrap; gap: 20px; }
 .foot a { color: var(--muted-light); text-decoration: none; }
 .foot a:hover { color: var(--gold); }
+.vg { flex-basis: 100%; margin: 0 0 8px; font-size: 13px; line-height: 1.5; max-width: 900px; }

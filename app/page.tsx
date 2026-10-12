@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     locale: "de_DE",
     title: "Gewerbeversicherung & Beratung für Unternehmen | Smarter Finanz",
     description:
-      "Absicherung und Steuerstrategie für Selbstständige und Betriebe, als unabhängiger Versicherungsmakler im Raum Hannover.",
+      "Absicherung und Vorsorge für Selbstständige und Betriebe, als Versicherungsmakler im Raum Hannover.",
     url: "https://www.smarterfinanz.de/",
   },
 };
@@ -30,9 +30,9 @@ const THEMEN = [
   { t: "D&O & Geschäftsführerhaftung", d: "Persönliche Haftung von Geschäftsführern und Organen." },
   { t: "Kaution & Bürgschaften", d: "Mietkaution und Avale statt gebundenem Kapital." },
   { t: "Rechtsschutz für Unternehmen", d: "Kosten bei Streit mit Kunden, Lieferanten oder Behörden." },
-  { t: "Betriebliche Altersvorsorge & Krankenversicherung", d: "Mitarbeiter binden und gleichzeitig steuerlich sinnvoll vergüten." },
+  { t: "Betriebliche Altersvorsorge & Krankenversicherung", d: "Mitarbeiter binden und die Vergütung um Vorsorgebausteine ergänzen. Steuerliche und arbeitsrechtliche Fragen klärt dein Steuerberater bzw. Rechtsanwalt." },
   { t: "Absicherung des Inhabers", d: "Berufsunfähigkeit, Krankentagegeld und Vorsorge für Selbstständige." },
-  { t: "Steuerstrategie für Unternehmer", d: "Gestaltungen wie der Investitionsabzugsbetrag, immer in Abstimmung mit deinem Steuerberater." },
+  { t: "Steuerliche Aspekte bei Vorsorge und Investitionen", d: "Wir zeigen dir, wo steuerliche Hebel bei Absicherung und Vorsorge eine Rolle spielen können. Die steuerliche Beurteilung und Umsetzung übernimmt dein Steuerberater." },
 ];
 
 export default function Page() {
@@ -46,9 +46,9 @@ export default function Page() {
           <div><span className="eyebrow on-dark">Für Selbstständige &amp; Unternehmen</span></div>
           <h1>Gewerbeversicherung und Finanzberatung für Unternehmen im Raum Hannover</h1>
           <p>
-            Ein Ansprechpartner für Absicherung, Vorsorge und Steuerstrategie deines Betriebs. Als
-            Versicherungsmakler vergleichen wir mehrere Gesellschaften und stehen auf deiner Seite,
-            auch im Schadenfall.
+            Ein Ansprechpartner für Absicherung und Vorsorge deines Betriebs. Als
+            Versicherungsmakler vergleichen wir mehrere Gesellschaften und unterstützen dich bei der
+            Schadenmeldung und -abwicklung.
           </p>
           <div className={styles.cta}>
             <a href="#anfrage" className="btn btn-gold">Gewerbe-Gespräch anfragen<small>Unverbindlich</small></a>
@@ -69,7 +69,7 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <p className={styles.note}>Allgemeine Informationen. Welche Absicherung zu deinem Betrieb passt, klären wir im Gespräch. Steuerliche Gestaltungen setzt du mit deinem Steuerberater um.</p>
+          <p className={styles.note}>Allgemeine Informationen. Welche Absicherung zu deinem Betrieb passt, klären wir im Gespräch. Steuerliche Fragen prüft und setzt dein Steuerberater um.</p>
         </div>
       </section>
 
@@ -79,8 +79,8 @@ export default function Page() {
           <h2>Warum ein Makler für dein Unternehmen sinnvoll ist</h2>
           <p>
             Ein Versicherungsmakler arbeitet nicht für einen einzelnen Versicherer, sondern vergleicht
-            für dich. Du bekommst einen Vergleich über mehrere Anbieter, Unterstützung im Schadenfall
-            und einen festen Ansprechpartner statt einer Hotline.
+            für dich. Du bekommst einen Vergleich über mehrere Anbieter, Unterstützung bei der Schadenmeldung
+            und einen persönlichen Ansprechpartner statt einer anonymen Hotline.
           </p>
           <ol className={styles.steps}>
             <li><strong>Kennenlernen.</strong> Wir sprechen über deinen Betrieb, deine Risiken und deine Ziele.</li>
@@ -120,6 +120,7 @@ export default function Page() {
 
       <footer className={styles.foot}>
         <div className="wrap">
+          <p className={styles.vg}>Hinweis: Wir arbeiten als Versicherungsmakler (Erlaubnis nach § 34d Abs. 1 GewO, Reg.-Nr. D-JOOT-NRHZP-02). Unsere Vergütung erfolgt in der Regel über Courtagen der Versicherer, die in der Prämie enthalten sind. Eine zusätzliche Vergütung (z. B. Servicepauschale) gilt nur, wenn sie vorab vereinbart wird. Details in der Erstinformation.</p>
           <span>© Smarter Finanz</span>
           <nav>
             <a href="/privat">Privatkunden</a>

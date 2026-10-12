@@ -18,7 +18,7 @@ export const posts: Post[] = [
     slug: "versicherungen-kleingewerbe",
     title: "Welche Versicherungen braucht ein Kleingewerbe wirklich?",
     description:
-      "Pflicht, sinnvoll, verzichtbar: Ein sachlicher Überblick für Selbstständige und kleine Betriebe, ohne Verkaufsdruck.",
+      "Pflicht, sinnvoll, verzichtbar: Ein sachlicher Überblick für Selbstständige und kleine Betriebe, unverbindlich.",
     date: "2026-10-12",
     published: false,
     blocks: [
@@ -73,7 +73,7 @@ export const posts: Post[] = [
       { type: "h2", text: "Fazit" },
       {
         type: "p",
-        text: "Pflicht ist oft weniger, als manche Angebote vermuten lassen, aber sinnvoll ist mehr, als viele Gründer zunächst denken. Wenn du wissen möchtest, wo du bei deinem Betrieb stehst, schauen wir gemeinsam darauf, kostenlos und ohne Verkaufsdruck.",
+        text: "Pflicht ist oft weniger, als manche Angebote vermuten lassen, aber sinnvoll ist mehr, als viele Gründer zunächst denken. Wenn du wissen möchtest, wo du bei deinem Betrieb stehst, schauen wir gemeinsam und unverbindlich darauf.",
       },
       {
         type: "p",
