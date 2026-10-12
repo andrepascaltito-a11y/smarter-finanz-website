@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/erstinformation" },
 };
 
-// ENTWURF: Punkte mit "[prüfen]" im Kommentar sind von André zu bestätigen, bevor die Seite live geht.
+// Inhaltliche Annahmen (Zuwendungen ja, keine Beteiligungen, Pool-Zugang) von André am 12.10.2026 bestätigt.
 export default function Page() {
   return (
     <div className={styles.legalPage}>
