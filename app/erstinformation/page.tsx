@@ -56,7 +56,7 @@ export default function Page() {
           Maklerpools (Maxpool, BlauDirekt). Wählen wir im Einzelfall eine eingeschränkte Auswahl, sagen wir
           dir das vor deiner Vertragserklärung ausdrücklich und nennen dir die berücksichtigten Versicherer
           in Textform (§ 60 Abs. 2, § 62 VVG).
-          {/* [prüfen] Pool-Namen und tatsächliche Anbindung */}
+          
         </p>
 
         <h2>5. Unsere Vergütung</h2>
@@ -68,17 +68,11 @@ export default function Page() {
           </li>
           <li>
             Zusätzlich erhalten wir von Versicherern bzw. Maklerpools weitere Zuwendungen, zum Beispiel
-            Bestandspflegevergütungen und Boni. {/* [prüfen] Ja/Nein */}
+            Bestandspflegevergütungen und Boni.
           </li>
           <li>
-            Eine Vergütung, die du direkt an uns zahlst (zum Beispiel eine Servicepauschale oder ein Honorar),
-            gibt es nur, wenn wir sie vorab mit dir vereinbaren. Wir nennen dir die Höhe als Bruttobetrag inklusive
-            Umsatzsteuer, bevor du uns beauftragst. {/* [prüfen] Servicepauschale: Höhe/Zeitpunkt der Nennung */}
-          </li>
-          <li>
-            Unsere Vergütung kann damit aus einer Verknüpfung bestehen: der Courtage vom Versicherer (in der
-            Prämie enthalten) und, wenn vorab mit dir vereinbart, einer Servicepauschale, die du direkt an uns
-            zahlst.
+            Eine gesonderte Vergütung, die du direkt an uns zahlst, gibt es nur, wenn wir sie vorab
+            ausdrücklich mit dir vereinbaren. Ohne eine solche Vereinbarung zahlst du nichts an uns.
           </li>
         </ul>
 
@@ -88,7 +82,6 @@ export default function Page() {
           unmittelbaren oder mittelbaren Beteiligungen von über 10 Prozent an Stimmrechten oder Kapital eines
           Versicherungsunternehmens, und kein Versicherungsunternehmen oder dessen Mutterunternehmen hält eine
           solche Beteiligung an uns.
-          {/* [prüfen] */}
         </p>
 
         <h2>7. Schlichtung und Beschwerden</h2>

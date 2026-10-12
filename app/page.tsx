@@ -120,7 +120,7 @@ export default function Page() {
 
       <footer className={styles.foot}>
         <div className="wrap">
-          <p className={styles.vg}>Hinweis: Wir arbeiten als Versicherungsmakler (Erlaubnis nach § 34d Abs. 1 GewO, Reg.-Nr. D-JOOT-NRHZP-02). Unsere Vergütung erfolgt in der Regel über Courtagen der Versicherer, die in der Prämie enthalten sind. Eine zusätzliche Vergütung (z. B. Servicepauschale) gilt nur, wenn sie vorab vereinbart wird. Details in der Erstinformation.</p>
+          <p className={styles.vg}>Hinweis: Wir arbeiten als Versicherungsmakler (Erlaubnis nach § 34d Abs. 1 GewO, Reg.-Nr. D-JOOT-NRHZP-02). Unsere Vergütung erfolgt in der Regel über Courtagen der Versicherer, die in der Prämie enthalten sind. Eine gesonderte Vergütung, die du direkt an uns zahlst, gilt nur, wenn sie vorab ausdrücklich vereinbart wird. Details in der Erstinformation.</p>
           <span>© Smarter Finanz</span>
           <nav>
             <a href="/privat">Privatkunden</a>
