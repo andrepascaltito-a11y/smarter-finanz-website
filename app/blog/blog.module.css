@@ -1,0 +1,8 @@
+.list { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 20px; }
+.card { background: #fff; border: 1px solid #e3ddc9; border-radius: 18px; padding: 24px; }
+.card a { text-decoration: none; color: inherit; display: block; }
+.card h2 { margin: 0 0 8px; font-size: 26px; }
+.card p { margin: 0; color: var(--muted); }
+.meta { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+.cta { margin-top: 40px; padding: 28px; border-radius: 18px; background: var(--green); color: var(--cream); }
+.cta a { display: inline-block; margin-top: 12px; background: var(--gold); color: var(--green); padding: 12px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; }
