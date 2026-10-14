@@ -16,9 +16,22 @@ import type { LeadPayload } from "@/lib/types";
 // Standard-Empfaenger fuer neue Anfragen: Andres SmarterFinanz-Adresse (ueberschreibbar per NOTIFY_EMAIL_TO).
 const STANDARD_EMPFAENGER = "a.tito@smarterfinanz.de";
 
-function anfrageMail(payload: LeadPayload): { subject: string; text: string } {
+// Was mit dem Newsletter-Wunsch tatsaechlich passiert ist (Rita N14): Andre soll nicht annehmen, eine
+// Einwilligung liege vor, wenn die Anmeldung ignoriert wurde oder fehlschlug.
+const NEWSLETTER_ZEILEN: Record<string, string> = {
+  mailGesendet: "Newsletter-Wunsch: ja, Bestaetigungsmail (Double-Opt-in) wurde versendet. Einwilligung gilt erst nach dem Klick der Person.\n",
+  bereitsBestaetigt: "Newsletter-Wunsch: angekreuzt, Adresse ist bereits bestaetigt eingetragen, keine neue Mail.\n",
+  kuerzlichGesendet: "Newsletter-Wunsch: angekreuzt, Bestaetigungsmail ging vor Kurzem schon raus (oder Adresse ist gesperrt), keine zweite Mail.\n",
+  sammeladresse: "Newsletter-Wunsch: angekreuzt, aber Sammeladresse (info@ o. Ae.), Anmeldung bewusst ignoriert.\n",
+  fehler: "Newsletter-Wunsch: angekreuzt, aber die Anmeldung ist FEHLGESCHLAGEN (CRM oder Mailversand). Bitte nachfassen.\n",
+  nichtAktiv: "Newsletter-Wunsch: angekreuzt, Newsletter ist nicht aktiv, KEINE Einwilligung gespeichert.\n",
+};
+
+function anfrageMail(payload: LeadPayload, newsletterErgebnis?: string): { subject: string; text: string } {
   const newsletter =
-    payload.newsletter === true ? "Newsletter-Wunsch: ja, Bestaetigungsmail (Double-Opt-in) wurde angestossen\n" : "";
+    payload.newsletter === true
+      ? NEWSLETTER_ZEILEN[newsletterErgebnis ?? "nichtAktiv"] ?? NEWSLETTER_ZEILEN.nichtAktiv
+      : "";
   if (payload.art === "gewerbe") {
     return {
       subject: `Neue Gewerbe-Anfrage: ${payload.firmenname}`,
@@ -49,7 +62,7 @@ function anfrageMail(payload: LeadPayload): { subject: string; text: string } {
 
 // Benachrichtigung ueber JEDE neue Anfrage (Gewerbe und Privat) per E-Mail, unabhaengig vom CRM.
 // Antworten gehen direkt an die Adresse des Interessenten (replyTo).
-export async function sendLeadBenachrichtigung(payload: LeadPayload): Promise<void> {
+export async function sendLeadBenachrichtigung(payload: LeadPayload, newsletterErgebnis?: string): Promise<void> {
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_APP_PASSWORD;
   const to = process.env.NOTIFY_EMAIL_TO || STANDARD_EMPFAENGER;
@@ -68,7 +81,7 @@ export async function sendLeadBenachrichtigung(payload: LeadPayload): Promise<vo
     auth: { user, pass },
   });
 
-  const { subject, text } = anfrageMail(payload);
+  const { subject, text } = anfrageMail(payload, newsletterErgebnis);
   await transporter.sendMail({
     from: process.env.MAIL_FROM || user,
     to,
@@ -105,7 +118,7 @@ export async function sendErstinformation(
 export async function sendDoiMail(
   to: string,
   segment: Segment,
-  daten: { vorname: string; nachname: string; datum: string; bestaetigungslink: string; datenschutzlink: string },
+  daten: { datum: string; bestaetigungslink: string; datenschutzlink: string },
 ): Promise<boolean> {
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_APP_PASSWORD;

@@ -1,6 +1,8 @@
 // Newsletter (VORBEREITUNG): Anmeldung aus dem Kontaktformular. Speichert die (noch unbestaetigte)
 // Einwilligung als OFFENE Anfrage am CRM-Kontakt und verschickt die Double-Opt-in-Mail. Wirkt nur bei aktivem
-// Newsletter. Rueckgabe sagt dem Formular, was wirklich passiert ist (Ritas E10: Erfolgstext muss stimmen).
+// Newsletter. Rueckgabe: das genaue Ergebnis fuer die interne Benachrichtigung an Andre (Rita N14). Dem
+// anonymen Absender des Formulars wird davon nur das gemeldet, was keine fremden Daten verraet (Rita N5),
+// siehe formularErgebnis().
 
 import { sendDoiMail } from "@/lib/mailer";
 import { adressHash, newsletterAktiv, siteBasis, tokenErzeugen } from "@/lib/newsletter";
@@ -11,18 +13,30 @@ import type { LeadPayload } from "@/lib/types";
 
 export type NewsletterErgebnis =
   | "mailGesendet" // Bestaetigungsmail ist raus
-  | "keineMail" // Anmeldung nicht wirksam (aus, Sammeladresse, CRM oder SMTP fehlt), nichts versprechen
+  | "nichtAktiv" // Newsletter nicht freigeschaltet oder Konfiguration unvollstaendig
+  | "sammeladresse" // Anmeldung bewusst ignoriert
+  | "fehler" // CRM oder Mailversand fehlgeschlagen
   | "bereitsBestaetigt" // Adresse ist schon eingetragen
-  | "kuerzlichGesendet"; // Mail ging vor weniger als 24 Stunden schon raus
+  | "kuerzlichGesendet"; // Mail ging vor Kurzem schon raus, keine zweite
+
+// Was das Formular dem Absender anzeigen darf. Gesendet, bereits bestaetigt und kuerzlich gesendet sind von aussen
+// nicht zu unterscheiden, sonst liesse sich fuer jede Adresse abfragen, ob sie Abonnent ist.
+export type FormularErgebnis = "pruefen" | "sammeladresse" | "keineMail";
+
+export function formularErgebnis(e: NewsletterErgebnis): FormularErgebnis {
+  if (e === "mailGesendet" || e === "bereitsBestaetigt" || e === "kuerzlichGesendet") return "pruefen";
+  if (e === "sammeladresse") return "sammeladresse";
+  return "keineMail";
+}
 
 export async function starteNewsletterAnmeldung(payload: LeadPayload, accountId?: string): Promise<NewsletterErgebnis> {
   if (!newsletterAktiv()) {
     console.warn("[newsletter] Checkbox gesetzt, Newsletter ist aber nicht aktiv. Einwilligung NICHT gespeichert.");
-    return "keineMail";
+    return "nichtAktiv";
   }
   if (istSammeladresse(payload.email)) {
     console.warn("[newsletter] Sammeladresse, Newsletter-Anmeldung ignoriert (Anfrage selbst laeuft normal).");
-    return "keineMail";
+    return "sammeladresse";
   }
   const segment = payload.art === "gewerbe" ? "gewerbe" : "privat";
   const vorname = payload.art === "gewerbe" ? payload.ansprechpartnerVorname : payload.vorname;
@@ -40,7 +54,7 @@ export async function starteNewsletterAnmeldung(payload: LeadPayload, accountId?
   });
   if (!ergebnis) {
     console.error("[newsletter] CRM nicht konfiguriert. Anmeldung nicht gespeichert, keine Bestaetigungsmail.");
-    return "keineMail";
+    return "fehler";
   }
   if (ergebnis.status === "bereitsBestaetigt") return "bereitsBestaetigt";
   if (ergebnis.status === "kuerzlichGesendet") return "kuerzlichGesendet";
@@ -54,17 +68,21 @@ export async function starteNewsletterAnmeldung(payload: LeadPayload, accountId?
     t: ergebnis.anfrageZeit.getTime(),
   });
   const basis = siteBasis();
-  const gesendet = await sendDoiMail(payload.email.trim(), segment, {
-    vorname,
-    nachname,
-    datum: jetzt.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "Europe/Berlin" }),
-    bestaetigungslink: `${basis}/newsletter/bestaetigen?token=${encodeURIComponent(token)}`,
-    datenschutzlink: `${basis}/datenschutz#newsletter`,
-  });
+  let gesendet = false;
+  try {
+    gesendet = await sendDoiMail(payload.email.trim(), segment, {
+      datum: jetzt.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "Europe/Berlin" }),
+      bestaetigungslink: `${basis}/newsletter/bestaetigen?token=${encodeURIComponent(token)}`,
+      datenschutzlink: `${basis}/datenschutz#newsletter`,
+    });
+  } catch (err) {
+    // Versandfehler fangen (Rita N6): protokollieren, ohne Adresse loggen (Fehlertexte koennen sie enthalten).
+    console.error(`[newsletter] Double-Opt-in-Mail an Kontakt ${ergebnis.id} nicht versendet (Versandfehler).`);
+  }
   await doiProtokollieren(ergebnis.id, gesendet).catch(() => console.warn("[newsletter] DOI-Protokoll nicht gespeichert."));
   if (!gesendet) {
-    console.error(`[newsletter] Double-Opt-in-Mail nicht versendet (SMTP fehlt), Kontakt ${ergebnis.id} manuell nachfassen.`);
-    return "keineMail";
+    console.error(`[newsletter] Double-Opt-in-Mail nicht versendet, Kontakt ${ergebnis.id} manuell nachfassen.`);
+    return "fehler";
   }
   return "mailGesendet";
 }

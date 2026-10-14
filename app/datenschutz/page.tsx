@@ -54,15 +54,19 @@ export default function Page() {
       Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung. Nach einem
       Widerruf kontaktieren wir dich über diese Kanäle nicht mehr und löschen deine Angaben, soweit
       keine Aufbewahrung nötig ist, zum Beispiel für den Nachweis der Einwilligung. Deine Angaben
-      speichern wir in unserem CRM-System (eigener Server innerhalb der EU), um deine Anfrage zu
-      bearbeiten und den Kontaktverlauf nachvollziehen zu können. Die Daten werden gelöscht, sobald
-      sie für den Zweck nicht mehr erforderlich sind, soweit keine gesetzlichen
-      Aufbewahrungspflichten entgegenstehen.
+      speichern wir in unserem CRM-System (eigener Server innerhalb der EU bei einem
+      Hosting-Anbieter), um deine Anfrage zu bearbeiten und den Kontaktverlauf nachvollziehen zu
+      können. Für den Versand unserer E-Mails (zum Beispiel die Erstinformation und
+      Benachrichtigungen) nutzen wir Dienste von Google (Google Ireland Limited, Gordon House,
+      Barrow Street, Dublin 4, Irland). Pflichtangaben im Formular sind Name, E-Mail-Adresse,
+      Telefonnummer und die Zustimmungen (bei Unternehmen zusätzlich der Firmenname, bei
+      Privatpersonen die Auswahl des Themas). Ohne sie können wir deine Anfrage nicht bearbeiten.
+      Alle anderen Angaben sind freiwillig. Wie lange wir die Daten speichern, steht in Abschnitt 7.
     </p>
     <p>
       Bei Anfragen als Unternehmen kannst du im Formular freiwillig angeben, wann du am besten
       erreichbar bist (Wochentage, Tageszeit, Gesprächsform und einen kurzen Hinweis). Wir verwenden
-      diese Angaben ausschließlich, um einen Gesprächstermin mit dir abzustimmen (Art. 6 Abs. 1
+      diese Angaben, um einen Gesprächstermin mit dir abzustimmen (Art. 6 Abs. 1
       lit. b DSGVO, vorvertragliche Maßnahme auf deine Anfrage). Die Angaben sind freiwillig, ohne sie
       bearbeiten wir deine Anfrage ebenso. Sie werden zusammen mit deiner Anfrage in unserem
       CRM-System gespeichert, in der internen Benachrichtigung über deine Anfrage verwendet und wie die
@@ -106,24 +110,33 @@ export default function Page() {
     <h2>7. Speicherdauer</h2>
     <p>
       Wir speichern deine Angaben aus einer Anfrage, solange wir sie für die Beratung, die Anbahnung
-      oder die Durchführung eines Vertrags brauchen. Bei Unternehmen kann das länger dauern, zum
-      Beispiel bis zu einem Jahr oder mehr, wenn Kündigungsfristen zu beachten sind. Kommt keine
-      Beratung oder kein Vertrag zustande, löschen wir deine Angaben, sobald wir sie nicht mehr
-      brauchen, auf Wunsch jederzeit. Kommt es zu einer Beratung oder einem Vertrag, speichern wir
-      deine Daten so lange, wie es dafür und für gesetzliche Aufbewahrungspflichten erforderlich ist.
+      oder die Durchführung eines Vertrags brauchen. Kommt es zu keiner Beratung und zu keinem
+      Vertrag, löschen wir die Angaben von Privatpersonen in der Regel 12 Monate nach der letzten
+      Bearbeitung. Bei Unternehmen kann der Bedarf länger dauern, etwa weil Kündigungsfristen
+      bestehender Verträge zu beachten sind und du uns das mitgeteilt hast. Auch dann löschen wir
+      die Angaben, sobald wir sie nicht mehr brauchen, in der Regel spätestens 24 Monate nach dem
+      letzten Kontakt (Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO, unser Interesse an einer späteren
+      Anbahnung). Dazu prüfen wir unseren Datenbestand regelmäßig, mindestens einmal im Quartal.
+      Auf Wunsch löschen wir deine Angaben unverzüglich, spätestens innerhalb eines Monats, soweit
+      keine Aufbewahrungspflicht entgegensteht. Kommt es zu einer Beratung oder zu einem Vertrag,
+      speichern wir deine Daten so lange, wie es dafür und für gesetzliche Aufbewahrungspflichten
+      erforderlich ist.
     </p>
     <p>
       Zum Nachweis deiner Einwilligung speichern wir Name, Telefonnummer, den Wortlaut der
-      Einwilligung und den Zeitpunkt bis zu fünf Jahre ab Erteilung der Einwilligung (Art. 6 Abs. 1
-      lit. c DSGVO in Verbindung mit § 7a Abs. 2 UWG, hilfsweise Art. 6 Abs. 1 lit. f DSGVO).
+      Einwilligung und den Zeitpunkt bis zu fünf Jahre ab Erteilung der Einwilligung, nach einer
+      Verwendung der Einwilligung gerechnet ab dieser (bei Privatpersonen Art. 6 Abs. 1 lit. c DSGVO
+      in Verbindung mit § 7a Abs. 2 UWG, im Übrigen Art. 6 Abs. 1 lit. f DSGVO).
     </p>
     {NEWSLETTER_AKTIV && <p>Für die Daten zur E-Mail-Einwilligung gelten die Fristen aus Abschnitt 8.</p>}
 
     {NEWSLETTER_AKTIV && (
       <>
         {/* ENTWURF nach Ritas Ersatzfassung (M2, 14.10.2026), nur sichtbar bei NEXT_PUBLIC_NEWSLETTER_ENABLED=true.
-            Die Stellen mit [PRUEFEN] muessen VOR dem Livegang bestaetigt oder gestrichen werden (Versandweg, AVV,
-            Drittland-Garantie, Auswertung). Bei Textaenderung "Stand" unten aktualisieren. */}
+            Die Platzhalter in eckigen Klammern (Pruef-Marker) muessen VOR dem Livegang belegt oder gestrichen
+            werden (Versandweg, AVV, Drittland-Garantie, Auswertung). Solange welche stehen, bricht der Build
+            bei eingeschaltetem Newsletter ab (scripts/pruefe-newsletter-marker.mjs). Bei Textaenderung "Stand"
+            unten aktualisieren. */}
         <h2 id="newsletter">8. E-Mail-Infos (Newsletter)</h2>
         <p>
           Wenn du im Kontaktformular die optionale Auswahl für E-Mail-Infos setzt, schicken wir dir
@@ -139,25 +152,31 @@ export default function Page() {
           wenn du über den Link in dieser Mail auf der sich öffnenden Seite die Schaltfläche „Adresse
           bestätigen" anklickst, erhältst du E-Mail-Infos. Der Link ist 14 Tage gültig. Bestätigst du
           nicht, ist der Link danach ungültig und du erhältst keine E-Mail-Infos. Die Angaben zu einer
-          nicht bestätigten Anmeldung speichern wir nur, bis wir sie bei der nächsten Durchsicht
-          unseres CRM-Systems löschen, auf Wunsch sofort.
+          nicht bestätigten Anmeldung (Name, E-Mail-Adresse, Zeitpunkt und Zielgruppe) löschen wir bei
+          unserer monatlichen Durchsicht, in der Regel also innerhalb von zwei Monaten nach dem
+          Absenden, auf Wunsch unverzüglich. Wurde deine Adresse ohne dein Wissen eingetragen, genügt
+          es, die Bestätigungsmail zu ignorieren. Du erhältst dann keine E-Mail-Infos.
         </p>
         <p>
           <strong>Welche Daten wir speichern.</strong> Name, E-Mail-Adresse, bei Anfragen als Unternehmen
           die Verknüpfung mit der Firma, die Zielgruppe (Gewerbe oder Privat), den Zeitpunkt deiner
           Einwilligung, die Version des Einwilligungstextes, den Versandzeitpunkt der Bestätigungsmail und
           den Zeitpunkt deiner Bestätigung. Die letzten vier Angaben dienen als Nachweis deiner
-          Einwilligung (Art. 7 Abs. 1 DSGVO). Wir speichern sie in unserem CRM-System (eigener Server
+          Einwilligung (Art. 7 Abs. 1 DSGVO). Jeden dieser Schritte halten wir zusätzlich mit
+          Zeitpunkt in einem Verlauf am Kontakt fest. Wir speichern sie in unserem CRM-System (eigener Server
           innerhalb der EU).
         </p>
         <p>
           <strong>Speicherdauer.</strong> Solange du E-Mail-Infos erhältst, speichern wir diese Angaben.
-          Meldest du dich ab oder widerrufst du, nehmen wir dich aus dem Verteiler. Danach speichern wir
-          nur noch einen Sperrvermerk (E-Mail-Adresse und Zeitpunkt der Abmeldung) und die Nachweisdaten,
-          damit du keine weiteren Infos erhältst und wir deine frühere Einwilligung belegen und uns gegen
-          mögliche Ansprüche verteidigen können (Art. 6 Abs. 1 lit. f, Art. 17 Abs. 3 lit. e DSGVO). Wir
-          speichern sie in der Regel bis zum Ablauf des dritten Jahres nach dem Jahr der Abmeldung und
-          löschen sie danach.
+          Meldest du dich ab oder widerrufst du, nehmen wir dich aus dem Verteiler. Danach speichern
+          wir noch deinen Namen, deine E-Mail-Adresse, einen Sperrvermerk mit dem Zeitpunkt der
+          Abmeldung und die Nachweisdaten samt Verlauf (Anmeldung, Versand der Bestätigungsmail,
+          Bestätigung, Abmeldung, jeweils mit Zeitpunkt), damit du keine weiteren Infos erhältst und
+          wir deine frühere Einwilligung belegen und uns gegen mögliche Ansprüche verteidigen können
+          (Art. 6 Abs. 1 lit. f, Art. 17 Abs. 3 lit. e DSGVO). Wir speichern sie bis zum Ablauf des
+          dritten Jahres nach dem Jahr der Abmeldung und löschen sie bei unserer jährlichen Durchsicht
+          im darauffolgenden Januar. Ist zu diesem Zeitpunkt ein Streit oder ein Verfahren anhängig,
+          in dem wir den Nachweis brauchen, speichern wir länger, bis es abgeschlossen ist.
         </p>
         <p>
           <strong>Widerruf und Widerspruch.</strong> Du kannst deine Einwilligung jederzeit mit Wirkung

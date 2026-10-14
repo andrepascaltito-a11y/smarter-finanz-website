@@ -33,21 +33,21 @@ export const NEWSLETTER_CHECKBOX: Record<
   },
 };
 
-// Erfolgstext zur Newsletter-Auswahl, je nachdem, was der Server wirklich getan hat (Rita E10).
-export type NewsletterErgebnisText = "mailGesendet" | "keineMail" | "bereitsBestaetigt" | "kuerzlichGesendet";
+// Erfolgstext zur Newsletter-Auswahl. Die drei Faelle "Mail gesendet", "kuerzlich gesendet" und "bereits bestaetigt"
+// laufen bewusst in einen gleichlautenden Text zusammen ("pruefen"), damit ein Dritter ueber das Formular nicht
+// erfaehrt, ob eine fremde Adresse schon Abonnent ist (Rita N5).
+export type NewsletterErgebnisText = "pruefen" | "sammeladresse" | "keineMail";
 
 export const NEWSLETTER_ERFOLG_ZUSATZ: Record<Segment, Record<NewsletterErgebnisText, string>> = {
   gewerbe: {
-    mailGesendet: "Für die E-Mail-Infos schicken wir Ihnen eine separate Mail zur Bestätigung. Erst nach Ihrem Klick darin erhalten Sie die Infos.",
-    kuerzlichGesendet: "Die Mail zur Bestätigung für die E-Mail-Infos haben wir Ihnen vor Kurzem geschickt. Bitte schauen Sie auch im Spam-Ordner nach.",
-    bereitsBestaetigt: "Für die E-Mail-Infos müssen Sie nichts weiter tun.",
-    keineMail: "Die Anmeldung für die E-Mail-Infos hat nicht geklappt. Ihre Anfrage ist trotzdem bei uns angekommen. Sie können die Infos später noch einmal anfordern.",
+    pruefen: "Falls für Ihre Adresse eine Bestätigung nötig ist, schicken wir Ihnen dazu eine separate Mail. Erst nach Ihrem Klick darin erhalten Sie die E-Mail-Infos.",
+    sammeladresse: "Für diese Adresse bieten wir die E-Mail-Infos nicht an. Ihre Anfrage ist trotzdem bei uns angekommen.",
+    keineMail: "Die Anmeldung für die E-Mail-Infos hat nicht geklappt. Ihre Anfrage ist trotzdem bei uns angekommen.",
   },
   privat: {
-    mailGesendet: "Für die E-Mail-Infos schicken wir dir eine separate Mail zur Bestätigung. Erst nach deinem Klick darin bekommst du die Infos.",
-    kuerzlichGesendet: "Die Mail zur Bestätigung für die E-Mail-Infos haben wir dir vor Kurzem geschickt. Schau bitte auch im Spam-Ordner nach.",
-    bereitsBestaetigt: "Für die E-Mail-Infos musst du nichts weiter tun.",
-    keineMail: "Die Anmeldung für die E-Mail-Infos hat nicht geklappt. Deine Anfrage ist trotzdem bei uns angekommen. Du kannst die Infos später noch einmal anfordern.",
+    pruefen: "Falls für deine Adresse eine Bestätigung nötig ist, schicken wir dir dazu eine separate Mail. Erst nach deinem Klick darin bekommst du die E-Mail-Infos.",
+    sammeladresse: "Für diese Adresse bieten wir die E-Mail-Infos nicht an. Deine Anfrage ist trotzdem bei uns angekommen.",
+    keineMail: "Die Anmeldung für die E-Mail-Infos hat nicht geklappt. Deine Anfrage ist trotzdem bei uns angekommen.",
   },
 };
 
@@ -59,9 +59,8 @@ export const SAMMELADRESSE_HINWEIS: Record<Segment, string> = {
 
 export const DOI_BETREFF = "Bitte bestätigen: E-Mail-Infos von Smarter Finanz";
 
+// Bewusst ohne Namen: Die Anrede darf keinen Fremdtext aus dem oeffentlichen Formular enthalten (Rita N1).
 interface MailDaten {
-  vorname: string;
-  nachname: string;
   datum: string; // TT.MM.JJJJ
   bestaetigungslink: string;
   datenschutzlink: string;
@@ -75,7 +74,7 @@ Vermittlerregister-Nr. D-JOOT-NRHZP-02`;
 
 export function doiMailText(segment: Segment, d: MailDaten): string {
   if (segment === "gewerbe") {
-    return `Guten Tag ${d.vorname} ${d.nachname},
+    return `Guten Tag,
 
 über das Kontaktformular auf smarterfinanz.de haben Sie am ${d.datum} angegeben, dass Sie gelegentlich E-Mail-Infos von Smarter Finanz zu Versicherung und Vorsorge für Betriebe erhalten möchten, höchstens einmal im Monat. Bitte bestätigen Sie das mit einem Klick:
 
@@ -91,7 +90,7 @@ ${d.datenschutzlink}
 ${SIGNATUR}
 `;
   }
-  return `Hallo ${d.vorname},
+  return `Hallo,
 
 über das Kontaktformular auf smarterfinanz.de hast du am ${d.datum} angegeben, dass du gelegentlich E-Mail-Infos von Smarter Finanz zu Absicherung, Vorsorge und Finanzen erhalten möchtest, höchstens alle zwei Monate. Bitte bestätige das mit einem Klick:
 
@@ -113,7 +112,7 @@ ${SIGNATUR}
 // den Link nicht automatisch "anklicken" und damit eine Bestaetigung ausloesen.
 export const BESTAETIGEN_TEXTE: Record<
   Segment,
-  { vorstufeTitel: string; vorstufeText: string; schaltflaeche: string; titel: string; text: string; bereits: string; ungueltig: string }
+  { vorstufeTitel: string; vorstufeText: string; schaltflaeche: string; titel: string; text: string; bereits: string; ungueltig: string; technisch: string }
 > = {
   gewerbe: {
     vorstufeTitel: "Bitte bestätigen Sie Ihre Adresse",
@@ -123,6 +122,7 @@ export const BESTAETIGEN_TEXTE: Record<
     titel: "Ihre Adresse ist bestätigt",
     text: "Danke. Sie erhalten künftig gelegentlich E-Mail-Infos von Smarter Finanz zu Versicherung und Vorsorge für Betriebe, höchstens einmal im Monat. In jeder Ausgabe finden Sie einen Link zur Abmeldung.",
     bereits: "Ihre Adresse ist bereits bestätigt. Sie müssen nichts weiter tun.",
+    technisch: "Ihre Bestätigung konnte gerade technisch nicht gespeichert werden. Bitte klicken Sie den Link aus der Mail in Kürze noch einmal an.",
     ungueltig:
       "Dieser Bestätigungslink ist abgelaufen oder ungültig. Wenn Sie die E-Mail-Infos weiterhin möchten, wählen Sie die Option im Kontaktformular bitte noch einmal aus.",
   },
@@ -134,6 +134,7 @@ export const BESTAETIGEN_TEXTE: Record<
     titel: "Deine Adresse ist bestätigt",
     text: "Danke. Du bekommst künftig gelegentlich E-Mail-Infos von Smarter Finanz zu Absicherung, Vorsorge und Finanzen, höchstens alle zwei Monate. In jeder Ausgabe findest du einen Link zur Abmeldung.",
     bereits: "Deine Adresse ist bereits bestätigt. Du musst nichts weiter tun.",
+    technisch: "Deine Bestätigung konnte gerade technisch nicht gespeichert werden. Bitte klicke den Link aus der Mail in Kürze noch einmal an.",
     ungueltig:
       "Dieser Bestätigungslink ist abgelaufen oder ungültig. Wenn du die E-Mail-Infos weiterhin möchtest, wähle die Option im Kontaktformular bitte noch einmal aus.",
   },
@@ -142,14 +143,14 @@ export const BESTAETIGEN_TEXTE: Record<
 export const ABMELDEN_TEXTE: Record<Segment, { titel: string; text: string; bereits: string; ungueltig: string; technisch: string }> = {
   gewerbe: {
     titel: "Sie sind abgemeldet",
-    text: "Wir schicken Ihnen keine E-Mail-Infos mehr. Für diesen Zweck speichern wir nur noch einen Sperrvermerk und den Nachweis Ihrer früheren Einwilligung, damit Sie keine weiteren Infos erhalten und wir die Rechtmäßigkeit belegen können. Ihre Anfrage ist davon nicht betroffen.",
+    text: "Wir schicken Ihnen keine E-Mail-Infos mehr. Für diesen Zweck speichern wir noch Ihren Namen, Ihre E-Mail-Adresse, einen Sperrvermerk und den Nachweis Ihrer früheren Einwilligung, damit Sie keine weiteren Infos erhalten und wir die Rechtmäßigkeit belegen können. Ihre Anfrage ist davon nicht betroffen.",
     bereits: "Sie sind bereits abgemeldet.",
     ungueltig: "Dieser Link ist ungültig. Sie können sich auch formlos per E-Mail an a.tito@smarterfinanz.de abmelden.",
     technisch: "Ihre Abmeldung konnte gerade technisch nicht ausgeführt werden. Bitte antworten Sie auf die Mail oder schreiben Sie an a.tito@smarterfinanz.de. Wir tragen Sie dann umgehend aus.",
   },
   privat: {
     titel: "Du bist abgemeldet",
-    text: "Wir schicken dir keine E-Mail-Infos mehr. Für diesen Zweck speichern wir nur noch einen Sperrvermerk und den Nachweis deiner früheren Einwilligung, damit du keine weiteren Infos erhältst und wir die Rechtmäßigkeit belegen können. Deine Anfrage ist davon nicht betroffen.",
+    text: "Wir schicken dir keine E-Mail-Infos mehr. Für diesen Zweck speichern wir noch deinen Namen, deine E-Mail-Adresse, einen Sperrvermerk und den Nachweis deiner früheren Einwilligung, damit du keine weiteren Infos erhältst und wir die Rechtmäßigkeit belegen können. Deine Anfrage ist davon nicht betroffen.",
     bereits: "Du bist bereits abgemeldet.",
     ungueltig: "Dieser Link ist ungültig. Du kannst dich auch formlos per E-Mail an a.tito@smarterfinanz.de abmelden.",
     technisch: "Deine Abmeldung konnte gerade technisch nicht ausgeführt werden. Bitte antworte auf die Mail oder schreib an a.tito@smarterfinanz.de. Wir tragen dich dann umgehend aus.",

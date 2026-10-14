@@ -13,12 +13,18 @@
 // Kontaktlisten je Segment: ESPOCRM_NEWSLETTER_LISTE_GEWERBE / ESPOCRM_NEWSLETTER_LISTE_PRIVAT.
 // Versandfilter spaeter: in Segment-Liste UND cMailEinwilligung UND cDoiBestaetigt UND NICHT cMailSperre.
 // Keine E-Mail-Adressen in Logs, nur Kontakt-IDs.
+//
+// Bewusste Einschraenkungen (Rita N9, N13): Zwei exakt gleichzeitige Erstanmeldungen derselben neuen Adresse
+// koennen zwei Kontakte erzeugen. Die Abmeldung sperrt dann alle, der Versand muss je Adresse entdoppeln.
+// Die Sperre gilt an Kontakten, nicht an Leads/Firmen mit derselben Adresse.
 
 import { adressHash, type Segment, type TokenDaten } from "./newsletter";
 
 // Andre (Admin) im Produktions-EspoCRM, wie in lib/espocrm.ts.
 const ZUGEWIESEN_AN = "6a4526fc06043f992";
-const DOI_MIN_ABSTAND_MS = 24 * 60 * 60 * 1000;
+const TAG_MS = 24 * 60 * 60 * 1000;
+const DOI_MIN_ABSTAND_MS = TAG_MS; // eine DOI-Mail je Adresse und 24 Stunden
+const DOI_MIN_ABSTAND_GESPERRT_MS = 30 * TAG_MS; // an gesperrte Adressen hoechstens alle 30 Tage (Rita N4)
 
 const label = (s: Segment) => (s === "gewerbe" ? "Gewerbe" : "Privat");
 
@@ -48,12 +54,14 @@ async function fehler(res: Response, was: string): Promise<Error> {
 interface Kontakt {
   id: string;
   emailAddress?: string | null;
+  accountId?: string | null;
   cMailEinwilligung?: boolean;
   cMailEinwilligungZeitpunkt?: string | null;
   cMailEinwilligungText?: string | null;
   cMailSegment?: string | null;
   cDoiBestaetigt?: string | null;
   cMailSperre?: boolean;
+  cMailSperreZeitpunkt?: string | null;
   cMailAnfrageZeitpunkt?: string | null;
   cMailAnfrageText?: string | null;
   cMailAnfrageSegment?: string | null;
@@ -71,6 +79,17 @@ async function kontaktePerEmail(v: Verb, email: string): Promise<Kontakt[]> {
   const res = await fetch(`${v.base}/api/v1/Contact?${params.toString()}`, { headers: v.headers });
   if (!res.ok) throw await fehler(res, "Contact-Suche");
   return ((await res.json()) as { list?: Kontakt[] }).list ?? [];
+}
+
+// Bei Dubletten deterministisch waehlen (Rita N9): gesperrt vor bestaetigt vor offen vor sonstigen, dann nach ID.
+function rang(k: Kontakt): number {
+  if (k.cMailSperre) return 0;
+  if (k.cMailEinwilligung && k.cDoiBestaetigt) return 1;
+  if (k.cMailAnfrageZeitpunkt) return 2;
+  return 3;
+}
+function waehle(liste: Kontakt[]): Kontakt | undefined {
+  return [...liste].sort((a, b) => rang(a) - rang(b) || a.id.localeCompare(b.id))[0];
 }
 
 async function kontaktHolen(v: Verb, id: string): Promise<Kontakt | null> {
@@ -106,7 +125,7 @@ async function ereignis(v: Verb, id: string, text: string) {
 export type AnmeldungStatus =
   | "neu" // offene Anfrage geschrieben, DOI-Mail ist zu senden
   | "bereitsBestaetigt" // Adresse ist schon bestaetigt und nicht gesperrt, nichts zu senden
-  | "kuerzlichGesendet"; // gleiche offene Anfrage, DOI-Mail ging vor weniger als 24 Stunden raus
+  | "kuerzlichGesendet"; // es gibt eine offene Anfrage bzw. Sperre und die DOI-Mail ging kuerzlich raus, nichts zu senden
 
 export interface AnmeldungErgebnis {
   id: string;
@@ -136,19 +155,26 @@ export async function kontaktAnmelden(p: {
   };
 
   const treffer = await kontaktePerEmail(v, email);
-  if (treffer.length > 1) console.warn(`[newsletter] ${treffer.length} Kontakte mit derselben Adresse, nutze ${treffer[0].id}.`);
-  const k = treffer[0];
+  if (treffer.length > 1) console.warn(`[newsletter] ${treffer.length} Kontakte mit derselben Adresse, nutze ${waehle(treffer)?.id}.`);
+  const k = waehle(treffer);
   if (k) {
     if (k.cMailEinwilligung && k.cDoiBestaetigt && !k.cMailSperre && k.cMailSegment === seg && !k.cMailAnfrageZeitpunkt) {
       return { id: k.id, status: "bereitsBestaetigt", anfrageZeit: p.zeitpunkt };
     }
-    if (
-      k.cMailAnfrageZeitpunkt && k.cMailAnfrageSegment === seg && k.cMailAnfrageText === p.textVersion &&
-      k.cMailDoiGesendet && Date.now() - aus(k.cMailDoiGesendet) < DOI_MIN_ABSTAND_MS
-    ) {
-      return { id: k.id, status: "kuerzlichGesendet", anfrageZeit: new Date(aus(k.cMailAnfrageZeitpunkt)) };
+    // Schutz gegen Mail-Flut an fremde Adressen, unabhaengig vom Segment (Rita N3): bei offener Anfrage
+    // hoechstens eine DOI-Mail je 24 Stunden, an gesperrte Adressen hoechstens eine je 30 Tage (N4).
+    if (k.cMailDoiGesendet) {
+      const alter = Date.now() - aus(k.cMailDoiGesendet);
+      if ((k.cMailAnfrageZeitpunkt && alter < DOI_MIN_ABSTAND_MS) || (k.cMailSperre && alter < DOI_MIN_ABSTAND_GESPERRT_MS)) {
+        return {
+          id: k.id,
+          status: "kuerzlichGesendet",
+          anfrageZeit: k.cMailAnfrageZeitpunkt ? new Date(aus(k.cMailAnfrageZeitpunkt)) : p.zeitpunkt,
+        };
+      }
     }
-    await kontaktAendern(v, k.id, { ...anfrage, ...(p.accountId ? { accountId: p.accountId } : {}) });
+    // Firmenzuordnung eines bestehenden Kontakts nie umhaengen (Rita N2): nur setzen, wenn noch keine da ist.
+    await kontaktAendern(v, k.id, { ...anfrage, ...(p.accountId && !k.accountId ? { accountId: p.accountId } : {}) });
     await ereignis(v, k.id, `neue Anmeldung angefragt (Segment ${seg}, Textversion ${p.textVersion}), Bestaetigung steht aus`);
     return { id: k.id, status: "neu", anfrageZeit: p.zeitpunkt };
   }
@@ -174,11 +200,16 @@ export async function kontaktAnmelden(p: {
   return { id, status: "neu", anfrageZeit: p.zeitpunkt };
 }
 
-// Versandprotokoll der Double-Opt-in-Mail (Rita M3 Nr. 2).
+// Versandprotokoll der Double-Opt-in-Mail (Rita M3 Nr. 2). Zeitpunkt und Notiz getrennt abgesichert,
+// damit ein Fehler beim Zeitpunkt die Notiz nicht verhindert (Rita N6).
 export async function doiProtokollieren(contactId: string, gesendet: boolean): Promise<void> {
   const v = verbindung();
   if (!v) return;
-  if (gesendet) await kontaktAendern(v, contactId, { cMailDoiGesendet: espoDatetime() });
+  try {
+    if (gesendet) await kontaktAendern(v, contactId, { cMailDoiGesendet: espoDatetime() });
+  } catch (err) {
+    console.warn(`[newsletter] DOI-Zeitpunkt fuer Kontakt ${contactId} nicht gespeichert:`, err instanceof Error ? err.message : err);
+  }
   await ereignis(v, contactId, gesendet ? "Bestaetigungsmail (Double-Opt-in) versendet" : "Bestaetigungsmail NICHT versendet (SMTP fehlt oder Fehler)");
 }
 
@@ -186,10 +217,7 @@ export type SchrittErgebnis = "ok" | "bereits" | "ungueltig";
 
 async function listeVerknuepfen(v: Verb, id: string, segment: Segment) {
   const liste = listenId(segment);
-  if (!liste) {
-    console.warn("[newsletter] Keine Kontaktliste konfiguriert, Kontakt nicht in eine Liste aufgenommen.");
-    return;
-  }
+  if (!liste) throw new Error(`Keine Kontaktliste fuer Segment ${label(segment)} konfiguriert`); // Konfigurationsfehler, kein stilles Weitermachen (Rita N8)
   const res = await fetch(`${v.base}/api/v1/Contact/${encodeURIComponent(id)}/targetLists`, {
     method: "POST",
     headers: v.headers,
@@ -213,6 +241,8 @@ const SEGMENTE: Segment[] = ["gewerbe", "privat"];
 
 // Double-Opt-in: Bestaetigung nur fuer die OFFENE Anfrage, auf die der Link zeigt (Zeit und Segment muessen
 // passen). Kopiert erst jetzt in den bestaetigten Stand und hebt dabei eine Sperre auf.
+// Reihenfolge (Rita N8): erst in die Liste des neuen Segments, dann den Stand schreiben, dann die alte Liste
+// verlassen. Schlaegt ein Schritt fehl, bleibt die Anfrage offen und der Link laesst sich nochmal anklicken.
 export async function kontaktBestaetigen(t: TokenDaten): Promise<SchrittErgebnis> {
   const v = verbindung();
   if (!v) return "ungueltig";
@@ -227,6 +257,7 @@ export async function kontaktBestaetigen(t: TokenDaten): Promise<SchrittErgebnis
   if (k.cMailAnfrageZeitpunkt !== tokenZeit || k.cMailAnfrageSegment !== label(t.s)) return "ungueltig";
 
   const alt = SEGMENTE.find((s) => label(s) === k.cMailSegment);
+  await listeVerknuepfen(v, t.c, t.s);
   await kontaktAendern(v, t.c, {
     cMailEinwilligung: true,
     cMailEinwilligungZeitpunkt: k.cMailAnfrageZeitpunkt,
@@ -241,13 +272,15 @@ export async function kontaktBestaetigen(t: TokenDaten): Promise<SchrittErgebnis
     cMailAnfrageSegment: null,
   });
   if (alt && alt !== t.s) await listeLoesen(v, t.c, alt); // ein Kontakt, ein Segment zugleich
-  await listeVerknuepfen(v, t.c, t.s);
   await ereignis(v, t.c, `Adresse bestaetigt (Segment ${label(t.s)}, Textversion ${k.cMailAnfrageText ?? "?"}, Anfrage vom ${k.cMailAnfrageZeitpunkt}), Sperre aufgehoben`);
   return "ok";
 }
 
 // Abmeldung: Sperrvermerk an ALLEN Kontakten mit dieser Adresse, offene Anfrage verwerfen, aus beiden Listen
 // nehmen. Nachweisfelder des bestaetigten Stands bleiben erhalten. Wirkt sofort, ohne Rueckfrage.
+// Jeder Kontakt wird einzeln versucht (Rita N7): ein Fehler an einem Kontakt haelt die Sperre der anderen nicht auf.
+// Am Ende wird bei einem Fehler geworfen, damit die Seite den Ausweg per Mail nennt. Die Sperre wird vor dem
+// Listen-Entfernen gesetzt, sie ist massgeblich, die Listenentfernung nachrangig.
 export async function kontaktSperren(t: TokenDaten): Promise<SchrittErgebnis> {
   const v = verbindung();
   if (!v) return "ungueltig";
@@ -257,19 +290,35 @@ export async function kontaktSperren(t: TokenDaten): Promise<SchrittErgebnis> {
   for (const d of await kontaktePerEmail(v, k.emailAddress.toLowerCase())) alle.set(d.id, d);
 
   let geaendert = 0;
+  const fehlgeschlagen: string[] = [];
   for (const c of alle.values()) {
     if (c.cMailSperre && !c.cMailAnfrageZeitpunkt) continue;
-    await kontaktAendern(v, c.id, {
-      cMailSperre: true,
-      cMailSperreZeitpunkt: espoDatetime(),
-      cMailEinwilligung: false,
-      cMailAnfrageZeitpunkt: null,
-      cMailAnfrageText: null,
-      cMailAnfrageSegment: null,
-    });
-    for (const s of SEGMENTE) await listeLoesen(v, c.id, s);
+    try {
+      await kontaktAendern(v, c.id, {
+        cMailSperre: true,
+        // Der Anker der Aufbewahrungsfrist darf durch eine erneute Abmeldung nicht verschoben werden (Rita N15).
+        ...(c.cMailSperre && c.cMailSperreZeitpunkt ? {} : { cMailSperreZeitpunkt: espoDatetime() }),
+        cMailEinwilligung: false,
+        cMailAnfrageZeitpunkt: null,
+        cMailAnfrageText: null,
+        cMailAnfrageSegment: null,
+      });
+      geaendert++;
+    } catch (err) {
+      fehlgeschlagen.push(c.id);
+      console.error(`[newsletter] Sperre fuer Kontakt ${c.id} fehlgeschlagen:`, err instanceof Error ? err.message : err);
+      continue;
+    }
+    for (const s of SEGMENTE) {
+      try {
+        await listeLoesen(v, c.id, s);
+      } catch (err) {
+        fehlgeschlagen.push(c.id);
+        console.error(`[newsletter] Kontakt ${c.id} gesperrt, aber nicht aus Liste ${s} entfernt:`, err instanceof Error ? err.message : err);
+      }
+    }
     await ereignis(v, c.id, "Abmeldung, Sperrvermerk gesetzt, aus den Kontaktlisten entfernt");
-    geaendert++;
   }
+  if (fehlgeschlagen.length > 0) throw new Error(`Abmeldung nicht vollstaendig (Kontakte: ${[...new Set(fehlgeschlagen)].join(", ")}), bitte manuell pruefen`);
   return geaendert > 0 ? "ok" : "bereits";
 }

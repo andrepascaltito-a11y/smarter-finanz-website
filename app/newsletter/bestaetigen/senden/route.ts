@@ -6,7 +6,7 @@ import { kontaktBestaetigen, type SchrittErgebnis } from "@/lib/newsletter-crm";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-function weiter(req: Request, s: string, erg: SchrittErgebnis) {
+function weiter(req: Request, s: string, erg: SchrittErgebnis | "technisch") {
   return NextResponse.redirect(new URL(`/newsletter/bestaetigt?s=${s}&erg=${erg}`, req.url), 303);
 }
 
@@ -18,7 +18,8 @@ export async function POST(req: Request) {
   try {
     return weiter(req, daten.s, await kontaktBestaetigen(daten));
   } catch (err) {
-    console.error("[newsletter] Bestaetigung fehlgeschlagen:", err instanceof Error ? err.message : err);
-    return weiter(req, daten.s, "ungueltig");
+    console.error(`[newsletter] Bestaetigung fuer Kontakt ${daten.c} fehlgeschlagen:`, err instanceof Error ? err.message : err);
+    // Nicht "ungueltig": Die Person soll wissen, dass ein erneuter Klick hilft (Rita N8).
+    return weiter(req, daten.s, "technisch");
   }
 }

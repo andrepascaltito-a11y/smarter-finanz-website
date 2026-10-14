@@ -1,7 +1,8 @@
 // Newsletter (VORBEREITUNG): Schalter und signierte Links (Double-Opt-in, Abmeldung) ohne Datenbank.
 // Ein Token enthaelt Art, Kontakt-ID, Pruefsumme der Adresse (NICHT die Adresse selbst), Segment und
 // Anfragezeit, signiert mit HMAC-SHA256. Die Anfragezeit bindet den Bestaetigungslink an genau eine offene Anfrage.
-// Ohne NEWSLETTER_SECRET (mind. 32 Zeichen) oder ohne NEWSLETTER_ENABLED=true ist alles aus.
+// Ohne NEWSLETTER_ENABLED=true, NEWSLETTER_SECRET (mind. 32 Zeichen) und die uebrige Konfiguration
+// (siehe newsletterAktiv) ist alles aus.
 // Nur Node-Runtime (node:crypto), daher in Route Handlern und Server-Seiten nutzen.
 
 import { createHmac, timingSafeEqual } from "node:crypto";
@@ -24,8 +25,23 @@ function geheimnis(): string | null {
   return s && s.length >= 32 ? s : null;
 }
 
+// Nur aktiv, wenn alles Noetige gesetzt ist (Rita N8): Schalter, Geheimnis, CRM-Zugang, beide Kontaktlisten,
+// Mailzugang und Absenderadresse. Sonst waere die Kette halb eingeschaltet (Bestaetigung ohne Liste,
+// Mail im Namen des Hauptkontos statt der Alias-Adresse).
 export function newsletterAktiv(): boolean {
-  return process.env.NEWSLETTER_ENABLED === "true" && geheimnis() !== null;
+  const e = process.env;
+  const da = (v: string | undefined) => !!v && v.trim() !== "";
+  return (
+    e.NEWSLETTER_ENABLED === "true" &&
+    geheimnis() !== null &&
+    da(e.ESPOCRM_API_URL) &&
+    da(e.ESPOCRM_API_KEY) &&
+    da(e.ESPOCRM_NEWSLETTER_LISTE_GEWERBE) &&
+    da(e.ESPOCRM_NEWSLETTER_LISTE_PRIVAT) &&
+    da(e.SMTP_USER) &&
+    da(e.SMTP_APP_PASSWORD) &&
+    da(e.MAIL_FROM)
+  );
 }
 
 const b64 = (b: Buffer | string) => Buffer.from(b).toString("base64url");

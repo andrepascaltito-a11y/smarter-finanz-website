@@ -4,7 +4,7 @@ import { CONSENT_TEXT, CONSENT_VERSION, ERSTINFO_VERSION } from "@/lib/consent";
 import { HINWEIS_MAX, bereinigeErreichbarkeit } from "@/lib/erreichbarkeit";
 import { forwardToEspoCrm } from "@/lib/espocrm";
 import { sendErstinformation, sendLeadBenachrichtigung } from "@/lib/mailer";
-import { starteNewsletterAnmeldung, type NewsletterErgebnis } from "@/lib/newsletter-anmeldung";
+import { formularErgebnis, starteNewsletterAnmeldung, type NewsletterErgebnis } from "@/lib/newsletter-anmeldung";
 import { checkRateLimit } from "@/lib/ratelimit";
 import { isValidEmail, isValidGermanPhone, isValidName } from "@/lib/validation";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
@@ -45,6 +45,7 @@ function validateGewerbe(body: Partial<GewerbePayload>): string[] {
   if (!body.ansprechpartnerNachname || !isValidName(body.ansprechpartnerNachname))
     errors.push("ansprechpartnerNachname ungueltig");
   if (tooLong(body.firmenname, 150)) errors.push("firmenname zu lang");
+  if (tooLong(body.ansprechpartnerVorname, 80) || tooLong(body.ansprechpartnerNachname, 80)) errors.push("name zu lang");
   if (tooLong(body.branche, 150)) errors.push("branche zu lang");
   if (body.erreichbarkeit && tooLong(body.erreichbarkeit.hinweis, HINWEIS_MAX * 2)) errors.push("hinweis zu lang");
   return errors;
@@ -169,7 +170,7 @@ export async function POST(req: Request) {
 
   try {
     const sent = await sendErstinformation(payload.email, payload.art);
-    if (!sent) console.error("[lead] Erstinformation nicht versendet (SMTP fehlt), bitte manuell nachsenden:", payload.email);
+    if (!sent) console.error("[lead] Erstinformation nicht versendet (SMTP fehlt), bitte manuell nachsenden (Anfrage im CRM).");
   } catch (err) {
     console.error(
       "[lead] Erstinformations-Mail fehlgeschlagen:",
@@ -185,16 +186,16 @@ export async function POST(req: Request) {
       newsletterErgebnis = await starteNewsletterAnmeldung(payload, crmErgebnis.accountId);
     } catch (err) {
       console.error("[lead] Newsletter-Anmeldung fehlgeschlagen:", err instanceof Error ? err.message : err);
-      newsletterErgebnis = "keineMail";
+      newsletterErgebnis = "fehler";
     }
   }
 
   // Jede Anfrage erscheint zusaetzlich als E-Mail bei Andre (unabhaengig davon, ob das CRM erreichbar war).
   try {
-    await sendLeadBenachrichtigung(payload);
+    await sendLeadBenachrichtigung(payload, newsletterErgebnis);
   } catch (err) {
     console.error("[lead] Benachrichtigung fehlgeschlagen:", err instanceof Error ? err.message : err);
   }
 
-  return NextResponse.json({ ok: true, ...(newsletterErgebnis ? { newsletter: newsletterErgebnis } : {}) });
+  return NextResponse.json({ ok: true, ...(newsletterErgebnis ? { newsletter: formularErgebnis(newsletterErgebnis) } : {}) });
 }
