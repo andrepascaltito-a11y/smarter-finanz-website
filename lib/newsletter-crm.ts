@@ -165,6 +165,7 @@ export async function kontaktAnmelden(p: {
       ...anfrage,
       cMailEinwilligung: false,
       cMailSperre: false,
+      cNurNewsletter: true, // Kontakt existiert nur fuer den Newsletter (Loeschroutine fuer Unbestaetigte, Rita M1)
     }),
   });
   if (!res.ok) throw await fehler(res, "Contact anlegen");
