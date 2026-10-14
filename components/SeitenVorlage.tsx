@@ -119,6 +119,12 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
           </p>
         )}
 
+        {s.portrait && (
+          <figure className={styles.portrait}>
+            <Image src={s.portrait.datei} alt={s.portrait.alt} width={600} height={750} sizes="(max-width: 700px) 70vw, 280px" quality={80} />
+          </figure>
+        )}
+
         <div className={styles.einleitung}>
           {s.einleitung.map((t, i) => (
             <p key={i}>{t}</p>

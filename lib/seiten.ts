@@ -34,6 +34,8 @@ export type Seite = {
   stand: string;
   /** Hintergrundbild im Kopfband (Schluessel aus lib/bildnachweise.ts), bei zwei Orten beide */
   bilder?: OrtSchluessel[];
+  /** Nur Autorenseite: Portrait neben der Vita (Datei unter public/, Alternativtext beschreibt die Person) */
+  portrait?: { datei: string; alt: string };
   einleitung: string[];
   kurz: { frage: string; antwort: string }[];
   abschnitte: Abschnitt[];
