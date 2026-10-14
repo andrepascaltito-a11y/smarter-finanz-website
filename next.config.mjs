@@ -41,7 +41,13 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   async redirects() {
-    return [{ source: "/gewerbe", destination: "/", permanent: true }];
+    return [
+      { source: "/gewerbe", destination: "/", permanent: true },
+      // Es gibt keine Uebersichtsseiten unter /orte und /branchen, nur die Einzelseiten. Vorerst vorlaeufig (307),
+      // bis die Struktur steht, damit Browser und Suchmaschinen sich nichts Dauerhaftes merken.
+      { source: "/orte", destination: "/", permanent: false },
+      { source: "/branchen", destination: "/", permanent: false },
+    ];
   },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
