@@ -65,7 +65,8 @@ export default function Page() {
       diese Angaben ausschließlich, um einen Gesprächstermin mit dir abzustimmen (Art. 6 Abs. 1
       lit. b DSGVO, vorvertragliche Maßnahme auf deine Anfrage). Die Angaben sind freiwillig, ohne sie
       bearbeiten wir deine Anfrage ebenso. Sie werden zusammen mit deiner Anfrage in unserem
-      CRM-System gespeichert und in der internen Benachrichtigung über deine Anfrage verwendet. Bitte
+      CRM-System gespeichert, in der internen Benachrichtigung über deine Anfrage verwendet und wie die
+      Anfrage selbst behandelt (siehe Abschnitt 7). Bitte
       trage dort keine vertraulichen Angaben ein, insbesondere keine Gesundheits-, Vertrags- oder
       Kontodaten. Falls du es doch tust, löschen wir diese Angaben, sobald wir sie bemerken.
     </p>
@@ -104,10 +105,12 @@ export default function Page() {
 
     <h2>7. Speicherdauer</h2>
     <p>
-      Wenn keine Beratung oder kein Vertrag zustande kommt, löschen wir deine Angaben aus einer
-      Anfrage 12 Monate nach der letzten Bearbeitung. Kommt es zu einer Beratung oder einem
-      Vertrag, speichern wir deine Daten so lange, wie es dafür und für gesetzliche
-      Aufbewahrungspflichten erforderlich ist.
+      Wir speichern deine Angaben aus einer Anfrage, solange wir sie für die Beratung, die Anbahnung
+      oder die Durchführung eines Vertrags brauchen. Bei Unternehmen kann das länger dauern, zum
+      Beispiel bis zu einem Jahr oder mehr, wenn Kündigungsfristen zu beachten sind. Kommt keine
+      Beratung oder kein Vertrag zustande, löschen wir deine Angaben, sobald wir sie nicht mehr
+      brauchen, auf Wunsch jederzeit. Kommt es zu einer Beratung oder einem Vertrag, speichern wir
+      deine Daten so lange, wie es dafür und für gesetzliche Aufbewahrungspflichten erforderlich ist.
     </p>
     <p>
       Zum Nachweis deiner Einwilligung speichern wir Name, Telefonnummer, den Wortlaut der
@@ -135,7 +138,9 @@ export default function Page() {
           <strong>Double-Opt-in.</strong> Nach dem Absenden schicken wir dir eine Bestätigungsmail. Erst
           wenn du über den Link in dieser Mail auf der sich öffnenden Seite die Schaltfläche „Adresse
           bestätigen" anklickst, erhältst du E-Mail-Infos. Der Link ist 14 Tage gültig. Bestätigst du
-          nicht, löschen wir deine Angaben für diesen Zweck nach 14 Tagen.
+          nicht, ist der Link danach ungültig und du erhältst keine E-Mail-Infos. Die Angaben zu einer
+          nicht bestätigten Anmeldung speichern wir nur, bis wir sie bei der nächsten Durchsicht
+          unseres CRM-Systems löschen, auf Wunsch sofort.
         </p>
         <p>
           <strong>Welche Daten wir speichern.</strong> Name, E-Mail-Adresse, bei Anfragen als Unternehmen
@@ -151,7 +156,8 @@ export default function Page() {
           nur noch einen Sperrvermerk (E-Mail-Adresse und Zeitpunkt der Abmeldung) und die Nachweisdaten,
           damit du keine weiteren Infos erhältst und wir deine frühere Einwilligung belegen und uns gegen
           mögliche Ansprüche verteidigen können (Art. 6 Abs. 1 lit. f, Art. 17 Abs. 3 lit. e DSGVO). Wir
-          löschen sie mit Ablauf des dritten Jahres nach dem Jahr der Abmeldung.
+          speichern sie in der Regel bis zum Ablauf des dritten Jahres nach dem Jahr der Abmeldung und
+          löschen sie danach.
         </p>
         <p>
           <strong>Widerruf und Widerspruch.</strong> Du kannst deine Einwilligung jederzeit mit Wirkung

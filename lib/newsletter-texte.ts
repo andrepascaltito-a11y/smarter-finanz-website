@@ -81,7 +81,7 @@ export function doiMailText(segment: Segment, d: MailDaten): string {
 
 ${d.bestaetigungslink}
 
-Ohne Ihre Bestätigung schicken wir Ihnen keine solchen Infos. Wir löschen Ihre Adresse für diesen Zweck dann nach 14 Tagen. Wenn Sie das nicht angefordert haben, können Sie diese Mail ignorieren.
+Ohne Ihre Bestätigung schicken wir Ihnen keine solchen Infos. Der Bestätigungslink ist 14 Tage gültig. Wenn Sie das nicht angefordert haben, können Sie diese Mail ignorieren.
 
 Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen und der Nutzung Ihrer Daten für Werbung jederzeit widersprechen, per Klick auf den Abmeldelink in jeder Ausgabe oder formlos per Antwort auf diese Mail.
 
@@ -97,7 +97,7 @@ ${SIGNATUR}
 
 ${d.bestaetigungslink}
 
-Ohne deine Bestätigung schicken wir dir keine solchen Infos. Wir löschen deine Adresse für diesen Zweck dann nach 14 Tagen. Wenn du das nicht angefordert hast, kannst du diese Mail ignorieren.
+Ohne deine Bestätigung schicken wir dir keine solchen Infos. Der Bestätigungslink ist 14 Tage gültig. Wenn du das nicht angefordert hast, kannst du diese Mail ignorieren.
 
 Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen und der Nutzung deiner Daten für Werbung jederzeit widersprechen, per Klick auf den Abmeldelink in jeder Ausgabe oder formlos per Antwort auf diese Mail.
 
