@@ -11,6 +11,13 @@ export const dynamic = "force-dynamic";
 export default async function Page({ searchParams }: { searchParams: Promise<{ s?: string; erg?: string }> }) {
   const { s, erg } = await searchParams;
   const segment = s === "gewerbe" || s === "privat" ? s : null;
+  if (segment && erg === "technisch") {
+    return (
+      <NewsletterSeite titel="Abmeldung nicht ausgeführt">
+        <p className={legal.lead}>{ABMELDEN_TEXTE[segment].technisch}</p>
+      </NewsletterSeite>
+    );
+  }
   if (!segment || (erg !== "ok" && erg !== "bereits")) {
     const t = segment ? ABMELDEN_TEXTE[segment] : null;
     return (

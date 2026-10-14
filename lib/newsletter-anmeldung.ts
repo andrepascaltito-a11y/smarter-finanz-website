@@ -1,16 +1,28 @@
 // Newsletter (VORBEREITUNG): Anmeldung aus dem Kontaktformular. Speichert die (noch unbestaetigte)
-// Einwilligung am CRM-Kontakt und verschickt die Double-Opt-in-Mail. Wirkt nur bei aktivem Newsletter.
+// Einwilligung als OFFENE Anfrage am CRM-Kontakt und verschickt die Double-Opt-in-Mail. Wirkt nur bei aktivem
+// Newsletter. Rueckgabe sagt dem Formular, was wirklich passiert ist (Ritas E10: Erfolgstext muss stimmen).
 
 import { sendDoiMail } from "@/lib/mailer";
-import { newsletterAktiv, siteBasis, tokenErzeugen } from "@/lib/newsletter";
-import { kontaktAnmelden } from "@/lib/newsletter-crm";
+import { adressHash, newsletterAktiv, siteBasis, tokenErzeugen } from "@/lib/newsletter";
+import { istSammeladresse } from "@/lib/newsletter-adresse";
+import { doiProtokollieren, kontaktAnmelden } from "@/lib/newsletter-crm";
 import { NEWSLETTER_CHECKBOX } from "@/lib/newsletter-texte";
 import type { LeadPayload } from "@/lib/types";
 
-export async function starteNewsletterAnmeldung(payload: LeadPayload, accountId?: string): Promise<void> {
+export type NewsletterErgebnis =
+  | "mailGesendet" // Bestaetigungsmail ist raus
+  | "keineMail" // Anmeldung nicht wirksam (aus, Sammeladresse, CRM oder SMTP fehlt), nichts versprechen
+  | "bereitsBestaetigt" // Adresse ist schon eingetragen
+  | "kuerzlichGesendet"; // Mail ging vor weniger als 24 Stunden schon raus
+
+export async function starteNewsletterAnmeldung(payload: LeadPayload, accountId?: string): Promise<NewsletterErgebnis> {
   if (!newsletterAktiv()) {
     console.warn("[newsletter] Checkbox gesetzt, Newsletter ist aber nicht aktiv. Einwilligung NICHT gespeichert.");
-    return;
+    return "keineMail";
+  }
+  if (istSammeladresse(payload.email)) {
+    console.warn("[newsletter] Sammeladresse, Newsletter-Anmeldung ignoriert (Anfrage selbst laeuft normal).");
+    return "keineMail";
   }
   const segment = payload.art === "gewerbe" ? "gewerbe" : "privat";
   const vorname = payload.art === "gewerbe" ? payload.ansprechpartnerVorname : payload.vorname;
@@ -28,11 +40,19 @@ export async function starteNewsletterAnmeldung(payload: LeadPayload, accountId?
   });
   if (!ergebnis) {
     console.error("[newsletter] CRM nicht konfiguriert. Anmeldung nicht gespeichert, keine Bestaetigungsmail.");
-    return;
+    return "keineMail";
   }
-  if (ergebnis.bereitsBestaetigt) return;
+  if (ergebnis.status === "bereitsBestaetigt") return "bereitsBestaetigt";
+  if (ergebnis.status === "kuerzlichGesendet") return "kuerzlichGesendet";
 
-  const token = tokenErzeugen({ k: "doi", c: ergebnis.id, e: payload.email.trim().toLowerCase(), s: segment, t: jetzt.getTime() });
+  // Der Link zeigt auf genau diese offene Anfrage (Zeitpunkt) und nennt die Adresse nur als Pruefsumme.
+  const token = tokenErzeugen({
+    k: "doi",
+    c: ergebnis.id,
+    h: adressHash(payload.email),
+    s: segment,
+    t: ergebnis.anfrageZeit.getTime(),
+  });
   const basis = siteBasis();
   const gesendet = await sendDoiMail(payload.email.trim(), segment, {
     vorname,
@@ -41,5 +61,10 @@ export async function starteNewsletterAnmeldung(payload: LeadPayload, accountId?
     bestaetigungslink: `${basis}/newsletter/bestaetigen?token=${encodeURIComponent(token)}`,
     datenschutzlink: `${basis}/datenschutz#newsletter`,
   });
-  if (!gesendet) console.error("[newsletter] Double-Opt-in-Mail nicht versendet (SMTP fehlt), bitte manuell nachsenden:", payload.email);
+  await doiProtokollieren(ergebnis.id, gesendet).catch(() => console.warn("[newsletter] DOI-Protokoll nicht gespeichert."));
+  if (!gesendet) {
+    console.error(`[newsletter] Double-Opt-in-Mail nicht versendet (SMTP fehlt), Kontakt ${ergebnis.id} manuell nachfassen.`);
+    return "keineMail";
+  }
+  return "mailGesendet";
 }

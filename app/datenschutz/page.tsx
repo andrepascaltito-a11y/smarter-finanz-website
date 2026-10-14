@@ -62,9 +62,12 @@ export default function Page() {
     <p>
       Bei Anfragen als Unternehmen kannst du im Formular freiwillig angeben, wann du am besten
       erreichbar bist (Wochentage, Tageszeit, Gesprächsform und einen kurzen Hinweis). Wir verwenden
-      diese Angaben ausschließlich, um einen Gesprächstermin mit dir abzustimmen. Sie werden zusammen
-      mit deiner Anfrage gespeichert und nach denselben Regeln gelöscht (siehe Abschnitt 7). Bitte
-      trage dort keine vertraulichen Angaben ein.
+      diese Angaben ausschließlich, um einen Gesprächstermin mit dir abzustimmen (Art. 6 Abs. 1
+      lit. b DSGVO, vorvertragliche Maßnahme auf deine Anfrage). Die Angaben sind freiwillig, ohne sie
+      bearbeiten wir deine Anfrage ebenso. Sie werden zusammen mit deiner Anfrage in unserem
+      CRM-System gespeichert und in der internen Benachrichtigung über deine Anfrage verwendet. Bitte
+      trage dort keine vertraulichen Angaben ein, insbesondere keine Gesundheits-, Vertrags- oder
+      Kontodaten. Falls du es doch tust, löschen wir diese Angaben, sobald wir sie bemerken.
     </p>
     <p>
       <strong>Widerspruchsrecht:</strong> Soweit wir deine Daten aufgrund berechtigter Interessen
@@ -111,36 +114,68 @@ export default function Page() {
       Einwilligung und den Zeitpunkt bis zu fünf Jahre ab Erteilung der Einwilligung (Art. 6 Abs. 1
       lit. c DSGVO in Verbindung mit § 7a Abs. 2 UWG, hilfsweise Art. 6 Abs. 1 lit. f DSGVO).
     </p>
+    {NEWSLETTER_AKTIV && <p>Für die Daten zur E-Mail-Einwilligung gelten die Fristen aus Abschnitt 8.</p>}
 
     {NEWSLETTER_AKTIV && (
       <>
-        {/* ENTWURF (Claude, 14.10.2026), nur sichtbar bei NEXT_PUBLIC_NEWSLETTER_ENABLED=true.
-            Vor dem Livegang von Rita pruefen (Art. 7, 13 DSGVO, § 7 UWG), Versandweg und Loeschfristen ergaenzen. */}
+        {/* ENTWURF nach Ritas Ersatzfassung (M2, 14.10.2026), nur sichtbar bei NEXT_PUBLIC_NEWSLETTER_ENABLED=true.
+            Die Stellen mit [PRUEFEN] muessen VOR dem Livegang bestaetigt oder gestrichen werden (Versandweg, AVV,
+            Drittland-Garantie, Auswertung). Bei Textaenderung "Stand" unten aktualisieren. */}
         <h2 id="newsletter">8. E-Mail-Infos (Newsletter)</h2>
         <p>
           Wenn du im Kontaktformular die optionale Auswahl für E-Mail-Infos setzt, schicken wir dir
-          gelegentlich allgemeine Informationen von Smarter Finanz zu Versicherung, Vorsorge und Finanzen
-          per E-Mail (Werbung). Rechtsgrundlage ist deine ausdrückliche Einwilligung (Art. 6 Abs. 1
-          lit. a DSGVO, § 7 Abs. 2 Nr. 2 UWG). Die Einwilligung ist freiwillig und keine Voraussetzung
-          für deine Anfrage.
+          gelegentlich Informationen und Werbung von Smarter Finanz per E-Mail. Als Privatperson erhältst
+          du Infos zu Absicherung, Vorsorge und Finanzen, höchstens alle zwei Monate. Als Unternehmen
+          erhältst du Infos zu Versicherung und Vorsorge für Betriebe, höchstens einmal im Monat.
+          Verantwortlicher ist der in Abschnitt 1 genannte. Rechtsgrundlage ist deine ausdrückliche
+          Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 7 Abs. 2 Nr. 2 UWG). Die Einwilligung ist
+          freiwillig. Deine Anfrage bearbeiten wir auch ohne sie.
         </p>
         <p>
-          Wir nutzen das Double-Opt-in-Verfahren: Wir senden dir zuerst eine Bestätigungsmail, erst nach
-          deinem Klick auf den Bestätigungslink erhältst du E-Mail-Infos. Bestätigst du nicht, löschen
-          wir deine Adresse für diesen Zweck nach 14 Tagen. Zum Nachweis speichern wir deinen Namen,
-          deine E-Mail-Adresse, die Zielgruppe (Gewerbe oder Privat), die Version des Einwilligungstextes
-          sowie den Zeitpunkt der Einwilligung und der Bestätigung in unserem CRM-System (eigener Server
+          <strong>Double-Opt-in.</strong> Nach dem Absenden schicken wir dir eine Bestätigungsmail. Erst
+          wenn du über den Link in dieser Mail auf der sich öffnenden Seite die Schaltfläche „Adresse
+          bestätigen" anklickst, erhältst du E-Mail-Infos. Der Link ist 14 Tage gültig. Bestätigst du
+          nicht, löschen wir deine Angaben für diesen Zweck nach 14 Tagen.
+        </p>
+        <p>
+          <strong>Welche Daten wir speichern.</strong> Name, E-Mail-Adresse, bei Anfragen als Unternehmen
+          die Verknüpfung mit der Firma, die Zielgruppe (Gewerbe oder Privat), den Zeitpunkt deiner
+          Einwilligung, die Version des Einwilligungstextes, den Versandzeitpunkt der Bestätigungsmail und
+          den Zeitpunkt deiner Bestätigung. Die letzten vier Angaben dienen als Nachweis deiner
+          Einwilligung (Art. 7 Abs. 1 DSGVO). Wir speichern sie in unserem CRM-System (eigener Server
           innerhalb der EU).
         </p>
         <p>
-          Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, per Klick auf
-          den Abmeldelink in jeder Mail oder formlos per E-Mail an{" "}
-          <a href="mailto:a.tito@smarterfinanz.de">a.tito@smarterfinanz.de</a>. Danach speichern wir nur
-          noch einen Sperrvermerk (Adresse und Zeitpunkt der Abmeldung) und den Nachweis deiner
-          Einwilligung, damit du keine weiteren Infos erhältst und wir die Rechtmäßigkeit belegen
-          können (Art. 6 Abs. 1 lit. f DSGVO). Die Infos sind allgemeine Informationen, keine
-          individuelle Beratung.
+          <strong>Speicherdauer.</strong> Solange du E-Mail-Infos erhältst, speichern wir diese Angaben.
+          Meldest du dich ab oder widerrufst du, nehmen wir dich aus dem Verteiler. Danach speichern wir
+          nur noch einen Sperrvermerk (E-Mail-Adresse und Zeitpunkt der Abmeldung) und die Nachweisdaten,
+          damit du keine weiteren Infos erhältst und wir deine frühere Einwilligung belegen und uns gegen
+          mögliche Ansprüche verteidigen können (Art. 6 Abs. 1 lit. f, Art. 17 Abs. 3 lit. e DSGVO). Wir
+          löschen sie mit Ablauf des dritten Jahres nach dem Jahr der Abmeldung.
         </p>
+        <p>
+          <strong>Widerruf und Widerspruch.</strong> Du kannst deine Einwilligung jederzeit mit Wirkung
+          für die Zukunft widerrufen. Die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung bleibt davon
+          unberührt. Außerdem kannst du der Verwendung deiner Daten für Werbung jederzeit widersprechen
+          (Art. 21 Abs. 2 DSGVO). Dafür genügt der Klick auf den Abmeldelink in jeder Mail oder eine
+          formlose E-Mail an <a href="mailto:a.tito@smarterfinanz.de">a.tito@smarterfinanz.de</a>. Es
+          entstehen keine anderen Kosten als die üblichen Übermittlungskosten.
+        </p>
+        <p>
+          <strong>Empfänger.</strong> Die Bestätigungsmail und die E-Mail-Infos versenden wir über
+          [PRÜFEN vor Livegang: Google Workspace (Google Ireland Limited, Gordon House, Barrow Street,
+          Dublin 4, Irland) beziehungsweise den Versandweg, der zum Start gewählt ist]. Die Website wird
+          bei der Vercel Inc. gehostet (Abschnitt 2). Mit diesen Dienstleistern bestehen Verträge zur
+          Auftragsverarbeitung nach Art. 28 DSGVO [PRÜFEN: Abschluss belegen]. Soweit dabei Daten in die
+          USA gelangen, beruht die Übermittlung [PRÜFEN: auf dem Angemessenheitsbeschluss der
+          EU-Kommission zum EU-US Data Privacy Framework, soweit der Empfänger zertifiziert ist, im
+          Übrigen auf Standardvertragsklauseln].
+        </p>
+        <p>
+          <strong>Auswertung.</strong> [PRÜFEN, nur wenn zutreffend:] Wir werten nicht aus, ob und wann du
+          E-Mail-Infos öffnest oder auf Links klickst.
+        </p>
+        <p>Deine Rechte nach Abschnitt 6 (Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Beschwerde) gelten auch hierfür.</p>
       </>
     )}
 

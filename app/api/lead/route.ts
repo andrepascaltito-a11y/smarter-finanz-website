@@ -4,7 +4,7 @@ import { CONSENT_TEXT, CONSENT_VERSION, ERSTINFO_VERSION } from "@/lib/consent";
 import { HINWEIS_MAX, bereinigeErreichbarkeit } from "@/lib/erreichbarkeit";
 import { forwardToEspoCrm } from "@/lib/espocrm";
 import { sendErstinformation, sendLeadBenachrichtigung } from "@/lib/mailer";
-import { starteNewsletterAnmeldung } from "@/lib/newsletter-anmeldung";
+import { starteNewsletterAnmeldung, type NewsletterErgebnis } from "@/lib/newsletter-anmeldung";
 import { checkRateLimit } from "@/lib/ratelimit";
 import { isValidEmail, isValidGermanPhone, isValidName } from "@/lib/validation";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
@@ -178,11 +178,14 @@ export async function POST(req: Request) {
   }
 
   // Optional: Newsletter-Einwilligung (eigene Checkbox). Fehler hier duerfen die Anfrage nicht gefaehrden.
+  // Das Ergebnis geht ans Formular zurueck, damit der Erfolgstext nur verspricht, was wirklich passiert ist.
+  let newsletterErgebnis: NewsletterErgebnis | undefined;
   if (payload.newsletter === true) {
     try {
-      await starteNewsletterAnmeldung(payload, crmErgebnis.accountId);
+      newsletterErgebnis = await starteNewsletterAnmeldung(payload, crmErgebnis.accountId);
     } catch (err) {
       console.error("[lead] Newsletter-Anmeldung fehlgeschlagen:", err instanceof Error ? err.message : err);
+      newsletterErgebnis = "keineMail";
     }
   }
 
@@ -193,5 +196,5 @@ export async function POST(req: Request) {
     console.error("[lead] Benachrichtigung fehlgeschlagen:", err instanceof Error ? err.message : err);
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, ...(newsletterErgebnis ? { newsletter: newsletterErgebnis } : {}) });
 }

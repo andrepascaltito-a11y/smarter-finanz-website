@@ -11,7 +11,8 @@ import {
   type Erreichbarkeit,
 } from "@/lib/erreichbarkeit";
 import { ERFOLG_TEXTE, ERREICHBARKEIT_TEXTE, FEHLER_TEXTE } from "@/lib/formular-texte";
-import { NEWSLETTER_CHECKBOX, NEWSLETTER_ERFOLG_ZUSATZ } from "@/lib/newsletter-texte";
+import { istSammeladresse } from "@/lib/newsletter-adresse";
+import { NEWSLETTER_CHECKBOX, NEWSLETTER_ERFOLG_ZUSATZ, SAMMELADRESSE_HINWEIS, type NewsletterErgebnisText } from "@/lib/newsletter-texte";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
 
 // CONSENT_TEXT ist die einzige Quelle der Wahrheit fuer den Einwilligungstext
@@ -54,6 +55,7 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
   const [consent, setConsent] = useState(false);
   const [erstinfoZustimmung, setErstinfoZustimmung] = useState(false);
   const [newsletter, setNewsletter] = useState(false);
+  const [newsletterErgebnis, setNewsletterErgebnis] = useState<NewsletterErgebnisText | null>(null);
   const [hp, setHp] = useState("");
   const [startedAt] = useState(() => Date.now());
   const [status, setStatus] = useState<SubmitState>("idle");
@@ -99,12 +101,13 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      const data = (await res.json()) as { ok: boolean; message?: string };
+      const data = (await res.json()) as { ok: boolean; message?: string; newsletter?: NewsletterErgebnisText };
       if (!res.ok || !data.ok) {
         setStatus("error");
         setErrorMessage(data.message ?? FEHLER_TEXTE[art]);
         return;
       }
+      setNewsletterErgebnis(data.newsletter ?? null);
       setStatus("success");
     } catch {
       setStatus("error");
@@ -122,7 +125,7 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
               ? ERFOLG_TEXTE.gewerbeMitErreichbarkeit
               : ERFOLG_TEXTE.gewerbe}
         </p>
-        {NEWSLETTER_UI && newsletter && <p>{NEWSLETTER_ERFOLG_ZUSATZ[art === "gewerbe" ? "gewerbe" : "privat"]}</p>}
+        {NEWSLETTER_UI && newsletter && newsletterErgebnis && <p>{NEWSLETTER_ERFOLG_ZUSATZ[art === "gewerbe" ? "gewerbe" : "privat"][newsletterErgebnis]}</p>}
       </div>
     );
   }
@@ -389,11 +392,14 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
                 <input type="checkbox" checked={newsletter} onChange={(e) => setNewsletter(e.target.checked)} />
                 <span>
                   {vorLink}
-                  <a href="/datenschutz#newsletter">{NEWSLETTER_LINK_TEXT}</a>
+                  <a href="/datenschutz#newsletter" target="_blank" rel="noopener">{NEWSLETTER_LINK_TEXT}</a>
                   {nachLink}
                 </span>
               </label>
               <small className="field-hint">{nl.hinweis}</small>
+              {newsletter && istSammeladresse(email) && (
+                <small className="field-hint" role="note">{SAMMELADRESSE_HINWEIS[art === "gewerbe" ? "gewerbe" : "privat"]}</small>
+              )}
             </div>
           );
         })()}

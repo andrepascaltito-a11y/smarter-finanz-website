@@ -13,28 +13,48 @@ export const NEWSLETTER_CHECKBOX: Record<
   gewerbe: {
     zwischenzeile: "Optional: Infos per E-Mail",
     text:
-      "Ich möchte zusätzlich gelegentlich E-Mail-Infos von Smarter Finanz zu Versicherung und Vorsorge für Betriebe erhalten, höchstens einmal im Monat. " +
+      "Ich willige ein, dass Smarter Finanz mir gelegentlich Informationen und Werbung zu Versicherung und Vorsorge für Betriebe per E-Mail schickt, höchstens einmal im Monat. " +
+      "Ich bin berechtigt, dies für meinen Betrieb zu erklären. " +
       "Meine Adresse bestätige ich in einer separaten Mail per Klick. " +
       "Meine Einwilligung kann ich jederzeit mit Wirkung für die Zukunft widerrufen, zum Beispiel über den Abmeldelink in jeder Mail. " +
-      "Es gilt die Datenschutzerklärung.",
+      "Informationen zur Datenverarbeitung stehen in der Datenschutzerklärung.",
     hinweis: "Freiwillig. Ihre Anfrage bearbeiten wir auch ohne diese Auswahl.",
-    version: "smarterfinanz-newsletter-gewerbe-2026-10-v1",
+    version: "smarterfinanz-newsletter-gewerbe-2026-10-v2",
   },
   privat: {
     zwischenzeile: "Optional: Infos per E-Mail",
     text:
-      "Ich möchte zusätzlich gelegentlich E-Mail-Infos von Smarter Finanz zu Absicherung, Vorsorge und Finanzen erhalten, höchstens alle zwei Monate. " +
+      "Ich willige ein, dass Smarter Finanz mir gelegentlich Informationen und Werbung zu Absicherung, Vorsorge und Finanzen per E-Mail schickt, höchstens alle zwei Monate. " +
       "Meine Adresse bestätige ich in einer separaten Mail per Klick. " +
       "Meine Einwilligung kann ich jederzeit mit Wirkung für die Zukunft widerrufen, zum Beispiel über den Abmeldelink in jeder Mail. " +
-      "Es gilt die Datenschutzerklärung.",
+      "Informationen zur Datenverarbeitung stehen in der Datenschutzerklärung.",
     hinweis: "Freiwillig. Deine Anfrage bearbeiten wir auch ohne diese Auswahl.",
-    version: "smarterfinanz-newsletter-privat-2026-10-v1",
+    version: "smarterfinanz-newsletter-privat-2026-10-v2",
   },
 };
 
-export const NEWSLETTER_ERFOLG_ZUSATZ: Record<Segment, string> = {
-  gewerbe: "Für die E-Mail-Infos schicken wir Ihnen eine separate Mail zur Bestätigung. Erst nach Ihrem Klick darin erhalten Sie die Infos.",
-  privat: "Für die E-Mail-Infos schicken wir dir eine separate Mail zur Bestätigung. Erst nach deinem Klick darin bekommst du die Infos.",
+// Erfolgstext zur Newsletter-Auswahl, je nachdem, was der Server wirklich getan hat (Rita E10).
+export type NewsletterErgebnisText = "mailGesendet" | "keineMail" | "bereitsBestaetigt" | "kuerzlichGesendet";
+
+export const NEWSLETTER_ERFOLG_ZUSATZ: Record<Segment, Record<NewsletterErgebnisText, string>> = {
+  gewerbe: {
+    mailGesendet: "Für die E-Mail-Infos schicken wir Ihnen eine separate Mail zur Bestätigung. Erst nach Ihrem Klick darin erhalten Sie die Infos.",
+    kuerzlichGesendet: "Die Mail zur Bestätigung für die E-Mail-Infos haben wir Ihnen vor Kurzem geschickt. Bitte schauen Sie auch im Spam-Ordner nach.",
+    bereitsBestaetigt: "Für die E-Mail-Infos müssen Sie nichts weiter tun.",
+    keineMail: "Die Anmeldung für die E-Mail-Infos hat nicht geklappt. Ihre Anfrage ist trotzdem bei uns angekommen. Sie können die Infos später noch einmal anfordern.",
+  },
+  privat: {
+    mailGesendet: "Für die E-Mail-Infos schicken wir dir eine separate Mail zur Bestätigung. Erst nach deinem Klick darin bekommst du die Infos.",
+    kuerzlichGesendet: "Die Mail zur Bestätigung für die E-Mail-Infos haben wir dir vor Kurzem geschickt. Schau bitte auch im Spam-Ordner nach.",
+    bereitsBestaetigt: "Für die E-Mail-Infos musst du nichts weiter tun.",
+    keineMail: "Die Anmeldung für die E-Mail-Infos hat nicht geklappt. Deine Anfrage ist trotzdem bei uns angekommen. Du kannst die Infos später noch einmal anfordern.",
+  },
+};
+
+// Hinweis im Formular, wenn die Newsletter-Auswahl gesetzt ist und die Adresse eine Sammeladresse ist (Rita E2, Option A).
+export const SAMMELADRESSE_HINWEIS: Record<Segment, string> = {
+  gewerbe: "Für Sammeladressen bieten wir die E-Mail-Infos nicht an. Bitte geben Sie dafür eine persönliche Geschäftsadresse an. Ihre Anfrage senden Sie trotzdem ab.",
+  privat: "Für Sammeladressen wie info@ bieten wir die E-Mail-Infos nicht an. Bitte gib dafür eine persönliche Adresse an. Deine Anfrage kannst du trotzdem absenden.",
 };
 
 export const DOI_BETREFF = "Bitte bestätigen: E-Mail-Infos von Smarter Finanz";
@@ -119,18 +139,20 @@ export const BESTAETIGEN_TEXTE: Record<
   },
 };
 
-export const ABMELDEN_TEXTE: Record<Segment, { titel: string; text: string; bereits: string; ungueltig: string }> = {
+export const ABMELDEN_TEXTE: Record<Segment, { titel: string; text: string; bereits: string; ungueltig: string; technisch: string }> = {
   gewerbe: {
     titel: "Sie sind abgemeldet",
-    text: "Wir schicken Ihnen keine E-Mail-Infos mehr. Wir speichern nur noch einen Sperrvermerk, damit Sie keine weiteren Infos von uns erhalten. Ihre Anfrage ist davon nicht betroffen.",
+    text: "Wir schicken Ihnen keine E-Mail-Infos mehr. Für diesen Zweck speichern wir nur noch einen Sperrvermerk und den Nachweis Ihrer früheren Einwilligung, damit Sie keine weiteren Infos erhalten und wir die Rechtmäßigkeit belegen können. Ihre Anfrage ist davon nicht betroffen.",
     bereits: "Sie sind bereits abgemeldet.",
     ungueltig: "Dieser Link ist ungültig. Sie können sich auch formlos per E-Mail an a.tito@smarterfinanz.de abmelden.",
+    technisch: "Ihre Abmeldung konnte gerade technisch nicht ausgeführt werden. Bitte antworten Sie auf die Mail oder schreiben Sie an a.tito@smarterfinanz.de. Wir tragen Sie dann umgehend aus.",
   },
   privat: {
     titel: "Du bist abgemeldet",
-    text: "Wir schicken dir keine E-Mail-Infos mehr. Wir speichern nur noch einen Sperrvermerk, damit du keine weiteren Infos von uns erhältst. Deine Anfrage ist davon nicht betroffen.",
+    text: "Wir schicken dir keine E-Mail-Infos mehr. Für diesen Zweck speichern wir nur noch einen Sperrvermerk und den Nachweis deiner früheren Einwilligung, damit du keine weiteren Infos erhältst und wir die Rechtmäßigkeit belegen können. Deine Anfrage ist davon nicht betroffen.",
     bereits: "Du bist bereits abgemeldet.",
     ungueltig: "Dieser Link ist ungültig. Du kannst dich auch formlos per E-Mail an a.tito@smarterfinanz.de abmelden.",
+    technisch: "Deine Abmeldung konnte gerade technisch nicht ausgeführt werden. Bitte antworte auf die Mail oder schreib an a.tito@smarterfinanz.de. Wir tragen dich dann umgehend aus.",
   },
 };
 
