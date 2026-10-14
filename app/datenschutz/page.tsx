@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import styles from "../legal.module.css";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung – Smarter Finanz",
+  title: "Datenschutzerklärung | Smarter Finanz",
 };
 
 const NEWSLETTER_AKTIV = process.env.NEXT_PUBLIC_NEWSLETTER_ENABLED === "true";

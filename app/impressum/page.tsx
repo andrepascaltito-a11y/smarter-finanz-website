@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import styles from "../legal.module.css";
 
 export const metadata: Metadata = {
-  title: "Impressum – Smarter Finanz",
+  title: "Impressum | Smarter Finanz",
 };
 
 export default function Page() {
@@ -33,19 +33,19 @@ export default function Page() {
     <h2>Umsatzsteuer</h2>
     <p>Eine Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG ist derzeit nicht vorhanden.</p>
 
-    <h2>Berufsrechtliche Angaben – Versicherungsvermittlung (§ 34d GewO)</h2>
+    <h2>Berufsrechtliche Angaben: Versicherungsvermittlung (§ 34d GewO)</h2>
     <p>
       Erlaubnis als Versicherungsmakler gemäß § 34d Abs. 1 GewO, erteilt durch die IHK Hannover.<br />
       Vermittlerregister-Nr.: D-JOOT-NRHZP-02
     </p>
 
-    <h2>Berufsrechtliche Angaben – Finanzanlagenvermittlung (§ 34f GewO)</h2>
+    <h2>Berufsrechtliche Angaben: Finanzanlagenvermittlung (§ 34f GewO)</h2>
     <p>
       Erlaubnis als Finanzanlagenvermittler gemäß § 34f GewO, erteilt durch die IHK Hannover.<br />
       Vermittlerregister-Nr.: D-F-133-PEHS-92
     </p>
 
-    <h2>Berufsrechtliche Angaben – Immobiliardarlehensvermittlung (§ 34i GewO)</h2>
+    <h2>Berufsrechtliche Angaben: Immobiliardarlehensvermittlung (§ 34i GewO)</h2>
     <p>
       Erlaubnis als Immobiliardarlehensvermittler gemäß § 34i GewO, erteilt durch die IHK Hannover.<br />
       Vermittlerregister-Nr.: D-W-133-6P5U-60
@@ -76,7 +76,7 @@ export default function Page() {
     <h2>Schlichtungsstellen</h2>
     <p>
       Bei Streitigkeiten aus der Versicherungsvermittlung:<br />
-      Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin –
+      Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin,
       <a href="https://www.versicherungsombudsmann.de" target="_blank" rel="noopener">www.versicherungsombudsmann.de</a>
     </p>
     <p>

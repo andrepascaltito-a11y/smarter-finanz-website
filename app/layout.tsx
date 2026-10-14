@@ -30,14 +30,14 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.smarterfinanz.de"),
-  title: "Smarter Finanz – Finanzberatung auf Augenhöhe | Versicherungsmakler Raum Weser-Leine",
+  title: "Smarter Finanz: Finanzberatung auf Augenhöhe | Versicherungsmakler Raum Weser-Leine",
   description:
     "Smarter Finanz: Finanz- und Versicherungsmakler im Raum Weser-Leine, in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter. Steuerliche Aspekte bei Vorsorge und Vermögensaufbau, Versicherungen optimieren, transparent und auf Augenhöhe. Unverbindliches Erstgespräch.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    title: "Smarter Finanz – Finanzberatung auf Augenhöhe",
+    title: "Smarter Finanz: Finanzberatung auf Augenhöhe",
     description:
       "Als Versicherungsmakler nicht an einen Versicherer gebunden: Vermögensaufbau, Vorsorge und Absicherung. Unverbindliches Erstgespräch.",
     url: "https://www.smarterfinanz.de/",
