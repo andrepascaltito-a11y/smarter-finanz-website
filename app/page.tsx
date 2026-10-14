@@ -9,14 +9,14 @@ import styles from "./gewerbe-home.module.css";
 export const metadata: Metadata = {
   title: "Gewerbeversicherung & Beratung für Unternehmen | Smarter Finanz",
   description:
-    "Betriebshaftpflicht, Inhalt, Cyber, Flotte, D&O, bAV und mehr: Versicherungs- und Finanzberatung für Selbstständige und Unternehmen im Raum Weser-Leine, in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter.",
+    "Betriebshaftpflicht, Inhalt, Cyber, Flotte, D&O, bAV und mehr: Versicherungs- und Finanzberatung für Selbstständige und Unternehmen im Weser- und Leinebergland, in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "de_DE",
     title: "Gewerbeversicherung & Beratung für Unternehmen | Smarter Finanz",
     description:
-      "Absicherung und Vorsorge für Selbstständige und Betriebe, als Versicherungsmakler im Raum Weser-Leine, in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter.",
+      "Absicherung und Vorsorge für Selbstständige und Betriebe, als Versicherungsmakler im Weser- und Leinebergland, in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter.",
     url: "https://www.smarterfinanz.de/",
   },
 };
@@ -45,7 +45,7 @@ export default function Page() {
         <div className="wrap">
           <div className="audience-switch" role="group" aria-label="Für wen suchen Sie Beratung?"><a href="/" className="active" aria-current="page">Unternehmen &amp; Selbstständige</a><a href="/privat">Privatperson</a></div>
           <div><span className="eyebrow on-dark">Für Selbstständige &amp; Unternehmen</span></div>
-          <h1>Gewerbeversicherung und Finanzberatung für Unternehmen im Raum Weser-Leine</h1>
+          <h1>Gewerbeversicherung und Finanzberatung für Unternehmen im Weser- und Leinebergland</h1>
           <p>
             Ein Ansprechpartner für Absicherung und Vorsorge Ihres Betriebs. Als
             Versicherungsmakler vergleichen wir mehrere Gesellschaften und unterstützen Sie bei der

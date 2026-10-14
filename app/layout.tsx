@@ -7,7 +7,7 @@ const structuredData = {
   "@type": "InsuranceAgency",
   name: "Smarter Finanz",
   description:
-    "Finanz- und Versicherungsmakler im Raum Weser-Leine.",
+    "Finanz- und Versicherungsmakler im Weser- und Leinebergland.",
   url: "https://www.smarterfinanz.de/",
   telephone: "+49 170 8784889",
   email: "a.tito@smarterfinanz.de",
@@ -19,7 +19,7 @@ const structuredData = {
     addressCountry: "DE",
   },
   areaServed: [
-    "Raum Weser-Leine",
+    "Weser- und Leinebergland",
     { "@type": "City", name: "Alfeld (Leine)" },
     { "@type": "City", name: "Hildesheim" },
     { "@type": "City", name: "Hannover" },
@@ -30,9 +30,9 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.smarterfinanz.de"),
-  title: "Smarter Finanz: Finanzberatung auf Augenhöhe | Versicherungsmakler Raum Weser-Leine",
+  title: "Smarter Finanz: Finanzberatung auf Augenhöhe | Versicherungsmakler Weser- und Leinebergland",
   description:
-    "Smarter Finanz: Finanz- und Versicherungsmakler im Raum Weser-Leine, in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter. Steuerliche Aspekte bei Vorsorge und Vermögensaufbau, Versicherungen optimieren, transparent und auf Augenhöhe. Unverbindliches Erstgespräch.",
+    "Smarter Finanz: Finanz- und Versicherungsmakler im Weser- und Leinebergland, in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter. Steuerliche Aspekte bei Vorsorge und Vermögensaufbau, Versicherungen optimieren, transparent und auf Augenhöhe. Unverbindliches Erstgespräch.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
