@@ -240,7 +240,7 @@ export default function HomePage() {
         <a href="#termin" className="btn btn-gold" style={{alignItems: 'center', marginTop: '8px', padding: '12px 20px'}}>Termin vereinbaren</a>
       </div>
     </div>
-    <div className="loc-note">Persönliche Termine im gesamten <strong>Raum Weser-Leine</strong> – oder bequem per Video-Call. Sag uns einfach, was dir lieber ist.</div>
+    <div className="loc-note">Persönliche Termine im gesamten <strong>Raum Weser-Leine</strong>, zum Beispiel in Alfeld, Hildesheim, Hannover, Holzminden und Höxter – oder bequem per Video-Call. Sag uns einfach, was dir lieber ist.</div>
   </div>
 </section>
 

@@ -11,6 +11,7 @@ import {
   type Erreichbarkeit,
 } from "@/lib/erreichbarkeit";
 import { ERFOLG_TEXTE, ERREICHBARKEIT_TEXTE, FEHLER_TEXTE } from "@/lib/formular-texte";
+import { NEWSLETTER_CHECKBOX, NEWSLETTER_ERFOLG_ZUSATZ } from "@/lib/newsletter-texte";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
 
 // CONSENT_TEXT ist die einzige Quelle der Wahrheit fuer den Einwilligungstext
@@ -30,6 +31,11 @@ const THEMEN: Thema[] = [
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
+// Newsletter-Checkbox nur sichtbar, wenn der Newsletter freigegeben ist (Build-Variable, Standard: aus).
+// Der Server prueft zusaetzlich NEWSLETTER_ENABLED und NEWSLETTER_SECRET (lib/newsletter.ts).
+const NEWSLETTER_UI = process.env.NEXT_PUBLIC_NEWSLETTER_ENABLED === "true";
+const NEWSLETTER_LINK_TEXT = "Datenschutzerklärung";
+
 export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: "privatperson" | "gewerbe" }) {
   const [art, setArt] = useState<"privatperson" | "gewerbe">(defaultArt);
   const [vorname, setVorname] = useState("");
@@ -47,6 +53,7 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
   const [telefon, setTelefon] = useState("");
   const [consent, setConsent] = useState(false);
   const [erstinfoZustimmung, setErstinfoZustimmung] = useState(false);
+  const [newsletter, setNewsletter] = useState(false);
   const [hp, setHp] = useState("");
   const [startedAt] = useState(() => Date.now());
   const [status, setStatus] = useState<SubmitState>("idle");
@@ -66,7 +73,7 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
     setStatus("submitting");
     setErrorMessage(null);
 
-    const basis = { email, telefon, consent, erstinfoZustimmung, hp, formStartedAt: startedAt };
+    const basis = { email, telefon, consent, erstinfoZustimmung, newsletter: NEWSLETTER_UI && newsletter, hp, formStartedAt: startedAt };
     const payload: LeadPayload =
       art === "privatperson"
         ? ({
@@ -107,13 +114,16 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
 
   if (status === "success") {
     return (
-      <p className="kontakt-status success">
-        {art === "privatperson"
-          ? ERFOLG_TEXTE.privatperson
-          : erreichbarkeit
-            ? ERFOLG_TEXTE.gewerbeMitErreichbarkeit
-            : ERFOLG_TEXTE.gewerbe}
-      </p>
+      <div className="kontakt-status success">
+        <p>
+          {art === "privatperson"
+            ? ERFOLG_TEXTE.privatperson
+            : erreichbarkeit
+              ? ERFOLG_TEXTE.gewerbeMitErreichbarkeit
+              : ERFOLG_TEXTE.gewerbe}
+        </p>
+        {NEWSLETTER_UI && newsletter && <p>{NEWSLETTER_ERFOLG_ZUSATZ[art === "gewerbe" ? "gewerbe" : "privat"]}</p>}
+      </div>
     );
   }
 
@@ -123,14 +133,14 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
         <button
           type="button"
           className={`kontakt-tab${art === "privatperson" ? " active" : ""}`}
-          onClick={() => setArt("privatperson")}
+          onClick={() => { setArt("privatperson"); setNewsletter(false); }}
         >
           Privatperson
         </button>
         <button
           type="button"
           className={`kontakt-tab${art === "gewerbe" ? " active" : ""}`}
-          onClick={() => setArt("gewerbe")}
+          onClick={() => { setArt("gewerbe"); setNewsletter(false); }}
         >
           Unternehmer:in
         </button>
@@ -368,6 +378,25 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
             {ERSTINFO_TEXT} <a href="/erstinformation" target="_blank" rel="noopener">Erstinformation ansehen</a>
           </span>
         </label>
+
+        {NEWSLETTER_UI && (() => {
+          const nl = NEWSLETTER_CHECKBOX[art === "gewerbe" ? "gewerbe" : "privat"];
+          const [vorLink, nachLink] = nl.text.split(NEWSLETTER_LINK_TEXT);
+          return (
+            <div className="newsletter-optin">
+              <p className="optin-zwischen">{nl.zwischenzeile}</p>
+              <label className="consent-row">
+                <input type="checkbox" checked={newsletter} onChange={(e) => setNewsletter(e.target.checked)} />
+                <span>
+                  {vorLink}
+                  <a href="/datenschutz#newsletter">{NEWSLETTER_LINK_TEXT}</a>
+                  {nachLink}
+                </span>
+              </label>
+              <small className="field-hint">{nl.hinweis}</small>
+            </div>
+          );
+        })()}
 
         <button type="submit" className="btn btn-gold" disabled={status === "submitting"}>
           {status === "submitting" ? "Wird gesendet…" : "Unverbindlich anfragen"}

@@ -9,14 +9,14 @@ import styles from "./gewerbe-home.module.css";
 export const metadata: Metadata = {
   title: "Gewerbeversicherung & Beratung für Unternehmen | Smarter Finanz",
   description:
-    "Betriebshaftpflicht, Inhalt, Cyber, Flotte, D&O, bAV und mehr: Versicherungs- und Finanzberatung für Selbstständige und Unternehmen im Raum Weser-Leine.",
+    "Betriebshaftpflicht, Inhalt, Cyber, Flotte, D&O, bAV und mehr: Versicherungs- und Finanzberatung für Selbstständige und Unternehmen im Raum Weser-Leine, in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "de_DE",
     title: "Gewerbeversicherung & Beratung für Unternehmen | Smarter Finanz",
     description:
-      "Absicherung und Vorsorge für Selbstständige und Betriebe, als Versicherungsmakler im Raum Weser-Leine.",
+      "Absicherung und Vorsorge für Selbstständige und Betriebe, als Versicherungsmakler im Raum Weser-Leine, in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter.",
     url: "https://www.smarterfinanz.de/",
   },
 };
@@ -51,6 +51,7 @@ export default function Page() {
             Versicherungsmakler vergleichen wir mehrere Gesellschaften und unterstützen Sie bei der
             Schadenmeldung und -abwicklung.
           </p>
+          <p className={styles.orte}>Für Betriebe in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter.</p>
           <div className={styles.cta}>
             <a href="#anfrage" className="btn btn-gold">Gewerbe-Gespräch anfragen<small>Unverbindlich</small></a>
             <a href="/privat" className="btn btn-ghost">Sie suchen Beratung als Privatperson?<small>Zur Privatkunden-Seite</small></a>

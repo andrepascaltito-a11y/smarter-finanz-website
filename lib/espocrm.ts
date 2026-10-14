@@ -137,13 +137,15 @@ async function forwardGewerbe(
   base: string,
   headers: Record<string, string>,
   payload: GewerbePayload,
-): Promise<void> {
+): Promise<string> {
   const bestehendeId = await findeEindeutigeFirma(base, headers, payload.firmenname);
   const accountId = bestehendeId ?? (await legeNeueFirmaAn(base, headers, payload));
   await schreibeNotiz(base, headers, accountId, payload);
+  return accountId;
 }
 
-export async function forwardToEspoCrm(payload: LeadPayload): Promise<void> {
+// Gibt bei Gewerbe-Anfragen die Firmen-ID zurueck (fuer die Verknuepfung eines Newsletter-Kontakts).
+export async function forwardToEspoCrm(payload: LeadPayload): Promise<{ accountId?: string }> {
   const base = process.env.ESPOCRM_API_URL?.replace(/\/$/, "");
   const apiKey = process.env.ESPOCRM_API_KEY;
 
@@ -153,13 +155,13 @@ export async function forwardToEspoCrm(payload: LeadPayload): Promise<void> {
         "[lead] ESPOCRM_API_URL/ESPOCRM_API_KEY nicht gesetzt, CRM-Weiterleitung uebersprungen.",
       );
     }
-    return;
+    return {};
   }
 
   const headers = headersFor(apiKey);
   if (payload.art === "privatperson") {
     await forwardPrivatperson(base, headers, payload);
-  } else {
-    await forwardGewerbe(base, headers, payload);
+    return {};
   }
+  return { accountId: await forwardGewerbe(base, headers, payload) };
 }

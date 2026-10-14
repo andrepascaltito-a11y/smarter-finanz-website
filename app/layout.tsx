@@ -18,14 +18,21 @@ const structuredData = {
     addressLocality: "Alfeld",
     addressCountry: "DE",
   },
-  areaServed: "Raum Weser-Leine",
+  areaServed: [
+    "Raum Weser-Leine",
+    { "@type": "City", name: "Alfeld (Leine)" },
+    { "@type": "City", name: "Hildesheim" },
+    { "@type": "City", name: "Hannover" },
+    { "@type": "City", name: "Holzminden" },
+    { "@type": "City", name: "Höxter" },
+  ],
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.smarterfinanz.de"),
   title: "Smarter Finanz – Finanzberatung auf Augenhöhe | Versicherungsmakler Raum Weser-Leine",
   description:
-    "Smarter Finanz: Finanz- und Versicherungsmakler im Raum Weser-Leine. Steuerliche Aspekte bei Vorsorge und Vermögensaufbau, Versicherungen optimieren, transparent und auf Augenhöhe. Unverbindliches Erstgespräch.",
+    "Smarter Finanz: Finanz- und Versicherungsmakler im Raum Weser-Leine, in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter. Steuerliche Aspekte bei Vorsorge und Vermögensaufbau, Versicherungen optimieren, transparent und auf Augenhöhe. Unverbindliches Erstgespräch.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

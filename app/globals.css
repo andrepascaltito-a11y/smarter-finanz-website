@@ -265,3 +265,7 @@ html, body {
 .kontakt-form .field-hint{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
 .kontakt-form .field-count{text-align:right;margin-top:2px}
 @media (max-width:560px){.kontakt-form .chip{padding:9px 13px}}
+.kontakt-form .newsletter-optin{border-top:1px solid #e7e2d4;padding-top:14px;display:grid;gap:6px}
+.kontakt-form .optin-zwischen{margin:0;font-family:var(--sans);font-weight:700;font-size:13px;color:var(--text-dark)}
+.kontakt-status p{margin:0 0 8px}
+.kontakt-form .consent-row input[type="checkbox"]{width:auto;flex:0 0 auto;margin:3px 0 0;padding:0}

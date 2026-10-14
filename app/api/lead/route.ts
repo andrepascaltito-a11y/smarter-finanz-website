@@ -3,7 +3,8 @@ import { NextResponse } from "next/server";
 import { CONSENT_TEXT, CONSENT_VERSION, ERSTINFO_VERSION } from "@/lib/consent";
 import { HINWEIS_MAX, bereinigeErreichbarkeit } from "@/lib/erreichbarkeit";
 import { forwardToEspoCrm } from "@/lib/espocrm";
-import { sendErstinformation, sendGewerbeBenachrichtigung } from "@/lib/mailer";
+import { sendErstinformation, sendLeadBenachrichtigung } from "@/lib/mailer";
+import { starteNewsletterAnmeldung } from "@/lib/newsletter-anmeldung";
 import { checkRateLimit } from "@/lib/ratelimit";
 import { isValidEmail, isValidGermanPhone, isValidName } from "@/lib/validation";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
@@ -156,8 +157,9 @@ export async function POST(req: Request) {
   payload.erstinfoVersion = payload.art === "gewerbe" ? `${ERSTINFO_VERSION}-sie` : ERSTINFO_VERSION;
   payload.erstinfoTimestamp = payload.consentTimestamp;
 
+  let crmErgebnis: { accountId?: string } = {};
   try {
-    await forwardToEspoCrm(payload);
+    crmErgebnis = await forwardToEspoCrm(payload);
   } catch (err) {
     console.error(
       "[lead] EspoCRM-Weiterleitung fehlgeschlagen:",
@@ -175,15 +177,20 @@ export async function POST(req: Request) {
     );
   }
 
-  if (payload.art === "gewerbe") {
+  // Optional: Newsletter-Einwilligung (eigene Checkbox). Fehler hier duerfen die Anfrage nicht gefaehrden.
+  if (payload.newsletter === true) {
     try {
-      await sendGewerbeBenachrichtigung(payload);
+      await starteNewsletterAnmeldung(payload, crmErgebnis.accountId);
     } catch (err) {
-      console.error(
-        "[lead] Gewerbe-Benachrichtigung fehlgeschlagen:",
-        err instanceof Error ? err.message : err,
-      );
+      console.error("[lead] Newsletter-Anmeldung fehlgeschlagen:", err instanceof Error ? err.message : err);
     }
+  }
+
+  // Jede Anfrage erscheint zusaetzlich als E-Mail bei Andre (unabhaengig davon, ob das CRM erreichbar war).
+  try {
+    await sendLeadBenachrichtigung(payload);
+  } catch (err) {
+    console.error("[lead] Benachrichtigung fehlgeschlagen:", err instanceof Error ? err.message : err);
   }
 
   return NextResponse.json({ ok: true });

@@ -15,6 +15,9 @@ interface BasisPayload {
   consent: boolean;
   // Zustimmung zur Bereitstellung der Erstinformation ueber die Website (§ 16 Abs. 2 Nr. 2 VersVermV).
   erstinfoZustimmung: boolean;
+  // Optional: Einwilligung in E-Mail-Infos (Newsletter), eigene Checkbox, nicht vorangekreuzt. Nur wirksam,
+  // wenn der Newsletter serverseitig aktiviert ist (lib/newsletter.ts).
+  newsletter?: boolean;
   // Server setzt diese Felder serverseitig, Client-Werte werden ignoriert.
   consentTimestamp?: string;
   consentTextVersion?: string;

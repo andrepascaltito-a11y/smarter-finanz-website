@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Datenschutzerklärung – Smarter Finanz",
 };
 
+const NEWSLETTER_AKTIV = process.env.NEXT_PUBLIC_NEWSLETTER_ENABLED === "true";
+
 export default function Page() {
   return (
     <div className={styles.legalPage}>
@@ -58,6 +60,13 @@ export default function Page() {
       Aufbewahrungspflichten entgegenstehen.
     </p>
     <p>
+      Bei Anfragen als Unternehmen kannst du im Formular freiwillig angeben, wann du am besten
+      erreichbar bist (Wochentage, Tageszeit, Gesprächsform und einen kurzen Hinweis). Wir verwenden
+      diese Angaben ausschließlich, um einen Gesprächstermin mit dir abzustimmen. Sie werden zusammen
+      mit deiner Anfrage gespeichert und nach denselben Regeln gelöscht (siehe Abschnitt 7). Bitte
+      trage dort keine vertraulichen Angaben ein.
+    </p>
+    <p>
       <strong>Widerspruchsrecht:</strong> Soweit wir deine Daten aufgrund berechtigter Interessen
       (Art. 6 Abs. 1 lit. f DSGVO) verarbeiten, kannst du aus Gründen, die sich aus deiner besonderen
       Situation ergeben, jederzeit widersprechen. Gegen Werbung kannst du jederzeit widersprechen.
@@ -102,6 +111,38 @@ export default function Page() {
       Einwilligung und den Zeitpunkt bis zu fünf Jahre ab Erteilung der Einwilligung (Art. 6 Abs. 1
       lit. c DSGVO in Verbindung mit § 7a Abs. 2 UWG, hilfsweise Art. 6 Abs. 1 lit. f DSGVO).
     </p>
+
+    {NEWSLETTER_AKTIV && (
+      <>
+        {/* ENTWURF (Claude, 14.10.2026), nur sichtbar bei NEXT_PUBLIC_NEWSLETTER_ENABLED=true.
+            Vor dem Livegang von Rita pruefen (Art. 7, 13 DSGVO, § 7 UWG), Versandweg und Loeschfristen ergaenzen. */}
+        <h2 id="newsletter">8. E-Mail-Infos (Newsletter)</h2>
+        <p>
+          Wenn du im Kontaktformular die optionale Auswahl für E-Mail-Infos setzt, schicken wir dir
+          gelegentlich allgemeine Informationen von Smarter Finanz zu Versicherung, Vorsorge und Finanzen
+          per E-Mail (Werbung). Rechtsgrundlage ist deine ausdrückliche Einwilligung (Art. 6 Abs. 1
+          lit. a DSGVO, § 7 Abs. 2 Nr. 2 UWG). Die Einwilligung ist freiwillig und keine Voraussetzung
+          für deine Anfrage.
+        </p>
+        <p>
+          Wir nutzen das Double-Opt-in-Verfahren: Wir senden dir zuerst eine Bestätigungsmail, erst nach
+          deinem Klick auf den Bestätigungslink erhältst du E-Mail-Infos. Bestätigst du nicht, löschen
+          wir deine Adresse für diesen Zweck nach 14 Tagen. Zum Nachweis speichern wir deinen Namen,
+          deine E-Mail-Adresse, die Zielgruppe (Gewerbe oder Privat), die Version des Einwilligungstextes
+          sowie den Zeitpunkt der Einwilligung und der Bestätigung in unserem CRM-System (eigener Server
+          innerhalb der EU).
+        </p>
+        <p>
+          Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, per Klick auf
+          den Abmeldelink in jeder Mail oder formlos per E-Mail an{" "}
+          <a href="mailto:a.tito@smarterfinanz.de">a.tito@smarterfinanz.de</a>. Danach speichern wir nur
+          noch einen Sperrvermerk (Adresse und Zeitpunkt der Abmeldung) und den Nachweis deiner
+          Einwilligung, damit du keine weiteren Infos erhältst und wir die Rechtmäßigkeit belegen
+          können (Art. 6 Abs. 1 lit. f DSGVO). Die Infos sind allgemeine Informationen, keine
+          individuelle Beratung.
+        </p>
+      </>
+    )}
 
     <p style={{marginTop: '28px', fontSize: '13px', color: 'var(--muted)'}}>Stand: Oktober 2026</p>
 
