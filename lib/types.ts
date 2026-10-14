@@ -1,5 +1,7 @@
 // Zentrale Typdefinitionen fuer das Smarter-Finanz-Kontaktformular.
 
+import type { Erreichbarkeit } from "@/lib/erreichbarkeit";
+
 export type Thema =
   | "Steueroptimierung"
   | "Versicherungsvergleich"
@@ -37,6 +39,8 @@ export interface GewerbePayload extends BasisPayload {
   ansprechpartnerVorname: string;
   ansprechpartnerNachname: string;
   branche: string;
+  // Optional: wann die Ansprechperson am besten erreichbar ist (Terminwunsch statt Kalender).
+  erreichbarkeit?: Erreichbarkeit | null;
 }
 
 export type LeadPayload = PrivatpersonPayload | GewerbePayload;

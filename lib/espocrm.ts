@@ -2,6 +2,7 @@
 // ESPOCRM_API_URL und ESPOCRM_API_KEY gesetzt sind, sonst No-op.
 // Schlaegt nie hart fehl, Fehler werden im aufrufenden Handler geloggt.
 
+import { formatErreichbarkeit } from "@/lib/erreichbarkeit";
 import { toE164Phone } from "@/lib/validation";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload } from "@/lib/types";
 
@@ -86,6 +87,9 @@ async function schreibeNotiz(
     `Website-Kontakt: ${payload.ansprechpartnerVorname} ${payload.ansprechpartnerNachname}, ` +
     `Telefon ${toE164Phone(payload.telefon)}, E-Mail ${payload.email}` +
     (payload.branche ? `, Branche: ${payload.branche}` : "") +
+    (formatErreichbarkeit(payload.erreichbarkeit)
+      ? `. Erreichbarkeit (Terminwunsch): ${formatErreichbarkeit(payload.erreichbarkeit)}`
+      : "") +
     ` (Einwilligung ${payload.consentTextVersion} am ${payload.consentTimestamp} erteilt;` +
     ` Erstinformation-Zustimmung ${payload.erstinfoVersion} am ${payload.erstinfoTimestamp})`;
   const res = await fetch(`${base}/api/v1/Note`, {

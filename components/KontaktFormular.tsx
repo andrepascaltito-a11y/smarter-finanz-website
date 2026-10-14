@@ -3,6 +3,14 @@
 import { useState } from "react";
 
 import { CONSENT_TEXT, ERSTINFO_TEXT } from "@/lib/consent";
+import {
+  ERREICHBARKEIT_FORMEN,
+  ERREICHBARKEIT_TAGE,
+  ERREICHBARKEIT_ZEITEN,
+  HINWEIS_MAX,
+  type Erreichbarkeit,
+} from "@/lib/erreichbarkeit";
+import { ERFOLG_TEXTE, ERREICHBARKEIT_TEXTE, FEHLER_TEXTE } from "@/lib/formular-texte";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
 
 // CONSENT_TEXT ist die einzige Quelle der Wahrheit fuer den Einwilligungstext
@@ -31,6 +39,10 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
   const [ansprechpartnerVorname, setAnsprechpartnerVorname] = useState("");
   const [ansprechpartnerNachname, setAnsprechpartnerNachname] = useState("");
   const [branche, setBranche] = useState("");
+  const [tage, setTage] = useState<string[]>([]);
+  const [zeiten, setZeiten] = useState<string[]>([]);
+  const [gespraechsform, setGespraechsform] = useState<string | null>(null);
+  const [hinweis, setHinweis] = useState("");
   const [email, setEmail] = useState("");
   const [telefon, setTelefon] = useState("");
   const [consent, setConsent] = useState(false);
@@ -39,6 +51,15 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
   const [startedAt] = useState(() => Date.now());
   const [status, setStatus] = useState<SubmitState>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  function toggle(liste: string[], setListe: (v: string[]) => void, id: string) {
+    setListe(liste.includes(id) ? liste.filter((x) => x !== id) : [...liste, id]);
+  }
+
+  const erreichbarkeit: Erreichbarkeit | null =
+    tage.length || zeiten.length || gespraechsform || hinweis.trim()
+      ? { tage, zeiten, form: gespraechsform, hinweis: hinweis.trim() }
+      : null;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -62,6 +83,7 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
             ansprechpartnerVorname,
             ansprechpartnerNachname,
             branche,
+            erreichbarkeit,
           } satisfies GewerbePayload);
 
     try {
@@ -73,20 +95,24 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
       const data = (await res.json()) as { ok: boolean; message?: string };
       if (!res.ok || !data.ok) {
         setStatus("error");
-        setErrorMessage(data.message ?? "Etwas ist schiefgelaufen. Bitte versuche es erneut.");
+        setErrorMessage(data.message ?? FEHLER_TEXTE[art]);
         return;
       }
       setStatus("success");
     } catch {
       setStatus("error");
-      setErrorMessage("Etwas ist schiefgelaufen. Bitte versuche es erneut.");
+      setErrorMessage(FEHLER_TEXTE[art]);
     }
   }
 
   if (status === "success") {
     return (
       <p className="kontakt-status success">
-        Danke für deine Anfrage. Wir melden uns in Kürze bei dir. Die Erstinformation schicken wir dir per E-Mail.
+        {art === "privatperson"
+          ? ERFOLG_TEXTE.privatperson
+          : erreichbarkeit
+            ? ERFOLG_TEXTE.gewerbeMitErreichbarkeit
+            : ERFOLG_TEXTE.gewerbe}
       </p>
     );
   }
@@ -205,6 +231,92 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
                 onChange={(e) => setBranche(e.target.value)}
               />
             </div>
+
+            <fieldset className="erreichbar" aria-describedby="erreichbar-einleitung">
+              <legend>
+                {ERREICHBARKEIT_TEXTE.titel} <span>{ERREICHBARKEIT_TEXTE.badge}</span>
+              </legend>
+              <p className="erreichbar-intro" id="erreichbar-einleitung">{ERREICHBARKEIT_TEXTE.einleitung}</p>
+
+              <fieldset className="chip-fieldset" aria-describedby="hinweis-tage">
+                <legend>
+                  {ERREICHBARKEIT_TEXTE.tage.label} <small id="hinweis-tage">{ERREICHBARKEIT_TEXTE.tage.hinweis}</small>
+                </legend>
+                <div className="chip-row">
+                  {ERREICHBARKEIT_TAGE.map((o) => (
+                    <label key={o.id} className={`chip${tage.includes(o.id) ? " on" : ""}`}>
+                      <input
+                        type="checkbox"
+                        checked={tage.includes(o.id)}
+                        onChange={() => toggle(tage, setTage, o.id)}
+                      />
+                      {o.label}
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+
+              <fieldset className="chip-fieldset" aria-describedby="hinweis-zeiten">
+                <legend>
+                  {ERREICHBARKEIT_TEXTE.zeiten.label} <small id="hinweis-zeiten">{ERREICHBARKEIT_TEXTE.zeiten.hinweis}</small>
+                </legend>
+                <div className="chip-row">
+                  {ERREICHBARKEIT_ZEITEN.map((o) => (
+                    <label key={o.id} className={`chip${zeiten.includes(o.id) ? " on" : ""}`}>
+                      <input
+                        type="checkbox"
+                        checked={zeiten.includes(o.id)}
+                        onChange={() => toggle(zeiten, setZeiten, o.id)}
+                      />
+                      {o.label}
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+
+              <fieldset className="chip-fieldset" aria-describedby="hinweis-form">
+                <legend>
+                  {ERREICHBARKEIT_TEXTE.form.label} <small id="hinweis-form">{ERREICHBARKEIT_TEXTE.form.hinweis}</small>
+                </legend>
+                <div className="chip-row">
+                  {ERREICHBARKEIT_FORMEN.map((o) => (
+                    <label key={o.id} className={`chip${gespraechsform === o.id ? " on" : ""}`}>
+                      <input
+                        type="radio"
+                        name="gespraechsform"
+                        checked={gespraechsform === o.id}
+                        onChange={() => setGespraechsform(o.id)}
+                      />
+                      {o.label}
+                    </label>
+                  ))}
+                  {gespraechsform && (
+                    <button type="button" className="chip-reset" onClick={() => setGespraechsform(null)}>
+                      {ERREICHBARKEIT_TEXTE.form.zuruecksetzen}
+                    </button>
+                  )}
+                </div>
+              </fieldset>
+
+              <div>
+                <label htmlFor="erreichbar-hinweis">{ERREICHBARKEIT_TEXTE.hinweis.label}</label>
+                <input
+                  id="erreichbar-hinweis"
+                  type="text"
+                  maxLength={HINWEIS_MAX}
+                  placeholder={ERREICHBARKEIT_TEXTE.hinweis.platzhalter}
+                  aria-describedby="erreichbar-hinweis-hilfe"
+                  value={hinweis}
+                  onChange={(e) => setHinweis(e.target.value)}
+                />
+                <small className="field-hint" id="erreichbar-hinweis-hilfe">
+                  {ERREICHBARKEIT_TEXTE.hinweis.datenschutz}
+                </small>
+                <small className="field-hint field-count" aria-live={hinweis.length >= HINWEIS_MAX ? "polite" : "off"}>
+                  {ERREICHBARKEIT_TEXTE.hinweis.zaehler(hinweis.length)}
+                </small>
+              </div>
+            </fieldset>
           </>
         )}
 

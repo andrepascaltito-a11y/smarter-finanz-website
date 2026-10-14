@@ -246,3 +246,22 @@ html, body {
 .audience-switch a{padding:10px 20px;border-radius:999px;color:var(--cream);text-decoration:none;font-weight:600;font-size:14px}
 .audience-switch a.active{background:var(--gold);color:var(--green)}
 .audience-switch a:not(.active):hover{background:rgba(255,255,255,.12)}
+
+/* Gewerbe-Formular: Erreichbarkeit (optional) */
+.kontakt-form .erreichbar{border:1px solid #e7e2d4;border-radius:14px;padding:18px 18px 16px;margin:0;display:grid;gap:14px;background:rgba(255,255,255,.55)}
+.kontakt-form .erreichbar legend{font-family:var(--sans);font-weight:700;font-size:15px;padding:0 8px;color:var(--text-dark)}
+.kontakt-form .erreichbar legend span{font-weight:500;font-size:12px;color:var(--muted);margin-left:6px}
+.kontakt-form .erreichbar-intro{font-size:13px;color:var(--muted);margin:-4px 0 0}
+.kontakt-form .chip-fieldset{border:0;padding:0;margin:0;min-width:0}
+.kontakt-form .chip-fieldset legend{font-family:var(--sans);font-weight:600;font-size:13px;color:var(--text-dark);padding:0;margin-bottom:8px}
+.kontakt-form .chip-fieldset legend small{font-weight:400;color:var(--muted);margin-left:6px}
+.kontakt-form .chip-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.kontakt-form .chip{display:inline-flex;align-items:center;margin:0;padding:8px 14px;border-radius:999px;border:1px solid #e7e2d4;background:#fff;font-weight:500;font-size:14px;color:var(--text-dark);cursor:pointer;position:relative;transition:background .15s,border-color .15s}
+.kontakt-form .chip:hover{border-color:var(--emerald)}
+.kontakt-form .chip.on{background:var(--green);border-color:var(--green);color:var(--cream)}
+.kontakt-form .chip input{position:absolute;opacity:0;width:1px;height:1px;padding:0;pointer-events:none}
+.kontakt-form .chip:has(input:focus-visible){outline:2px solid var(--gold-deep);outline-offset:2px}
+.kontakt-form .chip-reset{background:none;border:none;color:var(--muted);font-size:12px;text-decoration:underline;cursor:pointer;padding:4px 6px;font-family:var(--sans)}
+.kontakt-form .field-hint{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
+.kontakt-form .field-count{text-align:right;margin-top:2px}
+@media (max-width:560px){.kontakt-form .chip{padding:9px 13px}}

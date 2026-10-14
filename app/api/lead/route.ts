@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { CONSENT_TEXT, CONSENT_VERSION, ERSTINFO_VERSION } from "@/lib/consent";
+import { HINWEIS_MAX, bereinigeErreichbarkeit } from "@/lib/erreichbarkeit";
 import { forwardToEspoCrm } from "@/lib/espocrm";
 import { sendErstinformation, sendGewerbeBenachrichtigung } from "@/lib/mailer";
 import { checkRateLimit } from "@/lib/ratelimit";
@@ -44,6 +45,7 @@ function validateGewerbe(body: Partial<GewerbePayload>): string[] {
     errors.push("ansprechpartnerNachname ungueltig");
   if (tooLong(body.firmenname, 150)) errors.push("firmenname zu lang");
   if (tooLong(body.branche, 150)) errors.push("branche zu lang");
+  if (body.erreichbarkeit && tooLong(body.erreichbarkeit.hinweis, HINWEIS_MAX * 2)) errors.push("hinweis zu lang");
   return errors;
 }
 
@@ -91,6 +93,7 @@ function trimLeadPayload(payload: LeadPayload): LeadPayload {
     ansprechpartnerVorname: payload.ansprechpartnerVorname.trim(),
     ansprechpartnerNachname: payload.ansprechpartnerNachname.trim(),
     branche: payload.branche.trim(),
+    erreichbarkeit: bereinigeErreichbarkeit(payload.erreichbarkeit),
   };
 }
 
@@ -149,7 +152,8 @@ export async function POST(req: Request) {
   payload.consentText = CONSENT_TEXT;
   payload.consentTextVersion = CONSENT_VERSION;
   payload.consentTimestamp = new Date().toISOString();
-  payload.erstinfoVersion = ERSTINFO_VERSION;
+  // Gesendete Variante mitschreiben: Inhalt gleich, Gewerbe in Sie-Fassung (Mia, 14.10.2026).
+  payload.erstinfoVersion = payload.art === "gewerbe" ? `${ERSTINFO_VERSION}-sie` : ERSTINFO_VERSION;
   payload.erstinfoTimestamp = payload.consentTimestamp;
 
   try {
@@ -162,7 +166,7 @@ export async function POST(req: Request) {
   }
 
   try {
-    const sent = await sendErstinformation(payload.email);
+    const sent = await sendErstinformation(payload.email, payload.art);
     if (!sent) console.error("[lead] Erstinformation nicht versendet (SMTP fehlt), bitte manuell nachsenden:", payload.email);
   } catch (err) {
     console.error(

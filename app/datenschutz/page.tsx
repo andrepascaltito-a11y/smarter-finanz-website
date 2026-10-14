@@ -79,8 +79,8 @@ export default function Page() {
     <p>
       Diese Website setzt <strong>keine Tracking- oder Marketing-Cookies</strong> ein und bindet keine
       Analyse- oder Werbedienste (z. B. Meta-Pixel oder Google Analytics) ein. Es findet kein Tracking
-      deines Surfverhaltens statt. Technisch notwendige Funktionen (z. B. das Merken deiner Kalender-
-      Zustimmung) werden ausschließlich lokal in deinem Browser gespeichert.
+      deines Surfverhaltens statt. Auch deine Kalender-Zustimmung gilt nur für die aktuelle
+      Seitenansicht und wird nicht in deinem Browser gespeichert.
     </p>
 
     <h2>6. Deine Rechte</h2>
