@@ -11,6 +11,32 @@ import BlogHeader from "./BlogHeader";
 import styles from "./seiten.module.css";
 
 const BASIS = "https://www.smarterfinanz.de";
+
+// Einfache Auszeichnung in Texten: **fett**, [Text](Ziel). Mit urls=true werden zusaetzlich nackte Webadressen
+// zu Links (Quellenlisten). Alles andere bleibt Text, React maskiert ihn.
+function Inline({ text, urls = false }: { text: string; urls?: boolean }) {
+  const re = urls
+    ? /\*\*(.+?)\*\*|\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]*)\)|(https?:\/\/[^\s]+)/g
+    : /\*\*(.+?)\*\*|\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]*)\)/g;
+  const teile: React.ReactNode[] = [];
+  let letzte = 0;
+  let m: RegExpExecArray | null;
+  let i = 0;
+  while ((m = re.exec(text))) {
+    if (m.index > letzte) teile.push(text.slice(letzte, m.index));
+    if (m[1] !== undefined) teile.push(<strong key={i++}>{m[1]}</strong>);
+    else if (m[2] !== undefined) teile.push(<a key={i++} href={m[3]}>{m[2]}</a>);
+    else if (m[4] !== undefined) {
+      const url = m[4].replace(/[.,;:)]+$/, "");
+      const rest = m[4].slice(url.length);
+      teile.push(<a key={i++} href={url} target="_blank" rel="noopener noreferrer">{url}</a>);
+      if (rest) teile.push(rest);
+    }
+    letzte = m.index + m[0].length;
+  }
+  if (letzte < text.length) teile.push(text.slice(letzte));
+  return <>{teile}</>;
+}
 const HUB_PFAD = "/weser-und-leinebergland";
 
 type Krume = { name: string; pfad?: string };
@@ -24,6 +50,7 @@ function krumen(s: Seite): Krume[] {
   if (s.typ === "ort") {
     return [start, { name: "Weser- und Leinebergland", pfad: linkErlaubt(HUB_PFAD) ? HUB_PFAD : undefined }, { name: kurzname(s) }];
   }
+  if (s.typ === "beitrag") return [start, { name: "Blog", pfad: "/blog" }, { name: kurzname(s) }];
   return [start, { name: kurzname(s) }];
 }
 
@@ -51,20 +78,20 @@ function strukturierteDaten(s: Seite) {
       ...(x.pfad ? { item: `${BASIS}${x.pfad === "/" ? "/" : x.pfad}` } : {}),
     })),
   };
+  const verantwortlich = { "@type": "Person", name: "André Pascal Tito", jobTitle: "Versicherungsmakler" };
+  const organisation = { "@type": "Organization", name: "Smarter Finanz", url: `${BASIS}/` };
+  // Kein "author" mit André als Person (Rita 14.10.2026): Verfasser ist die Organisation, André prueft und verantwortet.
   const seite =
     s.typ === "autor"
       ? {
           "@type": "ProfilePage",
           name: s.h1,
           url: `${BASIS}${pfad}`,
-          mainEntity: {
-            "@type": "Person",
-            name: "André Pascal Tito",
-            jobTitle: "Versicherungsmakler",
-            worksFor: { "@type": "InsuranceAgency", name: "Smarter Finanz", url: `${BASIS}/` },
-          },
+          mainEntity: { ...verantwortlich, worksFor: { "@type": "InsuranceAgency", name: "Smarter Finanz", url: `${BASIS}/` } },
         }
-      : { "@type": "WebPage", name: s.h1, description: s.description, url: `${BASIS}${pfad}` };
+      : s.typ === "beitrag"
+        ? { "@type": "Article", headline: s.h1, description: s.description, url: `${BASIS}${pfad}`, author: organisation, publisher: organisation, reviewedBy: verantwortlich }
+        : { "@type": "WebPage", name: s.h1, description: s.description, url: `${BASIS}${pfad}`, publisher: organisation, reviewedBy: verantwortlich };
   return { "@context": "https://schema.org", "@graph": [seite, brot] };
 }
 
@@ -108,6 +135,12 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
             ))}
           </nav>
           <h1>{s.h1}</h1>
+          {s.typ !== "autor" && (
+            <p className={styles.stand}>
+              Inhaltlich geprüft und verantwortet von {hatAutorenseite ? <a href="/ueber-andre">André Tito</a> : "André Tito"} (Versicherungsmakler, Erlaubnis nach
+              § 34d Abs. 1 GewO, Registernummer D-JOOT-NRHZP-02), Stand: {s.stand}
+            </p>
+          )}
         </div>
       </header>
 
@@ -127,7 +160,7 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
 
         <div className={styles.einleitung}>
           {s.einleitung.map((t, i) => (
-            <p key={i}>{t}</p>
+            <p key={i}><Inline text={t} /></p>
           ))}
         </div>
 
@@ -136,7 +169,7 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
             <p className={styles.kurzLabel}>Kurz beantwortet</p>
             {s.kurz.map((q, i) => (
               <p key={i}>
-                <strong>{q.frage}</strong> {q.antwort}
+                <strong><Inline text={q.frage} /></strong> <Inline text={q.antwort} />
               </p>
             ))}
           </aside>
@@ -144,12 +177,12 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
 
         {s.abschnitte.map((a, i) => {
           if (a.art === "h2") return <h2 key={i}>{a.text}</h2>;
-          if (a.art === "p") return <p key={i}>{a.text}</p>;
+          if (a.art === "p") return <p key={i}><Inline text={a.text} /></p>;
           if (a.art === "ul")
             return (
               <ul key={i}>
                 {a.punkte.map((p, j) => (
-                  <li key={j}>{p}</li>
+                  <li key={j}><Inline text={p} /></li>
                 ))}
               </ul>
             );
@@ -171,7 +204,7 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
                     {a.zeilen.map((z, j) => (
                       <tr key={j}>
                         {z.map((c, l) => (
-                          <td key={l}>{c}</td>
+                          <td key={l}><Inline text={c} /></td>
                         ))}
                       </tr>
                     ))}
@@ -189,24 +222,18 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
               {s.faq.map((f, i) => (
                 <details key={i}>
                   <summary>{f.frage}</summary>
-                  <p>{f.antwort}</p>
+                  {f.antwort.split("\n\n").map((t, k) => (
+                    <p key={k}><Inline text={t} /></p>
+                  ))}
                 </details>
               ))}
             </div>
           </>
         )}
 
-        {s.typ !== "autor" && (
-          <p className={styles.pruef}>
-            Inhaltlich geprüft und verantwortet von{" "}
-            {hatAutorenseite ? <a href="/ueber-andre">André Pascal Tito</a> : "André Pascal Tito"}, Versicherungsmakler (Erlaubnis nach § 34d GewO,
-            Register-Nr. D-JOOT-NRHZP-02). Stand: {s.stand}. Allgemeine Informationen, keine individuelle Rechts-, Steuer- oder Versicherungsberatung.
-          </p>
-        )}
-
         <div className={styles.cta}>
-          <strong>{s.cta.titel}</strong>
-          <p>{s.cta.text}</p>
+          {s.cta.titel && <strong>{s.cta.titel}</strong>}
+          <p><Inline text={s.cta.text} /></p>
           <a className={styles.knopf} href="/#anfrage">
             Unverbindlich anfragen
           </a>
@@ -230,7 +257,7 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
             Quellen
             <ol>
               {s.quellen.map((q, i) => (
-                <li key={i}>{q}</li>
+                <li key={i}><Inline text={q} urls /></li>
               ))}
             </ol>
           </div>
@@ -254,6 +281,10 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
             ))}
           </p>
         )}
+        <footer className={styles.fuss}>
+          <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutzerklärung</a> · <a href="/erstinformation">Erstinformation</a> ·{" "}
+          <a href="/">Smarter Finanz</a>
+        </footer>
       </main>
     </div>
   );

@@ -14,10 +14,10 @@ Zur Dokumentation hier der Inhalt (Stand 12.10.2026):
 Smarterfinanz, Einzelunternehmen, Inhaber: André Pascal Tito, Glenetalstraße 101 A, 31061 Alfeld (Leine), Telefon +49 170 8784889, E-Mail a.tito@smarterfinanz.de.
 
 2. Unser Status
-Wir sind als Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO tätig (Vermittlerregister-Nr. D-JOOT-NRHZP-02). Zusätzlich sind wir Finanzanlagenvermittler nach § 34f GewO (D-F-133-PEHS-92) und Immobiliardarlehensvermittler nach § 34i GewO (D-W-133-6P5U-60). Erlaubnisbehörde: IHK Hannover, Schiffgraben 49, 30175 Hannover.
+Wir sind als Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO tätig (Vermittlerregister-Nr. D-JOOT-NRHZP-02). Zusätzlich sind wir Finanzanlagenvermittler nach § 34f GewO (D-F-133-PEHS-92) und Immobiliardarlehensvermittler nach § 34i GewO (D-W-133-6P5U-60). Erlaubnisbehörde: IHK Hannover, Bischofsholer Damm 91, 30173 Hannover.
 
 3. Register prüfen
-Deutscher Industrie- und Handelskammertag e. V. (DIHK), Breite Straße 29, 10178 Berlin, Telefon 0180 600 585 0, www.vermittlerregister.info.
+DIHK | Deutsche Industrie- und Handelskammer, Breite Straße 29, 10178 Berlin, Telefon 0180 600 585 0, www.vermittlerregister.info.
 
 4. Beratung
 Wir bieten dir eine Beratung an. Wir legen ihr eine hinreichende Zahl von am Markt angebotenen Verträgen und Versicherern zugrunde (§ 60 Abs. 1 VVG). Zugang haben wir über Maklerpools (Maxpool, BlauDirekt). Wählen wir im Einzelfall eine eingeschränkte Auswahl, sagen wir dir das vor deiner Vertragserklärung ausdrücklich und nennen dir die berücksichtigten Versicherer in Textform.
@@ -55,10 +55,10 @@ Zur Dokumentation hier der Inhalt (Stand 12.10.2026):
 Smarterfinanz, Einzelunternehmen, Inhaber: André Pascal Tito, Glenetalstraße 101 A, 31061 Alfeld (Leine), Telefon +49 170 8784889, E-Mail a.tito@smarterfinanz.de.
 
 2. Unser Status
-Wir sind als Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO tätig (Vermittlerregister-Nr. D-JOOT-NRHZP-02). Zusätzlich sind wir Finanzanlagenvermittler nach § 34f GewO (D-F-133-PEHS-92) und Immobiliardarlehensvermittler nach § 34i GewO (D-W-133-6P5U-60). Erlaubnisbehörde: IHK Hannover, Schiffgraben 49, 30175 Hannover.
+Wir sind als Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO tätig (Vermittlerregister-Nr. D-JOOT-NRHZP-02). Zusätzlich sind wir Finanzanlagenvermittler nach § 34f GewO (D-F-133-PEHS-92) und Immobiliardarlehensvermittler nach § 34i GewO (D-W-133-6P5U-60). Erlaubnisbehörde: IHK Hannover, Bischofsholer Damm 91, 30173 Hannover.
 
 3. Register prüfen
-Deutscher Industrie- und Handelskammertag e. V. (DIHK), Breite Straße 29, 10178 Berlin, Telefon 0180 600 585 0, www.vermittlerregister.info.
+DIHK | Deutsche Industrie- und Handelskammer, Breite Straße 29, 10178 Berlin, Telefon 0180 600 585 0, www.vermittlerregister.info.
 
 4. Beratung
 Wir bieten Ihnen eine Beratung an. Wir legen ihr eine hinreichende Zahl von am Markt angebotenen Verträgen und Versicherern zugrunde (§ 60 Abs. 1 VVG). Zugang haben wir über Maklerpools (Maxpool, BlauDirekt). Wählen wir im Einzelfall eine eingeschränkte Auswahl, sagen wir Ihnen das vor Ihrer Vertragserklärung ausdrücklich und nennen Ihnen die berücksichtigten Versicherer in Textform.

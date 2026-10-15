@@ -51,9 +51,9 @@ export default function Page() {
       Vermittlerregister-Nr.: D-W-133-6P5U-60
     </p>
 
-    <h2>Registerführende Stelle (Vermittlerregister)</h2>
+    <h2>Gemeinsame Stelle nach § 11a Abs. 1 GewO (Vermittlerregister)</h2>
     <p>
-      Deutscher Industrie- und Handelskammertag e. V. (DIHK)<br />
+      DIHK | Deutsche Industrie- und Handelskammer<br />
       Breite Straße 29, 10178 Berlin<br />
       Telefon: 0180 600 585 0 (20 ct/Anruf aus dem dt. Festnetz, ggf. abweichend Mobilfunk)<br />
       Internet: <a href="https://www.vermittlerregister.info" target="_blank" rel="noopener">www.vermittlerregister.info</a>
@@ -62,8 +62,8 @@ export default function Page() {
     <h2>Zuständige Aufsichts-/Erlaubnisbehörde</h2>
     <p>
       Industrie- und Handelskammer Hannover<br />
-      Schiffgraben 49, 30175 Hannover<br />
-      <a href="https://www.hannover.ihk.de" target="_blank" rel="noopener">www.hannover.ihk.de</a>
+      Bischofsholer Damm 91, 30173 Hannover<br />
+      <a href="https://www.ihk.de/hannover" target="_blank" rel="noopener">www.ihk.de/hannover</a>
     </p>
 
     <h2>Berufshaftpflichtversicherung</h2>

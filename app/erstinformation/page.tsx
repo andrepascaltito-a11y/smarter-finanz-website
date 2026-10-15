@@ -37,13 +37,13 @@ export default function Page() {
         <p>
           Zusätzlich sind wir als Finanzanlagenvermittler nach § 34f GewO (Reg.-Nr. D-F-133-PEHS-92) und als
           Immobiliardarlehensvermittler nach § 34i GewO (Reg.-Nr. D-W-133-6P5U-60) eingetragen. Die Erlaubnis
-          wurde jeweils von der IHK Hannover, Schiffgraben 49, 30175 Hannover, erteilt.
+          wurde jeweils von der IHK Hannover, Bischofsholer Damm 91, 30173 Hannover, erteilt.
         </p>
 
         <h2>3. Eintrag im Vermittlerregister prüfen</h2>
         <p>
-          Unsere Eintragung kannst du bei der gemeinsamen Stelle prüfen: Deutscher Industrie- und
-          Handelskammertag e. V. (DIHK), Breite Straße 29, 10178 Berlin, Telefon 0180 600 585 0
+          Unsere Eintragung kannst du bei der gemeinsamen Stelle prüfen: DIHK | Deutsche Industrie- und
+          Handelskammer, Breite Straße 29, 10178 Berlin, Telefon 0180 600 585 0
           (20 ct/Anruf aus dem dt. Festnetz, ggf. abweichend Mobilfunk), Internet:{" "}
           <a href="https://www.vermittlerregister.info">www.vermittlerregister.info</a>. Gib dort unsere
           Registrierungsnummer ein.

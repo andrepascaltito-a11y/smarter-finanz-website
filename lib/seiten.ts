@@ -10,7 +10,7 @@ import type { OrtSchluessel } from "./bildnachweise";
 import { publishedPosts } from "./blog";
 import { SEITEN } from "./seiten-inhalt";
 
-export type SeitenTyp = "ort" | "branche" | "hub" | "autor";
+export type SeitenTyp = "ort" | "branche" | "hub" | "autor" | "beitrag";
 
 export type Abschnitt =
   | { art: "h2"; text: string }
@@ -20,7 +20,7 @@ export type Abschnitt =
 
 export type Seite = {
   typ: SeitenTyp;
-  /** ort: "alfeld" (unter /orte/alfeld), branche: "handwerk-bau", hub: "weser-und-leinebergland", autor: "ueber-andre" */
+  /** ort: "alfeld" (unter /orte/alfeld), branche: "handwerk-bau", beitrag: "versicherungen-kleingewerbe" (unter /blog/...), hub: "weser-und-leinebergland", autor: "ueber-andre" */
   slug: string;
   published: boolean;
   /** Komplett, inklusive "| Smarter Finanz", hoechstens 60 Zeichen */
@@ -43,12 +43,13 @@ export type Seite = {
   /** pfad wie "/orte/alfeld" oder "/blog/..." ; angezeigt werden nur Ziele, die sichtbar sind */
   links: { pfad: string; text: string }[];
   quellen: string[];
-  cta: { titel: string; text: string };
+  cta: { titel?: string; text: string };
 };
 
 export function seitenPfad(s: Pick<Seite, "typ" | "slug">): string {
   if (s.typ === "ort") return `/orte/${s.slug}`;
   if (s.typ === "branche") return `/branchen/${s.slug}`;
+  if (s.typ === "beitrag") return `/blog/${s.slug}`;
   return `/${s.slug}`; // Hub und Autorenseite liegen auf der ersten Ebene
 }
 
@@ -75,7 +76,7 @@ const FESTE_PFADE = new Set(["/", "/privat", "/erstinformation", "/impressum", "
 export function linkErlaubt(pfad: string): boolean {
   const p = pfad.replace(/\/$/, "") || "/";
   if (FESTE_PFADE.has(p) || p.startsWith("/#")) return true;
-  if (p.startsWith("/blog/")) return publishedPosts().some((b) => `/blog/${b.slug}` === p);
+  if (p.startsWith("/blog/") && publishedPosts().some((b) => `/blog/${b.slug}` === p)) return true;
   return sichtbareSeiten().some((s) => seitenPfad(s) === p);
 }
 
