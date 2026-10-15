@@ -104,6 +104,10 @@ export const SEITEN: Seite[] = [
       },
       {
         "art": "p",
+        "text": "Die dazugehörigen Sachkundeprüfungen habe ich vor der IHK bestanden. Die Bescheinigungen tragen die vorgeschriebenen Bezeichnungen „Geprüfter Fachmann für Versicherungsvermittlung IHK“ (§ 34d GewO), „Geprüfter Finanzanlagenfachmann IHK“ (§ 34f GewO) und „Geprüfter Fachmann für Immobiliardarlehensvermittlung IHK“ (§ 34i GewO)."
+      },
+      {
+        "art": "p",
         "text": "Das Vermittlerregister führen die Industrie- und Handelskammern. Sie bedienen sich dabei einer gemeinsamen Stelle, der DIHK, Deutsche Industrie- und Handelskammer (www.vermittlerregister.info). Eine Vermögensschaden-Haftpflichtversicherung für alle Erlaubnisse besteht, die Angaben dazu stehen im Impressum."
       },
       {
@@ -188,7 +192,8 @@ export const SEITEN: Seite[] = [
       "Erstinformation von Smarter Finanz, Stand 12.10.2026 (Vergütung, Auswahl, Zugang über Maklerpools), https://www.smarterfinanz.de/erstinformation.",
       "§ 59 VVG (Begriff des Versicherungsmaklers), § 60 VVG (hinreichende Zahl von Verträgen und Versicherern) und § 62 VVG (Textform), https://www.gesetze-im-internet.de/vvg_2008/__59.html, /__60.html und /__62.html. Abruf: 14.10.2026.",
       "§ 34d GewO und § 11a GewO (Vermittlerregister), https://www.gesetze-im-internet.de/gewo/__34d.html und /__11a.html. Abruf: 14.10.2026.",
-      "Vermittlerregister, https://www.vermittlerregister.info und https://www.vermittlerregister.info/impressum (Aufgabe der DIHK als gemeinsame Stelle). Abruf: 14.10.2026."
+      "Vermittlerregister, https://www.vermittlerregister.info und https://www.vermittlerregister.info/impressum (Aufgabe der DIHK als gemeinsame Stelle). Abruf: 14.10.2026.",
+      "Anlage 2 der VersVermV, der FinVermV und der ImmVermV (vorgeschriebene Bezeichnungen der Sachkundeprüfungen), https://www.gesetze-im-internet.de/versvermv_2018/, /finvermv/ und /immvermv/. Abruf: 15.10.2026."
     ],
     "cta": {
       "text": "Sie möchten wissen, wo Ihr Betrieb steht? Fragen Sie ein Gewerbe-Gespräch an. Das Gespräch ist unverbindlich. Wie ich als Versicherungsmakler vergütet werde, steht in der Erstinformation."
