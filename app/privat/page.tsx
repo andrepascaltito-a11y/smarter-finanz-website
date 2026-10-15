@@ -66,7 +66,7 @@ export default function HomePage() {
 
 <section className="manifesto">
   <div className="wrap">
-    <p>Der Ruf der Finanzbranche ist verbrannt. Berater sind nur noch Verkäufer von schlechten und intransparenten Produkten, um an dir Geld zu verdienen.</p>
+    <p>Der Ruf der Finanzbranche hat gelitten. Viele Beratungen sind produktgetrieben und für Kunden schwer durchschaubar.</p>
     <p>Wir wollen einen Unterschied machen und eine <strong>Arbeit auf Augenhöhe</strong> ermöglichen. Deshalb setzen wir auf <strong>Ehrlichkeit</strong>, nehmen uns ausreichend Zeit, komplizierte Lösungen <strong>einfach verständlich</strong> zu erklären, und <strong>helfen</strong> nur da, wo wir können.</p>
     <div className="sign">– Andre Tito</div>
   </div>
@@ -215,7 +215,7 @@ export default function HomePage() {
         Wir betreuen dich in vier Kernbereichen: Steueroptimierung, Versicherungsvergleich, Altersvorsorge &amp; Investment sowie Finanzierung &amp; Umschuldung. Als Makler sind wir nicht an einzelne Versicherer gebunden und vergleichen eine hinreichende Zahl von Anbietern.
       </FaqItem>
       <FaqItem question="Kostet das Beratungsgespräch Geld?">
-        Nein. Das Erstgespräch ist für dich kostenlos und unverbindlich. Unsere Vergütung erfolgt in der Regel über Provisionen der Produktanbieter – eine zusätzliche Vergütung durch dich ist nur möglich, wenn sie individuell vereinbart wird.
+        Nein. Das Erstgespräch ist für dich kostenlos und unverbindlich. Unsere Vergütung erfolgt in der Regel über Provisionen der Produktanbieter. Eine zusätzliche Vergütung durch dich gibt es nur, wenn du sie ausdrücklich mit uns vereinbarst. Einzelheiten stehen in der Erstinformation.
       </FaqItem>
       <FaqItem question="Wie unterscheidet ihr euch von anderen Anbietern, wie bspw. Banken?">
         Banken sind an ihre eigenen Produkte gebunden – wir nicht. Als Makler vergleichen wir eine hinreichende Zahl von Anbietern und wählen ausschließlich das aus, was für deine Situation am besten passt. Ehrlich, transparent und ohne Verkaufsdruck.
@@ -291,7 +291,7 @@ export default function HomePage() {
       </ul>
       </div>
     </div>
-    <p className="hinweis">Hinweis 1: Die Vergütung für die Vermittlung erfolgt in der Regel durch Provisionen von Produktanbietern. Eine zusätzliche Vergütung durch den Kunden ist möglich, sofern individuell vereinbart.<br />
+    <p className="hinweis">Hinweis 1: Die Vergütung für die Vermittlung erfolgt in der Regel durch Provisionen von Produktanbietern. Eine zusätzliche Vergütung durch den Kunden gibt es nur, wenn sie ausdrücklich vereinbart wird.<br />
     Hinweis 2: Es erfolgt keine steuerliche oder rechtliche Beratung. Für steuerliche oder rechtliche Fragen wenden Sie sich bitte an einen Steuerberater oder Rechtsanwalt.</p>
     <div className="foot-bottom">© {new Date().getFullYear()} Smarter Finanz. Alle Rechte vorbehalten.</div>
   </div>
