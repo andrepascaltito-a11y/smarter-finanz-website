@@ -21,7 +21,7 @@ export const SEITEN: Seite[] = [
       "alt": "André Pascal Tito, Versicherungsmakler in Alfeld (Leine)"
     },
     "einleitung": [
-      "Ich bin André Tito, Versicherungsmakler in Alfeld (Leine). Ich berate seit August 2018 Menschen und Betriebe zu Versicherung und Vorsorge, zu Beginn meiner Laufbahn noch im Angestelltenverhältnis. Heute bin ich Inhaber von Smarter Finanz und arbeite als Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO. In meiner Laufbahn habe ich mehr als 2.000 Kunden beraten, darunter auch Betriebe."
+      "Ich bin André Tito, Versicherungsmakler in Alfeld (Leine). Ich berate seit August 2018 Menschen und Betriebe zu Versicherung und Vorsorge, zu Beginn meiner Laufbahn noch im Angestelltenverhältnis. Heute bin ich Inhaber des Einzelunternehmens Smarterfinanz und arbeite als Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO. In meiner Laufbahn, einschließlich der Zeit im Angestelltenverhältnis, habe ich mehr als 2.000 Kunden beraten, darunter auch Betriebe."
     ],
     "kurz": [
       {
@@ -52,7 +52,7 @@ export const SEITEN: Seite[] = [
       },
       {
         "art": "p",
-        "text": "Das Thema ließ mich danach nicht mehr los. Ich wollte verstehen, wie das alles funktioniert. Ich machte eine Ausbildung zum Kaufmann für Büromanagement und legte parallel die IHK-Prüfungen für meine Erlaubnisse ab, vorbereitet mit den Schulungsangeboten eines Finanzvertriebs, bei dem ich damals als Berater tätig war. Dort habe ich gesehen, wie Vertrieb und Beratung im Alltag ablaufen. Daraus ist mein Anspruch entstanden: Ich möchte Menschen so beraten, dass der Vorschlag zu ihrer Situation passt."
+        "text": "Das Thema ließ mich danach nicht mehr los. Ich wollte verstehen, wie das alles funktioniert. Ich machte eine Ausbildung zum Kaufmann für Büromanagement und legte parallel die Sachkundeprüfungen vor der IHK für meine Erlaubnisse nach § 34d, § 34f und § 34i GewO ab, vorbereitet mit den Schulungsangeboten eines Finanzvertriebs, bei dem ich damals als Berater tätig war. Dort habe ich kennengelernt, wie Vertrieb und Beratung im Alltag ablaufen. Mein Anspruch ist es, Menschen so zu beraten, dass der Vorschlag zu ihrer Situation passt."
       },
       {
         "art": "h2",

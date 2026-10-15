@@ -57,8 +57,8 @@ export default function HomePage() {
 <section className="stats">
   <div className="wrap">
     <div className="stats-inner">
-      <div className="stat"><b>über 8 Jahre</b><div className="line"></div><span>Erfahrung in der Finanzbranche</span></div>
-      <div className="stat"><b>über 2.000</b><div className="line"></div><span>Kunden in meiner Laufbahn beraten</span></div>
+      <div className="stat"><b>über 8 Jahre</b><div className="line"></div><span>eigene Erfahrung in der Finanzbranche</span></div>
+      <div className="stat"><b>über 2.000</b><div className="line"></div><span>Kunden in meiner Laufbahn beraten, auch als Angestellter</span></div>
       <div className="stat"><b>§ 34d GewO</b><div className="line"></div><span>Versicherungsmakler mit IHK-Erlaubnis</span></div>
     </div>
   </div>
