@@ -21,7 +21,7 @@ export const SEITEN: Seite[] = [
       "alt": "André Pascal Tito, Versicherungsmakler in Alfeld (Leine)"
     },
     "einleitung": [
-      "Ich bin André Tito, Versicherungsmakler in Alfeld (Leine). Ich berate seit August 2018 Menschen und Betriebe zu Versicherung und Vorsorge, zu Beginn meiner Laufbahn noch im Angestelltenverhältnis. Heute bin ich Inhaber des Einzelunternehmens Smarterfinanz und arbeite als Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO. In meiner Laufbahn, einschließlich der Zeit im Angestelltenverhältnis, habe ich mehr als 2.000 Kunden beraten, darunter auch Betriebe."
+      "Ich bin André Tito, Versicherungsmakler in Alfeld (Leine). Ich berate seit August 2018 Menschen zu Versicherung und Vorsorge, zu Beginn meiner Laufbahn noch im Angestelltenverhältnis. Betriebe berate ich seit etwa 2021. Heute bin ich Inhaber des Einzelunternehmens Smarterfinanz und arbeite als Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO. In meiner Laufbahn, einschließlich der Zeit im Angestelltenverhältnis, habe ich mehr als 2.000 Kunden beraten, darunter auch Betriebe."
     ],
     "kurz": [
       {
