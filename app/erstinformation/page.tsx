@@ -18,7 +18,7 @@ export default function Page() {
         <h1>Erstinformation und Statusinformation</h1>
         <p className={styles.lead}>
           Angaben gemäß § 15 Versicherungsvermittlungsverordnung (VersVermV) sowie Informationen nach §§ 60, 62 VVG
-          zur Information des Kunden beim ersten Geschäftskontakt. Stand: 12.10.2026.
+          zur Information des Kunden beim ersten Geschäftskontakt. Stand: 15.10.2026.
         </p>
 
         <h2>1. Wer wir sind</h2>
@@ -63,8 +63,8 @@ export default function Page() {
         <ul>
           <li>
             Für die Vermittlung erhalten wir eine <strong>Provision (Courtage)</strong> vom
-            jeweiligen Versicherer. Sie ist in der Versicherungsprämie enthalten. Du zahlst dafür keinen
-            gesonderten Betrag an uns.
+            jeweiligen Versicherer. Sie ist in der Versicherungsprämie enthalten. Wir berechnen dir
+            dafür kein gesondertes Honorar.
           </li>
           <li>
             Zusätzlich erhalten wir von Versicherern bzw. Maklerpools weitere Zuwendungen, zum Beispiel
@@ -72,7 +72,7 @@ export default function Page() {
           </li>
           <li>
             Eine gesonderte Vergütung, die du direkt an uns zahlst, gibt es nur, wenn wir sie vorab
-            ausdrücklich mit dir vereinbaren. Ohne eine solche Vereinbarung zahlst du nichts an uns.
+            ausdrücklich mit dir vereinbaren. Ohne eine solche Vereinbarung berechnen wir dir kein gesondertes Honorar.
           </li>
         </ul>
 

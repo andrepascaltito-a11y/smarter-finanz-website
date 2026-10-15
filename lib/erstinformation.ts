@@ -8,7 +8,7 @@ export const ERSTINFO_MAIL_TEXT = `Vielen Dank für deine Anfrage bei Smarter Fi
 Zu Beginn unseres Kontakts informieren wir dich nach § 15 VersVermV über unseren Status und unsere Vergütung. Du findest die Erstinformation dauerhaft hier:
 ${ERSTINFO_URL}
 
-Zur Dokumentation hier der Inhalt (Stand 12.10.2026):
+Zur Dokumentation hier der Inhalt (Stand 15.10.2026):
 
 1. Wer wir sind
 Smarterfinanz, Einzelunternehmen, Inhaber: André Pascal Tito, Glenetalstraße 101 A, 31061 Alfeld (Leine), Telefon +49 170 8784889, E-Mail a.tito@smarterfinanz.de.
@@ -25,7 +25,7 @@ Wir bieten dir eine Beratung an. Wir legen ihr eine hinreichende Zahl von am Mar
 5. Unsere Vergütung
 - Für die Vermittlung erhalten wir eine Provision (Courtage) vom Versicherer. Sie ist in der Versicherungsprämie enthalten.
 - Zusätzlich erhalten wir von Versicherern bzw. Maklerpools weitere Zuwendungen, zum Beispiel Bestandspflegevergütungen und Boni.
-- Eine gesonderte Vergütung, die du direkt an uns zahlst, gibt es nur, wenn wir sie vorab ausdrücklich mit dir vereinbaren. Ohne eine solche Vereinbarung zahlst du nichts an uns.
+- Eine gesonderte Vergütung, die du direkt an uns zahlst, gibt es nur, wenn wir sie vorab ausdrücklich mit dir vereinbaren. Ohne eine solche Vereinbarung berechnen wir dir kein gesondertes Honorar.
 
 6. Beteiligungen
 Es bestehen keine Beteiligungen im Sinne des § 15 Abs. 1 Nr. 10 und 11 VersVermV.
@@ -49,7 +49,7 @@ export const ERSTINFO_MAIL_TEXT_SIE = `Vielen Dank für Ihre Anfrage bei Smarter
 Zu Beginn unseres Kontakts informieren wir Sie nach § 15 VersVermV über unseren Status und unsere Vergütung. Sie finden die Erstinformation dauerhaft hier:
 ${ERSTINFO_URL}
 
-Zur Dokumentation hier der Inhalt (Stand 12.10.2026):
+Zur Dokumentation hier der Inhalt (Stand 15.10.2026):
 
 1. Wer wir sind
 Smarterfinanz, Einzelunternehmen, Inhaber: André Pascal Tito, Glenetalstraße 101 A, 31061 Alfeld (Leine), Telefon +49 170 8784889, E-Mail a.tito@smarterfinanz.de.
@@ -66,7 +66,7 @@ Wir bieten Ihnen eine Beratung an. Wir legen ihr eine hinreichende Zahl von am M
 5. Unsere Vergütung
 - Für die Vermittlung erhalten wir eine Provision (Courtage) vom Versicherer. Sie ist in der Versicherungsprämie enthalten.
 - Zusätzlich erhalten wir von Versicherern bzw. Maklerpools weitere Zuwendungen, zum Beispiel Bestandspflegevergütungen und Boni.
-- Eine gesonderte Vergütung, die Sie direkt an uns zahlen, gibt es nur, wenn wir sie vorab ausdrücklich mit Ihnen vereinbaren. Ohne eine solche Vereinbarung zahlen Sie nichts an uns.
+- Eine gesonderte Vergütung, die Sie direkt an uns zahlen, gibt es nur, wenn wir sie vorab ausdrücklich mit Ihnen vereinbaren. Ohne eine solche Vereinbarung berechnen wir Ihnen kein gesondertes Honorar.
 
 6. Beteiligungen
 Es bestehen keine Beteiligungen im Sinne des § 15 Abs. 1 Nr. 10 und 11 VersVermV.

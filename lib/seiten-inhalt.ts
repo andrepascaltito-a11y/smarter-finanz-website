@@ -12,7 +12,7 @@ export const SEITEN: Seite[] = [
     "slug": "ueber-andre",
     "published": false,
     "title": "Über André Tito, Versicherungsmakler | Smarter Finanz",
-    "description": "André Pascal Tito, Versicherungsmakler in Alfeld (Leine): Erlaubnis nach § 34d GewO, Registernummer, Arbeitsweise. Seit über 7 Jahren in der Beratung.",
+    "description": "André Pascal Tito, Versicherungsmakler in Alfeld (Leine): Erlaubnis nach § 34d GewO, Registernummer, Arbeitsweise. Seit 2018 in der Beratung.",
     "h1": "André Pascal Tito, Versicherungsmakler in Alfeld (Leine)",
     "kurzname": "Über André",
     "stand": "Oktober 2026",
@@ -21,7 +21,7 @@ export const SEITEN: Seite[] = [
       "alt": "André Pascal Tito, Versicherungsmakler in Alfeld (Leine)"
     },
     "einleitung": [
-      "Ich bin André Tito, Versicherungsmakler in Alfeld (Leine). Ich berate seit über sieben Jahren Menschen und Betriebe zu Versicherung und Vorsorge. Heute arbeite ich als Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO. Mehr als 2.000 Kunden habe ich bisher betreut, darunter auch Betriebe."
+      "Ich bin André Tito, Versicherungsmakler in Alfeld (Leine). Ich berate seit August 2018 Menschen und Betriebe zu Versicherung und Vorsorge, zu Beginn meiner Laufbahn noch im Angestelltenverhältnis. Heute bin ich Inhaber von Smarter Finanz und arbeite als Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO. In meiner Laufbahn habe ich mehr als 2.000 Kunden beraten, darunter auch Betriebe."
     ],
     "kurz": [
       {
@@ -52,7 +52,7 @@ export const SEITEN: Seite[] = [
       },
       {
         "art": "p",
-        "text": "Das Thema ließ mich danach nicht mehr los. Ich wollte verstehen, wie das alles funktioniert. Ich machte eine Ausbildung zum Kaufmann für Büromanagement und legte parallel die IHK-Prüfungen für meine Erlaubnisse ab, vorbereitet mit den Schulungsangeboten eines Finanzvertriebs, bei dem ich damals tätig war. Dort habe ich gesehen, wie Vertrieb und Beratung im Alltag ablaufen. Daraus ist mein Anspruch entstanden: Ich möchte Menschen so beraten, dass der Vorschlag zu ihrer Situation passt."
+        "text": "Das Thema ließ mich danach nicht mehr los. Ich wollte verstehen, wie das alles funktioniert. Ich machte eine Ausbildung zum Kaufmann für Büromanagement und legte parallel die IHK-Prüfungen für meine Erlaubnisse ab, vorbereitet mit den Schulungsangeboten eines Finanzvertriebs, bei dem ich damals als Berater tätig war. Dort habe ich gesehen, wie Vertrieb und Beratung im Alltag ablaufen. Daraus ist mein Anspruch entstanden: Ich möchte Menschen so beraten, dass der Vorschlag zu ihrer Situation passt."
       },
       {
         "art": "h2",
