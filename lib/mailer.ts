@@ -10,7 +10,9 @@ import nodemailer from "nodemailer";
 
 import { formatErreichbarkeit } from "@/lib/erreichbarkeit";
 import { DOI_BETREFF, doiMailText, type Segment } from "@/lib/newsletter-texte";
-import { ERSTINFO_MAIL_BETREFF, ERSTINFO_MAIL_TEXT, ERSTINFO_MAIL_TEXT_SIE } from "@/lib/erstinformation";
+import { baueBegruessungsMail } from "@/lib/begruessung-mail";
+import { BEGRUESSUNG_TEXTE } from "@/lib/begruessung-texte";
+import { ERSTINFO_PDF_BASE64, ERSTINFO_PDF_DATEINAME } from "@/lib/erstinformation-pdf.generated";
 import type { LeadPayload } from "@/lib/types";
 
 // Standard-Empfaenger fuer neue Anfragen: Andres SmarterFinanz-Adresse (ueberschreibbar per NOTIFY_EMAIL_TO).
@@ -26,6 +28,9 @@ const NEWSLETTER_ZEILEN: Record<string, string> = {
   fehler: "Newsletter-Wunsch: angekreuzt, aber die Anmeldung ist FEHLGESCHLAGEN (CRM oder Mailversand). Bitte nachfassen.\n",
   nichtAktiv: "Newsletter-Wunsch: angekreuzt, Newsletter ist nicht aktiv, KEINE Einwilligung gespeichert.\n",
 };
+
+const ERSTINFO_FEHLT_ZEILE =
+  "ACHTUNG: Die Erstinformation (Begruessungsmail mit PDF) wurde an diese Person NICHT versendet. Bitte von Hand nachsenden, sonst fehlt ihr ein gesetzlich vorgeschriebenes Dokument.\n\n";
 
 function anfrageMail(payload: LeadPayload, newsletterErgebnis?: string): { subject: string; text: string } {
   const newsletter =
@@ -62,7 +67,7 @@ function anfrageMail(payload: LeadPayload, newsletterErgebnis?: string): { subje
 
 // Benachrichtigung ueber JEDE neue Anfrage (Gewerbe und Privat) per E-Mail, unabhaengig vom CRM.
 // Antworten gehen direkt an die Adresse des Interessenten (replyTo).
-export async function sendLeadBenachrichtigung(payload: LeadPayload, newsletterErgebnis?: string): Promise<void> {
+export async function sendLeadBenachrichtigung(payload: LeadPayload, newsletterErgebnis?: string, erstinfoVersendet = true): Promise<void> {
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_APP_PASSWORD;
   const to = process.env.NOTIFY_EMAIL_TO || STANDARD_EMPFAENGER;
@@ -81,21 +86,23 @@ export async function sendLeadBenachrichtigung(payload: LeadPayload, newsletterE
     auth: { user, pass },
   });
 
-  const { subject, text } = anfrageMail(payload, newsletterErgebnis);
+  const mail = anfrageMail(payload, newsletterErgebnis);
   await transporter.sendMail({
     from: process.env.MAIL_FROM || user,
     to,
     replyTo: payload.email,
-    subject,
-    text,
+    subject: erstinfoVersendet ? mail.subject : `[Erstinformation fehlt] ${mail.subject}`,
+    text: erstinfoVersendet ? mail.text : ERSTINFO_FEHLT_ZEILE + mail.text,
   });
 }
 
-// Bestaetigungsmail an den Kunden mit der Erstinformation (§ 16 Abs. 2 Nr. 2 VersVermV:
-// Adresse und genaue Fundstelle werden elektronisch mitgeteilt). Gibt true zurueck, wenn versendet.
+// Begruessungsmail an den Kunden. Die Erstinformation haengt als PDF an (§ 15 VersVermV, Textform auf dauerhaftem
+// Datentraeger), im Mailkoerper stehen die Begruessung, der Hinweis auf den Anhang und die dauerhafte Fundstelle auf der
+// Website (§ 16 Abs. 2 Nr. 2 VersVermV). Gibt true zurueck, wenn versendet.
 export async function sendErstinformation(
   to: string,
   art: "privatperson" | "gewerbe" = "privatperson",
+  mitAngaben = false,
 ): Promise<boolean> {
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_APP_PASSWORD;
@@ -104,12 +111,21 @@ export async function sendErstinformation(
     return false;
   }
   const transporter = nodemailer.createTransport({ service: "gmail", auth: { user, pass } });
+  const { subject, text, html } = baueBegruessungsMail(BEGRUESSUNG_TEXTE[art], art, mitAngaben);
   await transporter.sendMail({
     from: process.env.MAIL_FROM || user,
     to,
     replyTo: process.env.MAIL_FROM || user,
-    subject: art === "gewerbe" ? ERSTINFO_MAIL_BETREFF.gewerbe : ERSTINFO_MAIL_BETREFF.privatperson,
-    text: art === "gewerbe" ? ERSTINFO_MAIL_TEXT_SIE : ERSTINFO_MAIL_TEXT,
+    subject,
+    text,
+    html,
+    attachments: [
+      {
+        filename: ERSTINFO_PDF_DATEINAME,
+        content: Buffer.from(ERSTINFO_PDF_BASE64[art], "base64"),
+        contentType: "application/pdf",
+      },
+    ],
   });
   return true;
 }

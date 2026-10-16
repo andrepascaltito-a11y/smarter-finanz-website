@@ -5,7 +5,7 @@
   "description": "Smarter Finanz – Website mit Kontaktformular (Privatperson/Gewerbe)",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/pruefe-newsletter-marker.mjs",
+    "prebuild": "node scripts/pruefe-newsletter-marker.mjs && node scripts/erstinformation-pdf.mjs --pruefen",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

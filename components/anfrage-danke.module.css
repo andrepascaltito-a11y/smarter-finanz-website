@@ -1,0 +1,66 @@
+.danke{max-width:1000px;margin:0 auto;background:#fff;border:1px solid #e3ddc9;border-radius:28px;box-shadow:0 24px 60px rgba(14,42,30,.10);padding:44px 44px 36px;text-align:left;scroll-margin-top:24px}
+.kopf{display:flex;gap:26px;align-items:flex-start;padding-bottom:30px;border-bottom:1px solid #ece6d3}
+.haken{flex:0 0 72px;width:72px;height:72px}
+.kreis{fill:var(--green);stroke:var(--gold);stroke-width:2.5;stroke-dasharray:190;animation:kreis .8s ease-out .1s backwards}
+.strich{fill:none;stroke:var(--gold);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:46;animation:strich .45s ease-out .75s backwards}
+/* Grundzustand ist der fertige Zustand, die Animation startet nur den Aufbau (backwards): ohne Animation bleibt alles sichtbar */
+@keyframes kreis{from{stroke-dashoffset:190}}
+@keyframes strich{from{stroke-dashoffset:46}}
+.eyebrow{font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:6px}
+.danke h2{font-size:clamp(30px,4vw,44px);line-height:1.08;color:var(--green);margin:0;outline:none}
+.kern{margin:14px 0 0;font-size:18px;line-height:1.6;color:var(--text-dark);max-width:700px}
+
+.block{padding:30px 0 6px}
+.danke h3{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--emerald);margin:0 0 18px}
+.schritte{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative}
+.schritte li{display:flex;gap:14px;align-items:flex-start;background:var(--cream);border-radius:18px;padding:20px 18px;animation:rein .5s ease-out backwards}
+@keyframes rein{from{opacity:0;transform:translateY(10px)}}
+.nr{flex:0 0 38px;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;box-shadow:0 4px 12px rgba(228,193,92,.45)}
+.schritte strong{display:block;font-family:var(--serif);font-size:23px;line-height:1.15;color:var(--green);margin:0 0 6px;font-weight:600}
+.schritte p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+
+.zwei{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:22px}
+.karte{border:1px solid #e3ddc9;border-radius:18px;padding:24px 24px 20px}
+.karte p{margin:0 0 10px;font-size:15px;color:var(--muted);line-height:1.55}
+.karte ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.karte li{position:relative;padding-left:24px;font-size:15.5px;line-height:1.5;color:var(--text-dark)}
+.karte li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+
+.person{display:grid;grid-template-columns:96px 1fr auto;gap:22px;align-items:center;margin-top:22px;background:var(--green);color:var(--cream);border-radius:22px;padding:18px 28px 18px 18px}
+.foto{width:96px;height:120px;object-fit:cover;object-position:50% 20%;border-radius:14px;border:2px solid rgba(228,193,92,.55)}
+.personLabel{display:block;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.person strong{display:block;font-family:var(--serif);font-size:28px;line-height:1.1;font-weight:600;margin:2px 0 4px}
+.personText p{margin:0;font-size:15px;line-height:1.5;color:#dbe6de;max-width:460px}
+.eilt{display:flex;flex-direction:column;gap:6px;font-size:14.5px;line-height:1.5;padding-left:26px;border-left:1px solid rgba(255,255,255,.2);max-width:270px}
+.eilt span{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.eilt p{margin:0;color:#dbe6de}
+.eilt a{color:var(--cream);font-weight:500;text-decoration:underline;text-decoration-color:rgba(228,193,92,.6);text-underline-offset:3px}
+.eilt a:hover{color:var(--gold)}
+.eilt a[href^="tel:"]{white-space:nowrap}
+.rolle{display:block;font-size:13.5px;color:var(--gold);margin:0 0 6px}
+.reg{display:block;margin-top:6px;font-size:12.5px;color:#c8d6cd}
+.thema{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.klein{margin:8px 0 0 !important;font-size:13px !important;line-height:1.5;color:var(--muted)}
+.klein a{color:var(--emerald);text-decoration:underline}
+.schluss{margin:14px 0 0 !important;padding-top:12px;border-top:1px solid #ece6d3;font-family:var(--serif);font-style:italic;font-size:19px !important;line-height:1.35;color:var(--green) !important}
+.echo{margin-top:24px;background:var(--cream);border-radius:18px;padding:18px 22px}
+.echo h3{margin-bottom:12px}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{background:#fff;border:1px solid #e3ddc9;border-radius:999px;padding:6px 14px;font-size:14px;color:var(--green)}
+.echoHinweis{margin:12px 0 0;font-size:14px;color:var(--muted)}
+.zusatz{margin:18px 0 0;font-size:14px;color:var(--muted)}
+
+@media (max-width:900px){
+  .danke{padding:28px 20px 24px;border-radius:22px}
+  .kopf{gap:16px}
+  .haken{flex-basis:56px;width:56px;height:56px}
+  .kern{font-size:16.5px}
+  .schritte{grid-template-columns:1fr}
+  .zwei{grid-template-columns:1fr}
+  .person{grid-template-columns:76px 1fr;padding:16px}
+  .foto{width:76px;height:96px}
+  .eilt{grid-column:1 / -1;padding:14px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.2);max-width:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .kreis,.strich,.schritte li{animation:none}
+}

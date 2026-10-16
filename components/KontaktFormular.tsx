@@ -10,7 +10,9 @@ import {
   HINWEIS_MAX,
   type Erreichbarkeit,
 } from "@/lib/erreichbarkeit";
-import { ERFOLG_TEXTE, ERREICHBARKEIT_TEXTE, FEHLER_TEXTE } from "@/lib/formular-texte";
+import { AnfrageDanke } from "@/components/AnfrageDanke";
+import { DANKE_TEXTE } from "@/lib/danke-texte";
+import { ERREICHBARKEIT_TEXTE, FEHLER_TEXTE } from "@/lib/formular-texte";
 import { istSammeladresse } from "@/lib/newsletter-adresse";
 import { NEWSLETTER_CHECKBOX, NEWSLETTER_ERFOLG_ZUSATZ, SAMMELADRESSE_HINWEIS, type NewsletterErgebnisText } from "@/lib/newsletter-texte";
 import type { GewerbePayload, LeadPayload, PrivatpersonPayload, Thema } from "@/lib/types";
@@ -116,18 +118,14 @@ export function KontaktFormular({ defaultArt = "privatperson" }: { defaultArt?: 
   }
 
   if (status === "success") {
-    return (
-      <div className="kontakt-status success">
-        <p>
-          {art === "privatperson"
-            ? ERFOLG_TEXTE.privatperson
-            : erreichbarkeit
-              ? ERFOLG_TEXTE.gewerbeMitErreichbarkeit
-              : ERFOLG_TEXTE.gewerbe}
-        </p>
-        {NEWSLETTER_UI && newsletter && newsletterErgebnis && <p>{NEWSLETTER_ERFOLG_ZUSATZ[art === "gewerbe" ? "gewerbe" : "privat"][newsletterErgebnis]}</p>}
-      </div>
-    );
+    const danke =
+      art === "privatperson"
+        ? DANKE_TEXTE.privatperson
+        : erreichbarkeit
+          ? DANKE_TEXTE.gewerbeMitErreichbarkeit
+          : DANKE_TEXTE.gewerbe;
+    const zusatz = NEWSLETTER_UI && newsletter && newsletterErgebnis ? NEWSLETTER_ERFOLG_ZUSATZ[art === "gewerbe" ? "gewerbe" : "privat"][newsletterErgebnis] : null;
+    return <AnfrageDanke text={danke} zusatz={zusatz} firmenname={art === "gewerbe" ? firmenname : undefined} thema={art === "privatperson" ? thema : null} erreichbarkeit={art === "gewerbe" ? erreichbarkeit : null} />;
   }
 
   return (

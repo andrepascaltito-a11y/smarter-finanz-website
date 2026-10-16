@@ -1,4 +1,5 @@
-// Klartext-Fassung der Erstinformation fuer die Bestaetigungsmail.
+// Klartext-Fassung der Erstinformation. Sie ist die Quelle fuer das PDF im Anhang der Begruessungsmail
+// (scripts/erstinformation-pdf.mjs erzeugt daraus lib/erstinformation-pdf.generated.ts, der Build prueft die Synchronitaet).
 // WICHTIG: Inhaltlich synchron halten mit app/erstinformation/page.tsx (und ERSTINFO_VERSION hochzaehlen).
 
 export const ERSTINFO_URL = "https://www.smarterfinanz.de/erstinformation";
@@ -82,8 +83,3 @@ Sie haben der Bereitstellung dieser Informationen über die Website zugestimmt. 
 Smarter Finanz
 André Pascal Tito
 `;
-
-export const ERSTINFO_MAIL_BETREFF = {
-  privatperson: "Deine Erstinformation von Smarter Finanz",
-  gewerbe: "Ihre Erstinformation von Smarter Finanz",
-};

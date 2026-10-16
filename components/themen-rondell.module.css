@@ -1,0 +1,22 @@
+.rondell{position:relative;margin-top:32px}
+.track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:6px 2px 20px;margin:0;list-style:none;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.track:focus-visible{outline:2px solid var(--gold-deep);outline-offset:4px;border-radius:12px}
+.karte{flex:0 0 min(84%,340px);scroll-snap-align:start;position:relative;background:#fff;border:1px solid #e3ddc9;border-radius:18px;padding:26px 24px 28px;box-shadow:0 6px 22px rgba(14,42,30,.05);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.karte::before{content:"";position:absolute;left:24px;top:0;width:44px;height:3px;border-radius:0 0 3px 3px;background:var(--gold)}
+.karte:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(14,42,30,.10);border-color:#d6cdb0}
+.nr{display:block;font-family:var(--serif);font-style:italic;font-weight:700;font-size:15px;letter-spacing:.06em;color:var(--gold-deep);margin:6px 0 10px}
+.karte h3{margin:0 0 10px;font-size:24px;line-height:1.15;color:var(--green)}
+.karte p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.nav{display:flex;align-items:center;gap:18px;margin-top:6px}
+.knoepfe{display:flex;gap:10px}
+.btn{width:46px;height:46px;border-radius:50%;border:1px solid #d9d3c1;background:#fff;color:var(--green);font-size:22px;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:background .15s,border-color .15s,opacity .15s}
+.btn:hover:not(:disabled){border-color:var(--emerald);background:var(--cream)}
+.btn:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+.btn:disabled{opacity:.35;cursor:default}
+.fortschritt{flex:1;height:3px;border-radius:3px;background:#e3ddc9;overflow:hidden;max-width:360px}
+.fortschritt span{display:block;height:100%;background:var(--emerald);border-radius:3px;transition:width .25s ease}
+.zaehler{font-size:13px;color:var(--muted);white-space:nowrap}
+@media (min-width:640px){.karte{flex-basis:calc((100% - 18px)/2)}}
+@media (min-width:980px){.karte{flex-basis:calc((100% - 36px)/3)}}
+@media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}.karte,.fortschritt span{transition:none}.karte:hover{transform:none}}

@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { CONSENT_TEXT, CONSENT_VERSION, ERSTINFO_VERSION } from "@/lib/consent";
 import { HINWEIS_MAX, bereinigeErreichbarkeit } from "@/lib/erreichbarkeit";
 import { forwardToEspoCrm } from "@/lib/espocrm";
+import { formatErreichbarkeit } from "@/lib/erreichbarkeit";
 import { sendErstinformation, sendLeadBenachrichtigung } from "@/lib/mailer";
 import { formularErgebnis, starteNewsletterAnmeldung, type NewsletterErgebnis } from "@/lib/newsletter-anmeldung";
 import { checkRateLimit } from "@/lib/ratelimit";
@@ -168,9 +169,13 @@ export async function POST(req: Request) {
     );
   }
 
+  // Erstinformation (Begruessungsmail mit PDF). Scheitert der Versand, steht das gut sichtbar in der Benachrichtigung
+  // an Andre, damit niemand die Bestaetigungsseite mit dem Versprechen sieht, aber kein Dokument bekommt.
+  let erstinfoVersendet = false;
   try {
-    const sent = await sendErstinformation(payload.email, payload.art);
-    if (!sent) console.error("[lead] Erstinformation nicht versendet (SMTP fehlt), bitte manuell nachsenden (Anfrage im CRM).");
+    const mitAngaben = payload.art === "gewerbe" && formatErreichbarkeit(payload.erreichbarkeit) !== "";
+    erstinfoVersendet = await sendErstinformation(payload.email, payload.art, mitAngaben);
+    if (!erstinfoVersendet) console.error("[lead] Erstinformation nicht versendet (SMTP fehlt), bitte manuell nachsenden (Anfrage im CRM).");
   } catch (err) {
     console.error(
       "[lead] Erstinformations-Mail fehlgeschlagen:",
@@ -192,7 +197,7 @@ export async function POST(req: Request) {
 
   // Jede Anfrage erscheint zusaetzlich als E-Mail bei Andre (unabhaengig davon, ob das CRM erreichbar war).
   try {
-    await sendLeadBenachrichtigung(payload, newsletterErgebnis);
+    await sendLeadBenachrichtigung(payload, newsletterErgebnis, erstinfoVersendet);
   } catch (err) {
     console.error("[lead] Benachrichtigung fehlgeschlagen:", err instanceof Error ? err.message : err);
   }
