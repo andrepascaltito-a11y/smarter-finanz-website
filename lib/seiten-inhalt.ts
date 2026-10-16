@@ -189,7 +189,7 @@ export const SEITEN: Seite[] = [
     ],
     "quellen": [
       "Impressum von Smarter Finanz (Registernummern, Erlaubnisbehörde, Berufshaftpflicht), https://www.smarterfinanz.de/impressum. Abruf: 14.10.2026.",
-      "Erstinformation von Smarter Finanz, Stand 12.10.2026 (Vergütung, Auswahl, Zugang über Maklerpools), https://www.smarterfinanz.de/erstinformation.",
+      "Erstinformation von Smarter Finanz, Stand 16.10.2026 (Vergütung, Auswahl, Zugang über Maklerpools), https://www.smarterfinanz.de/erstinformation.",
       "§ 59 VVG (Begriff des Versicherungsmaklers), § 60 VVG (hinreichende Zahl von Verträgen und Versicherern) und § 62 VVG (Textform), https://www.gesetze-im-internet.de/vvg_2008/__59.html, /__60.html und /__62.html. Abruf: 14.10.2026.",
       "§ 34d GewO und § 11a GewO (Vermittlerregister), https://www.gesetze-im-internet.de/gewo/__34d.html und /__11a.html. Abruf: 14.10.2026.",
       "Vermittlerregister, https://www.vermittlerregister.info und https://www.vermittlerregister.info/impressum (Aufgabe der DIHK als gemeinsame Stelle). Abruf: 14.10.2026.",
@@ -410,7 +410,7 @@ export const SEITEN: Seite[] = [
       "Wikipedia, Weserbergland (Holzminden und Höxter unter den Städten des Weserberglands), https://de.wikipedia.org/wiki/Weserbergland. Abruf: 14.10.2026.",
       "§ 59 und § 60 VVG, https://www.gesetze-im-internet.de/vvg_2008/__59.html und /__60.html. Abruf: 14.10.2026.",
       "Handwerksordnung (§ 6, § 19, § 58, § 86, § 90), https://www.gesetze-im-internet.de/hwo/__6.html, /__19.html, /__58.html, /__86.html und /__90.html; IHK-Gesetz (§ 2), https://www.gesetze-im-internet.de/ihkg/__2.html; § 14 GewO, https://www.gesetze-im-internet.de/gewo/__14.html; § 19 und § 23 VVG, https://www.gesetze-im-internet.de/vvg_2008/__19.html und /__23.html. Abruf: 14.10.2026.",
-      "Erstinformation von Smarter Finanz, Stand 12.10.2026, https://www.smarterfinanz.de/erstinformation."
+      "Erstinformation von Smarter Finanz, Stand 16.10.2026, https://www.smarterfinanz.de/erstinformation."
     ],
     "cta": {
       "text": "Sie möchten wissen, wo Ihr Betrieb steht? Fragen Sie ein Gewerbe-Gespräch an. Das Gespräch ist unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der Erstinformation."
@@ -995,7 +995,7 @@ export const SEITEN: Seite[] = [
       "§ 2, § 3, § 6, § 136 und § 192 SGB VII, https://www.gesetze-im-internet.de/sgb_7/__192.html, /__136.html, /__2.html, /__3.html und /__6.html. Abruf: 14.10.2026.",
       "§ 28a und § 28e SGB IV, https://www.gesetze-im-internet.de/sgb_4/__28a.html und /__28e.html. Abruf: 14.10.2026.",
       "GDV, Musterbedingungen für die Betriebs- und Berufshaftpflichtversicherung (AVB BHV, Stand November 2025, unverbindliche Empfehlung), A1-3.1, https://www.gdv.de/resource/blob/6240/36855b2e54b41955ef52c9cfe1190ee5/02-avb-betriebs-und-berufshaftpflichtversicherung-2020-data.pdf. Abruf: 14.10.2026.",
-      "Erstinformation von Smarter Finanz, Stand 12.10.2026, https://www.smarterfinanz.de/erstinformation."
+      "Erstinformation von Smarter Finanz, Stand 16.10.2026, https://www.smarterfinanz.de/erstinformation."
     ],
     "cta": {
       "text": "Gewerbe-Check: Wir gehen gemeinsam Ihre bestehenden Versicherungen und Ihren Betrieb durch, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in unserer Erstinformation."
