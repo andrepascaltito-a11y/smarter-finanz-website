@@ -10,7 +10,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "autor",
     "slug": "ueber-andre",
-    "published": false,
+    "published": true,
     "title": "Über André Tito, Versicherungsmakler | Smarter Finanz",
     "description": "André Pascal Tito, Versicherungsmakler in Alfeld (Leine): Erlaubnis nach § 34d GewO, Registernummer, Arbeitsweise. Seit 2018 in der Beratung.",
     "h1": "André Pascal Tito, Versicherungsmakler in Alfeld (Leine)",
@@ -202,7 +202,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "hub",
     "slug": "weser-und-leinebergland",
-    "published": false,
+    "published": true,
     "title": "Gewerbeversicherung im Weser- und Leinebergland",
     "description": "Versicherungsmakler für Betriebe im Weser- und Leinebergland: Alfeld, Holzminden, Höxter, in und um Hildesheim und Hannover. Zuständigkeiten und Ablauf.",
     "h1": "Gewerbeversicherung im Weser- und Leinebergland",
@@ -419,7 +419,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "ort",
     "slug": "alfeld",
-    "published": false,
+    "published": true,
     "title": "Gewerbeversicherung Alfeld (Leine) | Smarter Finanz",
     "description": "Versicherungsmakler in Alfeld (Leine) für Betriebe im Leinebergland: Haftpflicht, Inhalt, Cyber. Mit Hinweisen zu Hochwasser und Kammern. Unverbindlich.",
     "h1": "Gewerbeversicherung in Alfeld (Leine) und im Leinebergland",
@@ -625,7 +625,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "branche",
     "slug": "handwerk-bau",
-    "published": false,
+    "published": true,
     "title": "Versicherungen für Handwerksbetriebe | Smarter Finanz",
     "description": "Betriebshaftpflicht, Inhalt, Fahrzeuge und Cyber für Handwerk und Bau: Betriebsbeschreibung, Subunternehmer, Nachweise für Auftraggeber. Unverbindlich.",
     "h1": "Versicherungen für Handwerk und Bau im Weser- und Leinebergland",
@@ -842,7 +842,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "beitrag",
     "slug": "versicherungen-kleingewerbe",
-    "published": false,
+    "published": true,
     "title": "Versicherungen im Kleingewerbe: Was ist Pflicht?",
     "description": "Pflicht, zuerst prüfen, genauer hinsehen: Überblick für Selbstständige und Kleinbetriebe mit Quellen und Stand. Allgemeine Information, unverbindlich.",
     "h1": "Welche Versicherungen braucht ein Kleingewerbe wirklich?",
@@ -1004,7 +1004,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "beitrag",
     "slug": "betriebshaftpflicht-nachweis-auftraggeber",
-    "published": false,
+    "published": true,
     "title": "Nachweis der Betriebshaftpflicht | Smarter Finanz",
     "description": "Ihr Auftraggeber verlangt einen Nachweis der Betriebshaftpflicht? Was als Nachweis gilt, wer ihn ausstellt und worauf Sie achten. Mit Quellen und Stand.",
     "h1": "Mein Auftraggeber verlangt einen Nachweis der Betriebshaftpflicht: Was zählt?",

@@ -38,6 +38,8 @@
 .eilt a:hover{color:var(--gold)}
 .eilt a[href^="tel:"]{white-space:nowrap}
 .rolle{display:block;font-size:13.5px;color:var(--gold);margin:0 0 6px}
+.mehr{display:inline-block;margin-top:8px;font-size:14px;color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.mehr:hover{color:var(--cream)}
 .reg{display:block;margin-top:6px;font-size:12.5px;color:#c8d6cd}
 .thema{margin:8px 0 0;font-size:15px;color:var(--muted)}
 .klein{margin:8px 0 0 !important;font-size:13px !important;line-height:1.5;color:var(--muted)}

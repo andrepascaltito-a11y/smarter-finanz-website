@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Bewertungen } from "@/components/Bewertungen";
 import { ThemenRondell, type Thema } from "@/components/ThemenRondell";
 import { DANKE_TEXTE } from "@/lib/danke-texte";
+import { linkErlaubt, seitenPfad, sichtbareSeiten } from "@/lib/seiten";
 import { ORTSBILDER, type OrtSchluessel } from "@/lib/bildnachweise";
 import { KontaktFormular } from "@/components/KontaktFormular";
 import { publishedPosts } from "@/lib/blog";
@@ -86,6 +87,11 @@ function mitRegNr(text: string) {
 
 export default function Page() {
   const posts = publishedPosts();
+  // Ratgeber-Beitraege: alte Posts und die Beitragsseiten aus lib/seiten-inhalt.ts (nur freigegebene bzw. in der Vorschau sichtbare)
+  const artikel = [
+    ...posts.map((p) => ({ pfad: `/blog/${p.slug}`, titel: p.title, text: p.description })),
+    ...sichtbareSeiten().filter((s) => s.typ === "beitrag").map((s) => ({ pfad: seitenPfad(s), titel: s.h1, text: s.description })),
+  ];
   return (
     <>
       <div className={legal.legalPage}><BlogHeader onHome /></div>
@@ -130,6 +136,7 @@ export default function Page() {
                   <li key={p}>{p}</li>
                 ))}
               </ul>
+              {linkErlaubt("/ueber-andre") && <a href="/ueber-andre" className={styles.karteLink}>Mehr über André Tito</a>}
             </div>
           </aside>
         </div>
@@ -187,6 +194,9 @@ export default function Page() {
           <ul className={styles.orteListe}>
             {REGION.map((o) => (
               <li key={o.key}>
+                {o.key === "alfeld" && linkErlaubt("/orte/alfeld") && (
+                  <a href="/orte/alfeld" className={styles.ortLink} aria-label="Gewerbeversicherung in Alfeld (Leine)" />
+                )}
                 <Image
                   src={ORTSBILDER[o.key].datei}
                   alt=""
@@ -199,21 +209,24 @@ export default function Page() {
               </li>
             ))}
           </ul>
+          {linkErlaubt("/weser-und-leinebergland") && (
+            <p className={styles.regionLink}><a href="/weser-und-leinebergland">Mehr zum Weser- und Leinebergland</a></p>
+          )}
         </div>
       </section>
 
       <Bewertungen zielgruppe="gewerbe" />
 
-      {posts.length > 0 && (
+      {artikel.length > 0 && (
         <section className="section" style={{ background: "var(--cream)" }}>
           <div className="wrap">
             <span className="eyebrow">Wissen</span>
             <h2>Aus unserem Blog</h2>
             <div className={styles.grid}>
-              {posts.map((p) => (
-                <a key={p.slug} href={`/blog/${p.slug}`} className={styles.tile} style={{ textDecoration: "none" }}>
-                  <h3>{p.title}</h3>
-                  <p>{p.description}</p>
+              {artikel.map((a) => (
+                <a key={a.pfad} href={a.pfad} className={styles.tile} style={{ textDecoration: "none" }}>
+                  <h3>{a.titel}</h3>
+                  <p>{a.text}</p>
                 </a>
               ))}
             </div>
@@ -274,6 +287,8 @@ export default function Page() {
           <nav>
             <a href="/privat">Privatkunden</a>
             <a href="/blog">Blog</a>
+            {linkErlaubt("/ueber-andre") && <a href="/ueber-andre">Über André</a>}
+            {linkErlaubt("/weser-und-leinebergland") && <a href="/weser-und-leinebergland">Weser- und Leinebergland</a>}
             <a href="/impressum">Impressum</a>
             <a href="/erstinformation">Erstinformation</a>
             <a href="/datenschutz">Datenschutzerklärung</a>

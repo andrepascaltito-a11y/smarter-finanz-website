@@ -157,6 +157,7 @@ export function AnfrageDanke({
           <span className={styles.rolle}>{text.personRolle}</span>
           <p>{text.personText}</p>
           <span className={styles.reg}>{text.personRegister}</span>
+          <a className={styles.mehr} href="/ueber-andre">Mehr über André Tito</a>
         </div>
         <div className={styles.eilt}>
           <span>{text.eiltTitel}</span>
