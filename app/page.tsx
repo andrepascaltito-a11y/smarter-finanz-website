@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Bewertungen } from "@/components/Bewertungen";
-import { ThemenRondell } from "@/components/ThemenRondell";
-import { ORTSBILDER } from "@/lib/bildnachweise";
+import { ThemenRondell, type Thema } from "@/components/ThemenRondell";
+import { DANKE_TEXTE } from "@/lib/danke-texte";
+import { ORTSBILDER, type OrtSchluessel } from "@/lib/bildnachweise";
 import { KontaktFormular } from "@/components/KontaktFormular";
 import { publishedPosts } from "@/lib/blog";
 import legal from "./legal.module.css";
@@ -24,19 +25,33 @@ export const metadata: Metadata = {
   },
 };
 
-const THEMEN = [
-  { t: "Betriebs- und Berufshaftpflicht", d: "Schäden bei Kunden und Dritten, auch Vermögensschäden. Wir vergleichen die Bedingungen, nicht nur den Preis." },
-  { t: "Geschäftsinhalt & Betriebsunterbrechung", d: "Einrichtung, Werkzeug, Waren und Technik. Dazu der Ertragsausfall, der nach einem Schaden oft das größere Problem ist." },
-  { t: "Cyber-Versicherung", d: "Absicherung gegen Datenverlust, Erpressung und Betriebsstillstand durch IT-Angriffe." },
-  { t: "Unternehmens- und Multirisk-Pakete", d: "Mehrere Risiken in einem Konzept, abgestimmt auf die typischen Lücken Ihrer Branche." },
-  { t: "Flotte, Kfz & Transport", d: "Firmenfahrzeuge, Fuhrpark, Transport- und Elektronikversicherung." },
-  { t: "Gebäude & Mietausfall", d: "Geschäftsgebäude und Immobilien im Betriebsvermögen." },
-  { t: "D&O & Geschäftsführerhaftung", d: "Persönliche Haftung von Geschäftsführern und Organen." },
-  { t: "Kaution & Bürgschaften", d: "Mietkaution und Avale statt gebundenem Kapital." },
-  { t: "Rechtsschutz für Unternehmen", d: "Kosten bei Streit mit Kunden, Lieferanten oder Behörden." },
-  { t: "Betriebliche Altersvorsorge & Krankenversicherung", d: "Mitarbeiter binden und die Vergütung um Vorsorgebausteine ergänzen. Steuerliche und arbeitsrechtliche Fragen klärt Ihr Steuerberater bzw. Rechtsanwalt." },
-  { t: "Absicherung des Inhabers", d: "Berufsunfähigkeit, Krankentagegeld und Vorsorge für Selbstständige." },
-  { t: "Steuerliche Aspekte bei Vorsorge und Investitionen", d: "Wir zeigen Ihnen, wo steuerliche Hebel bei Absicherung und Vorsorge eine Rolle spielen können. Die steuerliche Beurteilung und Umsetzung übernimmt Ihr Steuerberater." },
+const THEMEN: Thema[] = [
+  { t: "Betriebs- und Berufshaftpflicht", d: "Schäden bei Kunden und Dritten, auch Vermögensschäden. Wir vergleichen die Bedingungen, nicht nur den Preis.", icon: "haftpflicht" },
+  { t: "Geschäftsinhalt & Betriebsunterbrechung", d: "Einrichtung, Werkzeug, Waren und Technik. Dazu der Ertragsausfall, der nach einem Schaden oft das größere Problem ist.", icon: "inhalt" },
+  { t: "Cyber-Versicherung", d: "Absicherung gegen Datenverlust, Erpressung und Betriebsstillstand durch IT-Angriffe.", icon: "cyber" },
+  { t: "Unternehmens- und Multirisk-Pakete", d: "Mehrere Risiken in einem Konzept, abgestimmt auf die typischen Lücken Ihrer Branche.", icon: "multirisk" },
+  { t: "Flotte, Kfz & Transport", d: "Firmenfahrzeuge, Fuhrpark, Transport- und Elektronikversicherung.", icon: "flotte" },
+  { t: "Gebäude & Mietausfall", d: "Geschäftsgebäude und Immobilien im Betriebsvermögen.", icon: "gebaeude" },
+  { t: "D&O & Geschäftsführerhaftung", d: "Persönliche Haftung von Geschäftsführern und Organen.", icon: "do" },
+  { t: "Kaution & Bürgschaften", d: "Mietkaution und Avale statt gebundenem Kapital.", icon: "kaution" },
+  { t: "Rechtsschutz für Unternehmen", d: "Kosten bei Streit mit Kunden, Lieferanten oder Behörden.", icon: "rechtsschutz" },
+  { t: "Betriebliche Altersvorsorge & Krankenversicherung", d: "Mitarbeiter binden und die Vergütung um Vorsorgebausteine ergänzen. Steuerliche und arbeitsrechtliche Fragen klärt Ihr Steuerberater bzw. Rechtsanwalt.", icon: "bav" },
+  { t: "Absicherung des Inhabers", d: "Berufsunfähigkeit, Krankentagegeld und Vorsorge für Selbstständige.", icon: "inhaber" },
+  { t: "Steuerliche Aspekte bei Vorsorge und Investitionen", d: "Wir zeigen Ihnen, wo steuerliche Hebel bei Absicherung und Vorsorge eine Rolle spielen können. Die steuerliche Beurteilung und Umsetzung übernimmt Ihr Steuerberater.", icon: "steuer" },
+];
+
+const SCHRITTE = [
+  { t: "Kennenlernen", d: "Wir sprechen über Ihren Betrieb, Ihre Risiken und Ihre Ziele." },
+  { t: "Bestandscheck", d: "Wir prüfen, was Sie schon haben, und wo Lücken oder doppelte Kosten sind." },
+  { t: "Vorschlag", d: "Sie bekommen einen nachvollziehbaren Vergleich und entscheiden in Ruhe." },
+];
+
+const REGION: { key: OrtSchluessel; name: string }[] = [
+  { key: "alfeld", name: "Alfeld" },
+  { key: "hildesheim", name: "Hildesheim" },
+  { key: "hannover", name: "Hannover" },
+  { key: "holzminden", name: "Holzminden" },
+  { key: "hoexter", name: "Höxter" },
 ];
 
 const titelbild = ORTSBILDER.hildesheim;
@@ -136,19 +151,50 @@ export default function Page() {
       </section>
 
       <section className={styles.band}>
-        <div className="wrap">
-          <span className="eyebrow on-dark">Makler statt Vertreter</span>
-          <h2>Warum ein Makler für Ihr Unternehmen sinnvoll ist</h2>
-          <p>
-            Ein Versicherungsmakler arbeitet nicht für einen einzelnen Versicherer, sondern vergleicht
-            für Sie. Sie bekommen einen Vergleich über mehrere Anbieter, Unterstützung bei der Schadenmeldung
-            und einen persönlichen Ansprechpartner statt einer anonymen Hotline.
-          </p>
-          <ol className={styles.steps}>
-            <li><strong>Kennenlernen.</strong> Wir sprechen über Ihren Betrieb, Ihre Risiken und Ihre Ziele.</li>
-            <li><strong>Bestandscheck.</strong> Wir prüfen, was Sie schon haben, und wo Lücken oder doppelte Kosten sind.</li>
-            <li><strong>Vorschlag.</strong> Sie bekommen einen nachvollziehbaren Vergleich und entscheiden in Ruhe.</li>
+        <div className={`wrap ${styles.bandGrid}`}>
+          <div>
+            <span className="eyebrow on-dark">Makler statt Vertreter</span>
+            <h2>Warum ein Makler für Ihr Unternehmen sinnvoll ist</h2>
+            <p>
+              Ein Versicherungsmakler arbeitet nicht für einen einzelnen Versicherer, sondern vergleicht
+              für Sie. Sie bekommen einen Vergleich über mehrere Anbieter, Unterstützung bei der Schadenmeldung
+              und einen persönlichen Ansprechpartner statt einer anonymen Hotline.
+            </p>
+          </div>
+          <ol className={styles.schritte}>
+            {SCHRITTE.map((x, i) => (
+              <li key={x.t}>
+                <span className={styles.schrittNr} aria-hidden="true">{i + 1}</span>
+                <div>
+                  <strong>{x.t}</strong>
+                  <p>{x.d}</p>
+                </div>
+              </li>
+            ))}
           </ol>
+        </div>
+      </section>
+
+      <section className={styles.region} aria-labelledby="region-titel">
+        <div className="wrap">
+          <span className="eyebrow">Region</span>
+          <h2 id="region-titel">Weser- und Leinebergland</h2>
+          <p className={styles.regionText}>Für Betriebe in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter.</p>
+          <ul className={styles.orteListe}>
+            {REGION.map((o) => (
+              <li key={o.key}>
+                <Image
+                  src={ORTSBILDER[o.key].datei}
+                  alt=""
+                  fill
+                  quality={70}
+                  sizes="(max-width: 900px) 58vw, 230px"
+                  style={{ objectFit: "cover", objectPosition: ORTSBILDER[o.key].position }}
+                />
+                <span>{o.name}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -180,7 +226,29 @@ export default function Page() {
               Sagen Sie uns kurz, worum es geht, wir melden uns bei Ihnen zurück. Wann Sie am besten erreichbar sind, können Sie unten im Formular angeben.
             </p>
           </div>
-          <KontaktFormular defaultArt="gewerbe" />
+          <div className={styles.anfrageGrid}>
+            <aside className={styles.anfrageSeite} aria-label={HERO.karte.label}>
+              <div className={styles.apKarte}>
+                <Image src="/andre-tito.jpg" alt={HERO.karte.fotoAlt} width={600} height={750} sizes="96px" quality={80} />
+                <div>
+                  <span className={styles.karteLabel}>{HERO.karte.label}</span>
+                  <strong>{HERO.karte.name}</strong>
+                  <span className={styles.karteRolle}>{HERO.karte.rolle}</span>
+                </div>
+              </div>
+              <div className={styles.weiter}>
+                <h3>{DANKE_TEXTE.gewerbe.schritteTitel}</h3>
+                <ol>
+                  {DANKE_TEXTE.gewerbe.schritte.map((x) => (
+                    <li key={x.titel}>{x.titel}</li>
+                  ))}
+                </ol>
+              </div>
+            </aside>
+            <div className={styles.anfrageForm}>
+              <KontaktFormular defaultArt="gewerbe" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -188,9 +256,15 @@ export default function Page() {
         <div className="wrap">
           <p className={styles.vg}>Hinweis: Wir arbeiten als Versicherungsmakler (Erlaubnis nach § 34d Abs. 1 GewO, Reg.-Nr. D-JOOT-NRHZP-02). Unsere Vergütung erfolgt in der Regel über Courtagen der Versicherer, die in der Prämie enthalten sind. Eine gesonderte Vergütung, die Sie direkt an uns zahlen, gilt nur, wenn sie vorab ausdrücklich vereinbart wird. Details in der Erstinformation.</p>
           <p className={styles.nachweis}>
-            Titelbild: {titelbild.motiv}. Foto: {titelbild.autor},{" "}
-            <a href={titelbild.lizenzUrl} target="_blank" rel="noopener noreferrer">{titelbild.lizenz}</a>,{" "}
-            <a href={titelbild.quelle} target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.
+            Bildnachweise (Ausschnitte, Wikimedia Commons):{" "}
+            {[...REGION.map((o) => ({ ort: o.name, b: ORTSBILDER[o.key] }))].map(({ ort, b }, i) => (
+              <span key={ort}>
+                {i > 0 && " · "}
+                {ort}: <a href={b.quelle} target="_blank" rel="noopener noreferrer">{b.motiv}</a>, Foto: {b.autor},{" "}
+                <a href={b.lizenzUrl} target="_blank" rel="noopener noreferrer">{b.lizenz}</a>
+              </span>
+            ))}
+            . Das Titelbild zeigt Hildesheim.
           </p>
           <span>© Smarter Finanz</span>
           <nav>

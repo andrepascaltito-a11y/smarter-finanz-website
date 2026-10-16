@@ -2,12 +2,6 @@
 .tile { background: #fff; border: 1px solid #e3ddc9; border-radius: 18px; padding: 24px; }
 .tile h3 { margin: 0 0 8px; font-size: 22px; color: var(--green); font-family: 'Cormorant Garamond', serif; }
 .tile p { margin: 0; color: var(--muted); font-size: 15px; }
-.band { background: var(--green); color: var(--cream); padding: 64px 0; }
-.band h2 { color: var(--cream); }
-.band p { color: var(--muted-light); max-width: 720px; }
-.steps { counter-reset: s; list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
-.steps li { counter-increment: s; padding-left: 52px; position: relative; }
-.steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: var(--green); display: flex; align-items: center; justify-content: center; font-weight: 700; }
 .note { font-size: 13px; color: var(--muted); margin-top: 28px; }
 .foot { background: #0a1f16; color: var(--muted-light); padding: 28px 0; font-size: 14px; }
 .foot :global(.wrap) { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
@@ -49,3 +43,62 @@
   .ansprechText{padding:0}
   .ansprech strong{font-size:26px}
 }
+
+/* Makler-Band: Text links, drei Schritte als Karten rechts */
+.band{background:radial-gradient(900px 420px at 88% 0%,rgba(228,193,92,.12),transparent 65%),var(--green);color:var(--cream);padding:92px 0}
+.bandGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:center}
+.band h2{color:var(--cream);font-size:clamp(30px,4vw,46px);margin:14px 0 18px}
+.band p{color:var(--muted-light);max-width:560px;font-size:17px}
+.schritte{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.schritte li{display:flex;gap:18px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(228,193,92,.24);border-radius:18px;padding:20px 22px;transition:transform .2s ease,background .2s ease}
+.schritte li:hover{transform:translateX(4px);background:rgba(255,255,255,.09)}
+.schrittNr{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow:0 4px 14px rgba(228,193,92,.4)}
+.schritte strong{display:block;font-family:'Cormorant Garamond',serif;font-size:25px;line-height:1.1;font-weight:600;color:var(--cream);margin-bottom:4px}
+.schritte p{margin:0;font-size:15.5px;color:#dbe6de;max-width:none}
+
+/* Region: fuenf Orte als Fototafeln */
+.region{background:var(--cream);padding:88px 0 96px}
+.region h2{font-size:clamp(30px,4.4vw,50px)}
+.regionText{color:var(--muted);margin:8px 0 0}
+.orteListe{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.orteListe li{position:relative;aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:var(--green);box-shadow:0 10px 30px rgba(14,42,30,.12)}
+.orteListe li img{transition:transform .5s ease}
+.orteListe li:hover img{transform:scale(1.05)}
+.orteListe li::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,31,22,0) 45%,rgba(11,31,22,.86) 100%)}
+.orteListe span{position:absolute;left:16px;right:12px;bottom:14px;z-index:2;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;line-height:1.05;color:#fff}
+
+/* Anfrage: Ansprechpartner links, Formular rechts (nach dem Absenden nur die Bestaetigung) */
+.anfrageGrid{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:56px;align-items:start}
+.anfrageGrid:has([data-danke]){grid-template-columns:1fr}
+.anfrageGrid:has([data-danke]) .anfrageSeite{display:none}
+.anfrageSeite{position:sticky;top:96px;display:grid;gap:18px}
+.apKarte{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center;background:var(--green);color:var(--cream);border-radius:22px;padding:16px 20px 16px 16px;box-shadow:0 18px 44px rgba(14,42,30,.18)}
+.apKarte img{width:96px;height:120px;object-fit:cover;object-position:50% 20%;border-radius:14px;border:2px solid rgba(228,193,92,.55)}
+.apKarte strong{display:block;font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1.1;font-weight:600;margin:2px 0 4px}
+.weiter{background:#fff;border:1px solid #e3ddc9;border-radius:22px;padding:22px 24px}
+.weiter h3{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--emerald);margin:0 0 14px}
+.weiter ol{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:w}
+.weiter li{counter-increment:w;display:flex;gap:12px;align-items:center;font-size:15.5px;color:var(--text-dark)}
+.weiter li::before{content:counter(w);flex:0 0 28px;height:28px;border-radius:50%;background:var(--gold);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.anfrageForm :global(.kontakt-form){max-width:none;margin:0}
+.anfrageForm :global(.kontakt-tabs){justify-content:flex-start}
+
+@media (max-width:980px){
+  .bandGrid{grid-template-columns:1fr;gap:36px}
+  .orteListe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:0 0 8px;scrollbar-width:none}
+  .orteListe::-webkit-scrollbar{display:none}
+  .orteListe li{flex:0 0 58%;scroll-snap-align:start}
+  .anfrageGrid{grid-template-columns:1fr;gap:28px}
+  .anfrageSeite{position:static}
+  .weiter{display:none}
+}
+@media (max-width:560px){
+  .apKarte{grid-template-columns:76px 1fr;gap:14px}
+  .apKarte img{width:76px;height:96px}
+}
+@media (prefers-reduced-motion:reduce){
+  .schritte li,.orteListe li img{transition:none}
+  .schritte li:hover{transform:none}
+  .orteListe li:hover img{transform:none}
+}
+

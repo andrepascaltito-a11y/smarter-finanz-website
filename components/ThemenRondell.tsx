@@ -2,9 +2,10 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import { ThemenIcon, type ThemaIcon } from "./themen-icons";
 import styles from "./themen-rondell.module.css";
 
-export type Thema = { t: string; d: string };
+export type Thema = { t: string; d: string; icon?: ThemaIcon };
 
 // Rondell ohne Autoplay (gleiches Muster wie Bewertungen): Wischen, Pfeiltasten oder die beiden Knoepfe.
 // Die Liste bleibt eine echte <ul>, jede Karte ein <li>, damit Screenreader und Suchmaschinen alle Themen sehen.
@@ -77,7 +78,10 @@ export function ThemenRondell({ themen, bereich }: { themen: Thema[]; bereich: s
       >
         {themen.map((x, i) => (
           <li key={x.t} className={styles.karte}>
-            <span className={styles.nr} aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+            <div className={styles.kopf} aria-hidden="true">
+              {x.icon ? <span className={styles.icon}><ThemenIcon name={x.icon} /></span> : <span />}
+              <span className={styles.nr}>{String(i + 1).padStart(2, "0")}</span>
+            </div>
             <h3>{x.t}</h3>
             <p>{x.d}</p>
           </li>
