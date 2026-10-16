@@ -37,7 +37,7 @@ Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin, www.versicherung
 8. Berufshaftpflicht
 Vermögensschaden-Haftpflichtversicherung über CGPA Europe Underwriting GmbH, Leopoldstraße 19, 80802 München (Risikoträger CGPA Europe S.A.), Geltungsbereich Deutschland und europaweit.
 
-Du hast der Bereitstellung dieser Informationen über die Website zugestimmt. Auf Wunsch senden wir sie dir jederzeit kostenlos auf Papier. Antworte dafür einfach auf diese E-Mail.
+Du hast der Bereitstellung dieser Informationen über die Website und per E-Mail zugestimmt. Auf Wunsch senden wir sie dir jederzeit kostenlos auf Papier. Schreib dazu an a.tito@smarterfinanz.de oder ruf uns an unter +49 170 8784889.
 
 Smarter Finanz
 André Pascal Tito
@@ -78,7 +78,7 @@ Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin, www.versicherung
 8. Berufshaftpflicht
 Vermögensschaden-Haftpflichtversicherung über CGPA Europe Underwriting GmbH, Leopoldstraße 19, 80802 München (Risikoträger CGPA Europe S.A.), Geltungsbereich Deutschland und europaweit.
 
-Sie haben der Bereitstellung dieser Informationen über die Website zugestimmt. Auf Wunsch senden wir sie Ihnen jederzeit kostenlos auf Papier. Antworten Sie dafür einfach auf diese E-Mail.
+Sie haben der Bereitstellung dieser Informationen über die Website und per E-Mail zugestimmt. Auf Wunsch senden wir sie Ihnen jederzeit kostenlos auf Papier. Schreiben Sie dazu an a.tito@smarterfinanz.de oder rufen Sie uns an unter +49 170 8784889.
 
 Smarter Finanz
 André Pascal Tito

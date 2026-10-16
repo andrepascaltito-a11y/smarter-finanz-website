@@ -2,7 +2,7 @@
 // Gewerbe wird gesiezt, Privat geduzt. Wortlaut: Mia (Vault 03-Marketing/Content/Mia-Danke-Seite-und-Hero-2026-10-16.md,
 // Teil A). Rechtliche Pruefung durch Rita, danach liest Andre jede Fassung und traegt sie ins Freigabeprotokoll ein.
 // Platzhalter: {firmenname} und {thema} fuellt die Komponente aus der Eingabe (als Text, nie als HTML),
-// [TELEFON] und [MAIL] werden zu Links auf die Nummer und Adresse aus dem Impressum.
+// [TELEFON] und [MAIL] werden zu Links auf die Nummer und Adresse aus dem Impressum, [ERSTINFO] zum Link auf /erstinformation.
 // Nur eine Zeitangabe ist erlaubt: "an Werktagen". Keine Stunden, keine Fristen (UWG).
 
 export type DankeSchritt = {
@@ -54,7 +54,7 @@ const GEWERBE: DankeText = {
     {
       titel: "Erstinformation per E-Mail",
       text: "Wir schicken Ihnen die gesetzlich vorgeschriebene Erstinformation als PDF. Darin steht, wer wir sind und wie wir vergütet werden.",
-      hinweis: "Absender ist [MAIL]. Finden Sie nichts im Posteingang, schauen Sie bitte im Spam-Ordner nach.",
+      hinweis: "Absender ist [MAIL]. Finden Sie nichts im Posteingang, schauen Sie bitte im Spam-Ordner nach. Sie können die Erstinformation auch gleich online lesen: [ERSTINFO]",
     },
     {
       titel: "André Tito meldet sich",
@@ -69,7 +69,7 @@ const GEWERBE: DankeText = {
   nutzen: [
     "Wo Ihr Betrieb heute abgesichert ist und wo nicht",
     "Ob Sie für dasselbe Risiko doppelt zahlen",
-    "Welche Lücken in Ihrer Branche typisch sind, etwa Tätigkeiten, die im Vertrag fehlen",
+    "Welche Lücken in Betrieben wie Ihrem häufig vorkommen, etwa Tätigkeiten, die im Vertrag fehlen",
     "Wie es weitergeht, wenn der Betrieb nach einem Schaden stillsteht",
   ],
   nutzenSchluss: "Wo Sie mehr absichern als nötig, sagen wir Ihnen das genauso.",
@@ -124,7 +124,7 @@ export const DANKE_TEXTE: { gewerbe: DankeText; gewerbeMitErreichbarkeit: DankeT
       {
         titel: "Erstinformation per E-Mail",
         text: "Wir schicken dir die gesetzlich vorgeschriebene Erstinformation als PDF. Darin steht, wer wir sind und wie wir vergütet werden.",
-        hinweis: "Absender ist [MAIL]. Findest du nichts im Posteingang, schau bitte im Spam-Ordner nach.",
+        hinweis: "Absender ist [MAIL]. Findest du nichts im Posteingang, schau bitte im Spam-Ordner nach. Du kannst die Erstinformation auch gleich online lesen: [ERSTINFO]",
       },
       {
         titel: "André Tito meldet sich",
@@ -148,10 +148,10 @@ export const DANKE_TEXTE: { gewerbe: DankeText; gewerbeMitErreichbarkeit: DankeT
     vorbereitenHinweis:
       "Bitte schick keine Unterlagen oder sensiblen Daten über das Formular nach. Wie du uns etwas zukommen lässt, klären wir im Gespräch.",
     personLabel: "Dein Ansprechpartner",
-    personRolle: "Versicherungsmakler, Erlaubnisse nach § 34d, § 34f und § 34i GewO",
+    personRolle: "Versicherungsmakler (§ 34d GewO), Finanzanlagen- und Immobiliardarlehensvermittler (§ 34f, § 34i GewO)",
     personText:
       "Er arbeitet von Alfeld aus. Du triffst ihn im Weser- und Leinebergland persönlich oder sprichst per Video mit ihm, wie es dir lieber ist. Bei Versicherungen vergleicht er für dich mehrere Gesellschaften.",
-    personRegister: "Registernummer D-JOOT-NRHZP-02, im Vermittlerregister nachprüfbar",
+    personRegister: "Registernummern in der Erstinformation, im Vermittlerregister nachprüfbar",
     fotoAlt: "André Tito, Versicherungsmakler in Alfeld",
     eiltTitel: "Es eilt?",
     eiltText: "Dann ruf direkt an unter [TELEFON] oder schreib an [MAIL].",

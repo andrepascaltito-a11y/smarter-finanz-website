@@ -34,7 +34,7 @@ async function forwardPrivatperson(
     assignedUserId: DEFAULT_ASSIGNED_USER_ID,
     description:
       (payload.thema ? `Thema: ${payload.thema}` : "") +
-      `\nErstinformation: Zustimmung zur Bereitstellung ueber die Website ${payload.erstinfoVersion} am ${payload.erstinfoTimestamp}`,
+      `\nErstinformation: Zustimmung zur Bereitstellung ueber die Website und per E-Mail (PDF) ${payload.erstinfoVersion} am ${payload.erstinfoTimestamp}`,
     // Dieselben drei Custom Fields, die auch die FairKV-Website auf dem
     // Lead-Entity befuellt (DSGVO-Nachweis, welcher Wortlaut wann eingewilligt wurde).
     consentZeitpunkt: payload.consentTimestamp ? toEspoDatetime(payload.consentTimestamp) : null,

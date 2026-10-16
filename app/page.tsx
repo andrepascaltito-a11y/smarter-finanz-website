@@ -57,12 +57,12 @@ const REGION: { key: OrtSchluessel; name: string }[] = [
 const titelbild = ORTSBILDER.hildesheim;
 
 // Texte des Hero. Wortlaut: Mia (Vault 03-Marketing/Content/Mia-Danke-Seite-und-Hero-2026-10-16.md, Teil B), Rita prueft,
-// Andre gibt frei. "Seit etwa 2021" ist Andres Angabe vom 15.10.2026 in Ritas Ersatzformulierung (Nachweisakte: siehe Freigabeprotokoll).
+// Andre gibt frei. "Seit etwa 2021 berät André Tito Betriebe" bleibt draußen, bis die Nachweisakte den Beginn belegt (Rita BL2, 16.10.2026).
 const HERO = {
   eyebrow: "Versicherungsmakler für Betriebe aus der Region",
-  lead: "Ihr Betrieb braucht einen festen Ansprechpartner, keine anonyme Hotline. Als Versicherungsmakler vergleichen wir mehrere Gesellschaften und unterstützen Sie bei der Schadenmeldung und bei der Abwicklung.",
+  lead: "Sie sollen wissen, wen Sie anrufen, wenn im Betrieb etwas passiert. Als Versicherungsmakler vergleichen wir mehrere Gesellschaften und unterstützen Sie bei der Schadenmeldung und bei der Abwicklung.",
   cta: "Gespräch mit André Tito anfragen",
-  ctaKlein: "Unverbindlich, zu Ihren Wunschzeiten",
+  ctaKlein: "Unverbindlich, Sie nennen uns Ihre Zeiten",
   karte: {
     label: "Ihr Ansprechpartner",
     name: "André Tito",
@@ -72,7 +72,7 @@ const HERO = {
   },
   kennzahlen: [
     { gross: "§ 34d GewO", klein: "Versicherungsmakler mit Erlaubnis der IHK Hannover, Reg.-Nr. D-JOOT-NRHZP-02" },
-    { gross: "Seit etwa 2021", klein: "berät André Tito Betriebe" },
+    { gross: "Persönlich", klein: "Ein fester Ansprechpartner statt anonymer Hotline" },
     { gross: "Leine und Weser", klein: "Betriebe in und um Alfeld, Hildesheim, Hannover, Holzminden und Höxter" },
   ],
 };
@@ -91,14 +91,18 @@ export default function Page() {
       <div className={legal.legalPage}><BlogHeader onHome /></div>
       <section className={styles.hero}>
         <div className={styles.heroBild} aria-hidden="true">
-          <Image
-            src={titelbild.datei}
-            alt=""
-            fill
-            priority
-            quality={75}
+          {/* Statische WebP-Dateien (1280, 1920, 2560 px) statt Bildoptimierer: kein Kaltstart, in jedem Browser gleich. Quelle: public/orte/hildesheim.jpg */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/orte/hero-hildesheim-1920.webp"
+            srcSet="/orte/hero-hildesheim-1280.webp 1280w, /orte/hero-hildesheim-1920.webp 1920w, /orte/hero-hildesheim-2560.webp 2560w"
             sizes="100vw"
-            style={{ objectFit: "cover", objectPosition: titelbild.position }}
+            alt=""
+            width={2560}
+            height={1706}
+            fetchPriority="high"
+            decoding="async"
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: titelbild.position }}
           />
         </div>
         <div className={styles.heroVeil} aria-hidden="true" />
@@ -264,7 +268,7 @@ export default function Page() {
                 <a href={b.lizenzUrl} target="_blank" rel="noopener noreferrer">{b.lizenz}</a>
               </span>
             ))}
-            . Das Titelbild zeigt Hildesheim.
+            . Das Titelbild zeigt Hildesheim, zugeschnitten und abgedunkelt.
           </p>
           <span>© Smarter Finanz</span>
           <nav>

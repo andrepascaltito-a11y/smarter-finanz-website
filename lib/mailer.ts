@@ -66,8 +66,8 @@ function anfrageMail(payload: LeadPayload, newsletterErgebnis?: string): { subje
 }
 
 // Benachrichtigung ueber JEDE neue Anfrage (Gewerbe und Privat) per E-Mail, unabhaengig vom CRM.
-// Antworten gehen direkt an die Adresse des Interessenten (replyTo).
-export async function sendLeadBenachrichtigung(payload: LeadPayload, newsletterErgebnis?: string, erstinfoVersendet = true): Promise<void> {
+// Antworten gehen direkt an die Adresse des Interessenten (replyTo). Gibt true zurueck, wenn die Mail rausging.
+export async function sendLeadBenachrichtigung(payload: LeadPayload, newsletterErgebnis?: string, erstinfoVersendet = true): Promise<boolean> {
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_APP_PASSWORD;
   const to = process.env.NOTIFY_EMAIL_TO || STANDARD_EMPFAENGER;
@@ -78,7 +78,7 @@ export async function sendLeadBenachrichtigung(payload: LeadPayload, newsletterE
         "[mailer] SMTP_USER/SMTP_APP_PASSWORD nicht gesetzt, Benachrichtigung uebersprungen.",
       );
     }
-    return;
+    return false;
   }
 
   const transporter = nodemailer.createTransport({
@@ -94,6 +94,7 @@ export async function sendLeadBenachrichtigung(payload: LeadPayload, newsletterE
     subject: erstinfoVersendet ? mail.subject : `[Erstinformation fehlt] ${mail.subject}`,
     text: erstinfoVersendet ? mail.text : ERSTINFO_FEHLT_ZEILE + mail.text,
   });
+  return true;
 }
 
 // Begruessungsmail an den Kunden. Die Erstinformation haengt als PDF an (§ 15 VersVermV, Textform auf dauerhaftem

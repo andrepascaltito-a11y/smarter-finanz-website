@@ -214,14 +214,14 @@ export default function HomePage() {
       <FaqItem question="Auf welche Themen habt ihr euch spezialisiert?">
         Wir betreuen dich in vier Kernbereichen: Steueroptimierung, Versicherungsvergleich, Altersvorsorge &amp; Investment sowie Finanzierung &amp; Umschuldung. Als Makler sind wir nicht an einzelne Versicherer gebunden und vergleichen eine hinreichende Zahl von Anbietern.
       </FaqItem>
-      <FaqItem question="Kostet das Beratungsgespräch Geld?">
-        Nein. Das Erstgespräch ist unverbindlich, eine gesonderte Vergütung berechnen wir dafür nicht. Unsere Vergütung erfolgt in der Regel über Provisionen der Produktanbieter. Eine zusätzliche Vergütung durch dich gibt es nur, wenn du sie ausdrücklich mit uns vereinbarst. Einzelheiten stehen in der Erstinformation.
+      <FaqItem question="Kostet das Erstgespräch Geld?">
+        Für das Erstgespräch berechnen wir dir keine gesonderte Vergütung, und es ist unverbindlich. Unsere Vergütung erfolgt in der Regel über Provisionen der Produktanbieter. Eine zusätzliche Vergütung durch dich gibt es nur, wenn du sie vorab ausdrücklich mit uns vereinbarst. Einzelheiten stehen in der Erstinformation.
       </FaqItem>
       <FaqItem question="Wie unterscheidet ihr euch von anderen Anbietern, wie bspw. Banken?">
         Banken sind an ihre eigenen Produkte gebunden, wir nicht. Als Makler vergleichen wir eine hinreichende Zahl von Anbietern und wählen ausschließlich das aus, was für deine Situation am besten passt. Ehrlich, transparent und ohne Verkaufsdruck.
       </FaqItem>
       <FaqItem question="Kann ich meine bestehenden Verträge bei euch prüfen lassen?">
-        Ja, sehr gerne. Wir analysieren deine bestehenden Verträge, decken Lücken und unnötige Kosten auf und zeigen dir, wo du besser abgesichert bist oder sparen kannst. Das gehört zum Erstgespräch dazu, eine gesonderte Vergütung berechnen wir dafür nicht.
+        Ja, sehr gerne. Wir analysieren deine bestehenden Verträge, decken Lücken und unnötige Kosten auf und zeigen dir, wo du besser abgesichert bist oder sparen kannst. Eine erste Durchsicht gehört zum Erstgespräch dazu, eine gesonderte Vergütung berechnen wir dafür nicht.
       </FaqItem>
     </div>
   </div>

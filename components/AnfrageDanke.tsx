@@ -18,12 +18,13 @@ const TELEFON = "+49 170 8784889";
 const TELEFON_LINK = "tel:+491708784889";
 const MAIL = "a.tito@smarterfinanz.de";
 
-// [TELEFON] und [MAIL] in den Texten werden zu Links, {firmenname} und {thema} zu der Eingabe der Person
+// [TELEFON], [MAIL] und [ERSTINFO] in den Texten werden zu Links, {firmenname} und {thema} zu der Eingabe der Person
 // (als Text, React maskiert ihn).
 function mitKontakt(text: string): ReactNode {
-  return text.split(/(\[TELEFON\]|\[MAIL\])/).map((teil, i) => {
+  return text.split(/(\[TELEFON\]|\[MAIL\]|\[ERSTINFO\])/).map((teil, i) => {
     if (teil === "[TELEFON]") return <a key={i} href={TELEFON_LINK}>{TELEFON}</a>;
     if (teil === "[MAIL]") return <a key={i} href={`mailto:${MAIL}`}>{MAIL}</a>;
+    if (teil === "[ERSTINFO]") return <a key={i} href="/erstinformation">Erstinformation ansehen</a>;
     return <Fragment key={i}>{teil}</Fragment>;
   });
 }

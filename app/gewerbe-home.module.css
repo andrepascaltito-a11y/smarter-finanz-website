@@ -12,8 +12,8 @@
 
 /* Hero: Vollbild-Foto mit dunkelgruenem Verlauf (wie Privatseite), links Text, rechts Ansprechpartner-Karte */
 .hero{position:relative;background:var(--green);color:var(--cream);overflow:hidden}
-.heroBild{position:absolute;inset:0}
-.heroVeil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,31,22,.97) 0%,rgba(12,34,24,.92) 36%,rgba(13,38,26,.6) 68%,rgba(14,42,30,.34) 100%)}
+.heroBild{position:absolute;top:0;right:0;bottom:0;left:0}
+.heroVeil{position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(90deg,rgba(11,31,22,.97) 0%,rgba(12,34,24,.92) 36%,rgba(13,38,26,.6) 68%,rgba(14,42,30,.34) 100%)}
 .heroInner{position:relative;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.62fr);gap:64px;align-items:center;min-height:660px;padding:88px 24px}
 .heroText{max-width:660px}
 .hero h1{font-size:clamp(36px,5vw,60px);margin:18px 0 20px;color:var(--cream)}

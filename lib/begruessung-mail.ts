@@ -60,9 +60,9 @@ export function baueBegruessungsMail(
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:26px 0 6px"><tr><td style="background:${CREME};border-left:4px solid ${GOLD};border-radius:6px;padding:20px 22px">
     <div style="font:600 18px/1.3 ${SERIF};color:${GRUEN};margin:0 0 8px">${esc(t.box.titel)}</div>
     <div style="font:15px/1.6 ${SANS};color:${TEXT}">${auszeichnen(t.box.text)}</div>
-    <div style="font:13px/1.55 ${SANS};color:${MUTED};margin-top:12px">${esc(t.box.pflichtsatz)}</div>
+    <div style="font:14px/1.55 ${SANS};color:${TEXT};margin-top:12px">${esc(t.box.pflichtsatz)}</div>
     <div style="font:12px/1.5 ${SANS};color:${MUTED};margin-top:6px">${esc(t.box.stand)}</div>
-    <div style="margin-top:14px;font:600 13px/1.4 ${SANS};color:${GRUEN};background:#fff;border:1px solid #e3ddc9;border-radius:8px;padding:9px 12px;display:inline-block"><span style="background:${GOLD};color:#3a2e07;border-radius:4px;padding:2px 6px;font-size:11px;letter-spacing:1px;margin-right:8px">PDF</span>${esc(anhang)}</div>
+    <div style="margin-top:12px;font:13px/1.5 ${SANS};color:${MUTED}">Anhang: ${esc(anhang)}</div>
     <div style="margin-top:16px"><a href="${ERSTINFO_URL}" style="display:inline-block;background:${GOLD};color:#3a2e07;text-decoration:none;font:600 15px/1 ${SANS};padding:13px 22px;border-radius:10px">${esc(t.button)}</a></div>
   </td></tr></table>
   <p style="margin:22px 0 0;font:15px/1.6 ${SANS};color:${MUTED}"><strong style="color:${TEXT}">${esc(t.vorbereiten.label)}.</strong> ${esc(t.vorbereiten.text)}</p>

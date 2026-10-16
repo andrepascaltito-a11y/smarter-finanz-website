@@ -32,6 +32,6 @@ export const ERFOLG_TEXTE = {
 };
 
 export const FEHLER_TEXTE = {
-  privatperson: "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
-  gewerbe: "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+  privatperson: "Etwas ist schiefgelaufen. Bitte versuche es erneut oder ruf uns an unter +49 170 8784889.",
+  gewerbe: "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder rufen Sie uns an unter +49 170 8784889.",
 };

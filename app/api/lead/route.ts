@@ -160,8 +160,11 @@ export async function POST(req: Request) {
   payload.erstinfoTimestamp = payload.consentTimestamp;
 
   let crmErgebnis: { accountId?: string } = {};
+  let crmOk = false;
   try {
     crmErgebnis = await forwardToEspoCrm(payload);
+    // Ohne CRM-Zugangsdaten ist die Weiterleitung ein No-op und zaehlt nicht als zugestellt
+    crmOk = Boolean(process.env.ESPOCRM_API_URL && process.env.ESPOCRM_API_KEY);
   } catch (err) {
     console.error(
       "[lead] EspoCRM-Weiterleitung fehlgeschlagen:",
@@ -196,10 +199,18 @@ export async function POST(req: Request) {
   }
 
   // Jede Anfrage erscheint zusaetzlich als E-Mail bei Andre (unabhaengig davon, ob das CRM erreichbar war).
+  let benachrichtigt = false;
   try {
-    await sendLeadBenachrichtigung(payload, newsletterErgebnis, erstinfoVersendet);
+    benachrichtigt = await sendLeadBenachrichtigung(payload, newsletterErgebnis, erstinfoVersendet);
   } catch (err) {
     console.error("[lead] Benachrichtigung fehlgeschlagen:", err instanceof Error ? err.message : err);
+  }
+
+  // Die Bestaetigungsseite sagt "Ihre Anfrage liegt jetzt bei Andre Tito". Das muss stimmen: Kam die Anfrage weder
+  // im CRM noch per Mail an, antworten wir mit einem Fehler, dann greift der Fehlertext des Formulars (Rita S3).
+  if (process.env.NODE_ENV === "production" && !crmOk && !benachrichtigt) {
+    console.error("[lead] Anfrage weder im CRM noch per Mail zugestellt, Antwort 503.");
+    return NextResponse.json({ ok: false }, { status: 503 });
   }
 
   return NextResponse.json({ ok: true, ...(newsletterErgebnis ? { newsletter: formularErgebnis(newsletterErgebnis) } : {}) });
