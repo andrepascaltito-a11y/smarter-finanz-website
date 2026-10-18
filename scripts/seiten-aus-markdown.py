@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Erzeugt lib/seiten-inhalt.ts aus der Textdatei von Mia (Vault: 03-Marketing/Content/Mia-SEO-Phase1-Texte-*.md).
 
-Aufruf:  python3 scripts/seiten-aus-markdown.py <pfad-zur-markdown-datei> [--veroeffentlicht slug1,slug2]
+Aufruf:  python3 scripts/seiten-aus-markdown.py <datei1.md> [<datei2.md> ...] [--veroeffentlicht slug1,slug2]
 
-- Alle Seiten werden mit published: false erzeugt. Freigabe nur durch Andre: Slugs ueber --veroeffentlicht oder
-  per Hand in lib/seiten-inhalt.ts (published: true).
+- Mehrere Textdateien sind moeglich (zum Beispiel Phase 1 und Blog-Chargen), die Seiten werden in dieser Reihenfolge
+  zusammengefuehrt. Ein doppelter Slug bricht ab.
+- Neue Seiten werden mit published: false erzeugt. Bereits freigegebene Seiten behalten ihr Flag (es wird aus der
+  vorhandenen lib/seiten-inhalt.ts gelesen). Freigabe nur durch Andre: Slugs ueber --veroeffentlicht oder per Hand
+  (published: true).
 - Das Format der Markdown-Datei steht oben in Mias Datei ("So baut Claude aus dieser Datei").
 - Das Skript ist wiederholbar: Aenderungen an Mias Texten einlesen, Diff pruefen, committen.
 """
@@ -182,29 +185,49 @@ def baue(y, s, veroeffentlicht):
 
 
 def main():
-    if len(sys.argv) < 2:
+    args = sys.argv[1:]
+    if not args:
         raise SystemExit(__doc__)
-    quelle = Path(sys.argv[1]).expanduser()
     veroeffentlicht = set()
-    if "--veroeffentlicht" in sys.argv:
-        veroeffentlicht = set(sys.argv[sys.argv.index("--veroeffentlicht") + 1].split(","))
-    text = quelle.read_text(encoding="utf-8")
-    bloecke_seiten = re.split(r"^## Seite: .+$", text, flags=re.M)[1:]
+    if "--veroeffentlicht" in args:
+        i = args.index("--veroeffentlicht")
+        veroeffentlicht = set(args[i + 1].split(","))
+        del args[i : i + 2]
+    quellen = [Path(a).expanduser() for a in args if not a.startswith("--")]
+    ziel = Path(__file__).resolve().parent.parent / "lib" / "seiten-inhalt.ts"
+    # Bereits freigegebene Seiten behalten ihr Flag
+    if ziel.exists():
+        try:
+            alt = ziel.read_text(encoding="utf-8")
+            alt_json = json.loads(alt[alt.index("export const SEITEN: Seite[] = ") + len("export const SEITEN: Seite[] = "):].rstrip().rstrip(";"))
+            for a in alt_json:
+                if a.get("published"):
+                    veroeffentlicht.add(a["slug"])
+        except (ValueError, KeyError):
+            warn("Vorhandene Freigaben konnten nicht gelesen werden, alle Seiten gelten als Entwurf.")
     seiten = []
-    for blk in bloecke_seiten:
-        blk = re.split(r"^---\s*$", blk, flags=re.M)[0]
-        y, s = parse_seite(blk)
-        seiten.append(baue(y, s, veroeffentlicht))
+    gesehen = set()
+    for quelle in quellen:
+        text = quelle.read_text(encoding="utf-8")
+        bloecke_seiten = re.split(r"^## Seite: .+$", text, flags=re.M)[1:]
+        for blk in bloecke_seiten:
+            blk = re.split(r"^---\s*$", blk, flags=re.M)[0]
+            y, s = parse_seite(blk)
+            seite = baue(y, s, veroeffentlicht)
+            if seite["slug"] in gesehen:
+                raise SystemExit(f"Doppelter Slug: {seite['slug']} (Datei {quelle.name})")
+            gesehen.add(seite["slug"])
+            seiten.append(seite)
     kopf = (
         "// Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.\n"
-        "// ERZEUGT aus Mias Textdatei (Vault: 03-Marketing/Content/Mia-SEO-Phase1-Texte-2026-10-14.md) mit\n"
-        "// scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,\n"
-        "// sonst gehen Änderungen verloren. Rita hat die Fassung geprüft (Ampel gelb, freigabefähig unter Bedingungen).\n"
-        "// Freigabe durch André: published auf true setzen (oder Skript mit --veroeffentlicht neu laufen lassen).\n\n"
+        "// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): "
+        + ", ".join(q.name for q in quellen)
+        + "\n// mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,\n"
+        "// sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.\n"
+        "// Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.\n\n"
         'import type { Seite } from "./seiten";\n\n'
         "export const SEITEN: Seite[] = "
     )
-    ziel = Path(__file__).resolve().parent.parent / "lib" / "seiten-inhalt.ts"
     ziel.write_text(kopf + json.dumps(seiten, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
     print(f"{len(seiten)} Seiten geschrieben nach {ziel}")
     for s in seiten:

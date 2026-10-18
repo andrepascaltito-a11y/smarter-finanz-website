@@ -1,8 +1,8 @@
 // Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.
-// ERZEUGT aus Mias Textdatei (Vault: 03-Marketing/Content/Mia-SEO-Phase1-Texte-2026-10-14.md) mit
-// scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
-// sonst gehen Änderungen verloren. Rita hat die Fassung geprüft (Ampel gelb, freigabefähig unter Bedingungen).
-// Freigabe durch André: published auf true setzen (oder Skript mit --veroeffentlicht neu laufen lassen).
+// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md
+// mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
+// sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.
+// Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.
 
 import type { Seite } from "./seiten";
 
@@ -1187,6 +1187,1033 @@ export const SEITEN: Seite[] = [
     ],
     "cta": {
       "text": "Sie brauchen einen Nachweis oder möchten Ihre Versicherungssummen prüfen lassen? Vereinbaren Sie ein Gewerbe-Gespräch, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der Erstinformation."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "betriebsbeschreibung-betriebshaftpflicht",
+    "published": true,
+    "title": "Betriebsbeschreibung in der Haftpflicht | Smarter Finanz",
+    "description": "Steht jede Ihrer Arbeiten im Vertrag? So prüfen Sie die Betriebsbeschreibung Ihrer Betriebshaftpflicht und wissen, wann Sie Änderungen melden.",
+    "h1": "Wärmepumpe angeschlossen, Vertrag nicht angepasst? So prüfen Sie Ihre Arbeitsliste",
+    "kurzname": "Betriebsbeschreibung in der Haftpflicht",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Beispiel: Ein Elektrobetrieb, ein Stammkunde, ein freier Nachmittag.",
+      "„Kannst du mir die Wärmepumpe gleich mit anschließen?“ Klar, kann man. Ein Handschlag, ein Kaffee, die Rechnung schreiben Sie gleich noch.",
+      "Monate später ein Wasserschaden an der Anlage. Am Telefon der Sachbearbeiter vom Versicherer, freundlich, mit einer einzigen Frage: „Stand diese Arbeit in Ihrem Vertrag?“",
+      "Die Antwort beginnt auf einer Seite Ihres Versicherungsscheins.",
+      "Hier steht, wo Sie diese Seite finden, wie Sie sie an einem Abend prüfen und wann Sie Änderungen melden."
+    ],
+    "kurz": [
+      {
+        "frage": "Liste prüfen.",
+        "antwort": "Versichert ist Ihre Haftpflicht aus dem Betrieb, wie er im Versicherungsschein und seinen Nachträgen steht. Ihr Vertrag kann abweichen."
+      },
+      {
+        "frage": "Lücken schließen.",
+        "antwort": "Fehlt eine Tätigkeit, kann es im Schadenfall Streit über den Schutz geben. Darum gehört sie in den Vertrag."
+      },
+      {
+        "frage": "Änderungen anmelden.",
+        "antwort": "Ändert sich Ihre Arbeit, fragen Sie Ihren Versicherer am besten vorher."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Betriebsbeschreibung neben Ihre letzten Rechnungen legen und abhaken, was fehlt."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Das Leistungsverzeichnis Ihres Vertrags"
+      },
+      {
+        "art": "p",
+        "text": "Die Betriebshaftpflicht ist die Versicherung für Schäden, die Sie bei Ihrer Arbeit anderen zufügen. Welche Arbeiten sie dabei meint, legt eine Liste im Vertrag fest."
+      },
+      {
+        "art": "p",
+        "text": "Der Versicherungsschein ist das Papier zu Ihrem Vertrag. Ja, genau das Papier, das irgendwo zwischen Lieferschein und Kaffeetasse liegt. Darin stehen Betrieb, Summen, Laufzeit und Beitrag."
+      },
+      {
+        "art": "p",
+        "text": "Dazu gehört, was Ihr Betrieb tut. Diese Liste der versicherten Tätigkeiten heißt **Betriebsbeschreibung**, und sie ist das Leistungsverzeichnis Ihres Vertrags."
+      },
+      {
+        "art": "p",
+        "text": "Ändert sich etwas, kann ein **Nachtrag** dazukommen, ein Änderungsblatt zum Versicherungsschein."
+      },
+      {
+        "art": "p",
+        "text": "Im Schadenfall kann deshalb die Frage auftauchen: Gehört die Arbeit, bei der der Schaden entstand, zu dem Betrieb, der im Vertrag steht? Wer vor dem Anbau der Wärmepumpe beim Versicherer nachgefragt hat, weiß, woran er ist."
+      },
+      {
+        "art": "h2",
+        "text": "Zehn Minuten, ein Stapel Rechnungen, ein Textmarker"
+      },
+      {
+        "art": "p",
+        "text": "Alles, was Ihr Betrieb tut, gehört in die Beschreibung. Auch eine Arbeit, die nur ab und zu vorkommt, kann zu einem Schaden führen."
+      },
+      {
+        "art": "p",
+        "text": "Legen Sie die Betriebsbeschreibung aus Ihrem Versicherungsschein neben diese Unterlagen:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Ihre Eintragung bei der Handwerkskammer oder Ihre Gewerbeanmeldung",
+          "Ihre Rechnungen der letzten Monate",
+          "Ihre Website und Ihre Angebote"
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Rechnungen sind ehrlich: Sie zeigen, was Sie wirklich gemacht haben, auch den Handgriff für den Stammkunden."
+      },
+      {
+        "art": "p",
+        "text": "Dann gehen Sie diese Fragen durch:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Hauptarbeit und Nebenarbeiten:** Was machen Sie jeden Tag, und was kommt gelegentlich dazu?",
+          "**Handel:** Verkaufen Sie auch Waren?",
+          "**Montage, Wartung, Reparatur:** Bauen Sie nur ein, oder warten und reparieren Sie auch? Oder liefern Sie nur an?",
+          "**Eigene Produkte:** Stellen Sie selbst etwas her?",
+          "**Subunternehmer:** Geben Sie Arbeit an andere Betriebe weiter?"
+        ]
+      },
+      {
+        "art": "p",
+        "text": "„Ich bin doch bei der Handwerkskammer eingetragen.“ Das stimmt, und es ist ein guter Vergleichswert."
+      },
+      {
+        "art": "p",
+        "text": "Ihre Handwerkskammer führt eine Liste, in der Ihr Betrieb mit seinem Handwerk steht. Fehlt in Ihrer Betriebsbeschreibung etwas, das dort steht, ist das ein Grund nachzufragen. Die Eintragung ersetzt die Betriebsbeschreibung im Vertrag nicht von selbst."
+      },
+      {
+        "art": "h2",
+        "text": "Neue Arbeit? Erst anrufen, dann anschließen"
+      },
+      {
+        "art": "p",
+        "text": "Neue Arbeit kündigt sich selten an. Sie kommt als „Machst du mal eben?“"
+      },
+      {
+        "art": "p",
+        "text": "Sobald sich bei Ihrem Betrieb etwas ändert, lohnt ein Anruf: eine neue Tätigkeit, ein neuer Standort, mehr Mitarbeiter, ein höherer Umsatz. Fragen Sie Ihren Versicherer am besten vorher, ob und wie er die Änderung braucht."
+      },
+      {
+        "art": "p",
+        "text": "Wer auf dem Gerüst plötzlich die doppelte Last lagert, fragt vorher den Gerüstbauer. Beim Vertrag heißt der Gerüstbauer Versicherer."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück zur Wärmepumpe"
+      },
+      {
+        "art": "p",
+        "text": "Lesen, abgleichen, vorher fragen, in dieser Reihenfolge."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Legen Sie die Betriebsbeschreibung neben Ihre letzten Rechnungen, haken Sie ab, was fehlt, und rufen Sie morgen Ihren Versicherer an."
+      },
+      {
+        "art": "p",
+        "text": "Die Wärmepumpe läuft längst. Ob sie auch im Vertrag steht, verrät ein Textmarker."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand Oktober 2026, keine individuelle Beratung. Grundlage sind das Gesetz und die unverbindlichen Musterbedingungen des Versichererverbands GDV. Ihr Vertrag kann abweichen. Was bei Ihnen gilt, steht in Ihrem Versicherungsschein und in den Bedingungen."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/blog/betriebshaftpflicht-nachweis-auftraggeber",
+        "text": "Nachweis der Betriebshaftpflicht für den Auftraggeber"
+      },
+      {
+        "pfad": "/blog/kunde-behauptet-schaden-betriebshaftpflicht",
+        "text": "Kunde behauptet einen Schaden: Was Sie jetzt sagen, was Sie lassen"
+      },
+      {
+        "pfad": "/blog/grobe-fahrlaessigkeit-versicherung-betrieb",
+        "text": "Etwas vergessen: Zahlt die Versicherung trotzdem?"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Welche Versicherungen braucht ein Kleingewerbe?"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "§ 6 und § 19 Handwerksordnung (HwO), https://www.gesetze-im-internet.de/hwo/__6.html, https://www.gesetze-im-internet.de/hwo/__19.html. Abruf: 16.10.2026.",
+      "Gesamtverband der Deutschen Versicherungswirtschaft (GDV), Musterbedingungen für die Betriebs- und Berufshaftpflichtversicherung (AVB BHV, Stand laut Deckblatt: Oktober 2026, „Unverbindliche Bekanntgabe zur fakultativen Verwendung“), Ziffer A1-1, https://www.gdv.de/resource/blob/6240/36855b2e54b41955ef52c9cfe1190ee5/02-avb-betriebs-und-berufshaftpflichtversicherung-2020-data.pdf. Abruf: 16.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie Ihre Betriebsbeschreibung in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "kunde-behauptet-schaden-betriebshaftpflicht",
+    "published": true,
+    "title": "Kunde behauptet Schaden: Haftpflicht | Smarter Finanz",
+    "description": "Der Kunde sagt „Das war Ihr Pfusch“. Was Sie am Telefon sagen, was in die Schadenmappe gehört und wann Ihr Versicherer es erfahren sollte.",
+    "h1": "„Das war Ihr Pfusch“. Was Sie jetzt sagen, was Sie lassen",
+    "kurzname": "Kunde behauptet Schaden: Haftpflicht",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Beispiel: Montag, kurz vor acht. Kaffee in der Hand, der Tag im Kopf.",
+      "Dann klingelt das Handy: der Kunde vom Bad, das Sie am Freitag übergeben haben.",
+      "„An der Decke sind Flecken. Das war Ihr Pfusch. Und die Restrechnung überweise ich erst mal nicht.“",
+      "Jetzt kommt der Moment, in dem man etwas Nettes sagen will: „Ich zahl das, keine Sorge.“",
+      "Klingt anständig. Ist nur eben der Satz, den Sie besser noch nicht sagen.",
+      "Hier steht, was Sie stattdessen sagen, was in die Schadenmappe gehört und wann Ihr Versicherer davon erfahren sollte."
+    ],
+    "kurz": [
+      {
+        "frage": "Erst zuhören.",
+        "antwort": "Am besten keine Zahlung und kein Schuldeingeständnis, bevor Ihr Versicherer eingebunden ist."
+      },
+      {
+        "frage": "Früh melden.",
+        "antwort": "Die Frist beträgt eine Woche und kann schon vor der Forderung des Kunden laufen. Im Zweifel melden Sie am selben Tag."
+      },
+      {
+        "frage": "Festhalten.",
+        "antwort": "Fotos, Arbeitsnachweise, was gesagt wurde und wer dabei war: alles in eine Mappe."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Versicherungsschein und die Adresse für Schadenmeldungen dorthin legen, wo Sie sie am Montagmorgen finden."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Ihr Kunde ist kein Gutachter"
+      },
+      {
+        "art": "p",
+        "text": "Ein Fleck an der Decke ist noch kein Gutachten. Ob Ihre Arbeit die Ursache war, steht damit nicht fest."
+      },
+      {
+        "art": "p",
+        "text": "Das kennen Sie von der Baustelle: Ein Riss in der Wand sagt noch nicht, ob das Haus sich setzt oder der Putz nur trocknet."
+      },
+      {
+        "art": "p",
+        "text": "Hören Sie dem Kunden zu und bleiben Sie sachlich, statt über Schuld zu streiten. Wer jetzt streitet, rät nur."
+      },
+      {
+        "art": "h2",
+        "text": "Der netteste Satz des Tages kann warten"
+      },
+      {
+        "art": "p",
+        "text": "Am besten keine Zahlung und kein Schuldeingeständnis, bevor Ihr Versicherer eingebunden ist. Einen Auftrag sagen Sie ja auch nicht zu, bevor Sie die Baustelle gesehen haben."
+      },
+      {
+        "art": "p",
+        "text": "Wenn Sie sagen „Ich zahle das“, nennt man das ein **Anerkenntnis**. Das Gleiche gilt für einen Vergleich, also eine Einigung mit dem Kunden."
+      },
+      {
+        "art": "p",
+        "text": "Sagen können Sie etwas anderes. Zum Beispiel so:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "„Das nehme ich ernst.“",
+          "„Ich melde den Vorgang meinem Versicherer, der prüft den Fall.“",
+          "„Sobald ich mehr weiß, melde ich mich bei Ihnen.“"
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Das klingt weniger großzügig, hat aber den Vorteil, dass es stimmt."
+      },
+      {
+        "art": "h2",
+        "text": "Melden Sie heute, nicht irgendwann"
+      },
+      {
+        "art": "p",
+        "text": "Im Zweifel melden Sie am selben Tag, per Mail oder Brief, an die Stelle, die in Ihrem Versicherungsschein genannt ist. Schreiben Sie, wie Sie es einem Kollegen am Telefon erzählen würden: was passiert ist, wann, wo, wer dabei war."
+      },
+      {
+        "art": "p",
+        "text": "Melden Sie zu spät, kann das Ihren Schutz kosten. Auch bei einem kleinen Betrag lohnt die Meldung."
+      },
+      {
+        "art": "p",
+        "text": "Berichten Sie dem Versicherer vollständig und ehrlich und helfen Sie bei der Klärung."
+      },
+      {
+        "art": "h2",
+        "text": "Sauber gearbeitet, also nichts melden?"
+      },
+      {
+        "art": "p",
+        "text": "„Ich habe sauber gearbeitet, also muss ich nichts melden.“ Das fühlt sich logisch an."
+      },
+      {
+        "art": "p",
+        "text": "Melden Sie trotzdem. Ob die Ansprüche berechtigt sind, prüft der Versicherer."
+      },
+      {
+        "art": "p",
+        "text": "Sie müssen den Fall nicht gewinnen. Sie müssen ihn melden."
+      },
+      {
+        "art": "p",
+        "text": "Ob die Versicherung am Ende zahlt, ist eine eigene Frage. Die Antwort steht im [Artikel zur Betriebshaftpflicht](/blog/was-zahlt-die-betriebshaftpflicht)."
+      },
+      {
+        "art": "h2",
+        "text": "Schadenmappe anlegen, solange alles frisch ist"
+      },
+      {
+        "art": "p",
+        "text": "Es kann helfen, festzuhalten, was passiert ist. Das gehört in die Mappe:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Datum und Ort",
+          "was gesagt wurde und wer dabei war",
+          "Fotos und Arbeitsnachweise vom fertigen Bad",
+          "Versicherungsschein und Vertragsnummer"
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Eine Mappe, die man findet, schlägt den Ordner, den zuletzt irgendwer hatte."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück zum Montagmorgen"
+      },
+      {
+        "art": "p",
+        "text": "Zuhören, nichts anerkennen, melden, festhalten, in dieser Reihenfolge. Beim Dachdecker ist es der Tropfen im Flur, beim Elektriker der Rußfleck an der Wand: Die Reihenfolge bleibt dieselbe."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Legen Sie Versicherungsschein und die Adresse für Schadenmeldungen an einen Ort, den Sie am Montagmorgen finden."
+      },
+      {
+        "art": "p",
+        "text": "Der Kaffee ist kalt, die Meldung ist raus. Für einen Montag ist das keine schlechte Bilanz."
+      },
+      {
+        "art": "p",
+        "text": "Erst messen, dann sägen. Im Schadenfall heißt das: erst melden, mit dem Versicherer abstimmen, dann großzügig sein."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand Oktober 2026, keine individuelle Beratung. Ihr Vertrag kann abweichen. Was bei Ihnen gilt, steht in Ihrem Versicherungsschein und in den Bedingungen."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/blog/betriebshaftpflicht-nachweis-auftraggeber",
+        "text": "Nachweis der Betriebshaftpflicht für den Auftraggeber"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Welche Versicherungen braucht ein Kleingewerbe?"
+      },
+      {
+        "pfad": "/blog/grobe-fahrlaessigkeit-versicherung-betrieb",
+        "text": "Etwas vergessen: Zahlt die Versicherung trotzdem?"
+      },
+      {
+        "pfad": "/blog/betriebsbeschreibung-betriebshaftpflicht",
+        "text": "Wärmepumpe angeschlossen, Vertrag nicht angepasst? So prüfen Sie Ihre Arbeitsliste"
+      },
+      {
+        "pfad": "/blog/was-zahlt-die-betriebshaftpflicht",
+        "text": "„Zahlt das Ihre Versicherung?“ Was die Betriebshaftpflicht zahlt, was nicht"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "§ 104 VVG (Anzeigepflicht des Versicherungsnehmers), https://www.gesetze-im-internet.de/vvg_2008/__104.html. Abruf: 16.10.2026.",
+      "Deutscher Bundestag, Gesetzentwurf der Bundesregierung, Entwurf eines Gesetzes zur Reform des Versicherungsvertragsrechts, Drucksache 16/3945 vom 20.12.2006, Begründung zu § 104 (S. 85), https://dserver.bundestag.de/btd/16/039/1603945.pdf. Abruf: 16.10.2026.",
+      "Gesamtverband der Deutschen Versicherungswirtschaft (GDV), Musterbedingungen für die Betriebs- und Berufshaftpflichtversicherung (AVB BHV, Stand laut Deckblatt: Oktober 2026, „Unverbindliche Bekanntgabe zur fakultativen Verwendung“), Ziffern A1-4.1, A1-5.4, B3-3.2.2 und B4-2.1, https://www.gdv.de/resource/blob/6240/36855b2e54b41955ef52c9cfe1190ee5/02-avb-betriebs-und-berufshaftpflichtversicherung-2020-data.pdf. Abruf: 16.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie das für Ihren Betrieb in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "betriebsunterbrechung-ertragsausfall",
+    "published": true,
+    "title": "Betriebsunterbrechung nach einem Schaden | Smarter Finanz",
+    "description": "Brand oder Wasserschaden, der Betrieb steht still: Was die Inhaltsversicherung ersetzt, was die Betriebsunterbrechung leistet und worauf Sie achten.",
+    "h1": "Betrieb steht still, Kosten laufen weiter: Was Sie vorab klären können",
+    "kurzname": "Betriebsunterbrechung nach einem Schaden",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Beispiel: Dienstag, kurz nach sechs. Die Feuerwehr rollt die Schläuche ein, die Halle der Schreinerei steht in Rauch und Wasser.",
+      "Maschinen und Holz sind beschädigt, das sieht man. Was man nicht sieht: die nächsten Wochen.",
+      "Löhne, Miete und Leasingraten fragen nicht, ob es gebrannt hat. Sie kommen zum Ersten.",
+      "Hier steht, was die Inhaltsversicherung ersetzt, was die Betriebsunterbrechung dazu beitragen kann und welche fünf Fragen Sie Ihrem Vertrag vorher stellen."
+    ],
+    "kurz": [
+      {
+        "frage": "Zwei Bausteine.",
+        "antwort": "Die Inhaltsversicherung ersetzt Maschinen und Holz, soweit versichert. Den ausfallenden Verdienst ersetzt sie nicht automatisch."
+      },
+      {
+        "frage": "Betriebsunterbrechung.",
+        "antwort": "Wenn vereinbart, ersetzt sie Gewinn und laufende Kosten nach einem Sachschaden, den die Bedingungen nennen."
+      },
+      {
+        "frage": "Zeit und Summe.",
+        "antwort": "Wie lange und bis zu welcher Summe, legt Ihr Vertrag fest."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Im Versicherungsschein nachsehen: Ist die Betriebsunterbrechung vereinbart, mit welcher Summe und Haftzeit?"
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Ersetzt die Inhaltsversicherung auch den Verdienst?"
+      },
+      {
+        "art": "p",
+        "text": "Nicht automatisch. Die **Inhaltsversicherung** ist die Versicherung für die Einrichtung und die Vorräte im Betrieb."
+      },
+      {
+        "art": "p",
+        "text": "Im Beispiel der Schreinerei ersetzt die Inhaltsversicherung Maschinen und Holz, soweit versichert. Ohne Betriebsunterbrechung trägt der Betrieb die Zeit bis zum Neustart selbst."
+      },
+      {
+        "art": "p",
+        "text": "Wie beim Hausbau: Die Rechnung für den Rohbau und die Rechnung für die Zinsen der Bauzeit sind zwei verschiedene Rechnungen."
+      },
+      {
+        "art": "h2",
+        "text": "Gewinn plus laufende Kosten"
+      },
+      {
+        "art": "p",
+        "text": "Die **Betriebsunterbrechung** ist ein Baustein, der die Zeit des Stillstands absichern kann. Sie kann den Gewinn ersetzen, den Ihr Betrieb nicht verdient, und die Kosten, die trotzdem weiterlaufen. Das sind zum Beispiel Löhne, Miete und Leasingraten."
+      },
+      {
+        "art": "p",
+        "text": "Das gilt nur, wenn die Betriebsunterbrechung vereinbart ist. Außerdem braucht sie einen Auslöser: einen Sachschaden, den die Bedingungen nennen, zum Beispiel die Zerstörung einer Maschine durch Brand."
+      },
+      {
+        "art": "p",
+        "text": "Nicht jede Ausgabe zählt. Kosten werden nur ersetzt, soweit sie rechtlich notwendig oder wirtschaftlich begründet sind."
+      },
+      {
+        "art": "h2",
+        "text": "Die Stoppuhr läuft ab dem Schaden"
+      },
+      {
+        "art": "p",
+        "text": "Die Betriebsunterbrechung zahlt höchstens so lange, wie die Haftzeit reicht, und nur, solange der Ausfall besteht. Die **Haftzeit** ist der Zeitraum, für den sie zahlen kann."
+      },
+      {
+        "art": "p",
+        "text": "Die Stoppuhr läuft ab dem Schaden, nicht ab dem ersten Spatenstich. Planungs- und Wartezeiten laufen also mit. Auch die Wochen, in denen Sie auf den Elektriker warten, der „nächste Woche“ kommt."
+      },
+      {
+        "art": "h2",
+        "text": "Die Summe muss zum Jahr passen"
+      },
+      {
+        "art": "p",
+        "text": "Es gibt zwei Formen: die ausführliche Betriebsunterbrechung und die einfache. Bei der ausführlichen soll die Summe zu dem passen, was Ihr Betrieb im Jahr an Gewinn und fortlaufenden Kosten erwirtschaftet. Bei der einfachen gilt laut Musterbedingungen die Summe Ihrer Inhaltsversicherung zugleich als Summe der Betriebsunterbrechung."
+      },
+      {
+        "art": "p",
+        "text": "Liegt die Summe unter dem Wert, wird die Entschädigung laut Musterbedingungen gekürzt, im Verhältnis von Summe zu Wert. Wie das funktioniert, erklärt der [Artikel zur Summe im Vertrag](/blog/unterversicherung-inhalt-betrieb)."
+      },
+      {
+        "art": "p",
+        "text": "Wie lange ein Stillstand dauern könnte, bestimmt die Haftzeit, nicht die Summe. Lassen Sie sich im Vertrag zeigen, wie Ihre Summe berechnet wurde."
+      },
+      {
+        "art": "h2",
+        "text": "Fünf Fragen an Ihren Vertrag"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Ist die Betriebsunterbrechung vereinbart, und ist es die ausführliche oder die einfache Form?",
+          "Welche Ursachen sind eingeschlossen, zum Beispiel Leitungswasser, Sturm oder Hochwasser?",
+          "Wie lange zahlt sie, und reicht das für einen Wiederaufbau bei mir?",
+          "Passt meine Summe zu Gewinn und Kosten eines Jahres, bei längerer Haftzeit zu mehr?",
+          "Zieht der Versicherer einen Betrag ab, den ich selbst trage?"
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Zurück zur Halle"
+      },
+      {
+        "art": "p",
+        "text": "Form, Ursache, Haftzeit, Summe, Eigenanteil: fünf Punkte in Ihrem Vertrag, die Sie vor dem Schaden kennen sollten."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Schlagen Sie Versicherungsschein und Bedingungen auf und schreiben Sie neben die fünf Fragen, was dort steht. Was offen bleibt, klären Sie mit Ihrem Versicherer."
+      },
+      {
+        "art": "p",
+        "text": "Der Erste des Monats kommt trotzdem, pünktlich wie ein Dauerauftrag. Ob der Vertrag dafür etwas vorsieht, lässt sich heute nachlesen."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand Oktober 2026, keine individuelle Beratung. Grundlage sind die unverbindlichen Musterbedingungen des Versichererverbands GDV zur Betriebsunterbrechung. Ihr Vertrag kann abweichen, maßgeblich sind seine Bedingungen."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/unterversicherung-inhalt-betrieb",
+        "text": "Halb versichert, halb ersetzt? Warum die Zahl im Vertrag mitwachsen sollte"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Welche Versicherungen braucht ein Kleingewerbe?"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Gesamtverband der Deutschen Versicherungswirtschaft (GDV), Allgemeine Feuer-Betriebsunterbrechungs-Versicherungs-Bedingungen (FBUB 2010, GDV 0120, Version laut Deckblatt: 01.04.2014, unverbindliche Bekanntgabe), § 1, § 2, § 5 und § 6, https://www.gdv.de/resource/blob/6120/8d3b52913f8c4b26fb6ab434b594078d/01-allgemeine-feuer-betriebsunterbrechungs-versicherungs-bedingungen--fbub-2010--data.pdf. Abruf: 16.10.2026.",
+      "GDV, Zusatzbedingungen für die einfache Betriebsunterbrechungs-Versicherung (ZKBU 2010, GDV 0125, Version laut Deckblatt: 01.04.2014), § 3 und § 4, https://www.gdv.de/resource/blob/6122/78ada56583a0eb5c15b55f4e9ad35636/02-zusatzbedingungen-fuer-die-einfache-betriebsunterbrechungs-versicherung-zkbu-2010--data.pdf. Abruf: 16.10.2026.",
+      "GDV, Allgemeine Bedingungen für die Feuerversicherung (AFB 2010, GDV 0100, Version laut Deckblatt: 01.04.2014, unverbindliche Bekanntgabe), § 8, https://www.gdv.de/resource/blob/6066/fac7f18cb40b22a072cfe665774abfcc/01-allgemeine-bedingungen-fuer-die-feuerversicherung-afb-2010--data.pdf. Abruf: 16.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie die Absicherung für einen Stillstand in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "unterversicherung-inhalt-betrieb",
+    "published": true,
+    "title": "Inventar versichert: Reicht die Summe? | Smarter Finanz",
+    "description": "Ist die Versicherungssumme für Ihr Inventar zu niedrig, kann die Versicherung nur einen Teil des Schadens zahlen. So prüfen Sie Ihre Summe.",
+    "h1": "Halb versichert, halb ersetzt? Warum die Zahl im Vertrag mitwachsen sollte",
+    "kurzname": "Inventar versichert: Reicht die Summe?",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Beispiel: Ein Café, vor Jahren eingerichtet. Die Summe im Vertrag hat der Inhaber damals sorgfältig festgelegt.",
+      "Seitdem kamen eine größere Kaffeemaschine, neue Möbel und ein Lager dazu. Die Preise sind gestiegen.",
+      "Die Zahl im Vertrag blieb. Zahlen beschweren sich nicht, wenn man sie vergisst.",
+      "Dann gibt es einen Schaden.",
+      "Es geht um die Inhaltsversicherung, die Versicherung für Einrichtung und Vorräte im Betrieb.",
+      "Hier steht, wie die Rechnung danach aussieht und wie Sie Ihre eigene Summe an einem Abend prüfen."
+    ],
+    "kurz": [
+      {
+        "frage": "Summe gegen Wert.",
+        "antwort": "Zu niedrig versichert heißt: Die Summe im Vertrag liegt unter dem Wert Ihrer Sachen zum Zeitpunkt des Schadens."
+      },
+      {
+        "frage": "Teilersatz.",
+        "antwort": "Die Versicherung kann dann nur einen Teil des Schadens zahlen, im Verhältnis von Summe zu Wert."
+      },
+      {
+        "frage": "Auch kleine Lücken.",
+        "antwort": "Verlassen Sie sich nicht darauf, dass ein kleiner Abstand keine Rolle spielt."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Summe aus dem Versicherungsschein neben die Liste Ihrer Anschaffungen legen."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Der Kuchen wächst, das Stück im Vertrag nicht"
+      },
+      {
+        "art": "p",
+        "text": "Im Vertrag steht, wie groß das versicherte Stück Kuchen ist. Ist der Kuchen gewachsen, das Stück aber nicht, kann im Schaden nur ein Teil davon zurückkommen."
+      },
+      {
+        "art": "p",
+        "text": "Die Summe im Vertrag ist der Höchstbetrag, den die Versicherung dafür zahlt. Der Wert Ihrer Sachen ist das, was sie zum Zeitpunkt des Schadens wert sind. Liegt die Summe darunter, spricht man von **Unterversicherung**."
+      },
+      {
+        "art": "h2",
+        "text": "Erst teilen, dann ersetzen"
+      },
+      {
+        "art": "p",
+        "text": "Die Versicherung teilt die Summe durch den Wert. Das Ergebnis ist der Anteil des Schadens, den sie ersetzt. So beschreibt es auch das Gesetz."
+      },
+      {
+        "art": "p",
+        "text": "Ein Rechenbeispiel ohne Beträge: Der Wert Ihrer Sachen ist doppelt so hoch wie die Summe im Vertrag. Dann ersetzt die Versicherung nach dieser Rechnung die Hälfte des Schadens."
+      },
+      {
+        "art": "p",
+        "text": "Die andere Hälfte bliebe bei Ihnen. Das Beispiel dient dem Verstehen und sagt nichts über Ihren Vertrag."
+      },
+      {
+        "art": "h2",
+        "text": "„Ein kleiner Abstand fällt doch nicht ins Gewicht“"
+      },
+      {
+        "art": "p",
+        "text": "Das Gesetz spricht von einer „erheblich“ niedrigeren Summe. Die Musterbedingungen sind strenger: Dort genügt schon eine niedrigere Summe."
+      },
+      {
+        "art": "p",
+        "text": "Verlassen Sie sich darum nicht darauf, dass ein kleiner Abstand keine Rolle spielt. Ihre Bedingungen können eine Grenze setzen oder schon bei einem kleinen Abstand kürzen."
+      },
+      {
+        "art": "h2",
+        "text": "Mit dem Preis von heute rechnen"
+      },
+      {
+        "art": "p",
+        "text": "Rechnen Sie mit dem, was die Sache heute kostet, nicht mit dem, woran Sie sich gern erinnern."
+      },
+      {
+        "art": "p",
+        "text": "Die Sachen und die Preise ändern sich, die Summe im Vertrag bleibt stehen. Das kann zum Beispiel bei neuen Maschinen, Möbeln oder Werkzeug passieren, bei einem Warenlager, das im Lauf des Jahres wächst, und bei steigenden Preisen für Ersatz."
+      },
+      {
+        "art": "p",
+        "text": "Die Musterbedingungen erwarten, dass Sie die Summe dem jeweils gültigen Wert anpassen. Für Einrichtung und Maschinen zählt dabei der **Neuwert**, also das, was dieselbe Sache neu kostet. Es kann Verträge geben, in denen sich die Summe automatisch anpasst."
+      },
+      {
+        "art": "h2",
+        "text": "Die Merkliste für einen Abend"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Einrichtung, Maschinen, Werkzeug:** Was würde dasselbe heute neu kosten?",
+          "**Vorräte und Waren:** Wie viel liegt bei Ihnen im Lager, wenn es am vollsten ist?",
+          "**Anpassung:** Hat mein Vertrag eine automatische Anpassung?",
+          "**Stand:** Wann habe ich die Summe zuletzt geprüft?"
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Lautet die ehrliche Antwort auf die letzte Frage „zur Eröffnung“, ist heute ein guter Tag."
+      },
+      {
+        "art": "p",
+        "text": "Prüfen Sie Einrichtung und Waren getrennt, denn die Versicherung rechnet laut Musterbedingungen für jeden Teil für sich. Wenn Sie unsicher sind, gehen Sie die Liste mit Ihrem Versicherer durch."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück zum Café"
+      },
+      {
+        "art": "p",
+        "text": "Summe gegen Wert, Teil für Teil, einmal im Jahr."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Legen Sie die Summe aus dem Versicherungsschein neben Ihre Anschaffungsliste. Schreiben Sie zu jeder Zeile, was sie heute neu kosten würde."
+      },
+      {
+        "art": "p",
+        "text": "Das Café ist gewachsen, der Kuchen auch. Die Kaffeemaschine ist längst eingezogen, jetzt darf das Stück im Vertrag nachziehen."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand Oktober 2026, keine individuelle Beratung. Welche Regeln für Sie gelten, steht in Ihrem Vertrag. Grundlage sind das Gesetz und die unverbindlichen Musterbedingungen des Versichererverbands GDV zur Feuerversicherung. Ihr Vertrag kann das anders regeln."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/betriebsunterbrechung-ertragsausfall",
+        "text": "Betrieb steht still, Kosten laufen weiter: Was Sie vorab klären können"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Welche Versicherungen braucht ein Kleingewerbe?"
+      },
+      {
+        "pfad": "/blog/grobe-fahrlaessigkeit-versicherung-betrieb",
+        "text": "Etwas vergessen: Zahlt die Versicherung trotzdem?"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "§ 75, § 87 und § 88 VVG, https://www.gesetze-im-internet.de/vvg_2008/__75.html, https://www.gesetze-im-internet.de/vvg_2008/__87.html, https://www.gesetze-im-internet.de/vvg_2008/__88.html. Abruf: 16.10.2026.",
+      "Gesamtverband der Deutschen Versicherungswirtschaft (GDV), Allgemeine Bedingungen für die Feuerversicherung (AFB 2010, GDV 0100, Version laut Deckblatt: 01.04.2014, unverbindliche Bekanntgabe), § 7 und § 8, https://www.gdv.de/resource/blob/6066/fac7f18cb40b22a072cfe665774abfcc/01-allgemeine-bedingungen-fuer-die-feuerversicherung-afb-2010--data.pdf. Abruf: 16.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie Ihre Summen in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "grobe-fahrlaessigkeit-versicherung-betrieb",
+    "published": true,
+    "title": "Grobe Fahrlässigkeit: Je nach Versicherung | Smarter Finanz",
+    "description": "Wenn ich etwas vergessen habe: Zahlt die Versicherung trotzdem? Was bei Missgeschick, grober Unachtsamkeit und Absicht gilt, hängt von der Versicherung ab.",
+    "h1": "Etwas vergessen: Zahlt die Versicherung trotzdem?",
+    "kurzname": "Grobe Fahrlässigkeit: Je nach Versicherung",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Beispiel: Fünf Uhr morgens, Backstube. Die Lieferung ist da, die Öfen laufen, und der Sack Mehl landet dort, wo gerade Platz ist: auf dem Boden. Nur kurz, versteht sich. Provisorien halten bekanntlich am längsten.",
+      "Im Vertrag steht, dass Vorräte mit Abstand zum Boden lagern müssen. Daran hat heute Morgen keiner gedacht.",
+      "In der Nacht dringt Wasser ein. Am Telefon die Versicherung, höflich, mit einer Frage: „Hatten Sie nicht eine Vorgabe zur Lagerung?“",
+      "Ob das etwas ändert, hängt von mehr ab als vom Sack.",
+      "Hier steht in drei Schritten, wovon die Antwort auf „Ich hab was vergessen, zahlt die Versicherung?“ abhängt."
+    ],
+    "kurz": [
+      {
+        "frage": "Sachversicherung.",
+        "antwort": "Nach dem Gesetz muss die Versicherung bei einem Missgeschick trotzdem zahlen, bei grober Schlamperei darf sie kürzen, bei Absicht muss sie nicht zahlen. Der Vertrag kann abweichen."
+      },
+      {
+        "frage": "Betriebshaftpflicht.",
+        "antwort": "Beim Herbeiführen des Schadens muss die Versicherung gesetzlich nur dann nicht zahlen, wenn Sie ihn absichtlich und gegen das Recht verursacht haben. Der Vertrag darf strenger sein und zum Beispiel bewusstes Fehlverhalten ausschließen."
+      },
+      {
+        "frage": "Pflichten im Vertrag.",
+        "antwort": "Wer sie grob schlampig verletzt, riskiert eine Kürzung, bei Absicht kann die Zahlung ganz entfallen. Ihr Vertrag kann Abweichendes regeln."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Im Vertrag nachlesen, welche Pflichten drinstehen: Sicherungen, Kontrollen, Prüfungen, Fristen."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Schritt 1: Wie schwer war der Fehler?"
+      },
+      {
+        "art": "p",
+        "text": "Das Gesetz unterscheidet drei Stufen:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Missgeschick:** ein normaler Fehler, etwa wenn der Sack einmal versehentlich auf dem Boden steht.",
+          "**Grobe Schlamperei**, im Gesetz grobe Fahrlässigkeit: ein besonders schwerer Verstoß gegen die nötige Sorgfalt.",
+          "**Absicht:** Sie wollten den Schaden oder haben ihn bewusst in Kauf genommen. Bei einer Pflicht aus dem Vertrag genügt es, sie bewusst nicht zu erfüllen."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Wo ein Fehler einzuordnen ist, hängt vom Einzelfall ab. Ein Lineal dafür gibt es nicht."
+      },
+      {
+        "art": "h2",
+        "text": "Schritt 2: Bei welcher Versicherung ist es passiert?"
+      },
+      {
+        "art": "p",
+        "text": "Bei Sachen, also Inhalt, Gebäude oder Betriebsunterbrechung, darf die Versicherung bei grober Schlamperei kürzen. Wie stark, hängt von der Schwere des Fehlers ab. Bei Absicht muss sie nicht zahlen, bei einem Missgeschick muss sie trotzdem zahlen. So steht es im Gesetz, und die Musterbedingungen des Versichererverbands GDV, ein unverbindliches Muster für Verträge, sehen dasselbe vor."
+      },
+      {
+        "art": "p",
+        "text": "In der Betriebshaftpflicht gilt eine eigene Regel: Beim Herbeiführen des Schadens muss die Versicherung gesetzlich nur dann nicht zahlen, wenn Sie ihn absichtlich und gegen das Recht verursacht haben. Der Vertrag darf strenger sein: Laut Musterbedingungen sind absichtlich herbeigeführte Schäden ausgeschlossen, dazu kommen weitere Ausschlüsse für bewusstes Fehlverhalten."
+      },
+      {
+        "art": "p",
+        "text": "Welche bei Ihnen gelten, sehen Sie nur im Vertrag."
+      },
+      {
+        "art": "h2",
+        "text": "Schritt 3: Was im Vertrag als Pflicht steht"
+      },
+      {
+        "art": "p",
+        "text": "Pflichten im Vertrag sind Hausaufgaben mit Folgen: etwas, das Sie tun oder lassen müssen, damit die Versicherung voll zahlt. Vor dem Schaden ist das zum Beispiel der Abstand zum Boden oder die Alarmanlage, die abends eingeschaltet wird. Nach dem Schaden sind es Melden und Auskunft geben."
+      },
+      {
+        "art": "p",
+        "text": "Sieht der Vertrag für eine verletzte Pflicht Folgen vor, stuft das Gesetz sie nach der Schwere des Fehlers ab. Bei einem Missgeschick darf die Versicherung weder kürzen noch die Zahlung verweigern, bei grober Schlamperei darf sie kürzen, bei Absicht darf sie die Zahlung verweigern."
+      },
+      {
+        "art": "p",
+        "text": "Belegen Sie, dass Sie die Pflichten einhalten, zum Beispiel mit Prüfprotokollen. Das Prüfprotokoll gehört in den Ordner, nicht in die Jackentasche. Spätestens nach der nächsten Wäsche weiß man, warum."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück zum Mehlsack"
+      },
+      {
+        "art": "p",
+        "text": "Pflichten kennen, einhalten, belegen, in dieser Reihenfolge."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Schlagen Sie Versicherungsschein und Bedingungen auf, streichen Sie die Pflichten an und legen Sie die Nachweise dazu. Fragen Sie bei Unsicherheit Ihren Versicherer."
+      },
+      {
+        "art": "p",
+        "text": "Ein Sack Mehl wiegt nicht viel. Was im Vertrag dazu steht, kann schwerer wiegen. Der Sack kommt morgen auf eine Palette, die Pflicht dazu heute Abend in den Kopf."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand Oktober 2026, keine individuelle Beratung. Was in Ihrem Schadenfall gilt, hängt von Ihrem Vertrag und vom Einzelfall ab. Ihr Vertrag kann abweichen: Beim Herbeiführen des Schadens darf er bei Sachen vom Gesetz abweichen, in der Betriebshaftpflicht darf er strenger sein."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/kunde-behauptet-schaden-betriebshaftpflicht",
+        "text": "Kunde behauptet einen Schaden: Was Sie jetzt sagen, was Sie lassen"
+      },
+      {
+        "pfad": "/blog/unterversicherung-inhalt-betrieb",
+        "text": "Halb versichert, halb ersetzt? Warum die Zahl im Vertrag mitwachsen sollte"
+      },
+      {
+        "pfad": "/blog/betriebsbeschreibung-betriebshaftpflicht",
+        "text": "Wärmepumpe angeschlossen, Vertrag nicht angepasst? So prüfen Sie Ihre Arbeitsliste"
+      },
+      {
+        "pfad": "/blog/was-zahlt-die-betriebshaftpflicht",
+        "text": "„Zahlt das Ihre Versicherung?“ Was die Betriebshaftpflicht zahlt, was nicht"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Welche Versicherungen braucht ein Kleingewerbe?"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "§ 28, § 81, § 87, § 103 und § 112 VVG, https://www.gesetze-im-internet.de/vvg_2008/__28.html, https://www.gesetze-im-internet.de/vvg_2008/__81.html, https://www.gesetze-im-internet.de/vvg_2008/__87.html, https://www.gesetze-im-internet.de/vvg_2008/__103.html, https://www.gesetze-im-internet.de/vvg_2008/__112.html. Abruf: 16.10.2026.",
+      "Deutscher Bundestag, Gesetzentwurf der Bundesregierung, Entwurf eines Gesetzes zur Reform des Versicherungsvertragsrechts, Drucksache 16/3945 vom 20.12.2006, Begründung zu § 28 (S. 69), § 81 (S. 79 und 80) und § 103 (S. 85), https://dserver.bundestag.de/btd/16/039/1603945.pdf. Abruf: 16.10.2026.",
+      "Gesamtverband der Deutschen Versicherungswirtschaft (GDV), Musterbedingungen für die Betriebs- und Berufshaftpflichtversicherung (AVB BHV, Stand laut Deckblatt: Oktober 2026, „Unverbindliche Bekanntgabe zur fakultativen Verwendung“), Ziffern A1-7.1, A1-7.2, A1-7.23, B3-3.2.2 und B3-3.3, https://www.gdv.de/resource/blob/6240/36855b2e54b41955ef52c9cfe1190ee5/02-avb-betriebs-und-berufshaftpflichtversicherung-2020-data.pdf. Abruf: 16.10.2026.",
+      "GDV, Allgemeine Bedingungen für die Feuerversicherung (AFB 2010, GDV 0100, Version laut Deckblatt: 01.04.2014, unverbindliche Bekanntgabe), § 11 und Abschnitt B § 16 Nr. 1, https://www.gdv.de/resource/blob/6066/fac7f18cb40b22a072cfe665774abfcc/01-allgemeine-bedingungen-fuer-die-feuerversicherung-afb-2010--data.pdf. Abruf: 16.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie die Pflichten in Ihrem Vertrag in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "was-zahlt-die-betriebshaftpflicht",
+    "published": true,
+    "title": "Was zahlt die Betriebshaftpflicht? | Smarter Finanz",
+    "description": "Der Kunde fragt: Zahlt das Ihre Versicherung? Was die Betriebshaftpflicht bezahlt, was nicht und was die Selbstbeteiligung damit zu tun hat.",
+    "h1": "„Zahlt das Ihre Versicherung?“ Was die Betriebshaftpflicht zahlt, was nicht",
+    "kurzname": "Was zahlt die Betriebshaftpflicht?",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Beispiel: Im fertigen Bad zeigt der Kunde auf etwas und fragt: „Zahlt das Ihre Versicherung?“",
+      "Der Handwerker nickt, so wie man nickt, wenn man es nicht genau weiß. Der Versicherungsschein liegt im Büro, und das Büro ist gerade im Transporter. Der Kunde meint es nicht böse, er will nur wissen, woran er ist.",
+      "Die ehrliche Antwort lautet: Kommt darauf an, was „das“ ist. Es kann der Fleck an der Decke sein, die Fliesen oder der Rest der Rechnung, und jedes hat seine eigene Antwort.",
+      "Hier steht, was die Betriebshaftpflicht bezahlt, was nicht und was die Selbstbeteiligung damit zu tun hat."
+    ],
+    "kurz": [
+      {
+        "frage": "Schäden bei anderen.",
+        "antwort": "Die Betriebshaftpflicht ist die Versicherung für Schäden, die Sie bei Ihrer Arbeit anderen zufügen. Laut Musterbedingungen prüft der Versicherer zuerst, ob der Kunde recht hat."
+      },
+      {
+        "frage": "Eigene Arbeit.",
+        "antwort": "Laut Musterbedingungen gehört Ihre eigene Arbeit nicht dazu, zum Beispiel Fliesen neu zu verlegen."
+      },
+      {
+        "frage": "Selbstbeteiligung.",
+        "antwort": "Das ist der Betrag, den Sie bei jedem Schaden selbst tragen. Wie hoch er bei Ihnen ist, steht in Ihrem Vertrag."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Im Vertrag nachsehen: Wie hoch sind Selbstbeteiligung und Summe?"
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "„Und der Fleck an der Decke?“ Erst prüft der Versicherer"
+      },
+      {
+        "art": "p",
+        "text": "Zeigt der Kunde auf einen Fleck an der Decke darunter, geht es um einen Schaden an seinen Sachen. Das ist eine Frage für Ihren Versicherer."
+      },
+      {
+        "art": "p",
+        "text": "Er prüft zuerst, ob der Kunde recht hat. Ein Fleck an der Decke ist noch kein Gutachten. Ob Ihre Arbeit die Ursache war, steht damit nicht fest."
+      },
+      {
+        "art": "p",
+        "text": "Hat der Kunde recht, zahlt der Versicherer so, wie Ihr Vertrag es vorsieht, an den Kunden, nicht Sie: bis zur Summe im Vertrag und nach Abzug der **Selbstbeteiligung**. Das ist der Betrag, den Sie bei jedem Schaden selbst tragen."
+      },
+      {
+        "art": "h2",
+        "text": "„Und die Fliesen verlegen Sie neu?“"
+      },
+      {
+        "art": "p",
+        "text": "Nicht alles, was der Kunde verlangt, ist ein Fall für die Betriebshaftpflicht. Geht es um Ihre eigene Arbeit selbst, zahlt sie nicht."
+      },
+      {
+        "art": "p",
+        "text": "Verlangt der Kunde zum Beispiel, dass Sie die Fliesen neu verlegen, ist das kein Fall für sie. Die Betriebshaftpflicht verlegt keine Fliesen."
+      },
+      {
+        "art": "h2",
+        "text": "„Und der Rest der Rechnung?“"
+      },
+      {
+        "art": "p",
+        "text": "Auch ein zurückgehaltener Teil der Rechnung ist kein Fall für sie: Sie bezahlt Schäden, die Sie anderen zufügen, keine offenen Rechnungen. Außenstände holt sie nicht herein."
+      },
+      {
+        "art": "h2",
+        "text": "Die Selbstbeteiligung macht den Anfang"
+      },
+      {
+        "art": "p",
+        "text": "Wie hoch die Selbstbeteiligung bei Ihnen ist, steht in Ihrem Vertrag. Es ist die Zahl, die man erst liest, wenn man sie braucht. Wer sie kennt, muss im Bad nicht raten."
+      },
+      {
+        "art": "p",
+        "text": "Bei jedem Schaden macht Ihr Betrieb damit den Anfang. Auch bei einem kleinen Betrag lohnt die Meldung."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück ins Bad"
+      },
+      {
+        "art": "p",
+        "text": "Prüfen lassen, Eigenes selbst erledigen, Selbstbeteiligung kennen, in dieser Reihenfolge."
+      },
+      {
+        "art": "p",
+        "text": "Am besten kein Zahlungsversprechen im Bad, bevor Ihr Versicherer eingebunden ist. Einen Auftrag sagen Sie ja auch nicht zu, bevor Sie die Baustelle gesehen haben. Ein ehrliches „Das prüft mein Versicherer“ ist im Bad besser als ein schnelles „Klar“. Sie müssen den Fall nicht gewinnen. Sie müssen ihn melden."
+      },
+      {
+        "art": "p",
+        "text": "Was der Handwerker dem Kunden im Bad sagen kann, steht im [Artikel zum Kunden, der einen Schaden behauptet](/blog/kunde-behauptet-schaden-betriebshaftpflicht): zuhören, nichts anerkennen, melden."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Suchen Sie in Ihrem Vertrag Selbstbeteiligung und Summe heraus und schreiben Sie beide auf einen Zettel für die Sonnenblende im Transporter. Dort sitzt das Büro ohnehin."
+      },
+      {
+        "art": "p",
+        "text": "Die Betriebshaftpflicht ist kein Kollege auf der Baustelle. Sie schraubt nicht, sie streicht nicht, sie verlegt nicht. Sie prüft und rechnet."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand Oktober 2026, keine individuelle Beratung. Grundlage sind die unverbindlichen Musterbedingungen des Versichererverbands GDV. Ihr Vertrag kann abweichen. Was bei Ihnen gilt, steht in Ihrem Versicherungsschein und in den Bedingungen."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/kunde-behauptet-schaden-betriebshaftpflicht",
+        "text": "Kunde behauptet einen Schaden: Was Sie jetzt sagen, was Sie lassen"
+      },
+      {
+        "pfad": "/blog/grobe-fahrlaessigkeit-versicherung-betrieb",
+        "text": "Etwas vergessen: Zahlt die Versicherung trotzdem?"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Welche Versicherungen braucht ein Kleingewerbe?"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Gesamtverband der Deutschen Versicherungswirtschaft (GDV), Musterbedingungen für die Betriebs- und Berufshaftpflichtversicherung (AVB BHV, Stand laut Deckblatt: Oktober 2026, „Unverbindliche Bekanntgabe zur fakultativen Verwendung“), Ziffern A1-3.1, A1-3.2, A1-4.1, A1-5.1 und A1-5.4, https://www.gdv.de/resource/blob/6240/36855b2e54b41955ef52c9cfe1190ee5/02-avb-betriebs-und-berufshaftpflichtversicherung-2020-data.pdf. Abruf: 16.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie Ihre Selbstbeteiligung und Ihre Summen in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
     }
   }
 ];
