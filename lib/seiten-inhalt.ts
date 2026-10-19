@@ -1,5 +1,5 @@
 // Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.
-// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md
+// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2a-nur-Artikel-2026-10-19.md
 // mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
 // sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.
 // Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.
@@ -2659,6 +2659,711 @@ export const SEITEN: Seite[] = [
     ],
     "cta": {
       "text": "Wenn du das in Ruhe besprechen möchtest, buche einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "selbststaendig-krank-wer-zahlt",
+    "published": false,
+    "title": "Selbstständig und krank: Wer zahlt? | Smarter Finanz",
+    "description": "Kein Arbeitgeber, der weiterzahlt: Ab wann es Krankengeld für Selbstständige geben kann, was die Wahlerklärung bringt und was ein Krankentagegeld ist.",
+    "h1": "Selbstständig und krank: Wer zahlt, wenn ich ausfalle?",
+    "kurzname": "Selbstständig und krank: Wer zahlt?",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Beispiel: Ein Handwerksbetrieb ohne Mitarbeiter. Der Arzt schreibt den Inhaber krank, und zwar nicht nur bis Freitag.",
+      "Der Kalender weiß davon nichts und macht unbeirrt weiter: Aufmaß am Donnerstag, Lieferung am Freitag, und der Stapel Papierkram wartet weiter auf „nächste Woche“.",
+      "Dann kommt die Frage: Wer zahlt eigentlich, wenn ich ausfalle?",
+      "Hier steht, ab wann es Krankengeld geben kann und was Sie heute klären können."
+    ],
+    "kurz": [
+      {
+        "frage": "Keine Automatik.",
+        "antwort": "Hauptberuflich Selbstständige haben Krankengeld nur mit Wahlerklärung, und es beginnt dann erst in der siebten Woche, früher nur mit Wahltarif."
+      },
+      {
+        "frage": "Festes Schema.",
+        "antwort": "70 Prozent der Beitragsgrundlage, bis zu 78 Wochen. Die Kosten des Betriebs laufen daneben weiter."
+      },
+      {
+        "frage": "Erst fragen.",
+        "antwort": "Geht die Erklärung erst ein, wenn Sie schon arbeitsunfähig sind, gilt sie erst ab dem Tag nach dem Ende dieser Arbeitsunfähigkeit."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Die Krankenkasse fragen und die Fixkosten des Betriebs einmal auf einen Zettel schreiben."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Kein Chef, der weiterzahlt"
+      },
+      {
+        "art": "p",
+        "text": "Wird ein Arbeitnehmer krank, zahlt der Arbeitgeber das Gehalt bis zu sechs Wochen weiter. Als Inhaber haben Sie keinen Arbeitgeber, der das übernimmt."
+      },
+      {
+        "art": "p",
+        "text": "Wer hauptberuflich selbstständig erwerbstätig ist, hat keinen Anspruch auf Krankengeld, es sei denn, er erklärt seiner Krankenkasse, dass die Mitgliedschaft das Krankengeld umfassen soll (Wahlerklärung). Geht die Erklärung erst ein, wenn Sie schon arbeitsunfähig sind, gilt sie erst ab dem Tag nach dem Ende dieser Arbeitsunfähigkeit."
+      },
+      {
+        "art": "h2",
+        "text": "Krankengeld: Los geht es in der siebten Woche"
+      },
+      {
+        "art": "p",
+        "text": "Mit einer Wahlerklärung entsteht das Krankengeld von der siebten Woche der Arbeitsunfähigkeit an. In den ersten sechs Wochen zahlt die Kasse nach dieser Regel nichts."
+      },
+      {
+        "art": "p",
+        "text": "Wer früher Krankengeld möchte, fragt die Kasse nach einem Wahltarif. Die Kasse muss Tarife anbieten, bei denen das Krankengeld ab der ärztlichen Feststellung der Arbeitsunfähigkeit oder später beginnt; dafür zahlen Sie eine Prämie."
+      },
+      {
+        "art": "p",
+        "text": "Das Krankengeld beträgt 70 Prozent des Regelentgelts. Bei Selbstständigen ist das der Tagesbetrag, der zuletzt Ihrer Beitragsberechnung aus Arbeitseinkommen zugrunde lag. Wegen derselben Krankheit zahlt die Kasse Krankengeld längstens 78 Wochen innerhalb von drei Jahren."
+      },
+      {
+        "art": "p",
+        "text": "Das Krankengeld ruht, solange die Kasse von der Arbeitsunfähigkeit nichts weiß; wer sie innerhalb einer Woche nach Beginn meldet, hat dieses Problem nicht."
+      },
+      {
+        "art": "h2",
+        "text": "Ab 2027: eine Wartezeit bei der Kasse"
+      },
+      {
+        "art": "p",
+        "text": "Ab dem 1. Januar 2027 gilt nach dem Gesetz vom 24. Juli 2026 für die Wahlerklärung eine Wartezeit von drei Monaten, bevor der Anspruch auf Krankengeld entsteht. Ausnahmen gibt es unter anderem für eine Erklärung binnen 14 Tagen nach Beginn der ersten freiwilligen Mitgliedschaft und nach einem Unfall in der Wartezeit."
+      },
+      {
+        "art": "p",
+        "text": "Das ist die Wartezeit der Kasse. Beim Krankentagegeld gibt es eine andere, davon gleich mehr."
+      },
+      {
+        "art": "h2",
+        "text": "Privat: das Krankentagegeld"
+      },
+      {
+        "art": "p",
+        "text": "Ein Krankentagegeld aus einer privaten Krankenversicherung ersetzt den Verdienstausfall, den Krankheit oder Unfall durch Arbeitsunfähigkeit verursacht. Zusammen mit dem Krankengeld der Kasse darf es Ihr Nettoeinkommen je Kalendertag nicht übersteigen."
+      },
+      {
+        "art": "p",
+        "text": "Wie hoch das Krankentagegeld ist, wie lange es gezahlt wird und ab wann, legt der Tarif fest. Nach dem Muster des PKV-Verbands kommt eine Wartezeit von drei Monaten ab Vertragsbeginn dazu, bei Unfällen entfällt sie. Ihr Vertrag kann abweichen."
+      },
+      {
+        "art": "p",
+        "text": "Wartezeit heißt beim Krankentagegeld: die ersten drei Monate nach Vertragsbeginn, in denen eine Krankheit noch nicht versichert ist. Vor Vertragsabschluss beantworten Sie die Fragen des Versicherers, auch zu Ihrer Gesundheit, vollständig und richtig."
+      },
+      {
+        "art": "h2",
+        "text": "Die Kosten laufen weiter"
+      },
+      {
+        "art": "p",
+        "text": "Miete, Leasingraten und Versicherungen laufen weiter, auch wenn Sie nicht arbeiten können. Der Transporter steht in der Einfahrt, die Leasingrate fährt trotzdem pünktlich vor."
+      },
+      {
+        "art": "p",
+        "text": "Krankengeld und Krankentagegeld richten sich nach Ihrem Einkommen, nicht nach den Kosten Ihres Betriebs. Was die laufenden Kosten des Betriebs absichern kann, klären wir im Gespräch."
+      },
+      {
+        "art": "h2",
+        "text": "Fünf Fragen an Ihre Kasse"
+      },
+      {
+        "art": "p",
+        "text": "Fragen Sie Ihre Kasse:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Liegt eine Wahlerklärung vor?",
+          "Ab welchem Tag zahlt die Kasse Krankengeld?",
+          "Welcher Betrag liegt meinem Beitrag zugrunde?",
+          "Wie lange bin ich gebunden?",
+          "Welche Wahltarife gibt es, und was bedeuten sie für Beitrag und Beginn?"
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Zurück zum Kalender"
+      },
+      {
+        "art": "p",
+        "text": "Fragen, Zettel, Lücke: in dieser Reihenfolge."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Schreiben Sie die Fixkosten Ihres Betriebs einmal auf einen Zettel. Rechenschema für den Zettel: monatliche Betriebskosten plus eigene Lebenshaltung minus Krankengeld gleich monatliche Lücke. Morgen früh rufen Sie die Kasse an."
+      },
+      {
+        "art": "p",
+        "text": "Der Kalender verschiebt sich nicht von selbst, die Antworten der Kasse kommen auch nicht ungefragt."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand Oktober 2026, keine individuelle Beratung. Grundlage sind das Gesetz und die unverbindlichen Musterbedingungen des PKV-Verbands zum Krankentagegeld. Ihr Vertrag kann abweichen."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/erster-mitarbeiter-melden-absichern",
+        "text": "Der erste Mitarbeiter: Was Sie anmelden und absichern"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Welche Versicherungen braucht ein Kleingewerbe?"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Entgeltfortzahlungsgesetz (EntgFG), § 1 und § 3, https://www.gesetze-im-internet.de/entgfg/__1.html, https://www.gesetze-im-internet.de/entgfg/__3.html. Abruf: 19.10.2026.",
+      "Sozialgesetzbuch Fünftes Buch (SGB V), §§ 44, 46, 47, 48, 49, 53, 243, https://www.gesetze-im-internet.de/sgb_5/__44.html (entsprechend __46, __47, __48, __49, __53, __243). Abruf: 19.10.2026.",
+      "Gesetz zur Stabilisierung der Beitragssätze in der gesetzlichen Krankenversicherung (GKV-Beitragssatzstabilisierungsgesetz) vom 24. Juli 2026, BGBl. 2026 I Nr. 228, Art. 1 Nr. 16 bis 19, Art. 8, https://www.recht.bund.de/eli/bund/bgbl-1/2026/228, PDF https://www.recht.bund.de/bgbl/1/2026/228/regelungstext.pdf?__blob=publicationFile&v=1. Abruf: 19.10.2026.",
+      "Versicherungsvertragsgesetz (VVG), § 19 und § 192, https://www.gesetze-im-internet.de/vvg_2008/__19.html, https://www.gesetze-im-internet.de/vvg_2008/__192.html. Abruf: 19.10.2026.",
+      "Verband der Privaten Krankenversicherung (PKV-Verband), Musterbedingungen 2009 für die Krankentagegeldversicherung (MB/KT 2009, Stand laut Deckblatt: Juni 2024), §§ 1 bis 4, 9, 10, 15, https://www.pkv.de/fileadmin/user_upload/PKV/3_PDFs/ABV_und_MB/MB-KT.pdf. Abruf: 19.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie Ihre Absicherung bei Krankheit in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "erster-mitarbeiter-melden-absichern",
+    "published": false,
+    "title": "Erster Mitarbeiter: melden und absichern | Smarter Finanz",
+    "description": "Der erste Mitarbeiter kommt: Was Sie anmelden, was die Berufsgenossenschaft damit zu tun hat und was bei Krankheit und bei Schäden gilt.",
+    "h1": "Der erste Mitarbeiter: Was Sie anmelden und absichern",
+    "kurzname": "Erster Mitarbeiter: melden und absichern",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Beispiel: Ein Handwerksbetrieb mit einem Inhaber stellt zum ersten Mal jemanden ein. Der Handschlag ist gegeben, die Arbeitsschuhe stehen bereit, der Haken für die zweite Jacke ist angeschraubt.",
+      "Dann kommt die Frage hinter der Garderobe: Wer meldet das eigentlich wo an?",
+      "Hier steht, was Sie anmelden, was die Berufsgenossenschaft damit zu tun hat und was bei Krankheit und bei Schäden gilt."
+    ],
+    "kurz": [
+      {
+        "frage": "Reihenfolge.",
+        "antwort": "Betriebsnummer, Anmeldung bei der Krankenkasse (Minijob: Minijob-Zentrale), in manchen Branchen zusätzlich die Sofortmeldung."
+      },
+      {
+        "frage": "Unfallschutz.",
+        "antwort": "Beschäftigte sind von Gesetzes wegen in der gesetzlichen Unfallversicherung versichert, auch Minijobber."
+      },
+      {
+        "frage": "Krankheit und Schäden.",
+        "antwort": "Wird ein Mitarbeiter ohne eigenes Verschulden durch Krankheit arbeitsunfähig, zahlt der Arbeitgeber das Gehalt bis zu sechs Wochen weiter. Laut den Musterbedingungen des Versichererverbands GDV sind Betriebsangehörige für Schäden mitversichert, die sie bei der Arbeit für den Betrieb verursachen."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Nachsehen, ob Ihr Betrieb schon eine Betriebsnummer hat. Fehlt sie, die Unternehmensnummer aus dem BG-Bescheid bereitlegen und die Betriebsnummer beantragen."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Zuerst die Betriebsnummer"
+      },
+      {
+        "art": "p",
+        "text": "Jede Meldung enthält die Betriebsnummer Ihres Betriebs, die Sie elektronisch bei der Bundesagentur für Arbeit beantragen. Die Betriebsnummer ist so etwas wie der Personalausweis Ihres Betriebs, nur ohne Foto."
+      },
+      {
+        "art": "h2",
+        "text": "Anmelden: eine Reihenfolge, kein Papierberg"
+      },
+      {
+        "art": "p",
+        "text": "Ein Mitarbeiter, der in der Kranken-, Pflege-, Renten- oder Arbeitslosenversicherung versicherungspflichtig ist, wird bei Beginn der Beschäftigung bei seiner Krankenkasse angemeldet. Die Anmeldung gehört in die erste Lohnabrechnung nach dem Start, spätestens sechs Wochen nach Beginn."
+      },
+      {
+        "art": "p",
+        "text": "In einigen Branchen, zum Beispiel im Baugewerbe, im Gaststätten- und Beherbergungsgewerbe und im Friseur- und Kosmetikgewerbe, muss der Beginn zusätzlich spätestens bei Arbeitsaufnahme gemeldet werden (Sofortmeldung), sie ersetzt die Anmeldung nicht."
+      },
+      {
+        "art": "p",
+        "text": "Den Gesamtsozialversicherungsbeitrag zahlt der Arbeitgeber, auch den Teil, den der Mitarbeiter trägt."
+      },
+      {
+        "art": "h2",
+        "text": "Minijob und Mindestlohn: Zahlen mit Jahr"
+      },
+      {
+        "art": "p",
+        "text": "Der gesetzliche Mindestlohn beträgt 2026 brutto 13,90 Euro je Stunde und steigt am 1. Januar 2027 auf 14,60 Euro."
+      },
+      {
+        "art": "p",
+        "text": "Bei einem Minijob mit Verdienstgrenze darf der Verdienst regelmäßig 603 Euro im Monat nicht übersteigen (2026), ab dem 1. Januar 2027 sind es 633 Euro. Minijobber melden Sie nicht bei der Krankenkasse an, sondern bei der Minijob-Zentrale der Deutschen Rentenversicherung Knappschaft-Bahn-See."
+      },
+      {
+        "art": "h2",
+        "text": "Unfallschutz und Berufsgenossenschaft"
+      },
+      {
+        "art": "p",
+        "text": "Beschäftigte sind von Gesetzes wegen in der gesetzlichen Unfallversicherung versichert, auch Minijobber. Versichert sind Unfälle bei der versicherten Tätigkeit und auf dem unmittelbaren Weg zur Arbeit und zurück."
+      },
+      {
+        "art": "p",
+        "text": "Ihr Unternehmen muss der Berufsgenossenschaft binnen einer Woche nach Beginn mitgeteilt werden, ob mit oder ohne Mitarbeiter. Wie das läuft, steht im [Artikel zur Berufsgenossenschaft](/blog/berufsgenossenschaft-soloselbststaendig)."
+      },
+      {
+        "art": "p",
+        "text": "Ändert sich die Art Ihres Unternehmens so, dass es für die Zuständigkeit der Berufsgenossenschaft eine Rolle spielen kann, oder ändern sich Grundlagen der Beitragsberechnung, teilen Sie das innerhalb von vier Wochen mit. Im Zweifel kurz bei der Berufsgenossenschaft nachfragen."
+      },
+      {
+        "art": "h2",
+        "text": "Wenn der Mitarbeiter krank wird"
+      },
+      {
+        "art": "p",
+        "text": "Wird ein Mitarbeiter ohne eigenes Verschulden durch Krankheit arbeitsunfähig, zahlt der Arbeitgeber das Gehalt bis zu sechs Wochen weiter. Der Anspruch auf Entgeltfortzahlung entsteht nach vier Wochen ununterbrochenem Arbeitsverhältnis."
+      },
+      {
+        "art": "p",
+        "text": "Betriebe mit in der Regel höchstens 30 Mitarbeitern bekommen von der Krankenkasse bis zu 80 Prozent des fortgezahlten Gehalts erstattet und zahlen dafür eine Umlage."
+      },
+      {
+        "art": "h2",
+        "text": "Und die Betriebshaftpflicht?"
+      },
+      {
+        "art": "p",
+        "text": "Laut den Musterbedingungen des Versichererverbands GDV sind Betriebsangehörige für Schäden mitversichert, die sie bei der Arbeit für den Betrieb verursachen."
+      },
+      {
+        "art": "p",
+        "text": "Ausgeschlossen sind laut diesen Mustern Personenschäden, die Arbeitsunfälle oder Berufskrankheiten im Betrieb nach dem Sozialgesetzbuch VII sind, und Ihr Vertrag kann abweichen."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück zur Garderobe"
+      },
+      {
+        "art": "p",
+        "text": "Betriebsnummer, Anmeldung, Unfallschutz, Krankheit: in dieser Reihenfolge."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Sehen Sie nach, ob Ihr Betrieb schon eine Betriebsnummer hat. Fehlt sie, legen Sie die Unternehmensnummer aus dem Bescheid der Berufsgenossenschaft bereit und beantragen Sie die Betriebsnummer, am besten vor dem ersten Arbeitstag."
+      },
+      {
+        "art": "p",
+        "text": "Der zweite Haken an der Garderobe hängt längst. Die anderen Haken stehen auf der Liste: Betriebsnummer, Anmeldung, ein Blick in den Versicherungsordner."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand Oktober 2026, keine individuelle Beratung. Grundlage sind das Gesetz und die unverbindlichen Musterbedingungen des Versichererverbands GDV zur Betriebshaftpflicht. Ihr Vertrag kann abweichen."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/berufsgenossenschaft-soloselbststaendig",
+        "text": "Allein im Betrieb: Müssen Sie zur Berufsgenossenschaft?"
+      },
+      {
+        "pfad": "/blog/selbststaendig-krank-wer-zahlt",
+        "text": "Selbstständig und krank: Wer zahlt, wenn ich ausfalle?"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Welche Versicherungen braucht ein Kleingewerbe?"
+      },
+      {
+        "pfad": "/blog/was-zahlt-die-betriebshaftpflicht",
+        "text": "„Zahlt das Ihre Versicherung?“ Was die Betriebshaftpflicht zahlt, was nicht"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "§ 8, § 18i, § 28a, § 28e, § 28i Sozialgesetzbuch Viertes Buch (SGB IV), https://www.gesetze-im-internet.de/sgb_4/__8.html, https://www.gesetze-im-internet.de/sgb_4/__18i.html, https://www.gesetze-im-internet.de/sgb_4/__28a.html, https://www.gesetze-im-internet.de/sgb_4/__28e.html, https://www.gesetze-im-internet.de/sgb_4/__28i.html. Abruf: 19.10.2026.",
+      "§ 6 und § 7 Datenerfassungs- und -übermittlungsverordnung (DEÜV), https://www.gesetze-im-internet.de/de_v/__6.html, https://www.gesetze-im-internet.de/de_v/__7.html. Abruf: 19.10.2026.",
+      "§ 2, § 8, § 136a, § 192 Sozialgesetzbuch Siebtes Buch (SGB VII), https://www.gesetze-im-internet.de/sgb_7/__2.html, https://www.gesetze-im-internet.de/sgb_7/__8.html, https://www.gesetze-im-internet.de/sgb_7/__192.html. Abruf: 19.10.2026.",
+      "Deutsche Gesetzliche Unfallversicherung (DGUV), FAQ Unternehmensnummer, https://www.dguv.de/de/versicherung/unternehmensnummer/faq/index.jsp. Abruf: 19.10.2026.",
+      "§ 3 Entgeltfortzahlungsgesetz (EntgFG), https://www.gesetze-im-internet.de/entgfg/__3.html. Abruf: 19.10.2026.",
+      "§ 1, § 7, § 9 Aufwendungsausgleichsgesetz (AAG), https://www.gesetze-im-internet.de/aufag/__1.html, https://www.gesetze-im-internet.de/aufag/__7.html, https://www.gesetze-im-internet.de/aufag/__9.html. Abruf: 19.10.2026.",
+      "§ 1 Fünfte Mindestlohnanpassungsverordnung (MiLoV5) vom 5. November 2025 (BGBl. 2025 I Nr. 268), https://www.gesetze-im-internet.de/milov5/__1.html. Abruf: 19.10.2026.",
+      "Gesamtverband der Deutschen Versicherungswirtschaft (GDV), Musterbedingungen für die Betriebs- und Berufshaftpflichtversicherung (AVB BHV, Stand laut Deckblatt: Oktober 2026, „Unverbindliche Bekanntgabe zur fakultativen Verwendung“), Ziffer A1-2.1.2, https://www.gdv.de/resource/blob/6240/36855b2e54b41955ef52c9cfe1190ee5/02-avb-betriebs-und-berufshaftpflichtversicherung-2020-data.pdf. Abruf: 19.10.2026.",
+      "Minijob-Zentrale der Deutschen Rentenversicherung Knappschaft-Bahn-See, Minijob im Gewerbe anmelden, https://www.minijob-zentrale.de/DE/minijob-anmelden/minijob-im-gewerbe-anmelden. Abruf: 19.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie die Absicherung für Ihren ersten Mitarbeiter in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "berufsgenossenschaft-soloselbststaendig",
+    "published": false,
+    "title": "Berufsgenossenschaft für Soloselbstständige | Smarter Finanz",
+    "description": "Allein im Betrieb: Was Sie der Berufsgenossenschaft mitteilen, wie Sie Ihren Träger finden und was für Sie als Inhaber gilt.",
+    "h1": "Allein im Betrieb: Müssen Sie zur Berufsgenossenschaft?",
+    "kurzname": "Berufsgenossenschaft für Soloselbstständige",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Beispiel: Ein Betrieb mit einer einzigen Person, dem Inhaber. Das Gewerbe ist angemeldet, die Visitenkarten sind gedruckt, die Gewerbeanzeige ist abgeheftet.",
+      "Dann fragt jemand beiläufig: „Und die Berufsgenossenschaft?“",
+      "Man kennt das Wort. Man weiß nur nicht genau, ob es einen betrifft, wenn man allein arbeitet.",
+      "Hier steht, was das Gesetz sagt, wie Sie Ihren Träger finden und was für Sie als Inhaber gilt."
+    ],
+    "kurz": [
+      {
+        "frage": "Mitteilen.",
+        "antwort": "Wer ein Unternehmen beginnt, muss es innerhalb einer Woche nach dem Start dem zuständigen Unfallversicherungsträger mitteilen. Das gilt auch, wenn Sie allein arbeiten und niemanden beschäftigen."
+      },
+      {
+        "frage": "Träger.",
+        "antwort": "Welcher Träger zuständig ist, folgt aus Ihrer Branche, bei mehreren Bereichen aus dem Schwerpunkt, und Sie können ihn nicht aussuchen."
+      },
+      {
+        "frage": "Inhaber.",
+        "antwort": "Ob Inhaber versichert sind, kann jeder Träger in seiner Satzung selbst regeln. Das ist etwas anderes als eine private Unfallversicherung."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Gewerbeanzeige heraussuchen und nachsehen, ob der Bescheid des Trägers mit der Unternehmensnummer vorliegt."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Berufsgenossenschaft oder Unfallversicherungsträger?"
+      },
+      {
+        "art": "p",
+        "text": "Berufsgenossenschaft heißt der gewerbliche Träger, das Gesetz sagt Unfallversicherungsträger, weil es auch Unfallkassen und die landwirtschaftliche Kasse gibt. Wer „Unfallversicherungsträger“ fehlerfrei aus dem Stand sagen kann, hat sich eine Pause verdient."
+      },
+      {
+        "art": "p",
+        "text": "Im Folgenden heißt die Stelle kurz „Träger“."
+      },
+      {
+        "art": "h2",
+        "text": "Die Woche nach dem Start"
+      },
+      {
+        "art": "p",
+        "text": "Ein Unternehmen beginnt rechtlich schon mit den vorbereitenden Arbeiten."
+      },
+      {
+        "art": "p",
+        "text": "Die Mitteilung gilt als erfüllt, wenn Sie Ihr Gewerbe innerhalb der Wochenfrist bei der zuständigen Stelle anzeigen, zum Beispiel beim Gewerbeamt. Die Daten Ihrer Gewerbeanzeige gehen elektronisch an die gesetzliche Unfallversicherung, die sie an den zuständigen Träger weiterleitet."
+      },
+      {
+        "art": "p",
+        "text": "Kommt nach der Gewerbeanzeige keine Post vom Träger, fragen Sie nach. Der Träger stellt seine Zuständigkeit durch einen schriftlichen Bescheid fest, auf dem Ihre Unternehmensnummer steht."
+      },
+      {
+        "art": "h2",
+        "text": "Wer ist mein Träger?"
+      },
+      {
+        "art": "p",
+        "text": "Ihren Träger finden Sie im Serviceportal der gesetzlichen Unfallversicherung unter „Branche ermitteln“. Branche ermitteln ist ein durchsuchbares Branchenverzeichnis."
+      },
+      {
+        "art": "h2",
+        "text": "Und Sie selbst, als Inhaber?"
+      },
+      {
+        "art": "p",
+        "text": "Beschäftigte sind kraft Gesetzes unfallversichert. Das Unternehmen ist beim Träger Mitglied. Ob Sie als Inhaber damit auch versichert sind, ist eine eigene Frage."
+      },
+      {
+        "art": "p",
+        "text": "Ob Inhaber versichert sind, kann jeder Träger in seiner Satzung selbst regeln. Bei der BG BAU und bei der BGHM sind Inhaber nach deren Angabe nicht automatisch versichert, sie können sich freiwillig versichern. Die freiwillige Versicherung gibt es auf Antrag, sie beginnt am Tag nach dem Eingang des Antrags. Anders ist es zum Beispiel bei der BG ETEM: Dort sind Inhaber aus Textil, Bekleidung, Druck und Papierverarbeitung per Satzung pflichtversichert."
+      },
+      {
+        "art": "h2",
+        "text": "Gesetzlich oder privat: zwei verschiedene Dinge"
+      },
+      {
+        "art": "p",
+        "text": "Gesetzliche und private Unfallversicherung sind zwei verschiedene Dinge: Die gesetzliche gilt bei Arbeitsunfällen, Wegeunfällen und Berufskrankheiten der Versicherten, die private leistet nach Ihrem Vertrag. Eine private Unfallversicherung gilt laut GDV-Muster weltweit und rund um die Uhr."
+      },
+      {
+        "art": "h2",
+        "text": "Wenn sich etwas ändert"
+      },
+      {
+        "art": "p",
+        "text": "Ändert sich etwas, das für Zuständigkeit oder Beitragsberechnung wichtig sein kann, zum Beispiel die Art Ihrer Arbeit, teilen Sie es dem Träger binnen vier Wochen mit."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück zum Ordner"
+      },
+      {
+        "art": "p",
+        "text": "Mitteilen, Träger finden, Bescheid aufbewahren: in dieser Reihenfolge."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Gewerbeanzeige heraussuchen: Start und Datum der Anzeige nebeneinanderlegen. Wer freiberuflich arbeitet, hat keine Gewerbeanzeige und meldet direkt beim Träger.",
+          "Nachsehen, ob der Bescheid des Trägers mit der Unternehmensnummer vorliegt, und ihn aufbewahren.",
+          "Fehlt er: den Träger im Serviceportal über „Branche ermitteln“ finden, Anmeldung dort online.",
+          "Beim Träger klären, ob Sie als Inhaber versichert sind oder sich freiwillig versichern können, und im Termin besprechen, wie das zur privaten Absicherung passt."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Der Bescheid Ihres Trägers gehört in den Ordner mit den Versicherungen, nicht in den mit der Aufschrift „Sonstiges“."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand Oktober 2026, keine individuelle Beratung. Aussagen einzelner Träger gelten nur für diesen Träger. Die Musterbedingungen des GDV zur privaten Unfallversicherung sind unverbindlich, Ihr Vertrag kann abweichen."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/erster-mitarbeiter-melden-absichern",
+        "text": "Der erste Mitarbeiter: Was Sie anmelden und absichern"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Welche Versicherungen braucht ein Kleingewerbe?"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "§ 192 SGB VII (Mitteilungs- und Auskunftspflichten von Unternehmern und Bauherren), https://www.gesetze-im-internet.de/sgb_7/__192.html. Abruf: 19.10.2026.",
+      "§ 136 und § 136a SGB VII (Bescheid über die Zuständigkeit, Begriff des Unternehmers; Unternehmernummer), https://www.gesetze-im-internet.de/sgb_7/__136.html und https://www.gesetze-im-internet.de/sgb_7/__136a.html. Abruf: 19.10.2026.",
+      "§ 2, § 3, § 6, § 7 und § 8 SGB VII, https://www.gesetze-im-internet.de/sgb_7/__2.html, /__3.html, /__6.html, /__7.html und /__8.html. Abruf: 19.10.2026.",
+      "§ 121, § 122, § 130 und § 131 SGB VII (Zuständigkeit), https://www.gesetze-im-internet.de/sgb_7/__121.html, /__122.html, /__130.html und /__131.html. Abruf: 19.10.2026.",
+      "§ 14 und § 55c GewO (Anzeigepflicht), https://www.gesetze-im-internet.de/gewo/__14.html und https://www.gesetze-im-internet.de/gewo/__55c.html. Abruf: 19.10.2026.",
+      "§ 3 GewAnzV (Übermittlung von Daten aus der Gewerbeanzeige), https://www.gesetze-im-internet.de/gewanzv_2014/__3.html. Abruf: 19.10.2026.",
+      "Deutsche Gesetzliche Unfallversicherung (DGUV), Zuständigkeit, https://www.dguv.de/de/versicherung/zustaendigkeit/index.jsp; Ein neues Unternehmen anmelden, https://www.dguv.de/de/versicherung/unternehmensnummer/anmeldung/index.jsp; FAQ Unternehmensnummer, https://www.dguv.de/de/versicherung/unternehmensnummer/faq/index.jsp; Berufsgenossenschaften, https://www.dguv.de/de/bg-uk-lv/bgen/index.jsp. Abruf: 19.10.2026.",
+      "Serviceportal der gesetzlichen Unfallversicherung, https://serviceportal-uv.dguv.de/ ; Unternehmen anmelden, https://serviceportal-uv.dguv.de/mapping/leistung?leistung=OZG-10 ; Branche ermitteln, https://serviceportal-uv.dguv.de/mapping/finder?tab=traeger&gruppenBezeichnung=ANABUM&leistung=OZG-10. Abruf: 19.10.2026.",
+      "BG BAU, Informationen für die Unternehmensgründung, https://www.bgbau.de/themen/mitgliedschaft-und-beitrag/pflichtversicherung-fuer-unternehmen/informationen-fuer-die-unternehmensgruendung. Abruf: 19.10.2026.",
+      "BGHM, Fragen zu Mitgliedschaft und Beitrag, https://www.bghm.de/unternehmer/fragen-zu-mitgliedschaft-und-beitrag; Versicherungsschutz, https://www.bghm.de/arbeitnehmer/versicherungsschutz. Abruf: 19.10.2026.",
+      "BG ETEM, Unternehmerversicherung, https://www.bgetem.de/mitgliedschaft-beitrag/unternehmerversicherung; Pflichtversicherung kraft Satzung, https://www.bgetem.de/mitgliedschaft-beitrag/unternehmerversicherung/gut-versichert-die-unternehmerversicherung-der-textil-und-bekleidungsbranche; Unsere Branchen, https://www.bgetem.de/mitgliedschaft-beitrag/unsere-branchen. Abruf: 19.10.2026.",
+      "GDV, Allgemeine Unfallversicherungsbedingungen (AUB 2020, Stand Juni 2025, unverbindliche Bekanntgabe), Ziffern 1.1, 1.2, 1.3, 2.1, https://www.gdv.de/resource/blob/6252/6fde83896927a4920772d713456a646d/01-allgemeine-unfallversicherungsbedingungen-aub-2020--data.pdf. Abruf: 19.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie Ihre gesetzliche und Ihre private Unfallabsicherung in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "betriebsversicherung-angebote-vergleichen",
+    "published": false,
+    "title": "Zwei Angebote vergleichen: Was zählt? | Smarter Finanz",
+    "description": "Zwei Angebote, zwei Preise: Welche Felder bei Betriebshaftpflicht und Inhalt gleich sein müssen, damit der Preis überhaupt etwas aussagt.",
+    "h1": "Zwei Angebote, zwei Preise: Was Sie vergleichen, bevor Sie auf den Beitrag schauen",
+    "kurzname": "Zwei Angebote vergleichen: Was zählt?",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Beispiel: Ein Malerbetrieb hat zwei Versicherungsangebote auf dem Tisch, beide mit Logo, beide mit einer Zahl unten rechts.",
+      "Die Zahl unten rechts hat die Eigenschaft, alles andere auf der Seite unsichtbar zu machen.",
+      "Bei einem Angebot steht in der Tätigkeitsliste eine Arbeit mehr, beim anderen sieht die Selbstbeteiligung anders aus. Erst wenn beides dasselbe enthält, sagt der Preis etwas.",
+      "Hier steht, was Sie bei Betriebshaftpflicht und Inhaltsversicherung nebeneinanderlegen, bevor Sie auf den Beitrag schauen."
+    ],
+    "kurz": [
+      {
+        "frage": "Preis zuletzt.",
+        "antwort": "Erst gleich machen, dann auf den Preis schauen: Zwei Angebote sagen nur etwas, wenn sie dasselbe enthalten."
+      },
+      {
+        "frage": "Felder abgleichen.",
+        "antwort": "Sechs Felder für den ersten Abgleich: Beitragsart (mit oder ohne Steuer), Zahlweise, Summe und Jahreshöchstleistung, Selbstbeteiligung, Betriebsbeschreibung, Laufzeit."
+      },
+      {
+        "frage": "Nachfragen.",
+        "antwort": "Bei jedem Unterschied fragen statt raten; kein Angebot ist allein wegen seines Preises besser oder schlechter."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Beide Angebote nebeneinanderlegen, die sechs Felder abgleichen (Textmarker für jeden Unterschied) und die markierten Stellen dem Anbieter oder Berater als Fragen mitgeben."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Für jedes Angebot: Form, Zahlweise, Laufzeit"
+      },
+      {
+        "art": "p",
+        "text": "Vergleichen Sie Beiträge nur in gleicher Form: mit Versicherungsteuer gegen mit Versicherungsteuer (brutto gegen brutto) oder ohne gegen ohne (netto gegen netto). Brutto und netto sind Branchensprache und stehen nicht im Gesetz: Hier heißt brutto mit Versicherungsteuer und netto ohne."
+      },
+      {
+        "art": "p",
+        "text": "Auf den Beitrag kommt Versicherungsteuer; die Beitragsrechnung weist sie als eigenen Betrag mit dem Steuersatz aus."
+      },
+      {
+        "art": "p",
+        "text": "Die Zahlweise ist Vertragssache; die Musterbedingungen nennen monatlich, vierteljährlich, halbjährlich, jährlich oder einmalig. Vergleichen Sie darum, was Sie in einem Jahr insgesamt zahlen."
+      },
+      {
+        "art": "p",
+        "text": "Laufzeit: Wie lange läuft der Vertrag, bis wann kann ich kündigen, ab welchem Tag gilt der Schutz?"
+      },
+      {
+        "art": "h2",
+        "text": "Nur Betriebshaftpflicht: Tätigkeiten, Summe, Selbstbeteiligung"
+      },
+      {
+        "art": "p",
+        "text": "Versichert ist die Haftpflicht aus dem Betrieb, wie er im Versicherungsschein und seinen Nachträgen steht; vergleichbar sind zwei Angebote darum nur, wenn dort dieselben Tätigkeiten stehen."
+      },
+      {
+        "art": "p",
+        "text": "Die Versicherungssumme ist der Höchstbetrag, den die Versicherung bei einem Schaden zahlt; sie kann für Personen- und Sachschäden getrennt oder pauschal festgelegt sein."
+      },
+      {
+        "art": "p",
+        "text": "Für alle Schäden eines Versicherungsjahres zusammen gilt laut Musterbedingungen die Jahreshöchstleistung, ein Vielfaches der Summe, das im Vertrag steht. Zwei Angebote mit gleicher Summe können im Jahr deshalb unterschiedlich viel zahlen."
+      },
+      {
+        "art": "p",
+        "text": "Die Selbstbeteiligung ist der Betrag, den Sie bei jedem Schaden selbst tragen, falls sie vereinbart ist; sie steht im Versicherungsschein."
+      },
+      {
+        "art": "p",
+        "text": "Eine Nachhaftung, also Schutz für Schäden nach Aufgabe oder Einstellung des Betriebs, gibt es laut Musterbedingungen nur, wenn sie besonders vereinbart ist; die Dauer in Jahren steht im Vertrag."
+      },
+      {
+        "art": "h2",
+        "text": "Nur Inhalt: Unterversicherung, Neuwert, Außenversicherung"
+      },
+      {
+        "art": "p",
+        "text": "Die Inhaltsversicherung ist die Versicherung für Einrichtung und Vorräte im Betrieb."
+      },
+      {
+        "art": "p",
+        "text": "Ein Verzicht auf den Einwand der Unterversicherung heißt laut Klauselmuster des GDV: Die Versicherung kürzt nicht, solange der Schaden unter den im Vertrag genannten Grenzen bleibt. Was Unterversicherung ist, steht im [Artikel zur Summe im Vertrag](/blog/unterversicherung-inhalt-betrieb)."
+      },
+      {
+        "art": "p",
+        "text": "Bei Einrichtung und Maschinen gilt laut Musterbedingungen der Neuwert als Versicherungswert, es sei denn, der Zeitwert liegt unter einem im Vertrag genannten Prozentsatz des Neuwerts; dann gilt der Zeitwert."
+      },
+      {
+        "art": "p",
+        "text": "Außenversicherung bedeutet: Sachen sind auch außerhalb des Betriebs versichert. Laut Musterbedingungen gilt das, wenn nichts anderes vereinbart ist, vorübergehend und in Deutschland; auf Baustellen gelagerte Sachen sind darin nicht versichert. Dem Akkuschrauber ist es egal, ob er im Lager liegt oder auf der Baustelle. Dem Angebot nicht."
+      },
+      {
+        "art": "h2",
+        "text": "Vorsorge: ein Wort, zwei Bedeutungen"
+      },
+      {
+        "art": "p",
+        "text": "Vorsorge kann Verschiedenes heißen: in der Sachversicherung einen Zuschlag auf die Summe, in der Haftpflicht den Schutz für neu entstehende Risiken. Fragen Sie nach, was gemeint ist."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück zum Schreibtisch"
+      },
+      {
+        "art": "p",
+        "text": "Gleiche Form, gleiche Felder, dann der Preis: in dieser Reihenfolge."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Legen Sie beide Angebote nebeneinander, gleichen Sie die sechs Felder ab und markieren Sie jeden Unterschied mit dem Textmarker. Die markierten Stellen geben Sie dem Anbieter oder Berater als Fragen mit."
+      },
+      {
+        "art": "p",
+        "text": "Das kennen Sie von Ihren eigenen Angeboten: Der Quadratmeterpreis sagt erst etwas, wenn klar ist, welche Fläche gemeint ist. Bei einer Versicherung ist die Fläche das, was im Vertrag steht."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand Oktober 2026, keine individuelle Beratung. Grundlage sind das Gesetz und die unverbindlichen Musterbedingungen des Versichererverbands GDV zur Betriebshaftpflicht und zur Verbundenen Sach-Gewerbeversicherung (VSG). Die Musterbedingungen sind eine Empfehlung des Versichererverbands, echte Tarife können abweichen. Der Artikel empfiehlt kein Angebot."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/betriebsbeschreibung-betriebshaftpflicht",
+        "text": "Wärmepumpe angeschlossen, Vertrag nicht angepasst? So prüfen Sie Ihre Arbeitsliste"
+      },
+      {
+        "pfad": "/blog/unterversicherung-inhalt-betrieb",
+        "text": "Halb versichert, halb ersetzt? Warum die Zahl im Vertrag mitwachsen sollte"
+      },
+      {
+        "pfad": "/blog/was-zahlt-die-betriebshaftpflicht",
+        "text": "„Zahlt das Ihre Versicherung?“ Was die Betriebshaftpflicht zahlt, was nicht"
+      },
+      {
+        "pfad": "/blog/grobe-fahrlaessigkeit-versicherung-betrieb",
+        "text": "Etwas vergessen: Zahlt die Versicherung trotzdem?"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Welche Versicherungen braucht ein Kleingewerbe?"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Versicherungsteuergesetz (VersStG 2021, Neufassung vom 27.04.2021, BGBl. I S. 874), § 1, § 3, § 4, § 5, § 6, § 7, https://www.gesetze-im-internet.de/versstg/__1.html, .../__3.html, .../__4.html, .../__5.html, .../__6.html, .../__7.html. Abruf: 19.10.2026.",
+      "§ 1, § 7, § 11, § 12, § 19, § 75, § 81, § 87 und § 210 VVG, https://www.gesetze-im-internet.de/vvg_2008/__1.html, .../__7.html, .../__11.html, .../__19.html, .../__75.html, .../__81.html, .../__87.html, .../__210.html. Abruf: 19.10.2026.",
+      "Gesamtverband der Deutschen Versicherungswirtschaft (GDV), Musterbedingungen für die Betriebs- und Berufshaftpflichtversicherung (AVB BHV, Stand laut Deckblatt: Oktober 2026, „Unverbindliche Bekanntgabe zur fakultativen Verwendung“), Ziffern A1-1, A1-3.1, A1-5, A1-9, A1-10, B1-1 bis B1-3, B2-1, https://www.gdv.de/resource/blob/6240/36855b2e54b41955ef52c9cfe1190ee5/02-avb-betriebs-und-berufshaftpflichtversicherung-2020-data.pdf. Abruf: 19.10.2026.",
+      "GDV, Allgemeine Bedingungen für die Verbundene Sach-Gewerbeversicherung (VSG 2010, GDV 1800, Version laut Deckblatt: 01.04.2014, unverbindliche Bekanntgabe), Teil B § 15 Nr. 3, § 17 Nr. 1, § 18 Nr. 4, § 19 Nr. 5, https://www.gdv.de/resource/blob/5968/df3ece81b898dd9debcf0e23c943013a/01-allgemeine-bedingungen-fuer-die-verbundene-sach-gewerbeversicherung-vsg-2010--data.pdf. Abruf: 19.10.2026.",
+      "GDV, Klauseln für die Feuerversicherung (SK AFB 2010, GDV 0110, Version 01.06.2020), SK 1702, SK 1703, SK 2402, SK 2403, https://www.gdv.de/resource/blob/6234/1794135aea863a2cd129aeb963b6cc96/05-klauseln-fuer-die-feuerversicherung-sk-afb-2010--data.pdf. Abruf: 19.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie zwei Angebote in Ruhe nebeneinanderlegen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
     }
   }
 ];
