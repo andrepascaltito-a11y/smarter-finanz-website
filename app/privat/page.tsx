@@ -60,8 +60,7 @@ export default function HomePage() {
 <section className="stats">
   <div className="wrap">
     <div className="stats-inner">
-      <div className="stat"><b>über 8 Jahre</b><div className="line"></div><span>eigene Erfahrung in der Finanzbranche</span></div>
-      <div className="stat"><b>über 2.000</b><div className="line"></div><span>Kunden in meiner Laufbahn beraten, auch als Angestellter</span></div>
+      <div className="stat"><b>seit August 2018</b><div className="line"></div><span>in der Beratung, zunächst angestellt</span></div>
       <div className="stat"><b>§ 34d GewO</b><div className="line"></div><span>Versicherungsmakler mit IHK-Erlaubnis</span></div>
     </div>
   </div>
@@ -80,8 +79,8 @@ export default function HomePage() {
     <div className="side">
       <h2>Auf diese <span className="serif-accent">4 Bereiche</span> haben wir uns spezialisiert:</h2>
       <div className="rule"></div>
-      <p><strong>Unsere Beratung ist ungebunden von Gesellschaften:</strong> Das heißt, wir haben Zugriff auf fast jede erdenkliche Leistung und Gesellschaft, die auf dem deutschen Markt existiert.</p>
-      <p><strong>Das ermöglicht uns, immer zur maximalen Zufriedenheit des Kunden zu handeln.</strong> Ganz egal, ob du am Anfang stehst und deine Finanzen in den Griff bekommen möchtest oder es um komplexe Finanzlösungen geht.</p>
+      <p><strong>Als Makler sind wir nicht an einzelne Versicherer gebunden</strong> und vergleichen eine hinreichende Zahl von Anbietern.</p>
+      <p><strong>Das hilft uns, zu deiner Situation passend zu beraten.</strong> Ganz egal, ob du am Anfang stehst und deine Finanzen in den Griff bekommen möchtest oder es um komplexe Finanzlösungen geht.</p>
     </div>
     <div className="cards">
       <div className="card">
