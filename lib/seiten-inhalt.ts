@@ -2370,7 +2370,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "beitrag",
     "slug": "cyberangriff-im-betrieb-versicherung",
-    "published": false,
+    "published": true,
     "title": "Cyberangriff: Was tun, was zahlt? | Smarter Finanz",
     "description": "Erpresser-Mail oder gesperrter Rechner: Was in der ersten Stunde zu tun ist und was die Cyberversicherung laut Musterbedingungen zahlt und was nicht.",
     "h1": "Cyberangriff im Betrieb: Was tun und was zahlt die Versicherung?",
@@ -2517,7 +2517,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "ratgeber",
     "slug": "kfz-versicherung-wechseln-30-november",
-    "published": false,
+    "published": true,
     "title": "Kfz-Versicherung wechseln bis 30. November | Smarter Finanz",
     "description": "Kfz-Versicherung zum Jahresende wechseln: bis wann die Kündigung beim Versicherer ankommen muss, was du brauchst und worauf du achtest.",
     "h1": "Kfz-Versicherung wechseln: Bis wann musst du kündigen?",
