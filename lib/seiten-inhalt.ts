@@ -2219,7 +2219,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "beitrag",
     "slug": "stromausfall-im-betrieb-versicherung",
-    "published": false,
+    "published": true,
     "title": "Stromausfall im Betrieb: Wer zahlt? | Smarter Finanz",
     "description": "Am 18. Oktober fiel an der Westküste Schleswig-Holsteins der Strom aus. Was jetzt zu tun ist und was Netzbetreiber und eigene Versicherung zahlen.",
     "h1": "Stromausfall im Betrieb: Zahlt das die Versicherung?",
