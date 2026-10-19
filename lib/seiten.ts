@@ -10,7 +10,7 @@ import type { OrtSchluessel } from "./bildnachweise";
 import { publishedPosts } from "./blog";
 import { SEITEN } from "./seiten-inhalt";
 
-export type SeitenTyp = "ort" | "branche" | "hub" | "autor" | "beitrag";
+export type SeitenTyp = "ort" | "branche" | "hub" | "autor" | "beitrag" | "ratgeber";
 
 export type Abschnitt =
   | { art: "h2"; text: string }
@@ -52,6 +52,7 @@ export function seitenPfad(s: Pick<Seite, "typ" | "slug">): string {
   if (s.typ === "ort") return `/orte/${s.slug}`;
   if (s.typ === "branche") return `/branchen/${s.slug}`;
   if (s.typ === "beitrag") return `/blog/${s.slug}`;
+  if (s.typ === "ratgeber") return `/privat/ratgeber/${s.slug}`; // Privatratgeber (Du-Form), eigener Bereich neben dem Blog fuer Betriebe
   return `/${s.slug}`; // Hub und Autorenseite liegen auf der ersten Ebene
 }
 
@@ -72,7 +73,7 @@ export function findeSeite(typ: SeitenTyp, slug: string): Seite | undefined {
   return sichtbareSeiten().find((s) => s.typ === typ && s.slug === slug);
 }
 
-const FESTE_PFADE = new Set(["/", "/privat", "/erstinformation", "/impressum", "/datenschutz", "/blog"]);
+const FESTE_PFADE = new Set(["/", "/privat", "/privat/ratgeber", "/erstinformation", "/impressum", "/datenschutz", "/blog"]);
 
 /** Darf auf dieses Ziel verlinkt werden? Nur bestehende, sichtbare Seiten. */
 export function linkErlaubt(pfad: string): boolean {

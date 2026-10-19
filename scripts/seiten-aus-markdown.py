@@ -150,7 +150,7 @@ def baue(y, s, veroeffentlicht):
     slug_voll = y["slug"]
     typ = y["typ"]
     slug = slug_voll.split("/", 1)[1] if "/" in slug_voll else slug_voll
-    if typ not in ("ort", "branche", "hub", "autor", "beitrag"):
+    if typ not in ("ort", "branche", "hub", "autor", "beitrag", "ratgeber"):
         raise SystemExit(f"Unbekannter typ {typ} in {slug_voll}")
     kurzname = KURZNAMEN.get(slug_voll) or y["title"].split(" | ")[0]
     out = {
@@ -233,6 +233,13 @@ def main():
         "export const SEITEN: Seite[] = "
     )
     ziel.write_text(kopf + json.dumps(seiten, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
+    # Kleine Flag-Datei fuer die Privatseite (Client-Komponente): Ratgeber-Link nur zeigen, wenn mindestens ein Ratgeber freigegeben ist
+    flag = ziel.parent / "ratgeber-flag.ts"
+    flag.write_text(
+        "// ERZEUGT von scripts/seiten-aus-markdown.py: true, sobald mindestens ein Privatratgeber freigegeben ist.\n"
+        f"export const RATGEBER_VEROEFFENTLICHT = {'true' if any(s['typ'] == 'ratgeber' and s['published'] for s in seiten) else 'false'};\n",
+        encoding="utf-8",
+    )
     print(f"{len(seiten)} Seiten geschrieben nach {ziel}")
     for s in seiten:
         print(f"  {s['typ']:8} {s['slug']:48} {len(s['abschnitte'])} Abschnitte, {len(s['faq'])} FAQ, {len(s['links'])} Links, {len(s['quellen'])} Quellen, published={s['published']}")

@@ -51,6 +51,7 @@ function krumen(s: Seite): Krume[] {
     return [start, { name: "Weser- und Leinebergland", pfad: linkErlaubt(HUB_PFAD) ? HUB_PFAD : undefined }, { name: kurzname(s) }];
   }
   if (s.typ === "beitrag") return [start, { name: "Blog", pfad: "/blog" }, { name: kurzname(s) }];
+  if (s.typ === "ratgeber") return [start, { name: "Privatkunden", pfad: "/privat" }, { name: "Ratgeber", pfad: "/privat/ratgeber" }, { name: kurzname(s) }];
   return [start, { name: kurzname(s) }];
 }
 
@@ -106,7 +107,7 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
 
   return (
     <div className={`${legal.legalPage} ${styles.seite}`}>
-      <BlogHeader />
+      <BlogHeader privat={s.typ === "ratgeber"} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(strukturierteDaten(s)) }} />
 
       <header className={styles.band}>
@@ -249,9 +250,15 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
         <div className={styles.cta}>
           {s.cta.titel && <strong>{s.cta.titel}</strong>}
           <p><Inline text={s.cta.text} /></p>
-          <a className={styles.knopf} href="/#anfrage">
-            Unverbindlich anfragen
-          </a>
+          {s.typ === "ratgeber" ? (
+            <a className={styles.knopf} href="/privat#termin">
+              Termin buchen
+            </a>
+          ) : (
+            <a className={styles.knopf} href="/#anfrage">
+              Unverbindlich anfragen
+            </a>
+          )}
         </div>
 
         {links.length > 0 && (

@@ -2,6 +2,7 @@
 
 import { StandortMap, TerminConsent } from "@/components/InteractiveSections";
 import { KontaktFormular } from "@/components/KontaktFormular";
+import { RATGEBER_VEROEFFENTLICHT } from "@/lib/ratgeber-flag";
 import { useMobileMenu } from "@/components/MobileMenu";
 import { FaqItem } from "@/components/FaqAccordion";
 import { Bewertungen } from "@/components/Bewertungen";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <a href="#app">Unsere App</a>
       <a href="#ueber">Über uns</a>
       <a href="#standort">Kontakt</a>
+      {RATGEBER_VEROEFFENTLICHT && <a href="/privat/ratgeber">Ratgeber</a>}
     </nav>
     <a href="#termin" className="nav-cta">Beratungsgespräch vereinbaren</a>
     <button className="burger" aria-label="Menü" onClick={toggle}>
@@ -33,6 +35,7 @@ export default function HomePage() {
     <a href="#app" onClick={close}>Unsere App</a>
     <a href="#ueber" onClick={close}>Über uns</a>
     <a href="#standort" onClick={close}>Kontakt</a>
+    {RATGEBER_VEROEFFENTLICHT && <a href="/privat/ratgeber" onClick={close}>Ratgeber</a>}
     <a href="#termin" style={{ color: 'var(--gold)' }} onClick={close}>Beratungsgespräch vereinbaren →</a>
   </nav>
 </header>
