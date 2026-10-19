@@ -42,6 +42,11 @@
   font-size: 14px;
   font-weight: 500;
 }
+.legalPage .kopfNav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 .legalPage .back:hover {
   color: var(--gold);
 }
