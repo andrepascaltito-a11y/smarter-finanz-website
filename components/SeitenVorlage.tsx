@@ -60,7 +60,10 @@ export function seitenMetadata(s: Seite): Metadata {
     title: s.title,
     description: s.description,
     alternates: { canonical: pfad },
-    openGraph: { type: "website", locale: "de_DE", title: s.title, description: s.description, url: `${BASIS}${pfad}` },
+    openGraph: {
+      type: "website", locale: "de_DE", title: s.title, description: s.description, url: `${BASIS}${pfad}`,
+      ...(s.karte ? { images: [{ url: `${BASIS}${s.karte.datei}`, width: 1080, height: 1350, alt: s.karte.alt }] } : {}),
+    },
     // Entwuerfe nie in die Suchmaschine
     ...(s.published ? {} : { robots: { index: false, follow: false } }),
   };
@@ -150,6 +153,18 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
             <strong>Entwurf, nicht veröffentlicht.</strong> Diese Seite ist nur lokal und in Vorschau-Deployments sichtbar, nicht in der Sitemap und
             auf noindex gesetzt. Veröffentlichung durch published: true in lib/seiten-inhalt.ts.
           </p>
+        )}
+
+        {s.karte && (
+          <figure className={styles.karte}>
+            <a href={s.karte.datei} target="_blank" rel="noopener noreferrer" aria-label="Karte in voller Größe öffnen">
+              <Image src={s.karte.datei} alt={s.karte.alt} width={1080} height={1350} sizes="(max-width: 700px) 100vw, 560px" quality={85} priority />
+            </a>
+            <figcaption>
+              Das Wichtigste auf einer Karte. Zum Speichern und Weitergeben: <a href={s.karte.datei} download>Beitragsformat</a>
+              {s.karte.story ? <> oder <a href={s.karte.story} download>Story-Format</a></> : null}.
+            </figcaption>
+          </figure>
         )}
 
         {s.portrait && (

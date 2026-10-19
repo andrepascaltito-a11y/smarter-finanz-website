@@ -1,5 +1,5 @@
 // Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.
-// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md
+// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md
 // mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
 // sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.
 // Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.
@@ -2214,6 +2214,157 @@ export const SEITEN: Seite[] = [
     ],
     "cta": {
       "text": "Wenn Sie Ihre Selbstbeteiligung und Ihre Summen in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "stromausfall-im-betrieb-versicherung",
+    "published": false,
+    "title": "Stromausfall im Betrieb: Wer zahlt? | Smarter Finanz",
+    "description": "Am 18. Oktober fiel an der Westküste Schleswig-Holsteins der Strom aus. Was jetzt zu tun ist und was Netzbetreiber und eigene Versicherung zahlen.",
+    "h1": "Stromausfall im Betrieb: Zahlt das die Versicherung?",
+    "kurzname": "Stromausfall im Betrieb: Wer zahlt?",
+    "stand": "Oktober 2026",
+    "karte": {
+      "datei": "/aktuell/stromausfall-karte-feed.png",
+      "alt": "Karte zum Stromausfall im Betrieb mit vier Kästen: Festhalten, Sofort melden, Zahlt meine Versicherung? und Und der Netzbetreiber? Stand 19. Oktober 2026.",
+      "story": "/aktuell/stromausfall-karte-story.png"
+    },
+    "einleitung": [
+      "Am Sonntag, 18. Oktober, war an der Westküste Schleswig-Holsteins bei bis zu 40.000 Haushalten rund zwei Stunden der Strom weg (Angabe des Netzbetreibers SH Netz). Laut NDR sind Zähler durchgeschmort und Geräte durch Überspannung kaputtgegangen. Den Betroffenen wünschen wir, dass die Schäden überschaubar bleiben.",
+      "Das war nicht bei uns in Alfeld und im Weser- und Leinebergland, aber das kann überall passieren.",
+      "Hier steht, was Sie dann tun und wer was zahlt."
+    ],
+    "kurz": [
+      {
+        "frage": "Festhalten.",
+        "antwort": "Defekte Geräte nicht wegwerfen, nichts reparieren, erst fotografieren."
+      },
+      {
+        "frage": "Netzbetreiber.",
+        "antwort": "Den Schaden unverzüglich dem Netzbetreiber melden, nicht dem Stromanbieter."
+      },
+      {
+        "frage": "Versicherer.",
+        "antwort": "Ebenfalls unverzüglich informieren, laut Musterbedingungen auch mündlich oder telefonisch."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Im Vertrag nachsehen, ob Überspannung ohne Blitz und Elektronik eingeschlossen sind."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Erst fotografieren, dann melden"
+      },
+      {
+        "art": "p",
+        "text": "Laut Musterbedingungen lassen Sie das Schadenbild unverändert, sonst dokumentieren Sie es nachvollziehbar, etwa mit Fotos, und bewahren die beschädigten Sachen bis zur Besichtigung auf. Das defekte Gerät gehört also nicht in die Tonne, sondern vorerst auf den Schreibtisch, auch wenn es dort im Weg ist."
+      },
+      {
+        "art": "p",
+        "text": "SH Netz rät, Sicherungskästen und Hausanlagen von einem Fachbetrieb prüfen zu lassen. Arbeiten Sie nicht selbst daran."
+      },
+      {
+        "art": "p",
+        "text": "Melden Sie den Schaden unverzüglich dem Netzbetreiber, nicht dem Stromanbieter (§ 18 NAV). Am besten per Mail oder Formular, mit Fotos. Den eigenen Versicherer informieren Sie ebenfalls unverzüglich, möglichst vor der Reparatur."
+      },
+      {
+        "art": "h2",
+        "text": "Wer zahlt was?"
+      },
+      {
+        "art": "p",
+        "text": "Der Netzbetreiber zahlt nicht automatisch. Er haftet bei Verschulden (§ 18 NAV):"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Für Sachschäden bei einfacher Fahrlässigkeit, also einem normalen Fehler, höchstens 5.000 Euro je Anschlussnutzer.",
+          "Für entgangenen Umsatz bei einfacher Fahrlässigkeit gar nichts."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Anschlussnutzer ist, wer einen Anschluss ans Niederspannungsnetz nutzt. Ein normaler Gewerbeanschluss zählt dazu."
+      },
+      {
+        "art": "p",
+        "text": "Bei der eigenen Versicherung gilt laut Musterbedingungen:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Brand durch Überspannung: ja.",
+          "Geräteschaden durch Überspannung aus dem Netz: nur mit Elektronik- oder Technik-Baustein.",
+          "Angesengt ohne Feuer: in der Feuerversicherung ein Sengschaden und nicht versichert, außer er folgt aus einer versicherten Gefahr."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Eine Betriebsunterbrechung setzt laut Musterbedingungen einen Sachschaden voraus. Ein Stromausfall auf der Straße ist kein Sachschaden im Betrieb, also in den Mustern nicht gedeckt. Brennt es im Betrieb durch die Überspannung, kann eine vereinbarte Betriebsunterbrechung greifen. Wie sie funktioniert, steht im [Artikel zur Betriebsunterbrechung](/blog/betriebsunterbrechung-ertragsausfall). Ihr Vertrag kann abweichen."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück in den Betrieb"
+      },
+      {
+        "art": "p",
+        "text": "Festhalten, melden, nachlesen, in dieser Reihenfolge."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Schlagen Sie Versicherungsschein und Bedingungen auf und suchen Sie, ob Überspannung ohne Blitz und Elektronik eingeschlossen sind. Was offen bleibt, klären Sie mit Ihrem Versicherer."
+      },
+      {
+        "art": "p",
+        "text": "Ein Vertrag ist wie ein Werkzeugkasten: Ob die Zange drin ist, schaut man besser vorher nach als mittendrin."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand 19. Oktober 2026, keine individuelle Beratung. Grundlage sind die Niederspannungsanschlussverordnung und die unverbindlichen Musterbedingungen des Versichererverbands GDV. Ihr Vertrag kann abweichen, maßgeblich sind seine Bedingungen."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/betriebsunterbrechung-ertragsausfall",
+        "text": "Betrieb steht still, Kosten laufen weiter: Was Sie vorab klären können"
+      },
+      {
+        "pfad": "/blog/was-zahlt-die-betriebshaftpflicht",
+        "text": "„Zahlt das Ihre Versicherung?“ Was die Betriebshaftpflicht zahlt, was nicht"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "NDR, „Stromausfälle in SH: SH Netz sucht weiter nach der Ursache“, Stand 19.10.2026 08:35 Uhr, https://www.ndr.de/nachrichten/schleswig-holstein/stromausfaelle-in-sh-sh-netz-sucht-weiter-nach-der-ursache,stromausfall-226.html. Abruf: 19.10.2026.",
+      "Niederspannungsanschlussverordnung (NAV), § 1 und § 18 (zuletzt geändert durch Art. 9 G v. 18.12.2025), https://www.gesetze-im-internet.de/nav/__1.html, https://www.gesetze-im-internet.de/nav/__18.html. Abruf: 19.10.2026.",
+      "Gesamtverband der Deutschen Versicherungswirtschaft (GDV), Allgemeine Bedingungen für die Feuerversicherung (AFB 2010, GDV 0100, Version laut Deckblatt: 01.04.2014, unverbindliche Bekanntgabe), § 1 und § 8, https://www.gdv.de/resource/blob/6066/fac7f18cb40b22a072cfe665774abfcc/01-allgemeine-bedingungen-fuer-die-feuerversicherung-afb-2010--data.pdf. Abruf: 19.10.2026.",
+      "GDV, Klauseln für die Feuerversicherung (SK AFB 2010, GDV 0110, Version 01.06.2020), SK 3114, https://www.gdv.de/resource/blob/6234/1794135aea863a2cd129aeb963b6cc96/05-klauseln-fuer-die-feuerversicherung-sk-afb-2010--data.pdf. Abruf: 19.10.2026.",
+      "GDV, Allgemeine Bedingungen für die Verbundene Sach-Gewerbeversicherung (VSG 2010, GDV 1800, Version 01.04.2014), Teil A § 8, Teil B § 2, § 4, § 5 und § 13, https://www.gdv.de/resource/blob/5968/df3ece81b898dd9debcf0e23c943013a/01-allgemeine-bedingungen-fuer-die-verbundene-sach-gewerbeversicherung-vsg-2010--data.pdf. Abruf: 19.10.2026.",
+      "GDV, Allgemeine Bedingungen für die Elektronikversicherung (ABE 2020, GDV 0818, Version 01.07.2025), A1-2.1 und B3-3.2.2, https://www.gdv.de/resource/blob/6154/8f0941c9e332346b9c8e593c69ffba14/05-allgemeine-bedingungen-fuer-die-elektronikversicherung-abe-2020--data.pdf. Abruf: 19.10.2026.",
+      "GDV, Allgemeine Feuer-Betriebsunterbrechungs-Versicherungs-Bedingungen (FBUB 2010, GDV 0120, Version 01.04.2014), § 1 und § 2, https://www.gdv.de/resource/blob/6120/8d3b52913f8c4b26fb6ab434b594078d/01-allgemeine-feuer-betriebsunterbrechungs-versicherungs-bedingungen--fbub-2010--data.pdf. Abruf: 19.10.2026.",
+      "GDV, Zusatzbedingungen für die einfache Betriebsunterbrechungs-Versicherung (ZKBU 2010, GDV 0125), § 2, https://www.gdv.de/resource/blob/6122/78ada56583a0eb5c15b55f4e9ad35636/02-zusatzbedingungen-fuer-die-einfache-betriebsunterbrechungs-versicherung-zkbu-2010--data.pdf. Abruf: 19.10.2026.",
+      "GDV, Bedingungen für die Versicherung zusätzlicher Gefahren zur Feuer-Betriebsunterbrechungs-Versicherung (ECBUB 2010, GDV 1210, Version laut Deckblatt: 01.04.2014), § 2, https://www.gdv.de/resource/blob/6124/80be7b75366d116153975bc30c53f17f/04-bedingungen-fuer-die-versicherung-zusaetzlicher-gefahren-zur-feuer-betriebsunterbrechungs-versicherung-ecbub-2010--data.pdf. Abruf: 19.10.2026.",
+      "GDV, Klauseln für die Betriebsunterbrechungs-Versicherung (SK BU 2010, GVO 0123, Version 01.06.2020), SK 8114, https://www.gdv.de/resource/blob/6126/e4fd22ffbf6a111dc0031516309cdd54/05-klauseln-fuer-die-betriebsunterbrechungs-versicherung-sk-bu-2010--data.pdf. Abruf: 19.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie wissen möchten, wie Ihr Betrieb bei Stromausfall und Überspannung aufgestellt ist, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
     }
   }
 ];

@@ -168,6 +168,10 @@ def baue(y, s, veroeffentlicht):
         out["bilder"] = [b]
     elif b != "none":
         warn(f"Unbekannter bildschluessel {b} in {slug_voll}")
+    if y.get("karte"):
+        out["karte"] = {"datei": y["karte"], "alt": y.get("karte_alt", "")}
+        if y.get("karte_story"):
+            out["karte"]["story"] = y["karte_story"]
     if typ == "autor":
         out["portrait"] = {"datei": "/andre-tito.jpg", "alt": "André Pascal Tito, Versicherungsmakler in Alfeld (Leine)"}
     out.update({k: s[k] for k in ("einleitung", "kurz", "abschnitte", "faq", "links", "quellen", "cta")})

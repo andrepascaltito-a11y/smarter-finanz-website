@@ -36,6 +36,8 @@ export type Seite = {
   bilder?: OrtSchluessel[];
   /** Nur Autorenseite: Portrait neben der Vita (Datei unter public/, Alternativtext beschreibt die Person) */
   portrait?: { datei: string; alt: string };
+  /** Optional: Karte (Bild) am Seitenanfang, zum Beispiel beim Format "Aktuell" (Dateien unter public/aktuell/). story ist die Hochkant-Fassung zum Speichern. */
+  karte?: { datei: string; story?: string; alt: string };
   einleitung: string[];
   kurz: { frage: string; antwort: string }[];
   abschnitte: Abschnitt[];
