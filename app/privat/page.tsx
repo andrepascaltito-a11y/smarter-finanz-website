@@ -60,7 +60,7 @@ export default function HomePage() {
 <section className="stats">
   <div className="wrap">
     <div className="stats-inner">
-      <div className="stat"><b>seit August 2018</b><div className="line"></div><span>in der Beratung, zunächst angestellt</span></div>
+      <div className="stat"><b>seit August 2018</b><div className="line"></div><span>in der Beratung</span></div>
       <div className="stat"><b>§ 34d GewO</b><div className="line"></div><span>Versicherungsmakler mit IHK-Erlaubnis</span></div>
     </div>
   </div>
