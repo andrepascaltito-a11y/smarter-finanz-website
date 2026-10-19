@@ -1,5 +1,5 @@
 // Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.
-// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md
+// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md
 // mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
 // sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.
 // Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.
@@ -2365,6 +2365,300 @@ export const SEITEN: Seite[] = [
     ],
     "cta": {
       "text": "Wenn Sie wissen möchten, wie Ihr Betrieb bei Stromausfall und Überspannung aufgestellt ist, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "cyberangriff-im-betrieb-versicherung",
+    "published": false,
+    "title": "Cyberangriff: Was tun, was zahlt? | Smarter Finanz",
+    "description": "Erpresser-Mail oder gesperrter Rechner: Was in der ersten Stunde zu tun ist und was die Cyberversicherung laut Musterbedingungen zahlt und was nicht.",
+    "h1": "Cyberangriff im Betrieb: Was tun und was zahlt die Versicherung?",
+    "kurzname": "Cyberangriff: Was tun, was zahlt?",
+    "stand": "Oktober 2026",
+    "karte": {
+      "datei": "/aktuell/cyber-karte-feed.png",
+      "alt": "Karte zum Cyberangriff im Betrieb mit vier Kästen: Erste Schritte, Sofort melden, Zahlt meine Versicherung? und Und davor? Stand 19. Oktober 2026.",
+      "story": "/aktuell/cyber-karte-story.png"
+    },
+    "einleitung": [
+      "Die Erpresser-Mail kommt ohne Vorwarnung. Im Bundeslagebild Cybercrime 2025 des BKA trafen rund 90 Prozent der angezeigten Ransomware-Angriffe kleine und mittlere Unternehmen. Ransomware ist Schadsoftware, die Daten sperrt und Lösegeld fordert.",
+      "Hier steht, was Sie in der ersten Stunde tun und was die Versicherung zahlt."
+    ],
+    "kurz": [
+      {
+        "frage": "Trennen.",
+        "antwort": "Netzwerkkabel ziehen, Gerät nicht selbst ausschalten."
+      },
+      {
+        "frage": "Melden.",
+        "antwort": "Versicherer unverzüglich informieren, Dienstleister vorher mit ihm abstimmen, und bei der Polizei anzeigen."
+      },
+      {
+        "frage": "Lösegeld.",
+        "antwort": "BSI und Polizei raten, nicht zu zahlen. Laut Musterbedingungen des Versichererverbands GDV ist es nicht versichert."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Datensicherung prüfen: mindestens wöchentlich, getrennt gespeichert."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Die erste Stunde"
+      },
+      {
+        "art": "p",
+        "text": "Ist der Rechner gesperrt, bleiben Sie ruhig (BSI). Ziehen Sie das Netzwerkkabel, schalten Sie das Gerät nicht selbst aus und fragen Sie Fachleute. Löschen Sie nichts, setzen Sie nichts neu auf und fotografieren Sie die Forderung auf dem Bildschirm."
+      },
+      {
+        "art": "p",
+        "text": "Informieren Sie den Versicherer unverzüglich per E-Mail und stimmen Sie den IT-Dienstleister vorher mit ihm ab. Das BSI empfiehlt eine Anzeige bei der Polizei, für Firmen über die Zentrale Ansprechstelle Cybercrime."
+      },
+      {
+        "art": "p",
+        "text": "Sind personenbezogene Daten betroffen, meldet der Betrieb die Verletzung der Datenschutzbehörde unverzüglich und möglichst binnen 72 Stunden, nachdem sie ihm bekannt wurde, außer sie führt voraussichtlich nicht zu einem Risiko für die Betroffenen (Art. 33 DSGVO)."
+      },
+      {
+        "art": "p",
+        "text": "Kommt nur eine Erpresser-Mail, antworten Sie nicht und öffnen Sie keine Anhänge oder Links. Löschen Sie die Mail nicht und erstatten Sie Anzeige."
+      },
+      {
+        "art": "h2",
+        "text": "Was die Versicherung zahlt und was nicht"
+      },
+      {
+        "art": "p",
+        "text": "Laut den Musterbedingungen (AVB Cyber, Stand Februar 2024) zahlt die Cyberversicherung bis zu den Summen und Zeiten im Schein:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "IT-Forensik: Gutachter klären Ursache und Schaden, nach vorheriger Abstimmung.",
+          "Wiederherstellung der Daten.",
+          "Betriebsunterbrechung, solange Daten oder Systeme nicht nutzbar sind.",
+          "Haftpflicht, wenn Kunden oder Lieferanten wegen des Vorfalls Schadenersatz verlangen.",
+          "Datenschutzkosten: Kosten der Informationspflichten nach einer Datenschutzverletzung."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Nicht gezahlt wird unter anderem das Lösegeld: Ausgeschlossen ist „die Zahlung von Löse- oder Erpressungsgeldern oder die Erfüllung von Erpressungsforderungen“."
+      },
+      {
+        "art": "p",
+        "text": "Voraussetzung sind Pflichten vor dem Vorfall, zum Beispiel Updates, Passwörter, Virenschutz und eine mindestens wöchentliche Datensicherung, etwa getrennt oder offline. Bei vorsätzlichem Verstoß gibt es keine Leistung, bei grob fahrlässigem kann gekürzt werden. Ihr Vertrag kann abweichen."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück in den Betrieb"
+      },
+      {
+        "art": "p",
+        "text": "Trennen, melden, anzeigen."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Prüfen Sie, ob die Datensicherung mindestens wöchentlich läuft, getrennt oder offline liegt und sich zurückspielen lässt. Dann suchen Sie im Versicherungsschein, ob eine Cyberversicherung dabei ist."
+      },
+      {
+        "art": "p",
+        "text": "Eine Versicherung ist wie ein Ersatzschlüssel: Ob er passt, probiert man besser vorher aus als vor der verschlossenen Tür."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand 19. Oktober 2026, keine individuelle Beratung. Grundlage sind die unverbindlichen Musterbedingungen des GDV (AVB Cyber, Stand Februar 2024) und die Hinweise von BSI, BKA und Polizei. Maßgeblich sind die Bedingungen Ihres Vertrags."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/betriebsunterbrechung-ertragsausfall",
+        "text": "Betrieb steht still, Kosten laufen weiter: Was Sie vorab klären können"
+      },
+      {
+        "pfad": "/blog/was-zahlt-die-betriebshaftpflicht",
+        "text": "„Zahlt das Ihre Versicherung?“ Was die Betriebshaftpflicht zahlt, was nicht"
+      },
+      {
+        "pfad": "/blog/stromausfall-im-betrieb-versicherung",
+        "text": "Stromausfall im Betrieb: Zahlt das die Versicherung?"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "GDV, Allgemeine Versicherungsbedingungen für die Cyberrisiko-Versicherung (AVB Cyber, Version laut Deckblatt: Stand Februar 2024, unverbindliche Bekanntgabe), A1, A2, A3, A4, B3 und B4, https://www.gdv.de/resource/blob/6100/a0fed56c4947751cdc20b5206c171d98/01-allgemeine-versicherungsbedingungen-fuer-die-cyberrisiko-versicherung-avb-cyber--data.pdf. Abruf: 19.10.2026.",
+      "BSI, Ransomware: Erste Hilfe bei einem schweren IT-Sicherheitsvorfall (Arbeitspapier Version 1.2, 07.10.2022), Kap. 1, 3.6, 3.7, 3.9 und 4.3, https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Cyber-Sicherheit/Themen/Ransomware_Erste-Hilfe-IT-Sicherheitsvorfall.pdf?__blob=publicationFile&v=3. Abruf: 19.10.2026.",
+      "BSI, Ich habe einen IT-Sicherheitsvorfall: Checkliste Technik, https://www.bsi.bund.de/DE/IT-Sicherheitsvorfall/Unternehmen/Ich-habe-einen-IT-Sicherheitsvorfall-Checkliste-Technik/ich-habe-einen-it-sicherheitsvorfall-checkliste-technik_node.html. Abruf: 19.10.2026.",
+      "BSI, Ich habe einen IT-Sicherheitsvorfall: Checkliste Organisatorisches, https://www.bsi.bund.de/DE/IT-Sicherheitsvorfall/Unternehmen/Ich-habe-einen-IT-Sicherheitsvorfall-Checkliste-Organisatorisches/ich-habe-einen-it-sicherheitsvorfall-checkliste-organisatorisches_node.html. Abruf: 19.10.2026.",
+      "Bundeskriminalamt (BKA), Bundeslagebild Cybercrime 2025 (Stand Mai 2026), S. 13 bis 15, https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/JahresberichteUndLagebilder/Cybercrime/cybercrimeBundeslagebild2025.pdf?__blob=publicationFile&v=6. Abruf: 19.10.2026.",
+      "Polizeiliche Kriminalprävention der Länder und des Bundes (ProPK), Ransomware, https://www.polizei-beratung.de/themen-und-tipps/gefahren-im-internet/ransomware/. Abruf: 19.10.2026.",
+      "Verbraucherzentrale NRW, Erpressung per E-Mail (Stand 28.05.2026), https://www.verbraucherzentrale.de/wissen/vertraege-reklamation/abzocke/erpressung-per-email-angeblich-porno-geguckt-und-kamera-gehackt-29927. Abruf: 19.10.2026.",
+      "Verordnung (EU) 2016/679 (DSGVO), Art. 33, https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679. Abruf: 19.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie wissen möchten, wie Ihr Betrieb bei einem Cyberangriff aufgestellt ist, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "ratgeber",
+    "slug": "kfz-versicherung-wechseln-30-november",
+    "published": false,
+    "title": "Kfz-Versicherung wechseln bis 30. November | Smarter Finanz",
+    "description": "Kfz-Versicherung zum Jahresende wechseln: bis wann die Kündigung beim Versicherer ankommen muss, was du brauchst und worauf du achtest.",
+    "h1": "Kfz-Versicherung wechseln: Bis wann musst du kündigen?",
+    "kurzname": "Kfz-Versicherung wechseln bis 30. November",
+    "stand": "Oktober 2026",
+    "karte": {
+      "datei": "/aktuell/kfz-wechsel-karte-feed.png",
+      "alt": "Karte zum Kfz-Wechsel mit vier Kästen: Frist, Das brauchst du, Mehr als der Beitrag und Damit nichts schiefgeht. Stand 19. Oktober 2026.",
+      "story": "/aktuell/kfz-wechsel-karte-story.png"
+    },
+    "einleitung": [
+      "Der Versichererverband GDV hat die neuen Typklassen und Regionalklassen für 2027 veröffentlicht. In 304 Zulassungsbezirken mit mehr als 32 Millionen Autofahrenden bleibt die Regionalklasse in der Haftpflicht unverändert. Aus einer geänderten Typklasse allein lässt sich laut GDV nichts über deinen Beitrag sagen.",
+      "Ein guter Moment, den eigenen Vertrag anzuschauen."
+    ],
+    "kurz": [
+      {
+        "frage": "Frist.",
+        "antwort": "Montag, 30. November 2026, wenn dein Versicherungsjahr am 1. Januar beginnt."
+      },
+      {
+        "frage": "Zugang.",
+        "antwort": "Die Kündigung muss beim Versicherer ankommen, nicht nur losgeschickt sein."
+      },
+      {
+        "frage": "Keine Lücke.",
+        "antwort": "Der neue Vertrag beginnt an dem Tag, an dem der alte endet."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Im Versicherungsschein nachsehen, wann dein Vertrag abläuft."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Frist und Kündigung"
+      },
+      {
+        "art": "p",
+        "text": "Die Kündigung muss laut Musterbedingungen spätestens einen Monat vor Ablauf des Versicherungsjahres beim Versicherer ankommen. Beginnt dein Versicherungsjahr am 1. Januar, ist das Montag, der 30. November 2026."
+      },
+      {
+        "art": "p",
+        "text": "Maßgeblich ist der Zugang, nicht das Absenden (§ 130 BGB). Kündige so, dass du den Eingang belegen kannst, und lass dir den Eingang bestätigen."
+      },
+      {
+        "art": "p",
+        "text": "Läuft dein Vertrag laut Schein nicht zum Jahreswechsel ab, ist dein Stichtag ein anderer: ein Monat vor dem Ablauf, der im Versicherungsschein steht."
+      },
+      {
+        "art": "p",
+        "text": "Steigt der Beitrag durch eine Anpassungsklausel, kannst du einen Monat ab Zugang der Mitteilung kündigen (§ 40 VVG)."
+      },
+      {
+        "art": "h2",
+        "text": "Das brauchst du für den Vergleich"
+      },
+      {
+        "art": "p",
+        "text": "Das legst du bereit:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "den Fahrzeugschein mit HSN und TSN (Hersteller- und Typschlüssel), daraus ergibt sich die Typklasse",
+          "deinen Wohnort, daraus folgt die Regionalklasse",
+          "die Schadenfreiheitsklassen (SF-Klassen) von Haftpflicht und Vollkasko",
+          "die Jahresfahrleistung und den Abstellort, etwa Garage oder Carport"
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Deinen Rabatt nimmst du meist mit, einen Schaden aber auch. Lass dir die SF-Klasse bestätigen."
+      },
+      {
+        "art": "p",
+        "text": "Laut Musterbedingungen lohnen sich außer dem Beitrag diese Fragen: Wie lange nach der Erstzulassung wird der Neuwert ersetzt? Verzichtet der Tarif darauf, bei grober Fahrlässigkeit nach der Schwere des Verschuldens zu kürzen? Sind Tierbiss und Folgeschäden mitversichert?"
+      },
+      {
+        "art": "h2",
+        "text": "Damit nichts schiefgeht"
+      },
+      {
+        "art": "p",
+        "text": "Als Halter musst du eine Haftpflichtversicherung abschließen und aufrechterhalten (§ 1 PflVG). Darum beginnt der neue Vertrag an dem Tag, an dem der alte endet."
+      },
+      {
+        "art": "p",
+        "text": "Die Kasko kann der neue Versicherer ablehnen, eine Haftpflicht nur in engen Fällen (§ 5 PflVG). Stell den Antrag früh."
+      },
+      {
+        "art": "p",
+        "text": "Prüfe, ob dein Versicherungsschein da und die Kasko ab dem 1. Januar zugesagt ist, und zahle den ersten Beitrag pünktlich. Beim reinen Wechsel des Versicherers brauchst du laut GDV-Verbraucherseite keine eVB-Nummer (elektronische Versicherungsbestätigung)."
+      },
+      {
+        "art": "p",
+        "text": "Erst die Annahme, dann die Kündigung, aber rechtzeitig."
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Hol Versicherungsschein und Fahrzeugschein heraus, notiere Ablaufdatum, SF-Klasse, Fahrleistung und Abstellort."
+      },
+      {
+        "art": "p",
+        "text": "Die Kfz-Versicherung ist wie der Winterreifen-Termin: Wer früh dran ist, fährt ruhiger in den Dezember."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand 19. Oktober 2026, keine individuelle Beratung. Grundlage sind die unverbindlichen Musterbedingungen des GDV (AKB), Gesetze und Hinweise der Verbraucherzentrale. Maßgeblich sind die Bedingungen deines Vertrags."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/privat",
+        "text": "Beratung für Privatpersonen"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Gesamtverband der Deutschen Versicherungswirtschaft (GDV), Allgemeine Bedingungen für die Kfz-Versicherung (AKB 2015, Deckblatt „Stand: 13.10.2026“, unverbindliche Bekanntgabe), A.2.2, A.2.5, A.2.9, B.1, B.2, C.1, G.1, G.2, G.5, I.6, J.1, J.2 und Anhang 2, https://www.gdv.de/resource/blob/6178/ec39e06d2f552aca5f35f19277c94603/01-allgemeine-bedingungen-fuer-die-kfz-versicherung-akb-2015--data.pdf. Abruf: 19.10.2026.",
+      "Versicherungsvertragsgesetz (VVG), § 40 (Fassung am Abrufdatum), https://www.gesetze-im-internet.de/vvg_2008/__40.html. Abruf: 19.10.2026.",
+      "Pflichtversicherungsgesetz (PflVG), § 1 und § 5 (Fassung am Abrufdatum), https://www.gesetze-im-internet.de/pflvg/__1.html, https://www.gesetze-im-internet.de/pflvg/__5.html. Abruf: 19.10.2026.",
+      "Bürgerliches Gesetzbuch (BGB), § 130, https://www.gesetze-im-internet.de/bgb/__130.html. Abruf: 19.10.2026.",
+      "GDV, Medieninformation „Deutschlandweit neue Regionalklassen für fast zehn Millionen Autofahrende“, 09.09.2026, https://www.gdv.de/gdv/medien/medieninformationen/regionalklassen-2027-medieninformation-69824. Abruf: 19.10.2026.",
+      "GDV, „Neue Typklassen für über 12 Millionen Autofahrer“, zuletzt aktualisiert 30.09.2026, https://www.gdv.de/gdv/medien/medieninformationen/typklassen-kfz-versicherung-medieninformation-147618. Abruf: 19.10.2026.",
+      "GDV, Verbraucherseite DIE VERSiCHERER, „Was ist eine eVB-Nummer?“, 15.05.2024, https://www.dieversicherer.de/versicherer/auto/news/evb-nummer-142690. Abruf: 19.10.2026.",
+      "Verbraucherzentrale, „Versicherungsvertrag kündigen: Wann das klappt und wie Sie vorgehen“, Stand 19.11.2025, https://www.verbraucherzentrale.de/wissen/geld-versicherungen/weitere-versicherungen/versicherungsvertrag-kuendigen-wann-das-klappt-und-wie-sie-vorgehen-5442. Abruf: 19.10.2026.",
+      "Verbraucherzentrale, „Kfz-Versicherung überprüfen …“ (Titel hier gekürzt), Stand 08.10.2025, https://www.verbraucherzentrale.de/wissen/geld-versicherungen/weitere-versicherungen/kfzversicherung-ueberpruefen-und-mehrere-hundert-euro-sparen-11490. Abruf: 19.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn du das in Ruhe besprechen möchtest, buche einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
     }
   }
 ];
