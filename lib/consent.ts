@@ -12,9 +12,9 @@ export const CONSENT_TEXT =
 
 // Zustimmung zur Erstinformation nach § 15 VersVermV ueber die Website.
 // Bei inhaltlicher Aenderung von ERSTINFO_TEXT oder der Seite /erstinformation Version hochzaehlen.
-export const ERSTINFO_VERSION = "erstinformation-2026-10-16-v4";
+export const ERSTINFO_VERSION = "erstinformation-2026-10-22-v5";
 
 export const ERSTINFO_TEXT =
-  "Ich stimme zu, dass mir Smarter Finanz die Erstinformation nach § 15 VersVermV " +
-  "(Status, Vergütung, Register, Schlichtung) über die Website und als PDF per E-Mail zur Verfügung stellt. " +
+  "Ich stimme zu, dass mir Smarter Finanz die Erstinformation nach § 15 VersVermV samt den Angaben zu " +
+  "Finanzanlagen und Immobiliardarlehen (Status, Vergütung, Register, Schlichtung) über die Website und als PDF per E-Mail zur Verfügung stellt. " +
   "Ich kann sie jederzeit kostenlos auf Papier anfordern.";

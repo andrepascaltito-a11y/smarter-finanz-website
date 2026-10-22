@@ -100,7 +100,7 @@ function html({ einleitung, url, stand, abschnitte, hinweis }) {
       }</section>`;
     })
     .join("\n");
-  return `<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Erstinformation nach § 15 VersVermV | Smarter Finanz</title>
+  return `<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Erstinformation nach § 15 VersVermV mit Angaben zu Finanzanlagen und Immobiliardarlehen | Smarter Finanz</title>
 <style>
 @page{size:A4;margin:16mm 18mm 22mm;@bottom-left{content:"Smarter Finanz · André Pascal Tito · Glenetalstraße 101 A · 31061 Alfeld (Leine)";font:7.5pt Helvetica,Arial,sans-serif;color:#5c6b62}@bottom-right{content:"Seite " counter(page) " von " counter(pages);font:7.5pt Helvetica,Arial,sans-serif;color:#5c6b62}}
 *{box-sizing:border-box}
@@ -123,7 +123,7 @@ li{margin:0 0 3pt}
 </style></head><body>
 <div class="kopf"><div class="marke">Smarter Finanz<small>VERSICHERUNGSMAKLER</small></div><div class="stand">Stand ${esc(stand)}</div></div>
 <h1>Erstinformation</h1>
-<p class="sub">nach § 15 VersVermV · Status, Vergütung, Register, Schlichtung</p>
+<p class="sub">nach § 15 VersVermV, § 12 FinVermV, Art. 247 EGBGB · Status, Vergütung, Register, Schlichtung</p>
 <p class="einl">${esc(einleitung)}</p>
 ${url ? `<p class="url">Dauerhaft abrufbar: ${esc(url)}</p>` : ""}
 ${ab}
