@@ -22,7 +22,8 @@ const ERLAUBTE_THEMEN: Thema[] = [
   "Steueroptimierung", // Altwert, siehe lib/types.ts
   "Versicherungsvergleich",
   "Altersvorsorge und Investment",
-  "Finanzierung und Umschuldung",
+  "Immobilienfinanzierung und Umschuldung",
+  "Finanzierung und Umschuldung", // Altwert, siehe lib/types.ts
   "Sonstiges",
 ];
 

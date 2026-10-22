@@ -100,7 +100,7 @@ export default function HomePage() {
       </div>
       <div className="card">
         <div className="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="2" y="7" width="20" height="12" rx="2"/><path d="M2 11h20M6 15h4"/></svg></div>
-        <h3>Finanzierung &amp; Umschuldung</h3>
+        <h3>Immobilienfinanzierung &amp; Umschuldung</h3>
         <p>Steht ein Immobilienkauf an? Wir vermitteln dir passende Finanzierungen und sind dabei nicht an bestimmte Darlehensgeber gebunden. Die monatliche Rate soll zu dir passen.</p>
       </div>
     </div>
@@ -214,7 +214,7 @@ export default function HomePage() {
     <div><h2><span className="serif-accent">Fragen,</span> die immer wieder aufkommen.</h2></div>
     <div className="acc">
       <FaqItem question="Auf welche Themen habt ihr euch spezialisiert?">
-        Wir betreuen dich in vier Kernbereichen: Förderung &amp; Steuervorteile, Versicherungsvergleich, Altersvorsorge &amp; Investment sowie Finanzierung &amp; Umschuldung. Als Makler sind wir nicht an einzelne Versicherer gebunden und vergleichen eine hinreichende Zahl von Anbietern.
+        Wir betreuen dich in vier Kernbereichen: Förderung &amp; Steuervorteile, Versicherungsvergleich, Altersvorsorge &amp; Investment sowie Immobilienfinanzierung &amp; Umschuldung. Als Makler sind wir nicht an einzelne Versicherer gebunden und vergleichen eine hinreichende Zahl von Anbietern.
       </FaqItem>
       <FaqItem question="Kostet das Erstgespräch Geld?">
         Für das Erstgespräch berechnen wir dir keine gesonderte Vergütung, und es ist unverbindlich. Unsere Vergütung erfolgt in der Regel über Provisionen der Produktanbieter. Eine zusätzliche Vergütung durch dich gibt es nur, wenn du sie vorab ausdrücklich mit uns vereinbarst. Einzelheiten stehen in der Erstinformation.

@@ -8,6 +8,8 @@ export type Thema =
   | "Steueroptimierung"
   | "Versicherungsvergleich"
   | "Altersvorsorge und Investment"
+  | "Immobilienfinanzierung und Umschuldung"
+  // Altwert (bis 22.10.2026 im Formular), siehe oben.
   | "Finanzierung und Umschuldung"
   | "Sonstiges";
 

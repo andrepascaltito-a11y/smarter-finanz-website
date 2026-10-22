@@ -28,7 +28,7 @@ const THEMEN: Thema[] = [
   "Förderung und Steuervorteile",
   "Versicherungsvergleich",
   "Altersvorsorge und Investment",
-  "Finanzierung und Umschuldung",
+  "Immobilienfinanzierung und Umschuldung",
   "Sonstiges",
 ];
 
