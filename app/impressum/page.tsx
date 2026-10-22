@@ -80,8 +80,9 @@ export default function Page() {
       <a href="https://www.versicherungsombudsmann.de" target="_blank" rel="noopener">www.versicherungsombudsmann.de</a>
     </p>
     <p>
-      Bei Streitigkeiten aus der Finanzanlagenvermittlung:<br />
-      Ombudsstelle für Investmentfonds des BVI Bundesverband Investment und Asset Management e. V., Unter den Linden 42, 10117 Berlin.
+      Bei Streitigkeiten aus der Immobiliardarlehensvermittlung:<br />
+      Verbraucherschlichtungsstelle bei der Deutschen Bundesbank, Postfach 10 06 02, 60006 Frankfurt am Main,{" "}
+      <a href="https://www.bundesbank.de/schlichtungsstelle" target="_blank" rel="noopener">www.bundesbank.de/schlichtungsstelle</a>
     </p>
 
     <h2>Verbraucherstreitbeilegung</h2>
