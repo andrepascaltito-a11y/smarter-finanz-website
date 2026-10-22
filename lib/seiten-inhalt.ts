@@ -2664,7 +2664,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "beitrag",
     "slug": "selbststaendig-krank-wer-zahlt",
-    "published": false,
+    "published": true,
     "title": "Selbstständig und krank: Wer zahlt? | Smarter Finanz",
     "description": "Kein Arbeitgeber, der weiterzahlt: Ab wann es Krankengeld für Selbstständige geben kann, was die Wahlerklärung bringt und was ein Krankentagegeld ist.",
     "h1": "Selbstständig und krank: Wer zahlt, wenn ich ausfalle?",
@@ -2845,7 +2845,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "beitrag",
     "slug": "erster-mitarbeiter-melden-absichern",
-    "published": false,
+    "published": true,
     "title": "Erster Mitarbeiter: melden und absichern | Smarter Finanz",
     "description": "Der erste Mitarbeiter kommt: Was Sie anmelden, was die Berufsgenossenschaft damit zu tun hat und was bei Krankheit und bei Schäden gilt.",
     "h1": "Der erste Mitarbeiter: Was Sie anmelden und absichern",
@@ -3023,7 +3023,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "beitrag",
     "slug": "berufsgenossenschaft-soloselbststaendig",
-    "published": false,
+    "published": true,
     "title": "Berufsgenossenschaft für Soloselbstständige | Smarter Finanz",
     "description": "Allein im Betrieb: Was Sie der Berufsgenossenschaft mitteilen, wie Sie Ihren Träger finden und was für Sie als Inhaber gilt.",
     "h1": "Allein im Betrieb: Müssen Sie zur Berufsgenossenschaft?",
@@ -3193,7 +3193,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "beitrag",
     "slug": "betriebsversicherung-angebote-vergleichen",
-    "published": false,
+    "published": true,
     "title": "Zwei Angebote vergleichen: Was zählt? | Smarter Finanz",
     "description": "Zwei Angebote, zwei Preise: Welche Felder bei Betriebshaftpflicht und Inhalt gleich sein müssen, damit der Preis überhaupt etwas aussagt.",
     "h1": "Zwei Angebote, zwei Preise: Was Sie vergleichen, bevor Sie auf den Beitrag schauen",
