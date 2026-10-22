@@ -1,5 +1,5 @@
 // Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.
-// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md
+// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md, Mia-Blog-Aktuell-PHP-Luecke-2026-10-22a.md
 // mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
 // sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.
 // Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.
@@ -3363,6 +3363,149 @@ export const SEITEN: Seite[] = [
     ],
     "cta": {
       "text": "Wenn Sie zwei Angebote in Ruhe nebeneinanderlegen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "sicherheitsluecke-website-update-cyberversicherung",
+    "published": false,
+    "title": "PHP-Sicherheitslücke: Was Betriebe fragen | Smarter Finanz",
+    "description": "Weltweite Sicherheitslücke in PHP, Stand 22. Oktober 2026: Was Betriebe ihren Hoster fragen können und was die Cyberversicherung laut Muster sagt.",
+    "h1": "Sicherheitslücke in PHP: Was Betriebe fragen und was die Cyberversicherung sagt",
+    "kurzname": "PHP-Sicherheitslücke: Was Betriebe fragen",
+    "stand": "Oktober 2026",
+    "karte": {
+      "datei": "/aktuell/sicherheitsluecke-karte-feed.png",
+      "alt": "Karte zur PHP-Sicherheitslücke mit vier Kästen: Die Lage, Das können Sie tun, Das sagt das Muster der Cyberversicherung und Heute Abend. Stand 22. Oktober 2026.",
+      "story": "/aktuell/sicherheitsluecke-karte-story.png"
+    },
+    "einleitung": [
+      "Seit Mittwoch, 21. Oktober 2026, warnen Behörden weltweit vor zwei Sicherheitslücken in PHP, einer Programmiersprache, auf der Websites laufen, und die Entwickler haben noch am selben Tag Updates veröffentlicht.",
+      "Hier steht, was Sie Ihrem Hoster (der Firma, bei der Ihre Website liegt) schreiben können und was die Cyberversicherung dazu sagt."
+    ],
+    "kurz": [
+      {
+        "frage": "Lage.",
+        "antwort": "Laut BSI bisher keine erfolgreiche Ausnutzung in der Breite (Stand 22. Oktober 2026)."
+      },
+      {
+        "frage": "Hoster.",
+        "antwort": "Ist das PHP-Sicherheitsupdate eingespielt? Stand schriftlich bestätigen lassen."
+      },
+      {
+        "frage": "Versicherung.",
+        "antwort": "Laut den Musterbedingungen des Versichererverbands GDV ist eine Lücke allein kein Versicherungsfall."
+      },
+      {
+        "frage": "Heute tun.",
+        "antwort": "Mail an den Hoster, Datensicherung prüfen."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Was bekannt ist"
+      },
+      {
+        "art": "p",
+        "text": "Auch Websites, Webshops und Kundenportale können mit PHP laufen, zum Beispiel mit WordPress, ohne dass der Betrieb es weiß. Laut dpa meldet das Sicherheitsunternehmen Cloudflare weltweit Millionen automatisierter Angriffsversuche. Dem BSI ist nach eigener Angabe bisher keine erfolgreiche Ausnutzung der Lücken in der Breite bekannt (Stand 22. Oktober 2026)."
+      },
+      {
+        "art": "p",
+        "text": "Einrichtungen haben ihre Websites vorsorglich vom Netz genommen, einige sind wieder erreichbar. Weder Panik noch Entwarnung, aber ein Grund zum Nachfragen."
+      },
+      {
+        "art": "h2",
+        "text": "Was Sie Ihren Hoster fragen können"
+      },
+      {
+        "art": "p",
+        "text": "Fragen Sie Ihren Hoster oder Ihre Agentur, ob das PHP-Sicherheitsupdate eingespielt ist, und lassen Sie sich den Stand schriftlich bestätigen."
+      },
+      {
+        "art": "p",
+        "text": "Ein Update der Website-Software oder der Zusatzmodule allein genügt nicht, auch PHP auf dem Server muss aktualisiert sein."
+      },
+      {
+        "art": "h2",
+        "text": "Was die Cyberversicherung dazu sagt"
+      },
+      {
+        "art": "p",
+        "text": "Versicherungsfall ist laut den Musterbedingungen des Versichererverbands GDV der erstmals nachprüfbar festgestellte Schaden, wenn Angriff oder Schadsoftware Daten oder Systeme lahmlegen, verändern oder ausspähen; eine Lücke allein nicht."
+      },
+      {
+        "art": "p",
+        "text": "Zu den Pflichten vor einem Schaden gehört laut Muster, relevante Sicherheitsupdates zeitnah einzuspielen und Systeme mit bekannten Sicherheitslücken nicht ohne zusätzliche Absicherung zu betreiben."
+      },
+      {
+        "art": "p",
+        "text": "Der Betriebsausfall während einer geplanten Abschaltung ist im Muster ausgenommen, es sei denn, die Abschaltung gehört zu Maßnahmen gegen einen unmittelbar bevorstehenden Schaden. Ob eine Warnung vor einer Lücke als unmittelbar bevorstehender Schaden zählt, sagt das Muster nicht; fragen Sie im Zweifel vor Kosten bei Ihrem Versicherer nach."
+      },
+      {
+        "art": "p",
+        "text": "Ihr Vertrag kann abweichen. Die erste Stunde nach einem Vorfall beschreibt der [Artikel zum Cyberangriff](/blog/cyberangriff-im-betrieb-versicherung)."
+      },
+      {
+        "art": "h2",
+        "text": "Zurück in den Betrieb"
+      },
+      {
+        "art": "p",
+        "text": "Heute Abend, zehn Minuten: Schreiben Sie Ihrem Hoster oder Ihrer Agentur eine kurze Mail: „Läuft unsere Website mit PHP? Ist das Sicherheitsupdate vom 21. Oktober eingespielt? Bitte bestätigen Sie uns den Stand schriftlich.“ Prüfen Sie, ob eine aktuelle, getrennt gespeicherte Datensicherung vorhanden ist und sich zurückspielen lässt."
+      },
+      {
+        "art": "p",
+        "text": "Ein Versicherungsschein ist kein Wecker: Er klingelt nicht, wenn ein Update fällig ist."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand 22. Oktober 2026, keine individuelle Beratung. Die Lage kann sich schnell ändern. Grundlage sind die Hinweise von BSI, PHP-Projekt und Transferstelle Cybersicherheit im Mittelstand und die unverbindlichen Musterbedingungen des GDV (AVB Cyber, Stand Februar 2024)."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/cyberangriff-im-betrieb-versicherung",
+        "text": "Cyberangriff im Betrieb: Was tun und was zahlt die Versicherung?"
+      },
+      {
+        "pfad": "/blog/versicherungen-kleingewerbe",
+        "text": "Versicherungen im Kleingewerbe: Was ist Pflicht?"
+      },
+      {
+        "pfad": "/blog/betriebsversicherung-angebote-vergleichen",
+        "text": "Zwei Angebote vergleichen: Was zählt?"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "PHP-Projekt, Security advisory „Critical remote code execution vulnerabilities, update now“ (21.10.2026) und Ankündigung „Upcoming Critical PHP Security Release“ (20.10.2026), https://www.php.net/ und https://www.php.net/archive/2026.php. Abruf: 22.10.2026, 18:50 und 18:51 Uhr.",
+      "BSI, Pressemitteilung „PHP: BSI warnt vor kritischen Schwachstellen“ (21.10.2026), https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2026/261021_PHP-kritische-Schwachstelle.html. Abruf: 22.10.2026, 18:54 Uhr.",
+      "BSI, IT-Sicherheitshinweis „PHP: Kritische Schwachstellen bedrohen Webanwendungen weltweit“ (BITS-H 2026-297981, Version 1.2 vom 22.10.2026), S. 1 bis 6, https://www.bsi.bund.de/SharedDocs/Cybersicherheitswarnungen/DE/2026/2026-297981-1032.pdf?__blob=publicationFile&v=5. Abruf: 22.10.2026, 18:50 und 18:54 Uhr.",
+      "CISA, Alert „Critical Vulnerabilities in PHP Require Immediate Patching“ (21.10.2026), https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching. Abruf: 22.10.2026, 18:50 Uhr. ENISA, Joint statement on critical PHP vulnerabilities (21.10.2026), https://www.enisa.europa.eu/news/joint-statement-on-critical-php-vulnerabilities; CERT-EU, Security Advisory 2026-018, https://cert.europa.eu/publications/security-advisories/2026-018/. Abruf: 22.10.2026, 18:51 Uhr.",
+      "Cloudflare, „Cloudflare deploys protections against php2shell vulnerability“ (21.10.2026), https://blog.cloudflare.com/php-vulnerabilities-waf-protection/. Abruf: 22.10.2026, 18:52 Uhr.",
+      "heise online (Dirk Knop), „php2shell: Updates trudeln ein, viele Webseiten offline, Angriffe laufen“ (22.10.2026, 09:23 Uhr), https://www.heise.de/news/php2shell-Updates-trudeln-ein-viele-Webseiten-offline-Angriffe-laufen-11496366.html. Abruf: 22.10.2026, 18:49 Uhr.",
+      "NDR, „Sicherheitslücken: Die meisten Seiten im Norden sind wieder online“ (Stand 22.10.2026, 16:25 Uhr), https://www.ndr.de/nachrichten/niedersachsen/hannover_weser-leinegebiet/sicherheitsluecke-behoerden-nehmen-vorsorglich-seiten-vom-netz,sicherheitsluecke-100.html. Abruf: 22.10.2026, 18:50 Uhr.",
+      "dpa über Handelsblatt, „Sicherheitslücke im Internet: Millionen Hacker-Versuche: Viele Webseiten wieder online“ (22.10.2026, 14:03 Uhr), https://www.handelsblatt.com/technik/it-internet/sicherheitsluecke-im-internet-millionen-hacker-versuche-viele-webseiten-wieder-online/100264109.html (die ursprüngliche URL leitet dorthin um). Abruf: 22.10.2026, 18:49 Uhr.",
+      "Transferstelle Cybersicherheit im Mittelstand, „Kritische PHP-Sicherheitslücken: Was mittelständische Unternehmen jetzt wissen müssen“ (22.10.2026), https://transferstelle-cybersicherheit.de/kritische-php-sicherheitsluecken-was-mittelstaendische-unternehmen-jetzt-wissen-muessen/. Abruf: 22.10.2026, 18:55 Uhr.",
+      "GDV, Allgemeine Versicherungsbedingungen für die Cyberrisiko-Versicherung (AVB Cyber, Stand Februar 2024, unverbindliche Bekanntgabe), A1-1 bis A1-4, A1-16, A2-3 und A4-1, https://www.gdv.de/resource/blob/6100/a0fed56c4947751cdc20b5206c171d98/01-allgemeine-versicherungsbedingungen-fuer-die-cyberrisiko-versicherung-avb-cyber--data.pdf (gelistet unter https://www.gdv.de/gdv/service/musterbedingungen). Abruf: 22.10.2026, 18:52 und 18:53 Uhr."
+    ],
+    "cta": {
+      "text": "Wenn Sie wissen möchten, wie Ihr Betrieb bei Cyberrisiken aufgestellt ist, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
     }
   }
 ];
