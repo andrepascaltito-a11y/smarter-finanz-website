@@ -25,7 +25,7 @@ const CONSENT_LINK_TEXT = "Datenschutzerklärung";
 const [CONSENT_TEXT_BEFORE_LINK, CONSENT_TEXT_AFTER_LINK] = CONSENT_TEXT.split(CONSENT_LINK_TEXT);
 
 const THEMEN: Thema[] = [
-  "Steueroptimierung",
+  "Förderung und Steuervorteile",
   "Versicherungsvergleich",
   "Altersvorsorge und Investment",
   "Finanzierung und Umschuldung",

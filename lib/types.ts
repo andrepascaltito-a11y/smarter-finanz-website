@@ -3,6 +3,8 @@
 import type { Erreichbarkeit } from "@/lib/erreichbarkeit";
 
 export type Thema =
+  | "Förderung und Steuervorteile"
+  // Altwert (bis 22.10.2026 im Formular): bleibt gueltig, damit zwischengespeicherte Seiten keine Anfrage verlieren.
   | "Steueroptimierung"
   | "Versicherungsvergleich"
   | "Altersvorsorge und Investment"

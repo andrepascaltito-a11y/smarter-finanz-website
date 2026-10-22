@@ -18,7 +18,8 @@ const MIN_FILL_MS = 3000;
 // Identisch zum Thema-Union-Typ in lib/types.ts. Dort gibt es keine Laufzeit-
 // Liste dieser Werte, daher hier lokal dupliziert fuer die Server-Validierung.
 const ERLAUBTE_THEMEN: Thema[] = [
-  "Steueroptimierung",
+  "Förderung und Steuervorteile",
+  "Steueroptimierung", // Altwert, siehe lib/types.ts
   "Versicherungsvergleich",
   "Altersvorsorge und Investment",
   "Finanzierung und Umschuldung",

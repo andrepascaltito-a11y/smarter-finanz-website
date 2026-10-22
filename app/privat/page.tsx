@@ -47,7 +47,7 @@ export default function HomePage() {
     <div className="hero-text">
       <div className="audience-switch" role="group" aria-label="Für wen suchst du Beratung?"><a href="/">Unternehmen &amp; Selbstständige</a><a href="/privat" className="active" aria-current="page">Privatperson</a></div>
       <span className="eyebrow on-dark">Individuelle Finanzkonzepte für Privatpersonen</span>
-      <h1>Zahle weniger Steuern und baue strategisch Vermögen für eine sorgenfreie Zukunft auf</h1>
+      <h1>Nutze Steuervorteile und baue strategisch Vermögen für eine sorgenfreie Zukunft auf</h1>
       <p className="lead">Egal ob eine gesicherte Rente, attraktive Finanzierungen für Immobilien oder ein rundum Versicherungscheck. Wir kümmern uns engagiert um die Themen, für die du weder Zeit noch Nerven hast. Dabei behältst du jederzeit die Kontrolle über deine Finanzen.</p>
       <div className="hero-cta">
         <a href="#termin" className="btn btn-gold">Beratungsgespräch vereinbaren<small>Unverbindlich.</small></a>
@@ -85,8 +85,8 @@ export default function HomePage() {
     <div className="cards">
       <div className="card">
         <div className="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h3>Steueroptimierung</h3>
-        <p>Gemeinsam holen wir dir zurück, was dir zusteht. Von staatlichen Förderungen bis zur Steuererstattung sorgen wir dafür, dass du kein Geld mehr verschenkst.</p>
+        <h3>Förderung &amp; Steuervorteile</h3>
+        <p>Wir zeigen dir, wo Förderung und Steuervorteile bei Vorsorge eine Rolle spielen können. Die steuerliche Umsetzung übernimmt ein Steuerberater.</p>
       </div>
       <div className="card">
         <div className="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div>
@@ -96,12 +96,12 @@ export default function HomePage() {
       <div className="card">
         <div className="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
         <h3>Altersvorsorge &amp; Investment</h3>
-        <p>Wir bauen mit dir eine Strategie, die zu deinen Zielen passt: renditestark, verständlich und flexibel, damit du im Ruhestand sorgenfrei bleibst.</p>
+        <p>Wir bauen mit dir eine Strategie, die zu deinen Zielen passt: renditeorientiert, verständlich und flexibel, damit du im Ruhestand sorgenfrei bleibst.</p>
       </div>
       <div className="card">
         <div className="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="2" y="7" width="20" height="12" rx="2"/><path d="M2 11h20M6 15h4"/></svg></div>
         <h3>Finanzierung &amp; Umschuldung</h3>
-        <p>Steht ein Immobilienkauf an? Über unser großes Netzwerk sichern wir dir attraktive Kredite zu besten Zinsen. Dabei geht es immer darum, deine monatliche Belastung zu optimieren.</p>
+        <p>Steht ein Immobilienkauf an? Wir vermitteln dir passende Finanzierungen und sind dabei nicht an bestimmte Darlehensgeber gebunden. Die monatliche Rate soll zu dir passen.</p>
       </div>
     </div>
   </div>
@@ -156,7 +156,7 @@ export default function HomePage() {
     <div>
       <span className="eyebrow on-dark">Für Selbstständige &amp; Unternehmer</span>
       <h2>Du bist Unternehmer? Dann denken wir einen Schritt weiter.</h2>
-      <p>Betriebliche Altersvorsorge, Absicherung von Schlüsselpersonen, GmbH-Strukturen und steuerlich clevere Vergütung. Wir entwickeln Konzepte, die zu deinem Unternehmen und deinen privaten Zielen passen.</p>
+      <p>Betriebliche Altersvorsorge, Absicherung von Schlüsselpersonen und Vorsorge in der GmbH. Wir entwickeln Konzepte für dein Unternehmen und deine privaten Ziele. Steuerfragen klärt dein Steuerberater.</p>
     </div>
     <div className="u-cta">
       <a href="/#anfrage" className="btn btn-gold">Unternehmer-Termin sichern<small>Speziell für Selbstständige</small></a>
@@ -185,9 +185,9 @@ export default function HomePage() {
 <section className="einschaetzung section">
   <div className="wrap">
     <div className="est-box">
-      <span className="eyebrow on-dark" style={{justifyContent: 'center'}}>Mach unseren Test</span>
+      <span className="eyebrow on-dark" style={{justifyContent: 'center'}}>Deine Finanzanalyse</span>
       <div className="deco">• • • • • • • • • • • •</div>
-      <h2>Erhalte in unter 2 Minuten eine Einschätzung, wie viel € du <em>jährlich einsparen</em> kannst.</h2>
+      <h2>Wir schauen gemeinsam, ob und wo du bei deinen Versicherungen <em>sparen kannst</em>.</h2>
       <a href="#termin" className="btn btn-gold" style={{alignItems: 'center'}}>Finanzanalyse sichern</a>
     </div>
   </div>
@@ -198,7 +198,7 @@ export default function HomePage() {
     <div>
       <h2>Über <span className="serif-accent">Smarter Finanz</span></h2>
       <div className="rule"></div>
-      <p><strong>Mit Smarter Finanz verfolgen wir ein Ziel:</strong> Wir möchten den Ruf des Finanzmarktes wieder reparieren. Statt Falschberatung oder Profitorientierung setzen wir auf Augenhöhe und Transparenz. Denn Finanz- und Versicherungsberatung braucht jeder irgendwann.</p>
+      <p><strong>Mit Smarter Finanz verfolgen wir ein Ziel:</strong> Wir möchten den Ruf des Finanzmarktes wieder reparieren. Statt Verkaufsdruck setzen wir auf Augenhöhe und Transparenz. Denn Finanz- und Versicherungsberatung braucht jeder irgendwann.</p>
       <p>Wir sind fest davon überzeugt, dass es nicht immer einen „bösen Versicherungsverkäufer" geben muss. Mit einer ehrlich kundenorientierten Finanzberatung wollen wir genau das beweisen, Tag für Tag.</p>
     </div>
     <div className="ueber-img">
@@ -214,13 +214,13 @@ export default function HomePage() {
     <div><h2><span className="serif-accent">Fragen,</span> die immer wieder aufkommen.</h2></div>
     <div className="acc">
       <FaqItem question="Auf welche Themen habt ihr euch spezialisiert?">
-        Wir betreuen dich in vier Kernbereichen: Steueroptimierung, Versicherungsvergleich, Altersvorsorge &amp; Investment sowie Finanzierung &amp; Umschuldung. Als Makler sind wir nicht an einzelne Versicherer gebunden und vergleichen eine hinreichende Zahl von Anbietern.
+        Wir betreuen dich in vier Kernbereichen: Förderung &amp; Steuervorteile, Versicherungsvergleich, Altersvorsorge &amp; Investment sowie Finanzierung &amp; Umschuldung. Als Makler sind wir nicht an einzelne Versicherer gebunden und vergleichen eine hinreichende Zahl von Anbietern.
       </FaqItem>
       <FaqItem question="Kostet das Erstgespräch Geld?">
         Für das Erstgespräch berechnen wir dir keine gesonderte Vergütung, und es ist unverbindlich. Unsere Vergütung erfolgt in der Regel über Provisionen der Produktanbieter. Eine zusätzliche Vergütung durch dich gibt es nur, wenn du sie vorab ausdrücklich mit uns vereinbarst. Einzelheiten stehen in der Erstinformation.
       </FaqItem>
       <FaqItem question="Wie unterscheidet ihr euch von anderen Anbietern, wie bspw. Banken?">
-        Banken sind an ihre eigenen Produkte gebunden, wir nicht. Als Makler vergleichen wir eine hinreichende Zahl von Anbietern und wählen ausschließlich das aus, was für deine Situation am besten passt. Ehrlich, transparent und ohne Verkaufsdruck.
+        Banken sind an ihre eigenen Produkte gebunden, wir nicht. Als Makler vergleichen wir eine hinreichende Zahl von Anbietern und wählen aus, was zu deiner Situation passt. Ehrlich, transparent und ohne Verkaufsdruck.
       </FaqItem>
       <FaqItem question="Kann ich meine bestehenden Verträge bei euch prüfen lassen?">
         Ja, sehr gerne. Wir analysieren deine bestehenden Verträge, decken Lücken und unnötige Kosten auf und zeigen dir, wo du besser abgesichert bist oder sparen kannst. Eine erste Durchsicht gehört zum Erstgespräch dazu, eine gesonderte Vergütung berechnen wir dafür nicht.
