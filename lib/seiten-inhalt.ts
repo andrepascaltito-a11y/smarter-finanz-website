@@ -1,5 +1,5 @@
 // Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.
-// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2a-nur-Artikel-2026-10-19.md
+// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md
 // mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
 // sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.
 // Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.
@@ -3100,7 +3100,7 @@ export const SEITEN: Seite[] = [
       },
       {
         "art": "p",
-        "text": "Ob Inhaber versichert sind, kann jeder Träger in seiner Satzung selbst regeln. Bei der BG BAU und bei der BGHM sind Inhaber nach deren Angabe nicht automatisch versichert, sie können sich freiwillig versichern. Die freiwillige Versicherung gibt es auf Antrag, sie beginnt am Tag nach dem Eingang des Antrags. Anders ist es zum Beispiel bei der BG ETEM: Dort sind Inhaber aus Textil, Bekleidung, Druck und Papierverarbeitung per Satzung pflichtversichert."
+        "text": "Ob Inhaber versichert sind, kann jeder Träger in seiner Satzung selbst regeln. Bei der BG BAU und bei der BGHM sind Inhaber nach deren Angabe nicht automatisch versichert, sie können sich freiwillig versichern. Die freiwillige Versicherung gibt es auf Antrag, sie beginnt am Tag nach dem Eingang des Antrags."
       },
       {
         "art": "h2",
@@ -3184,7 +3184,6 @@ export const SEITEN: Seite[] = [
       "Serviceportal der gesetzlichen Unfallversicherung, https://serviceportal-uv.dguv.de/ ; Unternehmen anmelden, https://serviceportal-uv.dguv.de/mapping/leistung?leistung=OZG-10 ; Branche ermitteln, https://serviceportal-uv.dguv.de/mapping/finder?tab=traeger&gruppenBezeichnung=ANABUM&leistung=OZG-10. Abruf: 19.10.2026.",
       "BG BAU, Informationen für die Unternehmensgründung, https://www.bgbau.de/themen/mitgliedschaft-und-beitrag/pflichtversicherung-fuer-unternehmen/informationen-fuer-die-unternehmensgruendung. Abruf: 19.10.2026.",
       "BGHM, Fragen zu Mitgliedschaft und Beitrag, https://www.bghm.de/unternehmer/fragen-zu-mitgliedschaft-und-beitrag; Versicherungsschutz, https://www.bghm.de/arbeitnehmer/versicherungsschutz. Abruf: 19.10.2026.",
-      "BG ETEM, Unternehmerversicherung, https://www.bgetem.de/mitgliedschaft-beitrag/unternehmerversicherung; Pflichtversicherung kraft Satzung, https://www.bgetem.de/mitgliedschaft-beitrag/unternehmerversicherung/gut-versichert-die-unternehmerversicherung-der-textil-und-bekleidungsbranche; Unsere Branchen, https://www.bgetem.de/mitgliedschaft-beitrag/unsere-branchen. Abruf: 19.10.2026.",
       "GDV, Allgemeine Unfallversicherungsbedingungen (AUB 2020, Stand Juni 2025, unverbindliche Bekanntgabe), Ziffern 1.1, 1.2, 1.3, 2.1, https://www.gdv.de/resource/blob/6252/6fde83896927a4920772d713456a646d/01-allgemeine-unfallversicherungsbedingungen-aub-2020--data.pdf. Abruf: 19.10.2026."
     ],
     "cta": {
