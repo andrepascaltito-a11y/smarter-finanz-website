@@ -3368,7 +3368,7 @@ export const SEITEN: Seite[] = [
   {
     "typ": "beitrag",
     "slug": "sicherheitsluecke-website-update-cyberversicherung",
-    "published": false,
+    "published": true,
     "title": "PHP-Sicherheitslücke: Was Betriebe fragen | Smarter Finanz",
     "description": "Weltweite Sicherheitslücke in PHP, Stand 22. Oktober 2026: Was Betriebe ihren Hoster fragen können und was die Cyberversicherung laut Muster sagt.",
     "h1": "Sicherheitslücke in PHP: Was Betriebe fragen und was die Cyberversicherung sagt",
