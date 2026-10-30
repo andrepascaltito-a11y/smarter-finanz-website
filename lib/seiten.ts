@@ -16,7 +16,8 @@ export type Abschnitt =
   | { art: "h2"; text: string }
   | { art: "p"; text: string }
   | { art: "ul"; punkte: string[] }
-  | { art: "tabelle"; titel: string; kopf: string[]; zeilen: string[][] };
+  | { art: "tabelle"; titel: string; kopf: string[]; zeilen: string[][] }
+  | { art: "rechner"; id: "etf-tilgung" };
 
 export type Seite = {
   typ: SeitenTyp;

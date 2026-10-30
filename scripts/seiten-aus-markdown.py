@@ -54,6 +54,10 @@ def bloecke(zeilen):
 def inhalt_zu_abschnitten(zeilen):
     res = []
     for b in bloecke(zeilen):
+        # Marker fuer eingebaute Werkzeuge, zum Beispiel {{rechner: etf-tilgung}} als eigener Absatz
+        if len(b) == 1 and (mr := re.fullmatch(r"\{\{\s*rechner\s*:\s*([a-z0-9-]+)\s*\}\}", b[0].strip())):
+            res.append({"art": "rechner", "id": mr.group(1)})
+            continue
         if all(re.match(r"^\s*-\s+", z) or re.match(r"^\s{2,}\S", z) for z in b) and re.match(r"^\s*-\s+", b[0]):
             punkte = []
             for z in b:

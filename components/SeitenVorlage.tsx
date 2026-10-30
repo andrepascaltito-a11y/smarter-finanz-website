@@ -8,6 +8,7 @@ import legal from "../app/legal.module.css";
 import { ORTSBILDER } from "../lib/bildnachweise";
 import { linkErlaubt, seitenName, seitenPfad, type Seite } from "../lib/seiten";
 import BlogHeader from "./BlogHeader";
+import { TilgungsRechner } from "./TilgungsRechner";
 import styles from "./seiten.module.css";
 
 const BASIS = "https://www.smarterfinanz.de";
@@ -202,6 +203,7 @@ export function SeitenVorlage({ seite: s }: { seite: Seite }) {
                 ))}
               </ul>
             );
+          if (a.art === "rechner") return <TilgungsRechner key={i} />;
           return (
             <div key={i}>
               <p className={styles.tabellenTitel}>{a.titel}</p>

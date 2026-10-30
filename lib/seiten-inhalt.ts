@@ -1,5 +1,5 @@
 // Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.
-// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md, Mia-Blog-Aktuell-PHP-Luecke-2026-10-22a.md, Mia-Blog-Mitarbeiter-Unfall-nur-Artikel-2026-10-30a.md
+// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md, Mia-Blog-Aktuell-PHP-Luecke-2026-10-22a.md, Mia-Blog-Mitarbeiter-Unfall-nur-Artikel-2026-10-30a.md, Mia-Ratgeber-Endfaelliges-Darlehen-Teil1-2026-10-31a.md, Mia-Ratgeber-Endfaelliges-Darlehen-Teil2-2026-10-31a.md
 // mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
 // sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.
 // Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.
@@ -3667,6 +3667,349 @@ export const SEITEN: Seite[] = [
     ],
     "cta": {
       "text": "Wenn Sie die Absicherung Ihres Betriebs und Ihrer Leute in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "ratgeber",
+    "slug": "endfaelliges-darlehen-etf-sparplan",
+    "published": true,
+    "title": "Endfälliges Darlehen mit ETF-Sparplan | Smarter Finanz",
+    "description": "Nur Zinsen zahlen und die Tilgung ansparen? So funktioniert das endfällige Darlehen mit ETF-Sparplan, mit Blick auf den MSCI World und einem Rechner.",
+    "h1": "Nur Zinsen zahlen und die Tilgung ansparen: Geht das?",
+    "kurzname": "Endfälliges Darlehen mit ETF-Sparplan",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Du kaufst eine Wohnung, um sie zu vermieten. Die Bank sagt: Du zahlst nur die Zinsen. Zurückgezahlt wird am Ende, in einem Betrag. Das Geld dafür sparst du in der Zwischenzeit in einen ETF-Sparplan.",
+      "Ein ETF ist ein Fonds, der an der Börse gehandelt wird und meist einen Index nachbildet, zum Beispiel den MSCI World. Mit einem Kauf legst du dann in viele große Firmen zugleich an. Das Modell heißt endfälliges Darlehen.",
+      "Hier steht, wie es funktioniert, was die letzten Jahrzehnte gezeigt haben und wo es hakt. Und du kannst es selbst durchrechnen. Die Steuer und eine Versicherung als zweiter Weg stehen im [zweiten Artikel](/privat/ratgeber/endfaelliges-darlehen-steuer-und-police)."
+    ],
+    "kurz": [
+      {
+        "frage": "So geht es.",
+        "antwort": "Du zahlst nur Zinsen und sparst jeden Monat in einen ETF. Am Ende löst der Verkaufserlös das Darlehen ab."
+      },
+      {
+        "frage": "Der Blick zurück sieht gut aus.",
+        "antwort": "Das Deutsche Aktieninstitut hat nachgerechnet: Sparpläne in den MSCI World brachten über 25 oder 30 Jahre im Schnitt rund 8 Prozent im Jahr, vor Kosten und Steuern. Der schlechteste 25-Jahres-Sparplan kam nur auf 3,8 Prozent. Die Vergangenheit ist kein verlässlicher Hinweis auf die Zukunft."
+      },
+      {
+        "frage": "Eine Garantie gibt es nicht.",
+        "antwort": "Bringt der Sparplan weniger, ist das Darlehen trotzdem in voller Höhe fällig."
+      },
+      {
+        "frage": "Es kommt auf die Rendite an.",
+        "antwort": "Im Beispiel mit 300.000 Euro und 25 Jahren muss der Sparplan nach Kosten und vor Steuern im Schnitt rund 4,7 Prozent im Jahr bringen."
+      },
+      {
+        "frage": "Für Eigennutzer meist nicht.",
+        "antwort": "Die Verbraucherzentrale rät Selbstnutzern aus Kostengründen zur direkten Tilgung. Bei einer selbst bewohnten Immobilie lassen sich die Zinsen in der Regel nicht steuerlich ansetzen, bei Vermietung unter Umständen schon."
+      },
+      {
+        "frage": "Steuer und Versicherung.",
+        "antwort": "Wie die Steuer wirkt und was eine fondsgebundene Rentenversicherung ändert, steht im [zweiten Artikel](/privat/ratgeber/endfaelliges-darlehen-steuer-und-police)."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "So funktioniert es"
+      },
+      {
+        "art": "p",
+        "text": "Du bekommst das Darlehen komplett ausgezahlt. Du zahlst nur Zinsen, die Schuld bleibt gleich hoch (§ 488 BGB)."
+      },
+      {
+        "art": "p",
+        "text": "Die Tilgung überweist du nicht an die Bank, sondern jeden Monat in einen ETF-Sparplan. Weil ein ETF ein Fonds ist, ist in Unterlagen oft auch von einem Fondssparplan die Rede. Wir nennen den Sparplan hier den Investmentmotor: Er soll über die Jahre das Geld aufbauen, mit dem du am Ende ablöst. Ein Motor läuft aber nur, wenn der Markt mitspielt. Das Wort ist unser Bild und kein Produktname."
+      },
+      {
+        "art": "p",
+        "text": "Die Bank will Sicherheit. Deshalb wird der Sparplan meist an sie verpfändet oder abgetreten. Du kommst dann nicht mehr frei an das Geld."
+      },
+      {
+        "art": "p",
+        "text": "Am Ende verkaufst du die ETF-Anteile und löst das Darlehen ab. Bleibt etwas übrig, gehört es dir. Fehlt etwas, zahlst du die Differenz aus eigenem Geld oder finanzierst neu."
+      },
+      {
+        "art": "p",
+        "text": "Die Bank muss dich vor dem Vertrag deutlich darauf hinweisen, dass es ein endfälliger Kredit ist und du die Tilgung gesondert regeln musst (Art. 247 § 1 Abs. 2 EGBGB mit dem ESIS-Merkblatt). Das ersetzt keine Beratung."
+      },
+      {
+        "art": "h2",
+        "text": "Was die letzten Jahrzehnte gezeigt haben"
+      },
+      {
+        "art": "p",
+        "text": "Das Deutsche Aktieninstitut hat nachgerechnet, was ein Sparplan in den MSCI World gebracht hätte: gleiche Monatsbeträge, Start jeweils im Dezember seit 1975, Stand Ende 2025, in Euro (bis 1998 in D-Mark), vor Kosten und Steuern, auch vor den Steuern auf Dividenden im Ausland."
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**25 Jahre sparen:** im Schnitt 8,0 Prozent im Jahr. Der schlechteste Sparplan kam auf 3,8 Prozent, der beste auf 13,8 Prozent.",
+          "**30 Jahre sparen:** im Schnitt 7,9 Prozent im Jahr. Der schlechteste Sparplan kam auf 6,2 Prozent, der beste auf 10,1 Prozent."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Ein ETF liegt meist etwas unter dem Index, wegen seiner Kosten und der Steuern auf Dividenden im Ausland. Ziehen wir grob einen Prozentpunkt ab, lag bei 30 Jahren auch der schlechteste Sparplan noch über den 4,7 Prozent, die das Beispiel unten braucht. Bei 25 Jahren blieben fünf der 26 Sparpläne darunter. Der Abzug ist unsere Annahme, keine Zahl des Aktieninstituts."
+      },
+      {
+        "art": "p",
+        "text": "Das ist ein Blick zurück. Die Wertentwicklung der Vergangenheit ist kein verlässlicher Indikator für künftige Ergebnisse. Die Zeiträume überlappen sich, es sind keine 26 oder 21 voneinander getrennten Erfahrungen. Und die Kurse schwanken: Der MSCI World hat auch Phasen mit großen Verlusten erlebt, zum Beispiel in der Finanzkrise 2008. Bei kürzerer Sparzeit gab es auch Minus: Ein 10-Jahres-Sparplan mit Start im Dezember 1998 verlor im Schnitt 6,2 Prozent im Jahr. Wer genau dann verkaufen muss, bekommt weniger."
+      },
+      {
+        "art": "h2",
+        "text": "Das Beispiel in Zahlen"
+      },
+      {
+        "art": "p",
+        "text": "Die Annahmen: 300.000 Euro Darlehen, 25 Jahre, 4 Prozent Zins, fest. Der Zins ist ein Rechenwert, kein Angebot."
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Normale Tilgung:** 1.584 Euro im Monat. Nach 25 Jahren ist das Darlehen weg.",
+          "**Endfällig mit Sparplan:** 1.000 Euro Zinsen plus 584 Euro in den ETF-Sparplan, zusammen ebenfalls 1.584 Euro. Nach 25 Jahren stehen noch 300.000 Euro Schuld, die der Sparplan ablösen soll."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Was dann im Sparplan liegt, hängt vom Verlauf ab. Die Renditen sind nach Kosten und vor Steuern gerechnet, die Beträge nach Steuern:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**7 Prozent im Jahr:** rund 404.900 Euro. Das Darlehen ist weg, rund 104.900 Euro bleiben übrig.",
+          "**5 Prozent im Jahr:** rund 311.000 Euro. Es reicht, rund 11.000 Euro bleiben übrig.",
+          "**3 Prozent im Jahr:** rund 243.300 Euro. Es fehlen rund 56.700 Euro."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Weil die Schuld nie sinkt, zahlst du in 25 Jahren 300.000 Euro Zinsen. Bei normaler Tilgung sind es rund 175.100 Euro. Der Sparplan muss die rund 124.900 Euro Mehrzinsen erst verdienen. Der Rechner unten zieht zusätzlich 0,2 Prozent Kosten im Jahr ab, darum weichen die Werte dort leicht ab."
+      },
+      {
+        "art": "p",
+        "text": "Wie die Steuer gerechnet ist, steht unter dem Rechner und im [zweiten Artikel](/privat/ratgeber/endfaelliges-darlehen-steuer-und-police)."
+      },
+      {
+        "art": "rechner",
+        "id": "etf-tilgung"
+      },
+      {
+        "art": "h2",
+        "text": "Wo es hakt"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Mehr Zinsen.** Die Verbraucherzentrale schreibt, das Modell sei in der Vergangenheit immer teurer gewesen als ein normales Tilgungsdarlehen. Sie warnt auch davor, einfach davon auszugehen, dass der Sparplan mehr bringt, als die Bank an Zinsen verlangt.",
+          "**Der Sparplan muss durchhalten.** Läuft er schwächer als gedacht, fehlt am Ende Geld. Im Beispiel sind es bei 3 Prozent rund 56.700 Euro.",
+          "**Der Anschlusszins gilt für die ganze Summe.** Oft ist der Zins nur fünf bis 15 Jahre fest. Danach gilt der neue Zins für die volle, nie getilgte Schuld.",
+          "**Die Bank muss mitspielen.** Sie will die Tilgung am Ende für realistisch halten und kann bei schwankenden Anlagen Abschläge ansetzen. Nicht jede Bank macht das mit. Die BaFin nennt Festdarlehen mit einem Tilgungsersatzprodukt eine ehemals gängige Finanzierungskonstruktion.",
+          "**Verkauf vor dem Ende.** Verkaufst du die Immobilie, solange der Zins fest ist, kann die Bank eine Vorfälligkeitsentschädigung auf die gesamte Summe verlangen, einen Ausgleich für ihren Zinsverlust. Das gilt höchstens zehn Jahre lang. Danach kannst du mit sechs Monaten Frist kündigen (§ 489 Abs. 1 Nr. 2 BGB).",
+          "**Das Ende der Laufzeit.** Rechne nach, wie alt du bei der Ablösung bist. Endet die Finanzierung erst nach dem Renteneintritt, fehlt dir dann womöglich das Einkommen, um eine Lücke zu schließen."
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Für wen es passt und für wen nicht"
+      },
+      {
+        "art": "p",
+        "text": "Eher passt es, wenn"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "du vermietest und die Zinsen steuerlich ansetzen kannst (das gleicht die höheren Zinsen nur zum Teil aus),",
+          "du einen langen Horizont und eine Reserve hast, falls der Sparplan zurückbleibt,",
+          "du ohnehin regelmäßig in ETFs oder Fonds sparst und Kursschwankungen aushältst."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Eher passt es nicht, wenn"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "du das Haus selbst bewohnst,",
+          "du die Sparrate knapp rechnest,",
+          "du planbare Raten und Sicherheit brauchst,",
+          "die Finanzierung bis ins Rentenalter läuft,",
+          "du eine Lücke am Ende nicht aus anderen Mitteln decken könntest,",
+          "du mit schwankenden Kursen noch keine Erfahrung hast."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Das sind Anhaltspunkte und keine Beurteilung deiner Lage. Ob es für dich passt, zeigt erst eine Rechnung mit deinen Zahlen."
+      },
+      {
+        "art": "p",
+        "text": "Es gibt auch Mischformen: eine normale Tilgung mit niedrigem Satz und daneben ein kleiner Sparplan. Dann hängt weniger von der Börse ab. Ob eine Bank das mitmacht, entscheidet sie."
+      },
+      {
+        "art": "h2",
+        "text": "Was du vor einer Entscheidung klären kannst"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Lass dir beide Varianten mit gleicher Gesamtbelastung durchrechnen, mit der Sparrate in der Rechnung.",
+          "Frag, was passiert, wenn der Sparplan zurückbleibt, und wer die Lücke trägt.",
+          "Frag nach dem Zins nach Ablauf der Zinsbindung und was er für die volle Summe bedeutet.",
+          "Kläre mit einem Steuerberater, ob und wie du die Zinsen ansetzen kannst."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Ein endfälliges Darlehen schiebt die Tilgung nach hinten und das Risiko zu dir. Für den passenden Fall kann sich das rechnen, und die letzten Jahrzehnte sprechen nicht dagegen. Garantiert ist es nie."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand 30. Oktober 2026, keine individuelle Beratung zu Geldanlage oder Finanzierung, keine Steuerberatung und keine Rechtsberatung. Das Rechenbeispiel beruht auf Annahmen und sagt nichts über die künftige Entwicklung von Zinsen, Kursen oder Steuern. Wertentwicklungen der Vergangenheit sind kein verlässlicher Indikator für künftige Ergebnisse. Steuerregeln können sich ändern, und wie viel Steuer du zahlst, hängt von deiner Lage ab. Maßgeblich sind die Unterlagen deiner Bank."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/privat/ratgeber/endfaelliges-darlehen-steuer-und-police",
+        "text": "Steuer und Police beim endfälligen Darlehen"
+      },
+      {
+        "pfad": "/privat",
+        "text": "Beratung für Privatpersonen"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Deutsches Aktieninstitut, MSCI-World-Rendite-Dreieck für monatliche Geldanlage, Stand 31.12.2025, https://www.dai.de/fileadmin/user_upload/251231_MSCI_World-Rendite-Dreick_50_Jahre_Sparplan_Web.pdf. Abruf: 30.10.2026.",
+      "Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin), Verbraucherseite „Immobilienkredit im Überblick“, https://www.bafin.de/DE/verbraucherinnen-verbraucher/themen-finanzprodukte/kredite-immobilienfinanzierung/immobilienfinanzierung/immobilienkredit/immobilienkredit_node. Abruf: 30.10.2026.",
+      "Verbraucherzentrale, „Immobilienfinanzierung: Diese Modelle gibt es und das sollten Sie beachten“, Stand 31.10.2024, https://www.verbraucherzentrale.de/wissen/geld-versicherungen/bau-und-immobilienfinanzierung/immobilienfinanzierung-diese-modelle-gibt-es-und-das-sollten-sie-beachten-5801. Abruf: 30.10.2026.",
+      "Bürgerliches Gesetzbuch (BGB), § 488 und § 489 Abs. 1, https://www.gesetze-im-internet.de/bgb/__488.html (entsprechend __489). Abruf: 30.10.2026.",
+      "Einkommensteuergesetz (EStG), § 12 Nr. 1, https://www.gesetze-im-internet.de/estg/__12.html. Abruf: 30.10.2026.",
+      "Einführungsgesetz zum Bürgerlichen Gesetzbuche (EGBGB), Art. 247 § 1 und Anlage 6 (ESIS-Merkblatt), https://www.gesetze-im-internet.de/bgbeg/art_247__1.html (Anlage 6: https://www.gesetze-im-internet.de/bgbeg/art_253anlage_6.html). Abruf: 30.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn du eine Finanzierung in Ruhe durchdenken möchtest, buche einen Termin mit André Tito, unverbindlich. Wir vermitteln Immobiliardarlehen und sind dabei nicht an bestimmte Darlehensgeber gebunden. Wie wir als Immobiliardarlehens-, Finanzanlagen- und Versicherungsvermittler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "ratgeber",
+    "slug": "endfaelliges-darlehen-steuer-und-police",
+    "published": true,
+    "title": "Endfälliges Darlehen: Steuer und Police | Smarter Finanz",
+    "description": "Wie wird ein ETF-Sparplan als Tilgungsersatz besteuert, und was ändert eine fondsgebundene Rentenversicherung? Einfach erklärt, mit Rechenbeispiel.",
+    "h1": "Steuer beim endfälligen Darlehen: Depot oder Versicherung?",
+    "kurzname": "Endfälliges Darlehen: Steuer und Police",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Das ist der zweite Teil. Beim endfälligen Darlehen zahlst du nur die Zinsen und sparst die Tilgung in einen ETF-Sparplan an. Am Ende löst der Verkaufserlös das Darlehen ab. Im [ersten Teil](/privat/ratgeber/endfaelliges-darlehen-etf-sparplan) steht, wie das funktioniert und was das Rechenbeispiel zeigt: 300.000 Euro, 25 Jahre, 4 Prozent Zins. Das sind Rechenwerte und kein Angebot.",
+      "Hier geht es um die Steuer. Und darum, was sich ändert, wenn du die Tilgung nicht in einem Depot, sondern in einer fondsgebundenen Rentenversicherung aufbaust."
+    ],
+    "kurz": [
+      {
+        "frage": "Im Depot.",
+        "antwort": "Der Gewinn im ETF-Sparplan wird beim Verkauf versteuert, bei ETFs ohne Ausschüttung kann ein Teil schon vorher anfallen. Bei Aktienfonds bleiben 30 Prozent der Erträge steuerfrei."
+      },
+      {
+        "frage": "Zinsen.",
+        "antwort": "Bei Vermietung kannst du Zinsen oft von den Mieteinnahmen abziehen, wenn das Darlehen für die vermietete Immobilie verwendet wird. Bei einer selbst bewohnten Immobilie in der Regel nicht."
+      },
+      {
+        "frage": "In der Police.",
+        "antwort": "Solange das Geld im Vertrag liegt, fällt keine laufende Steuer an. Bei der Auszahlung wird der Gewinn versteuert, ab dem 62. Geburtstag und nach zwölf Jahren nur zur Hälfte. Zahlt sie früher aus, gilt die Hälfte nicht."
+      },
+      {
+        "frage": "Aber.",
+        "antwort": "Die Police hat eigene Kosten, und das Anlagerisiko bleibt bei dir: Eine garantierte Ablaufleistung gibt es in der Regel nicht. Ob sie sich steuerlich lohnt, hängt von Kosten, Steuersatz und Alter ab. In unserer Beispielrechnung lohnt sie sich nur, wenn die Mehrkosten sehr niedrig sind."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Und die Steuer?"
+      },
+      {
+        "art": "p",
+        "text": "Beim Verkauf wird der Gewinn im Sparplan versteuert: 25 Prozent Abgeltungsteuer plus Solidaritätszuschlag (§ 32d Abs. 1 EStG, § 3 Abs. 1 Nr. 5 und § 4 SolzG). Kirchensteuer kommt dazu, wenn du kirchensteuerpflichtig bist. Bei ETFs, die ihre Erträge nicht ausschütten, kann schon vorher ein Teil der Steuer anfallen, die Vorabpauschale (§ 18 InvStG). Beim Verkauf wird sie angerechnet. Hältst du die Anteile privat, bleiben bei Aktienfonds 30 Prozent der Erträge steuerfrei, die sogenannte Teilfreistellung (§ 20 Abs. 1 InvStG). Ob dein ETF als Aktienfonds gilt, steht in seinen Anlagebedingungen (§ 2 Abs. 6 InvStG). Bei Anleihe- oder Geldmarkt-ETFs gibt es die Teilfreistellung in der Regel nicht."
+      },
+      {
+        "art": "p",
+        "text": "Bei Vermietung kannst du die Zinsen von den Mieteinnahmen abziehen, soweit du das Darlehen wirklich für die vermietete Immobilie verwendest (§ 9 Abs. 1 Satz 3 Nr. 1 und § 21 EStG). Beim endfälligen Darlehen bleibt die Schuld gleich. Bei gleichem Zinssatz bleiben dann auch die Zinsen gleich, die du ansetzen kannst, solange du vermietest. Ziehst du selbst ein oder verkaufst du die Wohnung, kann sich das ändern. Das hilft, gleicht die höheren Zinsen aber nur zum Teil aus, denn du sparst nur deinen Steuersatz auf den abziehbaren Betrag. Die Sparraten für den Sparplan gehören nicht zu den Werbungskosten. Bei einer Immobilie, die du selbst bewohnst, kannst du die Zinsen in der Regel nicht absetzen (§ 12 Nr. 1 EStG). Die Verbraucherzentrale rät Selbstnutzern aus Kostengründen zur direkten Tilgung."
+      },
+      {
+        "art": "p",
+        "text": "Das ist eine allgemeine Information und keine Steuerberatung. Wie viel Steuer du zahlst, hängt von deiner Lage ab und kann sich ändern. Wie das Finanzamt dein Modell behandelt, klärt ein Steuerberater."
+      },
+      {
+        "art": "h2",
+        "text": "Es geht auch mit einer Versicherung"
+      },
+      {
+        "art": "p",
+        "text": "Statt eines ETF-Sparplans im Depot kann die Tilgung auch in einer fondsgebundenen Rentenversicherung mit Kapitalauszahlung aufgebaut werden. Das Risiko bleibt: Auch die Police legt in Fonds an, der Wert kann schwanken und fallen. Eine garantierte Ablaufleistung gibt es nach Angaben der Verbraucherzentrale in der Regel nicht. Reicht das Geld am Ende nicht, bleibt das Darlehen in der restlichen Höhe fällig. Anders sind vor allem Steuer, Kosten und die Bank:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Keine Steuer auf die Erträge, solange das Geld im Vertrag liegt.** Die Vorabpauschale, die im Depot in Jahren mit Wertzuwachs anfallen kann, gibt es in der Police nicht (§ 16 Abs. 2 Satz 2 Nr. 2 InvStG). Im Depot ist sie keine zusätzliche Steuer. Sie zieht nur einen Teil der Steuer nach vorn und wird beim Verkauf angerechnet (§ 19 Abs. 1 InvStG). Der Vorteil der Police ist hier also vor allem, dass die Steuer später kommt.",
+          "**Halbe Besteuerung möglich.** Wird die Police ab deinem 62. Geburtstag und nach mindestens zwölf Jahren ausgezahlt, wird nur die Hälfte des Gewinns versteuert, mit deinem persönlichen Steuersatz (§ 20 Abs. 1 Nr. 6 Satz 2, § 32d Abs. 2 Nr. 2 und § 52 Abs. 28 Satz 7 EStG). Bei einer fondsgebundenen Police bleiben außerdem 15 Prozent der Fondserträge steuerfrei (§ 20 Abs. 1 Nr. 6 Satz 9 EStG). Solidaritätszuschlag und Kirchensteuer können dazukommen. Das gilt nur, wenn der Vertrag die steuerlichen Voraussetzungen erfüllt. Erhöhst du den Beitrag nachträglich, zählt der Mehrbetrag steuerlich wie ein neuer Vertrag mit eigener Zwölfjahresfrist (BMF-Schreiben vom 1. Oktober 2009, Rz. 71).",
+          "**Dein Alter zählt.** Zahlt die Police vor deinem 62. Geburtstag oder vor Ablauf der zwölf Jahre aus, gilt die Halbierung nicht. Dann wird der Gewinn mit der Abgeltungsteuer versteuert (§ 32d Abs. 1 EStG). Das ist meist mehr Steuer als bei einem Aktien-ETF im Depot. Läuft die Police bis zum Ende eines Darlehens über 25 Jahre, musst du beim Start mindestens 37 Jahre alt sein, damit du bei der Auszahlung 62 bist.",
+          "**Nettotarif.** In einen Nettotarif ist keine Vermittlerprovision eingerechnet, also keine Abschlusskosten im Preis, die sogenannten Alpha-Kosten. Bei einer normalen Police holt sich der Versicherer sie in den ersten Jahren aus deinen Beiträgen. Dafür zahlst du die Vermittlung gesondert, mit einem Honorar, das vorab vereinbart wird.",
+          "**Banken kennen Policen.** Mehrere große Banken nennen in ihren Unterlagen Lebens- und Rentenversicherungen als Tilgungsersatz, eine davon ausdrücklich auch fondsgebundene. Ob deine Bank eine Police oder ein Depot annimmt, erfährst du nur dort."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Aber die Police hat eigene Kosten, und der Steuervorteil ist nicht für jeden gleich groß. Je höher dein Steuersatz, desto kleiner ist er. Bei etwa 42 Prozent bleibt davon kaum etwas übrig. In unserer Beispielrechnung gleicht der Steuervorteil die Kosten der Police nur aus, wenn sie über die Fondskosten hinaus sehr niedrig sind: bei einem Steuersatz von 35 Prozent bis etwa 0,15 Prozent im Jahr zusätzlich. Auch ein Honorar für die Vermittlung gehört zu den Kosten der Police. Angenommen sind ein Aktien-ETF im Depot, 5 Prozent Rendite der Fonds nach Fondskosten, 25 Jahre Laufzeit und eine Auszahlung ab dem 62. Geburtstag, bei der Police ohne Solidaritätszuschlag und Kirchensteuer, beim Depot ohne Vorabpauschale. Die 5 Prozent sind ein Rechenwert und keine Erwartung. Mit anderen Annahmen kommt anderes heraus: Rechnet man Solidaritätszuschlag, Kirchensteuer und Vorabpauschale ein, liegt der Wert je nach Annahme zwischen etwa 0,1 und 0,2 Prozent. Weil die Auszahlung in einem einzigen Jahr anfällt, kann dein Steuersatz in diesem Jahr anders ausfallen als sonst. Ein Grund für die Police kann deshalb eher die Bank sein als die Steuer. Rechne beide Wege durch."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand 30. Oktober 2026, keine individuelle Beratung zu Geldanlage oder Finanzierung, keine Steuerberatung und keine Rechtsberatung. Die Beispielrechnung beruht auf Annahmen und sagt nichts über die künftige Entwicklung von Zinsen, Kursen oder Steuern. Steuerregeln können sich ändern, und wie viel Steuer du zahlst, hängt von deiner Lage ab. Maßgeblich sind die Unterlagen deiner Bank und deines Versicherers."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/privat/ratgeber/endfaelliges-darlehen-etf-sparplan",
+        "text": "Endfälliges Darlehen mit ETF-Sparplan, Teil 1"
+      },
+      {
+        "pfad": "/privat",
+        "text": "Beratung für Privatpersonen"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Verbraucherzentrale, „Immobilienfinanzierung: Diese Modelle gibt es und das sollten Sie beachten“, Stand 31.10.2024, https://www.verbraucherzentrale.de/wissen/geld-versicherungen/bau-und-immobilienfinanzierung/immobilienfinanzierung-diese-modelle-gibt-es-und-das-sollten-sie-beachten-5801. Abruf: 30.10.2026.",
+      "Einkommensteuergesetz (EStG), § 9 Abs. 1 Satz 3 Nr. 1, § 12 Nr. 1, § 20 Abs. 1 Nr. 6, § 21 Abs. 1, § 32d Abs. 1 und Abs. 2 Nr. 2, § 52 Abs. 28, https://www.gesetze-im-internet.de/estg/__9.html (entsprechend __12, __20, __21, __32d, __52). Abruf: 30.10.2026.",
+      "Bundesministerium der Finanzen, Schreiben vom 1. Oktober 2009 (BStBl I S. 1172) zur Besteuerung von Versicherungserträgen im Sinne des § 20 Absatz 1 Nummer 6 EStG, in der Fassung der Änderungen bis zum 9. August 2019, Rz. 71, abgedruckt im Amtlichen Einkommensteuer-Handbuch 2024, Anhang 22a I, https://ao.bundesfinanzministerium.de/esth/2024/C-Anhaenge/Anhang-22a/I/anhang-22a-I.html. Abruf: 30.10.2026.",
+      "Solidaritätszuschlaggesetz 1995 (SolzG), § 3 Abs. 1 Nr. 5 und § 4, https://www.gesetze-im-internet.de/solzg_1995/__4.html (entsprechend __3). Abruf: 30.10.2026.",
+      "Investmentsteuergesetz (InvStG), § 2 Abs. 6, § 16 Abs. 2 Satz 2 Nr. 2, § 18, § 19 Abs. 1 und § 20 Abs. 1, https://www.gesetze-im-internet.de/invstg_2018/__18.html (entsprechend __2, __16, __19, __20). Abruf: 30.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn du eine Finanzierung in Ruhe durchdenken möchtest, buche einen Termin mit André Tito, unverbindlich. Wir vermitteln Immobiliardarlehen und sind dabei nicht an bestimmte Darlehensgeber gebunden. Wie wir als Immobiliardarlehens-, Finanzanlagen- und Versicherungsvermittler vergütet werden, steht in der [Erstinformation](/erstinformation)."
     }
   }
 ];
