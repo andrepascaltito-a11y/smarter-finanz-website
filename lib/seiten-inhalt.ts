@@ -1,5 +1,5 @@
 // Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.
-// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md, Mia-Blog-Aktuell-PHP-Luecke-2026-10-22a.md
+// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md, Mia-Blog-Aktuell-PHP-Luecke-2026-10-22a.md, Mia-Blog-Mitarbeiter-Unfall-nur-Artikel-2026-10-30a.md
 // mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
 // sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.
 // Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.
@@ -3506,6 +3506,167 @@ export const SEITEN: Seite[] = [
     ],
     "cta": {
       "text": "Wenn Sie wissen möchten, wie Ihr Betrieb bei Cyberrisiken aufgestellt ist, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "mitarbeiter-unfall-abgesichert",
+    "published": true,
+    "title": "Mitarbeiter verunglückt: Wer zahlt? | Smarter Finanz",
+    "description": "Was die Berufsgenossenschaft bei einem Arbeitsunfall übernimmt, was nicht versichert ist und wann ein Unternehmer trotzdem zahlen kann.",
+    "h1": "Ein Mitarbeiter verunglückt: Wer zahlt?",
+    "kurzname": "Mitarbeiter verunglückt: Wer zahlt?",
+    "stand": "30.10.2026",
+    "einleitung": [
+      "Beispiel: Ein Dachdecker rutscht auf einer nassen Leiter ab und bricht sich den Arm. Der Chef steht daneben und fragt sich: Zahle ich jetzt?",
+      "Eine zweite Szene: Derselbe Mitarbeiter bricht sich am Sonntag beim Fußball den Arm. Ist das auch ein Fall für den Betrieb?",
+      "Hier steht, was die gesetzliche Unfallversicherung abdeckt und was nicht."
+    ],
+    "kurz": [
+      {
+        "frage": "Beschäftigte sind kraft Gesetzes versichert.",
+        "antwort": "Dafür schließen Sie keinen Vertrag ab, beitragspflichtig sind die Unternehmer (§ 2 Abs. 1 Nr. 1, § 150 Abs. 1 SGB VII)."
+      },
+      {
+        "frage": "Versichert ist die Arbeit und der Weg dorthin.",
+        "antwort": "Ein rein privater Unfall in der Freizeit gehört nicht dazu (§ 8 SGB VII). Bei Betriebssport und Betriebsveranstaltungen kann das anders sein."
+      },
+      {
+        "frage": "Den Lohn zahlt zunächst der Betrieb weiter.",
+        "antwort": "Ist der Mitarbeiter unverschuldet arbeitsunfähig, besteht Anspruch auf Entgeltfortzahlung bis zu sechs Wochen, unabhängig davon, wer die Behandlung zahlt (§ 3 Abs. 1 EntgFG)."
+      },
+      {
+        "frage": "Gegenüber dem Mitarbeiter haftet der Chef nur begrenzt.",
+        "antwort": "Für den Personenschaden nur bei Vorsatz oder bei einem von ihm verursachten Wegeunfall, also einem Unfall auf dem Weg des Mitarbeiters von oder zur Arbeit (§ 104 SGB VII). Die Berufsgenossenschaft kann sich bei Vorsatz oder grober Fahrlässigkeit aber Kosten von der Person zurückholen, die den Unfall verursacht hat, auch vom Chef persönlich (§§ 110, 111 SGB VII)."
+      },
+      {
+        "frage": "Für die Freizeit gilt etwas anderes.",
+        "antwort": "Die Krankenversicherung behandelt, der Lohn kann nach dem Entgeltfortzahlungsgesetz weiterlaufen. Wer darüber hinaus privat vorsorgen will, schaut auf die private Unfallversicherung, deren Umfang der Vertrag festlegt."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Wer ist über die Berufsgenossenschaft versichert?"
+      },
+      {
+        "art": "p",
+        "text": "Beschäftigte sind kraft Gesetzes in der gesetzlichen Unfallversicherung versichert (§ 2 Abs. 1 Nr. 1 SGB VII). Die Berufsgenossenschaft (BG) ist der Träger dieser Versicherung. Sie zahlt Heilbehandlung und andere Leistungen, wenn ein Arbeitsunfall passiert."
+      },
+      {
+        "art": "p",
+        "text": "Ein Arbeitsunfall ist ein Unfall infolge der versicherten Tätigkeit. Unfälle sind zeitlich begrenzte, von außen auf den Körper einwirkende Ereignisse, die zu einem Gesundheitsschaden oder zum Tod führen (§ 8 Abs. 1 SGB VII)."
+      },
+      {
+        "art": "h2",
+        "text": "Gilt das auch auf dem Weg zur Arbeit?"
+      },
+      {
+        "art": "p",
+        "text": "Ja. Auch der unmittelbare Weg von und zur Arbeit gehört zur versicherten Tätigkeit (§ 8 Abs. 2 Nr. 1 SGB VII). Bei Umwegen kann der Schutz entfallen. Ausnahmen nennt § 8 Abs. 2 Nr. 2 SGB VII: der Umweg, um Kinder aus dem eigenen Haushalt in fremde Obhut zu geben, oder um mit anderen gemeinsam ein Fahrzeug zu nutzen. Im Zweifel entscheidet die BG im Einzelfall."
+      },
+      {
+        "art": "h2",
+        "text": "Und der Fußballabend am Sonntag?"
+      },
+      {
+        "art": "p",
+        "text": "Ein rein privater Fußballabend ist kein Arbeitsunfall. Versichert ist die Tätigkeit für den Betrieb und der Weg dorthin (§ 8 Abs. 1 und 2 SGB VII). Wird der Sport oder die Veranstaltung vom Betrieb getragen, kann das anders sein, zum Beispiel bei regelmäßigem Betriebssport für die Belegschaft oder bei einer Feier für alle Beschäftigten. Dafür gelten zusätzliche Voraussetzungen, die BG entscheidet im Einzelfall. Für den privaten Fall ist die Krankenkasse zuständig."
+      },
+      {
+        "art": "p",
+        "text": "Wer darüber hinaus privat vorsorgen will, schaut auf die private Unfallversicherung. Was sie leistet und ob sie nur den Beruf oder auch die Freizeit abdeckt, steht im jeweiligen Vertrag."
+      },
+      {
+        "art": "h2",
+        "text": "Und der Lohn in den ersten Wochen?"
+      },
+      {
+        "art": "p",
+        "text": "Unabhängig davon, wer die Behandlung zahlt: Ist der Mitarbeiter unverschuldet arbeitsunfähig, hat er gegenüber dem Arbeitgeber Anspruch auf Entgeltfortzahlung bis zu sechs Wochen, sobald das Arbeitsverhältnis vier Wochen ununterbrochen bestanden hat (§ 3 Abs. 1 und 3 EntgFG). Das gilt nach dem Gesetzeswortlaut für Krankheit allgemein, also auch für den Freizeitunfall."
+      },
+      {
+        "art": "p",
+        "text": "Betriebe mit in der Regel höchstens 30 Arbeitnehmern, Auszubildende nicht mitgezählt, bekommen von der Krankenkasse auf Antrag einen Teil des fortgezahlten Lohns erstattet, bis zu 80 Prozent, und zahlen dafür eine Umlage (§ 1 Abs. 1, § 2 Abs. 2, § 7 Abs. 1 AAG). Erstattungssatz und Umlage richten sich nach der Satzung der Krankenkasse (§ 9 AAG)."
+      },
+      {
+        "art": "h2",
+        "text": "Muss der Chef persönlich zahlen?"
+      },
+      {
+        "art": "p",
+        "text": "Gegenüber dem verletzten Mitarbeiter haften Unternehmer für den Personenschaden nach anderen Gesetzen nur, wenn sie den Unfall vorsätzlich oder auf einem versicherten Weg von oder zur Arbeit herbeigeführt haben (§ 104 Abs. 1 SGB VII, Weg nach § 8 Abs. 2 Nr. 1 bis 4). Auch Kollegen untereinander haften für Personenschäden, die sie bei einer betrieblichen Tätigkeit verursachen, nur bei Vorsatz oder auf einem versicherten Weg (§ 105 Abs. 1 SGB VII)."
+      },
+      {
+        "art": "p",
+        "text": "Anders gegenüber der BG: Haben der Unternehmer, ein Geschäftsführer oder ein Kollege den Unfall vorsätzlich oder grob fahrlässig herbeigeführt, kann sich die BG ihre Aufwendungen bis zur Höhe des zivilrechtlichen Schadenersatzanspruchs von der Person zurückholen, die ihn verursacht hat (§§ 110 Abs. 1, 111 SGB VII). Das grobe Verschulden muss sich nur auf das Handeln oder Unterlassen beziehen, das den Unfall verursacht hat (§ 110 Abs. 1 Satz 3 SGB VII). Sie kann darauf nach billigem Ermessen ganz oder teilweise verzichten (§ 110 Abs. 2 SGB VII). Ob dieser Rückgriff über Ihre Betriebshaftpflicht gedeckt ist, steht im Versicherungsschein und in den Bedingungen, die Verträge unterscheiden sich dabei. Das lässt sich mit uns oder Ihrem Versicherer klären. Meldet sich die BG mit einer solchen Forderung, geben Sie das Schreiben sofort an Ihren Haftpflichtversicherer weiter. Das Versicherungsvertragsgesetz verlangt die Anzeige binnen einer Woche nach der Geltendmachung (§ 104 Abs. 1 Satz 2 VVG). Erkennen Sie die Forderung nicht ohne Rücksprache mit Ihrem Versicherer an. Ob sie berechtigt ist, klärt im Zweifel ein Rechtsanwalt."
+      },
+      {
+        "art": "h2",
+        "text": "Was ist mit mir selbst, wenn ich Inhaber bin?"
+      },
+      {
+        "art": "p",
+        "text": "Für Unternehmer gilt das nicht automatisch. Ob Sie sich selbst versichern müssen oder können, hängt von der Satzung Ihrer BG ab (§ 3 Abs. 1 Nr. 1 SGB VII) oder davon, ob Sie sich freiwillig versichern (§ 6 Abs. 1 Nr. 1 SGB VII). Fragen Sie dort nach. Mehr dazu im Beitrag zur Berufsgenossenschaft für Soloselbstständige."
+      },
+      {
+        "art": "h2",
+        "text": "Drei Dinge, die Sie diese Woche klären können"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Ist der Betrieb bei der zuständigen BG angemeldet? Die Mitteilung ist binnen einer Woche nach Beginn des Unternehmens fällig (§ 192 Abs. 1 SGB VII), bestimmte Änderungen binnen vier Wochen (§ 192 Abs. 2), etwa an Art und Gegenstand des Unternehmens oder an den Grundlagen der Beitragsberechnung. Den Bescheid, mit dem die BG ihre Zuständigkeit feststellt (§ 136 Abs. 1 SGB VII), sollten Sie vorliegen haben.",
+          "Wissen Ihre Leute, bei wem sie einen Arbeitsunfall melden? Sie selbst müssen ihn der BG anzeigen, wenn jemand getötet wird oder mehr als drei Tage arbeitsunfähig ist, und zwar binnen drei Tagen, nachdem Sie davon erfahren haben (§ 193 Abs. 1 und 4 SGB VII).",
+          "Haben sie eine private Absicherung für die Freizeit? Das ist ihre Entscheidung, Sie können darauf hinweisen."
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Zurück zur Leiter"
+      },
+      {
+        "art": "p",
+        "text": "Beim Dachdecker mit dem gebrochenen Arm ist die BG zuständig, und der Betrieb zahlt den Lohn bis zu sechs Wochen weiter, wenn die Voraussetzungen des § 3 EntgFG vorliegen. Beim privaten Fußballunfall ist es die Krankenkasse, auch dann kann der Lohn weiterlaufen. Wer das vorher weiß, kann Fragen früh klären."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand 30. Oktober 2026, keine individuelle Beratung und keine Rechtsberatung. Für den Einzelfall fragen Sie Ihre Berufsgenossenschaft oder einen Rechtsanwalt."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/blog/erster-mitarbeiter-melden-absichern",
+        "text": "Der erste Mitarbeiter: Was Sie anmelden und absichern"
+      },
+      {
+        "pfad": "/blog/berufsgenossenschaft-soloselbststaendig",
+        "text": "Muss ich als Soloselbstständiger zur Berufsgenossenschaft?"
+      },
+      {
+        "pfad": "/branchen/handwerk-bau",
+        "text": "Versicherungen für Handwerk und Bau"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Sozialgesetzbuch Siebtes Buch (SGB VII), § 2 Abs. 1 Nr. 1, § 3, § 6, § 8, §§ 104, 105, 110, 111, § 136, § 150, § 192, § 193, https://www.gesetze-im-internet.de/sgb_7/__2.html (entsprechend __3, __6, __8, __104, __105, __110, __111, __136, __150, __192, __193). Rohtext abgerufen: 26.10.2026 und 30.10.2026.",
+      "Entgeltfortzahlungsgesetz (EntgFG), § 3 Abs. 1 und 3, https://www.gesetze-im-internet.de/entgfg/__3.html. Abruf: 26.10.2026 und 30.10.2026.",
+      "Versicherungsvertragsgesetz (VVG), § 104 Abs. 1, https://www.gesetze-im-internet.de/vvg_2008/__104.html. Abruf: 30.10.2026.",
+      "Aufwendungsausgleichsgesetz (AAG), § 1 Abs. 1, § 2 Abs. 2, § 7 Abs. 1, § 9 Abs. 1 und 2, https://www.gesetze-im-internet.de/aufag/__1.html (entsprechend __2, __7, __9). Abruf: 30.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn Sie die Absicherung Ihres Betriebs und Ihrer Leute in Ruhe besprechen möchten, vereinbaren Sie einen Termin mit André Tito, unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
     }
   }
 ];
