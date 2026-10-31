@@ -1,5 +1,5 @@
 // Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.
-// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md, Mia-Blog-Aktuell-PHP-Luecke-2026-10-22a.md, Mia-Blog-Mitarbeiter-Unfall-nur-Artikel-2026-10-30a.md, Mia-Ratgeber-Endfaelliges-Darlehen-Teil1-2026-10-31a.md, Mia-Ratgeber-Endfaelliges-Darlehen-Teil2-2026-10-31a.md
+// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md, Mia-Blog-Aktuell-PHP-Luecke-2026-10-22a.md, Mia-Blog-Mitarbeiter-Unfall-nur-Artikel-2026-10-30a.md, Mia-Ratgeber-Endfaelliges-Darlehen-Teil1-2026-10-31a.md, Mia-Ratgeber-Endfaelliges-Darlehen-Teil2-2026-10-31a.md, Mia-Ratgeber-Unterlagen-fuer-die-Immobilienfinanzierung-nur-Artikel-2026-10-31a.md, Mia-Ratgeber-Eigenkapital-Immobilienfinanzierung-nur-Artikel-2026-10-31a.md
 // mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
 // sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.
 // Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.
@@ -4010,6 +4010,440 @@ export const SEITEN: Seite[] = [
     ],
     "cta": {
       "text": "Wenn du eine Finanzierung in Ruhe durchdenken möchtest, buche einen Termin mit André Tito, unverbindlich. Wir vermitteln Immobiliardarlehen und sind dabei nicht an bestimmte Darlehensgeber gebunden. Wie wir als Immobiliardarlehens-, Finanzanlagen- und Versicherungsvermittler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "ratgeber",
+    "slug": "unterlagen-fuer-die-immobilienfinanzierung",
+    "published": true,
+    "title": "Unterlagen für die Immobilienfinanzierung | Smarter Finanz",
+    "description": "Welche Unterlagen die Bank bei einer Immobilienfinanzierung sehen will, was die Selbstauskunft ist und was du vorher klären kannst. Mit Rechenbeispiel.",
+    "h1": "Was die Bank von dir sehen will: Unterlagen für die Immobilienfinanzierung",
+    "kurzname": "Unterlagen für die Immobilienfinanzierung",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Abends liegt ein Exposé im Postfach. Du willst wissen, ob du dir das leisten kannst, und die Bank will deine Unterlagen sehen. Wer die Mappe schon beisammen hat, bleibt ruhiger.",
+      "Hier steht, was die Bank prüft, welche Unterlagen dazugehören und was du vorher klären kannst. Dazu ein Beispiel mit ausgedachten Zahlen."
+    ],
+    "kurz": [
+      {
+        "frage": "Die Bank muss prüfen.",
+        "antwort": "Das Gesetz verlangt, dass sie Einkommen, Ausgaben und andere finanzielle Umstände wie Schulden prüft, soweit nötig auch anhand von Unterlagen (§ 505b BGB)."
+      },
+      {
+        "frage": "Welche Unterlagen, legt jede Bank selbst fest.",
+        "antwort": "In den Listen, die wir gelesen haben, kamen immer vor: ein Antragsformular oder eine Selbstauskunft, Einkommensnachweise, Nachweise für das Eigenkapital und Unterlagen zum Objekt. Im Einzelnen unterscheiden sich die Listen."
+      },
+      {
+        "frage": "Vollständig hilft.",
+        "antwort": "Ohne richtige und vollständige Unterlagen kann die Bank dein Vorhaben gar nicht prüfen. Gute Unterlagen ersetzen aber weder Einkommen noch Eigenkapital."
+      },
+      {
+        "frage": "Früh anfangen lohnt sich.",
+        "antwort": "Manches liegt in deiner Hand, manches kommt von anderen, zum Beispiel vom Verkäufer oder von der Hausverwaltung."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Was die Bank wissen will"
+      },
+      {
+        "art": "p",
+        "text": "Die Bank stellt im Kern drei Fragen. Kannst du Zins und Tilgung aus deinem Einkommen zahlen? Wie viel Eigenkapital bringst du mit? Und was ist das Objekt wert? Der Wert, den die Bank ansetzt, heißt Beleihungswert. Nach der BaFin unterscheidet er sich vom Markt- oder Verkehrswert. Er kann daher niedriger sein als der Preis, den du zahlst."
+      },
+      {
+        "art": "p",
+        "text": "Welche Unterlagen sie dafür braucht, entscheidet die Bank. Sie muss dir aber sagen, was sie bis wann von dir braucht (Art. 247 § 1 EGBGB)."
+      },
+      {
+        "art": "h2",
+        "text": "Selbstauskunft: zwei Dinge mit demselben Namen"
+      },
+      {
+        "art": "p",
+        "text": "**Selbstauskunft an die Bank.** Das ist ein Formular, das du ausfüllst. In dem Muster, das wir gelesen haben, stehen deine persönlichen Angaben, deine Einnahmen und Ausgaben im Monat, dein Vermögen und deine Schulden, das Vorhaben mit Kosten und Finanzierungswunsch, und Fragen zu Pfändungen oder Insolvenz. Dazu kommt eine Klausel zur Schufa: Die Bank darf Daten mit der Schufa austauschen, und du entbindest sie dafür vom Bankgeheimnis."
+      },
+      {
+        "art": "p",
+        "text": "**Datenkopie der Schufa.** Das ist etwas anderes: Du forderst bei der Schufa eine Kopie der Daten an, die dort über dich gespeichert sind. Nach Angaben der Schufa ist sie kostenlos und kommt in der Regel in 5 bis 7 Tagen per Post. Bei vielen Bestellungen kann es etwas länger dauern. Beantrage sie direkt bei der Schufa. Manche Seiten verlangen Geld dafür, den Antrag für dich zu stellen. Das brauchst du nicht. Prüfe sie auf Fehler. Wer das früh tut, hat Zeit, falsche Einträge zu klären."
+      },
+      {
+        "art": "h2",
+        "text": "Dein Einkommen belegen"
+      },
+      {
+        "art": "p",
+        "text": "In den vier Listen von Kreditinstituten (Stand 2025 und 2026), die wir gelesen haben, steht zum Beispiel Folgendes. Nicht jede Liste nennt alles:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Angestellte:** Gehaltsabrechnungen, je nach Liste die letzten zwei bis drei Monate, teils dazu der Dezember des Vorjahres. Bei zwei Listen kommt der letzte Einkommensteuerbescheid dazu.",
+          "**Beamte:** die aktuelle Bezügemitteilung.",
+          "**Rentner:** der aktuelle Rentenbescheid.",
+          "**Selbstständige:** der Jahresabschluss oder die Einnahmenüberschussrechnung, meist der letzten zwei Jahre, dazu eine aktuelle Auswertung vom Steuerberater (BWA) sowie Steuererklärung und Steuerbescheid. Eine Liste verlangt bei Abgabe nach dem 1. August die endgültigen Zahlen des Vorjahres. Das braucht den Steuerberater.",
+          "**Alle:** ein Ausweis und, wenn es welche gibt, Nachweise über weitere Einkünfte wie Mieten."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Es gibt keine einheitliche Liste. Frag deine Bank, welche gilt."
+      },
+      {
+        "art": "h2",
+        "text": "Eigenkapital und bestehende Kredite"
+      },
+      {
+        "art": "p",
+        "text": "Als Eigenkapital zählt nach der BaFin alles, was du einsetzen kannst: Bargeld, Guthaben, verkäufliche Wertpapiere und auch eigene Arbeit am Bau. Dafür brauchst du Kontoauszüge oder Depotauszüge. Sie sollen aktuell sein, bei einer Liste höchstens einen Monat alt."
+      },
+      {
+        "art": "p",
+        "text": "Kommt das Geld von jemand anderem, zum Beispiel als Schenkung, will die Bank das belegt haben. Auch bestehende Kredite, Leasing und Raten gehören in die Mappe."
+      },
+      {
+        "art": "h2",
+        "text": "Das Haus oder die Wohnung"
+      },
+      {
+        "art": "p",
+        "text": "Hier brauchst du Unterlagen, die oft andere haben:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Exposé oder Kaufvertragsentwurf. Der Notar soll dir den Entwurf in der Regel zwei Wochen vor dem Termin geben (§ 17 BeurkG).",
+          "Grundbuchauszug, bei zwei Listen nicht älter als sechs Monate.",
+          "Flurkarte und Wohnflächenberechnung.",
+          "Bei Eigentumswohnungen Teilungserklärung und Aufteilungsplan, meist von der Hausverwaltung.",
+          "Energieausweis. Verkäufer oder Makler müssen ihn dir in der Regel spätestens bei der Besichtigung vorlegen (§ 80 GModG, früher GEG).",
+          "Bei Vermietung Mietverträge und Nachweise über die Miete."
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Ein Beispiel mit ausgedachten Zahlen"
+      },
+      {
+        "art": "p",
+        "text": "Das ist ein Rechenbeispiel. Es ist keine Vorhersage und kein Angebot, und deine Zahlen sind andere."
+      },
+      {
+        "art": "p",
+        "text": "Ein Haushalt mit zwei Erwachsenen und zwei Kindern kauft für 350.000 Euro. Die Nebenkosten sind mit 10 Prozent angenommen. Eigenkapital sind 77.000 Euro, das Darlehen ist 308.000 Euro. Im Monat:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Einnahmen:** 5.118 Euro (Nettoeinkommen 4.600 Euro, Kindergeld 518 Euro).",
+          "**Ausgaben ohne Rate:** 3.337,50 Euro (Lebenshaltung 1.900, Auto und Versicherungen 400, ein bestehender Ratenkredit 220, Nebenkosten fürs Haus 380 und eine Rücklage für Reparaturen von 437,50 Euro).",
+          "**Überschuss vor der Rate:** 1.780,50 Euro."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Wie hoch die Rate wird, hängt davon ab, wie viel Zins und Tilgung zusammen im Jahr ausmachen, bezogen auf das Darlehen. Die Zahlen sind frei gewählt und auf volle Euro gerundet. Es sind keine Konditionen, die eine Bank anbietet:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**5 Prozent im Jahr:** Rate 1.283 Euro, es bleiben 497 Euro übrig.",
+          "**6 Prozent im Jahr:** Rate 1.540 Euro, es bleiben 241 Euro übrig.",
+          "**7 Prozent im Jahr:** Rate 1.797 Euro, es fehlen 16 Euro.",
+          "**8 Prozent im Jahr:** Rate 2.053 Euro, es fehlen 273 Euro."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Die Bank rechnet das mit eigenen Annahmen und prüft auch, was passiert, wenn der Zins später steigt oder dein Einkommen im Ruhestand sinkt. Mach deine eigene Rechnung und lass dir Zeit für die Zahlen."
+      },
+      {
+        "art": "h2",
+        "text": "Wie lange es dauert und was oft hakt"
+      },
+      {
+        "art": "p",
+        "text": "Wie lange es dauert, lässt sich nicht pauschal sagen. Vieles liegt in deiner Hand, manches kommt von anderen. Belegt sind einzelne Fristen, die Beispiele stehen oben."
+      },
+      {
+        "art": "p",
+        "text": "In einer BaFin-Umfrage unter 3.060 Verbraucherinnen und Verbrauchern (Sommer 2024) gaben die Befragten an: Wenn Anbieter ihre Absage begründeten, nannten sie am häufigsten zu wenig Eigenkapital oder zu wenig Einkommen. Weitere Gründe waren Rückbuchungen auf Kontoauszügen, überzogene Dispokredite und negative Schufa-Einträge. Das sind Dinge, die in den Unterlagen sichtbar werden. Gut vorbereitete Unterlagen können sie nicht wegmachen, aber sie helfen, früh zu wissen, wo du stehst."
+      },
+      {
+        "art": "h2",
+        "text": "Wenn ein Exposé mit Frist kommt"
+      },
+      {
+        "art": "p",
+        "text": "Manchmal will der Verkäufer oder Makler schnell wissen, ob du es finanzieren kannst. Dafür gibt es die Finanzierungsbestätigung. Kreditinstitute beschreiben sie als Schreiben, in dem die Bank signalisiert, dass sie grundsätzlich bereit ist, eine Finanzierung in bestimmter Höhe zu geben. Ob du eine bekommst und wie schnell, entscheidet die Bank. Es gibt sie verbindlich und unverbindlich. Wie verbindlich sie ist, zeigt der Wortlaut: Wörter wie „vorläufig“ oder „vorbehaltlich“ zeigen Vorbehalte. Den Darlehensvertrag ersetzt sie nicht."
+      },
+      {
+        "art": "p",
+        "text": "Das kannst du vorher klären:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Stell Einnahmen, Ausgaben und Überschuss auf, zum Beispiel mit einem Haushaltsbuch.",
+          "Fordere deine Schufa-Datenkopie an.",
+          "Frag die Bank, welche Liste gilt und bis wann sie die Unterlagen braucht.",
+          "Trenne die Unterlagen in zwei Pakete: Person und Objekt.",
+          "Frag Verkäufer oder Makler früh nach Teilungserklärung, Energieausweis und Wohnflächenberechnung.",
+          "Achte darauf, wie alt Nachweise sein dürfen.",
+          "Bitte den Notar früh um den Entwurf.",
+          "Als Selbstständiger: Klär früh mit dem Steuerberater, wann der Jahresabschluss fertig ist."
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Für wen das hilft und für wen nicht"
+      },
+      {
+        "art": "p",
+        "text": "Eine geordnete Mappe hilft, wenn du schnell und sicher antworten willst. Sie hilft nicht, wenn Einkommen oder Eigenkapital für das Vorhaben nicht reichen. Dann zeigt sie das nur früher."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand 31. Oktober 2026, keine individuelle Beratung zu Finanzierung oder Geldanlage und keine Rechtsberatung. Das Rechenbeispiel beruht auf frei gewählten Annahmen und sagt nichts darüber, welches Darlehen du bekommst oder zu welchen Bedingungen. Teile der Regeln zur Kreditprüfung im Gesetz ändern sich ab dem 20. November 2026. Maßgeblich ist die Liste deiner Bank."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/privat/ratgeber",
+        "text": "Alle Ratgeber"
+      },
+      {
+        "pfad": "/privat",
+        "text": "Beratung für Privatpersonen"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin), Verbraucherseite „Immobilienkredit im Überblick“, https://www.bafin.de/DE/verbraucherinnen-verbraucher/themen-finanzprodukte/kredite-immobilienfinanzierung/immobilienfinanzierung/immobilienkredit/immobilienkredit.html. Abruf: 31.10.2026.",
+      "BaFin, „Wenn Raten zur Belastung werden“, 19.12.2024 (Verbraucherumfrage), https://www.bafin.de/SharedDocs/Veroeffentlichungen/DE/Fachartikel/2024/fa_241219_Immobilienfinanzierung.html. Abruf: 31.10.2026.",
+      "Verbraucherzentrale, „Immobilienfinanzierung: So berechnen Sie, was Sie sich leisten können“, Stand 06.11.2024, https://www.verbraucherzentrale.de/wissen/geld-versicherungen/bau-und-immobilienfinanzierung/immobilienfinanzierung-so-berechnen-sie-was-sie-sich-leisten-koennen-5822. Abruf: 31.10.2026.",
+      "Unterlagenlisten von vier Kreditinstituten (Stand Februar 2025 bis Juli 2026) und Hinweise von drei Kreditinstituten zur Finanzierungsbestätigung. Abruf: 31.10.2026.",
+      "Schufa Holding AG, „Datenkopie nach Art. 15 DS-GVO“, https://www.meineschufa.de/service/datenkopie. Abruf: 31.10.2026.",
+      "Verbraucherzentrale Nordrhein-Westfalen, „Beantragung kostenfreier Schufa-Auskunft gegen Entgelt“, Pressemitteilung vom 27.11.2024, https://www.verbraucherzentrale.nrw/pressemitteilungen/beantragung-kostenfreier-schufaauskunft-gegen-entgelt-101626. Abruf: 31.10.2026.",
+      "Bürgerliches Gesetzbuch (BGB), § 505b, https://www.gesetze-im-internet.de/bgb/__505b.html. Abruf: 31.10.2026.",
+      "Einführungsgesetz zum Bürgerlichen Gesetzbuche (EGBGB), Art. 247 § 1, https://www.gesetze-im-internet.de/bgbeg/art_247__1.html. Abruf: 31.10.2026.",
+      "Immobiliar-Kreditwürdigkeitsprüfungsleitlinien-Verordnung (ImmoKWPLV), § 4, https://www.gesetze-im-internet.de/immokwplv/__4.html. Abruf: 31.10.2026.",
+      "Gesetz zur Umsetzung der Richtlinie (EU) 2023/2225 über Verbraucherkreditverträge und zur Regelung der Förderung klimaneutraler Mobilität vom 12. Mai 2026 (BGBl. 2026 I Nr. 139), https://www.recht.bund.de/bgbl/1/2026/139/regelungstext.pdf?__blob=publicationFile&v=1. Abruf: 31.10.2026.",
+      "Beurkundungsgesetz (BeurkG), § 17, https://www.gesetze-im-internet.de/beurkg/__17.html. Abruf: 31.10.2026.",
+      "Gebäudemodernisierungsgesetz (GModG, früher Gebäudeenergiegesetz), § 80, https://www.gesetze-im-internet.de/geg/__80.html. Abruf: 31.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn du deine Finanzierung in Ruhe vorbereiten möchtest, buche einen Termin mit André Tito, unverbindlich. Wir vermitteln Immobiliardarlehen und sind dabei nicht an bestimmte Darlehensgeber gebunden. Wie wir als Immobiliardarlehens-, Finanzanlagen- und Versicherungsvermittler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "ratgeber",
+    "slug": "eigenkapital-immobilienfinanzierung",
+    "published": true,
+    "title": "Eigenkapital bei der Immobilienfinanzierung | Smarter Finanz",
+    "description": "Wofür dein Eigenkapital zuerst gebraucht wird, was mehr oder weniger davon ändert und wie du deine Reserve rechnest. Mit Rechenbeispiel.",
+    "h1": "Eigenkapital bei der Immobilie: Wie viel einsetzen, wie viel behalten?",
+    "kurzname": "Eigenkapital bei der Immobilienfinanzierung",
+    "stand": "Oktober 2026",
+    "einleitung": [
+      "Du hast Geld gespart und willst eine Immobilie kaufen. Alles einsetzen oder einen Teil behalten? Eine Antwort für alle gibt es nicht. Aber du kannst vorher sehen, was dein Eigenkapital zuerst bezahlt, was mehr oder weniger davon ändert und was als Reserve bleibt.",
+      "Zahlen zeigt ein Beispiel mit ausgedachten Werten. Deine sind andere."
+    ],
+    "kurz": [
+      {
+        "frage": "Zuerst die Nebenkosten.",
+        "antwort": "Dein Eigenkapital bezahlt zuerst Grunderwerbsteuer, Notar, Grundbuch und gegebenenfalls Makler. Erst der Rest geht in den Kaufpreis."
+      },
+      {
+        "frage": "Die Nebenkosten schwanken stark.",
+        "antwort": "Im Beispiel mit 400.000 Euro Kaufpreis sind es zwischen rund 19.600 Euro (niedrige Steuer, kein Makler) und rund 46.000 Euro (hohe Steuer, mit Makler)."
+      },
+      {
+        "frage": "Eine gesetzliche Pflichtquote gibt es nicht.",
+        "antwort": "Das Gesetz verlangt, dass die Bank prüft, ob du die Rate tragen kannst (§ 18a KWG). Die Bank entscheidet, ob und zu welchen Bedingungen sie finanziert. Dein Eigenkapital spielt dabei eine Rolle. Die Verbraucherzentrale nennt Richtwerte, die sich unterscheiden."
+      },
+      {
+        "frage": "Mehr Eigenkapital senkt die Rate, weniger lässt dir Luft.",
+        "antwort": "Beides hat Vor- und Nachteile, die du gegeneinander rechnen kannst."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Wofür das Eigenkapital zuerst gebraucht wird"
+      },
+      {
+        "art": "p",
+        "text": "Eigenkapital ist nach der BaFin alles, was du einsetzen kannst: Bargeld, Guthaben, verkäufliche Wertpapiere und auch eigene Arbeit am Bau. Davon bezahlst du zuerst die Kaufnebenkosten."
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Grunderwerbsteuer.** Sie hängt vom Bundesland ab und liegt derzeit zwischen 3,5 Prozent (Bayern) und 6,5 Prozent des Kaufpreises (zum Beispiel Nordrhein-Westfalen). Kaufst du ein Grundstück und baust darauf mit dem Verkäufer oder einem Anbieter, der mit ihm zusammenarbeitet, kann die Steuer auch auf die Baukosten anfallen.",
+          "**Notar und Grundbuch.** Das sind bei 400.000 Euro Kaufpreis nach unserer Überschlagsrechnung grob 1,4 Prozent. Die Verbraucherzentrale nennt 1 bis 1,5 Prozent. Die genauen Kosten setzen Notar und Grundbuchamt fest.",
+          "**Makler.** Kaufst du als Verbraucher eine Wohnung oder ein Einfamilienhaus, gelten feste Regeln: Hat der Makler für beide Seiten gearbeitet, zahlen beide gleich viel (§ 656c BGB). Hat nur eine Seite ihn beauftragt, darf die andere höchstens so viel zahlen wie diese (§ 656d BGB). Im Beispiel rechnen wir mit rund 3,6 Prozent Käuferanteil. Das ist eine Annahme, eher am oberen Ende."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Bei 400.000 Euro sind das im Beispiel rund 19.600 Euro (4,9 Prozent), wenn die Steuer niedrig ist und es keinen Makler gibt. Mit hoher Steuer und Makler sind es rund 46.000 Euro (11,5 Prozent). Die Verbraucherzentrale schreibt, die Nebenkosten könnten schon 10 Prozent des Kaufpreises ausmachen."
+      },
+      {
+        "art": "h2",
+        "text": "Ein Beispiel: 10, 20 oder 30 Prozent Eigenkapital"
+      },
+      {
+        "art": "p",
+        "text": "Die Annahmen: 400.000 Euro Kaufpreis, niedrige Nebenkosten (3,5 Prozent Grunderwerbsteuer, kein Makler), 4 Prozent Zins im Jahr und 2 Prozent Tilgung als Rechenwerte, zehn Jahre Zinsbindung. Das ist keine Vorhersage und kein Angebot. Das Beispiel geht von einer Immobilie aus, in der du selbst wohnst. Bei einer vermieteten Immobilie gelten steuerlich andere Regeln, zum Beispiel für die Darlehenszinsen. Du hast insgesamt 150.000 Euro Erspartes. Was du als Eigenkapital einsetzt, geht davon ab, der Rest bleibt als Reserve."
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**40.000 Euro Eigenkapital (10 Prozent):** Darlehen rund 379.700 Euro, Rate rund 1.899 Euro, Restschuld nach zehn Jahren rund 286.500 Euro, Reserve 110.000 Euro.",
+          "**80.000 Euro (20 Prozent):** Darlehen rund 339.600 Euro, Rate rund 1.698 Euro, Restschuld rund 256.300 Euro, Reserve 70.000 Euro.",
+          "**120.000 Euro (30 Prozent):** Darlehen rund 299.500 Euro, Rate rund 1.498 Euro, Restschuld rund 226.000 Euro, Reserve 30.000 Euro."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Je 40.000 Euro mehr Eigenkapital sinkt die Rate im Beispiel um rund 200 Euro im Monat und die Restschuld nach zehn Jahren um rund 30.300 Euro. Danach brauchst du für die Restschuld ein neues Darlehen, zum Zins von dann. Der kann höher oder niedriger sein als heute."
+      },
+      {
+        "art": "p",
+        "text": "Mit hoher Steuer (6,5 Prozent) und Makler reichen 10 Prozent Eigenkapital im Beispiel nicht einmal für die Nebenkosten. Das Darlehen läge dann bei rund 101,5 Prozent des Kaufpreises. Ob eine Bank so viel finanziert, entscheidet sie im Einzelfall. Dass sich das ausrechnen lässt, heißt nicht, dass du ein solches Darlehen bekommst."
+      },
+      {
+        "art": "h2",
+        "text": "Was für mehr Eigenkapital spricht"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Niedrigere Rate und weniger Restschuld.** Siehe oben.",
+          "**Oft ein besserer Zins.** Wer wenig Eigenkapital einsetzt, zahlt nach der Verbraucherzentrale höhere Zinsen. Auch das Verhältnis des Darlehens zu dem Wert, den die Bank für die Immobilie ansetzt (Beleihungsauslauf), beeinflusst nach der BaFin den Zins. Wie groß der Unterschied ist, hängt von der Bank ab.",
+          "**Bei frühem Verkauf reicht der Erlös eher für die Schulden.** So beschreibt es die Verbraucherzentrale.",
+          "**Die Verbraucherzentrale hält es oft für sinnvoll,** Sparverträge zur Altersvorsorge und andere Geldanlagen aufzulösen und das Darlehen damit zu senken. Wer eine größere Summe nebenher in ETFs anlegt, investiert nach ihrer Ansicht im Grunde auf Kredit. Prüfe vorher, was das Auflösen kostet: Beim Verkauf von Wertpapieren kann Steuer auf den Gewinn anfallen (§ 20 EStG, § 19 InvStG). Bei Lebensversicherungen und geförderten Verträgen kann es Steuern oder Förderung kosten. Das hängt von deiner Lage ab."
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Was für eine Reserve spricht"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Reparaturen kommen.** Die Verbraucherzentrale setzt rund 2 Prozent des Wertes der Bausubstanz im Jahr für Instandhaltung an.",
+          "**Nachfinanzieren ist nicht sicher.** Eine Nachfinanzierung kann teuer sein oder abgelehnt werden.",
+          "**Das Leben ändert sich.** Die BaFin nennt zum Beispiel Krankheit, Arbeitslosigkeit und Scheidung."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Im Beispiel bleiben bei 30 Prozent Eigenkapital 30.000 Euro. Angenommen sind 2.000 Euro Lebenshaltung im Monat ohne Wohnkosten, dazu kommt die Rate. Dann reicht das für rund 8,6 Monate. Fallen zusätzlich 20.000 Euro Renovierung an, sind es nur noch rund 2,9 Monate."
+      },
+      {
+        "art": "h2",
+        "text": "Und wenn du den Rest anlegen willst?"
+      },
+      {
+        "art": "p",
+        "text": "Manche überlegen, weniger Eigenkapital einzusetzen und das übrige Geld anzulegen. Ein Beispiel: Du setzt 80.000 statt 120.000 Euro ein und legst die 40.000 Euro an. Dann müsste die Anlage nach Kosten und vor Steuern im Schnitt etwa 4,9 Prozent im Jahr bringen, damit das nicht schlechter ausgeht als das höhere Eigenkapital (zehn Jahre, 4 Prozent Zins). Das ist mehr als der Zins, weil der Gewinn einer Anlage versteuert wird, die gesparten Zinsen aber nicht. Bei einer Immobilie, in der du selbst wohnst, kannst du die Zinsen in der Regel auch nicht von der Steuer absetzen (§ 12 Nr. 1 EStG)."
+      },
+      {
+        "art": "p",
+        "text": "In der Zahl stecken Annahmen:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Die Steuer auf den Gewinn ist schon abgezogen. Gerechnet ist mit einer Anlage, bei der 30 Prozent des Gewinns steuerfrei bleiben, zum Beispiel einem Aktienfonds, und ohne Kirchensteuer (§ 20 InvStG, § 32d EStG).",
+          "Beide Wege kosten im Monat gleich viel. Wer mehr Eigenkapital einsetzt, legt also den Unterschied bei der Rate an.",
+          "Der Zins ist in beiden Wegen gleich hoch. Verlangt die Bank für das größere Darlehen mehr Zins, liegt die Schwelle höher: Bei 0,2 Prozentpunkten mehr sind es schon rund 7 Prozent."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Das ist eine Schwelle und keine Erwartung. Eine Anlage kann weniger bringen oder Geld verlieren, und du brauchst das Geld vielleicht früher. Die Verbraucherzentrale nennt das riskant, weil es am Aktienmarkt schon Phasen von 10 bis 15 Jahren ohne nennenswerte Erträge gab. Wie viel Steuer du zahlst, hängt von deiner Lage ab und kann sich ändern."
+      },
+      {
+        "art": "h2",
+        "text": "Für wen es passt und für wen nicht"
+      },
+      {
+        "art": "p",
+        "text": "Eine größere Reserve ist besonders wichtig, wenn dein Einkommen schwankt, wenn Kinder oder Teilzeit anstehen oder wenn du ohnehin nur wenig auf dem Konto hast. Die Verbraucherzentrale rät, nicht mehr zu planen, als du dauerhaft tragen kannst. Hast du kaum Eigenkapital, ist die Frage nicht, ob du zu viel einsetzt. Dann geht es darum, ob die Bank über den Kaufpreis hinaus finanziert. Das sind Anhaltspunkte und keine Beurteilung deiner Lage."
+      },
+      {
+        "art": "h2",
+        "text": "Was du vorher klären kannst"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Rechne die Nebenkosten für dein Bundesland und für den Fall mit und ohne Makler.",
+          "Rechne deine Reserve in Monaten: Wie viele Monate kannst du Rate und Lebenshaltung zahlen, wenn kein Einkommen kommt?",
+          "Frag deine Bank, wie sie den Wert der Immobilie ansetzt und ob sich der Zins ändert, wenn das Darlehen einen bestimmten Anteil davon übersteigt.",
+          "Frag nach Förderprogrammen und ihren Fristen. Bei manchen muss der Antrag gestellt sein, bevor du den Kaufvertrag unterschreibst."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Eine richtige Quote für alle gibt es nicht. Rechne beide Wege mit deinen Zahlen durch."
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand 31. Oktober 2026, keine individuelle Beratung zu Finanzierung oder Geldanlage, keine Steuerberatung und keine Rechtsberatung. Das Rechenbeispiel beruht auf frei gewählten Annahmen und sagt nichts darüber, welches Darlehen du bekommst oder zu welchem Zins. Der Zins von 4 Prozent ist ein Rechenwert. Steuersätze, Gebühren und Regeln ändern sich. Maßgeblich sind die Unterlagen deiner Bank."
+        ]
+      }
+    ],
+    "faq": [],
+    "links": [
+      {
+        "pfad": "/privat/ratgeber",
+        "text": "Alle Ratgeber"
+      },
+      {
+        "pfad": "/privat",
+        "text": "Beratung für Privatpersonen"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin), Verbraucherseite „Immobilienkredit im Überblick“, https://www.bafin.de/DE/verbraucherinnen-verbraucher/themen-finanzprodukte/kredite-immobilienfinanzierung/immobilienfinanzierung/immobilienkredit/immobilienkredit_node. Abruf: 31.10.2026.",
+      "Verbraucherzentrale, „Immobilienfinanzierung: Häufige Fragen rund um Hauskauf und Hauskredit“, Stand 14.11.2025, https://www.verbraucherzentrale.de/wissen/geld-versicherungen/bau-und-immobilienfinanzierung/immobilienfinanzierung-haeufige-fragen-rund-um-hauskauf-und-hauskredit-6992. Abruf: 31.10.2026.",
+      "Verbraucherzentrale, „Immobilienfinanzierung: So berechnen Sie, was Sie sich leisten können“, Stand 06.11.2024, https://www.verbraucherzentrale.de/wissen/geld-versicherungen/bau-und-immobilienfinanzierung/immobilienfinanzierung-so-berechnen-sie-was-sie-sich-leisten-koennen-5822. Abruf: 31.10.2026.",
+      "Verbraucherzentrale, „Immobilienfinanzierung: Diese Modelle gibt es und das sollten Sie beachten“, Stand 31.10.2024, https://www.verbraucherzentrale.de/wissen/geld-versicherungen/bau-und-immobilienfinanzierung/immobilienfinanzierung-diese-modelle-gibt-es-und-das-sollten-sie-beachten-5801. Abruf: 31.10.2026.",
+      "Bayerisches Landesamt für Steuern, „Grunderwerbsteuer“ (häufig gestellte Fragen), https://www.lfst.bayern.de/steuerinfos/haeufig-gestellte-fragen/grunderwerbsteuer. Abruf: 31.10.2026.",
+      "Land Nordrhein-Westfalen, „Gesetz über die Festsetzung des Steuersatzes für die Grunderwerbsteuer“ (§ 1: 6,5 vom Hundert), https://recht.nrw.de/lrgv/gesetz/01012015-gesetz-ueber-die-festsetzung-des-steuersatzes-fuer-die-grunderwerbsteuer/. Abruf: 31.10.2026.",
+      "Grunderwerbsteuergesetz (GrEStG), § 11, https://www.gesetze-im-internet.de/grestg_1983/__11.html, und Grundgesetz (GG), Art. 105 Abs. 2a, https://www.gesetze-im-internet.de/gg/art_105.html. Abruf: 31.10.2026.",
+      "Land Mecklenburg-Vorpommern, MV-Serviceportal, „Grunderwerbsteuer zahlen“ (Steuersätze der Länder „zwischen 3,5 und 6,5 v.H.“, Baukosten bei einheitlichem Vertragswerk), https://www.mv-serviceportal.de/suche-a-bis-z?leistungId=112749874. Abruf: 31.10.2026.",
+      "Einkommensteuergesetz (EStG), §§ 12, 20 und 32d, https://www.gesetze-im-internet.de/estg/__12.html (entsprechend __20, __32d), und Investmentsteuergesetz (InvStG), §§ 19 und 20, https://www.gesetze-im-internet.de/invstg_2018/__20.html (entsprechend __19). Abruf: 31.10.2026.",
+      "Bürgerliches Gesetzbuch (BGB), §§ 656a bis 656d, https://www.gesetze-im-internet.de/bgb/__656c.html (entsprechend __656a, __656b, __656d). Abruf: 31.10.2026.",
+      "Kreditwesengesetz (KWG), § 18a, https://www.gesetze-im-internet.de/kredwg/__18a.html. Abruf: 31.10.2026.",
+      "Gerichts- und Notarkostengesetz (GNotKG), Anlage 1 (Kostenverzeichnis) und Anlage 2 (Gebührentabellen), https://www.gesetze-im-internet.de/gnotkg/anlage_1.html und https://www.gesetze-im-internet.de/gnotkg/anlage_2.html. Abruf: 31.10.2026.",
+      "KfW, „Wohneigentumsprogramm (124)“, https://www.kfw.de/inlandsfoerderung/Privatpersonen/Neubau/F%C3%B6rderprodukte/Wohneigentumsprogramm-(124)/. Abruf: 31.10.2026."
+    ],
+    "cta": {
+      "text": "Wenn du deine Finanzierung in Ruhe durchrechnen möchtest, buche einen Termin mit André Tito, unverbindlich. Wir vermitteln Immobiliardarlehen und sind dabei nicht an bestimmte Darlehensgeber gebunden. Wie wir als Immobiliardarlehens-, Finanzanlagen- und Versicherungsvermittler vergütet werden, steht in der [Erstinformation](/erstinformation)."
     }
   }
 ];
