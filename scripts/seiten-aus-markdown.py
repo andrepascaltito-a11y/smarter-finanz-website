@@ -202,7 +202,9 @@ def main():
         veroeffentlicht = set(args[i + 1].split(","))
         del args[i : i + 2]
     quellen = [Path(a).expanduser() for a in args if not a.startswith("--")]
-    ziel = Path(__file__).resolve().parent.parent / "lib" / "seiten-inhalt.ts"
+    if not quellen:
+        raise SystemExit(__doc__)
+    ziel =Path(__file__).resolve().parent.parent / "lib" / "seiten-inhalt.ts"
     # Bereits freigegebene Seiten behalten ihr Flag
     if ziel.exists():
         try:
