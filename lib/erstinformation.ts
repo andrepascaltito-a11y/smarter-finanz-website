@@ -9,7 +9,7 @@ export const ERSTINFO_MAIL_TEXT = `Vielen Dank für deine Anfrage bei Smarter Fi
 Zu Beginn unseres Kontakts informieren wir dich nach § 15 VersVermV, § 12 FinVermV und Art. 247 § 13 EGBGB über unseren Status und unsere Vergütung. Du findest die Erstinformation dauerhaft hier:
 ${ERSTINFO_URL}
 
-Zur Dokumentation hier der Inhalt (Stand 22.10.2026):
+Zur Dokumentation hier der Inhalt (Stand 04.11.2026):
 
 1. Wer wir sind
 Smarterfinanz, Einzelunternehmen, Inhaber: André Pascal Tito, Glenetalstraße 101 A, 31061 Alfeld (Leine), Telefon +49 170 8784889, E-Mail a.tito@smarterfinanz.de.
@@ -32,7 +32,7 @@ Wir bieten dir eine Beratung an. Wir legen ihr eine hinreichende Zahl von am Mar
 Es bestehen keine Beteiligungen im Sinne des § 15 Abs. 1 Nr. 10 und 11 VersVermV.
 
 7. Schlichtung
-Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin, www.versicherungsombudsmann.de. Zu Finanzanlagen und Immobiliardarlehen siehe Punkt 10 und 12.
+Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin, www.versicherungsombudsmann.de. Bei privater Kranken- und Pflegeversicherung zusätzlich: Ombudsmann Private Kranken- und Pflegeversicherung, Postfach 06 02 22, 10052 Berlin, www.pkv-ombudsmann.de. Zu Finanzanlagen und Immobiliardarlehen siehe Punkt 10 und 12.
 
 8. Berufshaftpflicht
 Vermögensschaden-Haftpflichtversicherung über CGPA Europe Underwriting GmbH, Leopoldstraße 19, 80802 München (Risikoträger CGPA Europe S.A.), Geltungsbereich Deutschland und europaweit.
@@ -77,7 +77,7 @@ export const ERSTINFO_MAIL_TEXT_SIE = `Vielen Dank für Ihre Anfrage bei Smarter
 Zu Beginn unseres Kontakts informieren wir Sie nach § 15 VersVermV, § 12 FinVermV und Art. 247 § 13 EGBGB über unseren Status und unsere Vergütung. Sie finden die Erstinformation dauerhaft hier:
 ${ERSTINFO_URL}
 
-Zur Dokumentation hier der Inhalt (Stand 22.10.2026):
+Zur Dokumentation hier der Inhalt (Stand 04.11.2026):
 
 1. Wer wir sind
 Smarterfinanz, Einzelunternehmen, Inhaber: André Pascal Tito, Glenetalstraße 101 A, 31061 Alfeld (Leine), Telefon +49 170 8784889, E-Mail a.tito@smarterfinanz.de.
@@ -100,7 +100,7 @@ Wir bieten Ihnen eine Beratung an. Wir legen ihr eine hinreichende Zahl von am M
 Es bestehen keine Beteiligungen im Sinne des § 15 Abs. 1 Nr. 10 und 11 VersVermV.
 
 7. Schlichtung
-Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin, www.versicherungsombudsmann.de. Zu Finanzanlagen und Immobiliardarlehen siehe Punkt 10 und 12.
+Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin, www.versicherungsombudsmann.de. Bei privater Kranken- und Pflegeversicherung zusätzlich: Ombudsmann Private Kranken- und Pflegeversicherung, Postfach 06 02 22, 10052 Berlin, www.pkv-ombudsmann.de. Zu Finanzanlagen und Immobiliardarlehen siehe Punkt 10 und 12.
 
 8. Berufshaftpflicht
 Vermögensschaden-Haftpflichtversicherung über CGPA Europe Underwriting GmbH, Leopoldstraße 19, 80802 München (Risikoträger CGPA Europe S.A.), Geltungsbereich Deutschland und europaweit.

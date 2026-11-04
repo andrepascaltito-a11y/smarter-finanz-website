@@ -80,6 +80,11 @@ export default function Page() {
       <a href="https://www.versicherungsombudsmann.de" target="_blank" rel="noopener">www.versicherungsombudsmann.de</a>
     </p>
     <p>
+      Bei Streitigkeiten zur privaten Kranken- und Pflegeversicherung außerdem:<br />
+      Ombudsmann Private Kranken- und Pflegeversicherung, Postfach 06 02 22, 10052 Berlin,{" "}
+      <a href="https://www.pkv-ombudsmann.de" target="_blank" rel="noopener">www.pkv-ombudsmann.de</a>
+    </p>
+    <p>
       Bei Streitigkeiten aus der Immobiliardarlehensvermittlung:<br />
       Verbraucherschlichtungsstelle bei der Deutschen Bundesbank, Postfach 10 06 02, 60006 Frankfurt am Main,{" "}
       <a href="https://www.bundesbank.de/schlichtungsstelle" target="_blank" rel="noopener">www.bundesbank.de/schlichtungsstelle</a>
@@ -89,7 +94,8 @@ export default function Page() {
     <p>
       Zur Teilnahme an einem Streitbeilegungsverfahren vor einer allgemeinen Verbraucherschlichtungsstelle sind wir nicht
       verpflichtet und grundsätzlich nicht bereit. Bei Streitigkeiten aus der Versicherungsvermittlung ist der oben genannte
-      Versicherungsombudsmann zuständig.
+      Versicherungsombudsmann zuständig, bei privater Kranken- und Pflegeversicherung auch der Ombudsmann Private Kranken-
+      und Pflegeversicherung.
     </p>
 
     <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>

@@ -20,7 +20,7 @@ export default function Page() {
           Angaben gemäß § 15 Versicherungsvermittlungsverordnung (VersVermV) sowie Informationen nach §§ 60, 62 VVG
           zur Information des Kunden beim ersten Geschäftskontakt, dazu die Angaben zu Finanzanlagen nach § 12 und
           § 12a Finanzanlagenvermittlungsverordnung (FinVermV) und zu Immobiliardarlehen nach Art. 247 § 13 und
-          § 13b EGBGB. Stand: 22.10.2026.
+          § 13b EGBGB. Stand: 04.11.2026.
         </p>
 
         <h2>1. Wer wir sind</h2>
@@ -90,8 +90,11 @@ export default function Page() {
         <p>
           Bei Streitigkeiten aus der Versicherungsvermittlung kannst du dich an die Schlichtungsstelle wenden:
           Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin,{" "}
-          <a href="https://www.versicherungsombudsmann.de">www.versicherungsombudsmann.de</a>. Zu
-          Finanzanlagen und Immobiliardarlehen siehe Punkt 10 und 12.
+          <a href="https://www.versicherungsombudsmann.de">www.versicherungsombudsmann.de</a>. Bei
+          Streitigkeiten zur privaten Kranken- und Pflegeversicherung kannst du dich außerdem an den Ombudsmann
+          Private Kranken- und Pflegeversicherung wenden: Postfach 06 02 22, 10052 Berlin,{" "}
+          <a href="https://www.pkv-ombudsmann.de">www.pkv-ombudsmann.de</a>. Zu Finanzanlagen und
+          Immobiliardarlehen siehe Punkt 10 und 12.
         </p>
 
         <h2>8. Berufshaftpflicht</h2>
