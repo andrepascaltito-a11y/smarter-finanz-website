@@ -17,7 +17,8 @@ export type Ortsbild = {
   position: string;
 };
 
-export type OrtSchluessel = "holzminden" | "hildesheim" | "alfeld" | "hannover" | "hoexter";
+// Die ersten fuenf Schluessel sind Orte, "maschine", "wohnhaus" und "werkstatt" sind Themenbilder fuer Beitraege und Ratgeber (18.11.2026).
+export type OrtSchluessel = "holzminden" | "hildesheim" | "alfeld" | "hannover" | "hoexter" | "maschine" | "wohnhaus" | "werkstatt";
 
 export const ORTSBILDER: Record<OrtSchluessel, Ortsbild> = {
   holzminden: {
@@ -63,6 +64,33 @@ export const ORTSBILDER: Record<OrtSchluessel, Ortsbild> = {
     lizenz: "CC BY-SA 3.0",
     lizenzUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
     quelle: "https://commons.wikimedia.org/wiki/File:H%C3%B6xter_Germany_Weser-River-01.jpg",
+    position: "50% 50%",
+  },
+  maschine: {
+    datei: "/themen/maschine.jpg",
+    motiv: "Handwerker an einer Kappsäge in der Werkstatt (Ausschnitt)",
+    autor: "Shixart1985",
+    lizenz: "CC BY 2.0",
+    lizenzUrl: "https://creativecommons.org/licenses/by/2.0/",
+    quelle: "https://commons.wikimedia.org/wiki/File:Craftsman_operating_a_cutting_machine_in_a_wooden_workshop_during_daylight_hours.jpg",
+    position: "50% 50%",
+  },
+  wohnhaus: {
+    datei: "/themen/wohnhaus.jpg",
+    motiv: "Wohnhaus mit Garten in Karthaus bei Dülmen",
+    autor: "Dietmar Rabich",
+    lizenz: "CC BY-SA 4.0",
+    lizenzUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    quelle: "https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_Kirchspiel,_Karthaus,_Haus_--_2015_--_5343.jpg",
+    position: "50% 45%",
+  },
+  werkstatt: {
+    datei: "/themen/werkstatt.jpg",
+    motiv: "Historische Tischlerwerkstatt im Tischlereimuseum",
+    autor: "Olaf Meister",
+    lizenz: "CC BY-SA 3.0",
+    lizenzUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+    quelle: "https://commons.wikimedia.org/wiki/File:Tischlereimuseum_R%C3%BCdiger_Timme_Werkstatt.jpg",
     position: "50% 50%",
   },
 };

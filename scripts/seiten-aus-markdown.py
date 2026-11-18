@@ -30,7 +30,7 @@ KURZNAMEN = {
     "weser-und-leinebergland": "Weser- und Leinebergland",
     "ueber-andre": "Über André",
 }
-BILDER = {"alfeld", "holzminden", "hildesheim", "hannover", "hoexter"}
+BILDER = {"alfeld", "holzminden", "hildesheim", "hannover", "hoexter", "maschine", "wohnhaus", "werkstatt"}
 WARN = []
 
 

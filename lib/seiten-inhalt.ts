@@ -1,5 +1,5 @@
 // Inhalte der Orts-, Branchen-, Hub-, Autoren- und Beitragsseiten. Aufbau und Freigabe-Flag: siehe lib/seiten.ts.
-// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md, Mia-Blog-Aktuell-PHP-Luecke-2026-10-22a.md, Mia-Blog-Mitarbeiter-Unfall-nur-Artikel-2026-10-30a.md, Mia-Ratgeber-Endfaelliges-Darlehen-Teil1-2026-10-31a.md, Mia-Ratgeber-Endfaelliges-Darlehen-Teil2-2026-10-31a.md, Mia-Ratgeber-Unterlagen-fuer-die-Immobilienfinanzierung-nur-Artikel-2026-10-31a.md, Mia-Ratgeber-Eigenkapital-Immobilienfinanzierung-nur-Artikel-2026-10-31a.md
+// ERZEUGT aus den Textdateien von Mia (Vault, 03-Marketing/Content/): Mia-SEO-Phase1-Texte-2026-10-14.md, Mia-Blog-Charge1-v7a-nur-Artikel-2026-10-18.md, Mia-Blog-Aktuell-Pilot-Stromausfall-2026-10-19a.md, Mia-Blog-Aktuell-Cyber-2026-10-19a.md, Mia-Ratgeber-Kfz-Wechsel-2026-10-19a.md, Mia-Blog-Charge2b-nur-Artikel-2026-10-19.md, Mia-Blog-Aktuell-PHP-Luecke-2026-10-22a.md, Mia-Blog-Mitarbeiter-Unfall-nur-Artikel-2026-10-30a.md, Mia-Ratgeber-Endfaelliges-Darlehen-Teil1-2026-10-31a.md, Mia-Ratgeber-Endfaelliges-Darlehen-Teil2-2026-10-31a.md, Mia-Ratgeber-Unterlagen-fuer-die-Immobilienfinanzierung-nur-Artikel-2026-10-31a.md, Mia-Ratgeber-Eigenkapital-Immobilienfinanzierung-nur-Artikel-2026-10-31a.md, Mia-Blog-IAB-nur-Artikel-2026-11-18.md, Mia-Ratgeber-Hauskauf-nur-Artikel-2026-11-18.md, Mia-Blog-Jahresende-nur-Artikel-2026-11-18.md
 // mit scripts/seiten-aus-markdown.py. Texte nicht hier ändern, sondern in der Quelldatei und neu erzeugen,
 // sonst gehen Änderungen verloren. Rita hat die Fassungen geprüft.
 // Freigabe durch André: Skript mit --veroeffentlicht neu laufen lassen oder published auf true setzen.
@@ -4444,6 +4444,682 @@ export const SEITEN: Seite[] = [
     ],
     "cta": {
       "text": "Wenn du deine Finanzierung in Ruhe durchrechnen möchtest, buche einen Termin mit André Tito, unverbindlich. Wir vermitteln Immobiliardarlehen und sind dabei nicht an bestimmte Darlehensgeber gebunden. Wie wir als Immobiliardarlehens-, Finanzanlagen- und Versicherungsvermittler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "investitionsabzugsbetrag-iab-betrieb",
+    "published": true,
+    "title": "Investitionsabzugsbetrag einfach erklärt | Smarter Finanz",
+    "description": "Der Investitionsabzugsbetrag lässt Betriebe einen Teil geplanter Anschaffungen schon vorher vom Gewinn abziehen. Einfach erklärt, mit Rechenbeispiel.",
+    "h1": "Investitionsabzugsbetrag: Steuer später zahlen, bevor Sie investieren",
+    "kurzname": "Investitionsabzugsbetrag einfach erklärt",
+    "stand": "November 2026",
+    "bilder": [
+      "maschine"
+    ],
+    "einleitung": [
+      "Ein Schreiner weiß: In zwei Jahren braucht er eine neue Maschine. Sie kostet viel Geld. Normalerweise wirkt sich der Kauf erst im Jahr des Kaufs auf die Steuer aus.",
+      "Der Investitionsabzugsbetrag (kurz IAB) dreht das um. Sie dürfen schon heute einen Teil der geplanten Kosten vom Gewinn abziehen. Ihr steuerpflichtiger Gewinn sinkt, Sie zahlen für dieses Jahr weniger Steuern. Das Geld bleibt im Betrieb, wenn Sie es später für die Anschaffung brauchen."
+    ],
+    "kurz": [
+      {
+        "frage": "Was ist der Investitionsabzugsbetrag?",
+        "antwort": "Sie dürfen bis zu 50 Prozent einer geplanten Anschaffung schon vor dem Kauf vom Gewinn abziehen (§ 7g EStG)."
+      },
+      {
+        "frage": "Spare ich damit Steuern?",
+        "antwort": "Sie zahlen dadurch jetzt weniger Steuern. Später holt sich das Finanzamt den Betrag zurück. Sie gewinnen Zeit, kein Geld geschenkt. Wird der Abzug später rückgängig gemacht, können Zinsen anfallen."
+      },
+      {
+        "frage": "Wie lange habe ich Zeit zum Kaufen?",
+        "antwort": "Sie müssen innerhalb von drei Jahren wirklich kaufen. Sonst wird der Abzug rückgängig gemacht."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Ein Rechenbeispiel (gerechnet, kein Kundenfall)"
+      },
+      {
+        "art": "p",
+        "text": "Ein Schreinerbetrieb plant für 2027 eine Maschine für 30.000 Euro. Der Gewinn 2026 liegt bei 80.000 Euro."
+      },
+      {
+        "art": "p",
+        "text": "1. **2026:** Der Betrieb zieht 50 Prozent der geplanten Kosten ab, also 15.000 Euro. Steuerpflichtig sind nur noch 65.000 Euro."
+      },
+      {
+        "art": "p",
+        "text": "2. **2027:** Die Maschine wird gekauft. Die 15.000 Euro werden dem Gewinn wieder hinzugerechnet. Im Gegenzug dürfen die Anschaffungskosten um denselben Betrag herabgesetzt werden. Abgeschrieben wird dann nur noch von 15.000 Euro."
+      },
+      {
+        "art": "p",
+        "text": "Unterm Strich zahlt der Betrieb nicht weniger Steuern über alle Jahre. Er zahlt sie später. Der Vorteil ist vor allem ein Zeit- und Liquiditätsvorteil, und nur, wenn Sie wirklich investieren. Wie stark die Steuer insgesamt abweicht, hängt auch von Ihrem Steuersatz in den einzelnen Jahren ab."
+      },
+      {
+        "art": "h2",
+        "text": "Wer kann den Abzug nutzen?"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Sie ermitteln Ihren Gewinn mit der Einnahmen-Überschuss-Rechnung oder einer Bilanz. Das trifft auf die meisten Einzelunternehmer, Handwerker und Selbstständigen zu.",
+          "Ihr Gewinn liegt im Jahr des Abzugs bei höchstens 200.000 Euro. Gemeint ist der Gewinn so, als hätten Sie den Abzug nicht genommen. Hinzurechnungen aus früheren Abzügen, die im selben Jahr anfallen, zählen dabei nicht mit.",
+          "Je Betrieb dürfen offene Abzüge zusammen höchstens 200.000 Euro betragen. Dazu zählt das Abzugsjahr und die drei Jahre davor.",
+          "Personengesellschaften können den Abzug ebenfalls nutzen. Dann tritt die Gesellschaft an die Stelle des Einzelnen."
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Was wird gefördert?"
+      },
+      {
+        "art": "p",
+        "text": "Gefördert werden bewegliche Dinge, die sich abnutzen und Ihrem Betrieb dauerhaft dienen: Maschinen, Werkzeug, Transporter, Büro- und Betriebsausstattung."
+      },
+      {
+        "art": "p",
+        "text": "Nicht gefördert werden Grundstücke und Gebäude. Auch Material, das Sie sofort verbrauchen, fällt nicht darunter."
+      },
+      {
+        "art": "p",
+        "text": "Wichtig: Die Anschaffung muss bis zum Ende des Jahres nach dem Kauf in einer inländischen Betriebsstätte ausschließlich oder fast ausschließlich betrieblich genutzt oder vermietet werden. Ein Fahrzeug, das Sie auch privat fahren, kann hier zum Stolperstein werden. Fragen Sie Ihren Steuerberater, wie das Finanzamt das in Ihrem Fall sieht."
+      },
+      {
+        "art": "h2",
+        "text": "Wie lange haben Sie Zeit?"
+      },
+      {
+        "art": "p",
+        "text": "Sie haben drei Jahre nach dem Abzugsjahr, um die Anschaffung wirklich zu machen. Kaufen Sie nicht, wird der Abzug rückgängig gemacht. Das Finanzamt ändert dann den alten Steuerbescheid und Sie zahlen die Steuer nach. Auf die Nachzahlung kommen Zinsen dazu. Die Zinsen laufen erst 15 Monate nach Ablauf des Kalenderjahres, für das der Abzug gemacht wurde, und nur für volle Monate. Bei einem Abzug für 2026 beginnen sie frühestens am 1. April 2028 (bei Gewinnermittlung nach Kalenderjahr). Sie betragen 0,15 Prozent pro Monat, also 1,8 Prozent im Jahr (Stand November 2026; § 7g Abs. 3 EStG, §§ 233a, 238 AO)."
+      },
+      {
+        "art": "p",
+        "text": "Sie können den Abzug auch von selbst früher rückgängig machen, wenn Sie merken, dass Sie nicht kaufen werden."
+      },
+      {
+        "art": "h2",
+        "text": "Häufige Stolpersteine"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Die Anschaffung kommt nicht.** Der Plan ändert sich, der Kauf fällt aus. Dann kommt die Steuer zurück.",
+          "**Der Gewinn ist zu hoch.** Liegt Ihr Gewinn über 200.000 Euro, ist der Abzug für dieses Jahr nicht möglich.",
+          "**Zu viel Privatnutzung.** Wird die Anschaffung bis Ende des Folgejahres nicht fast nur betrieblich genutzt, werden Hinzurechnung und Kürzung rückgängig gemacht (§ 7g Abs. 4 EStG). Der Abzug fällt dann an die Investitionsfrist zurück.",
+          "**Das Geld fehlt später.** Sie sparen jetzt Steuern, aber der Kauf muss trotzdem bezahlt werden. Planen Sie die Finanzierung mit.",
+          "**Die Meldung wird vergessen.** Ohne elektronische Übermittlung der Beträge ans Finanzamt gibt es den Abzug nicht, außer das Finanzamt verzichtet auf Antrag in einem Härtefall (§ 7g Abs. 1 EStG). Das macht in der Regel Ihr Steuerberater mit der Steuererklärung."
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Für wen lohnt es sich eher nicht?"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Wenn Sie in den nächsten drei Jahren nichts Größeres kaufen wollen.",
+          "Wenn Ihr Gewinn so niedrig ist, dass kaum Steuer anfällt.",
+          "Wenn Sie erwarten, dass Ihr Gewinn in den Folgejahren deutlich höher ausfällt. Dann verschieben Sie Gewinn in ein Jahr mit höherem Steuersatz. Das kann sich rechnen oder nicht."
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Die Sonderabschreibung als Schwester"
+      },
+      {
+        "art": "p",
+        "text": "Neben dem Abzug gibt es die Sonderabschreibung: Im Jahr des Kaufs und in den vier Jahren danach dürfen Sie insgesamt bis zu 40 Prozent der Kosten zusätzlich zur normalen Abschreibung ansetzen (§ 7g Abs. 5 EStG). Die Gewinngrenze von 200.000 Euro gilt hier für das Jahr vor dem Kauf, und die Nutzung muss im Kaufjahr und im Folgejahr betrieblich sein. Beides lässt sich kombinieren. Wie, klärt Ihr Steuerberater."
+      },
+      {
+        "art": "h2",
+        "text": "Checkliste zum Selbst-Durchgehen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Planen Sie in den nächsten drei Jahren eine Anschaffung?",
+          "Ist es etwas Bewegliches, das Sie ausschließlich oder fast ausschließlich betrieblich nutzen?",
+          "Ermitteln Sie Ihren Gewinn per Einnahmen-Überschuss-Rechnung oder Bilanz?",
+          "Liegt Ihr Gewinn bei höchstens 200.000 Euro?",
+          "Haben Sie die Finanzierung der Anschaffung im Blick?",
+          "Haben Sie mit Ihrem Steuerberater gesprochen?"
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Information, keine Steuerberatung. Bitte mit Ihrem Steuerberater umsetzen."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "frage": "Brauche ich schon eine Rechnung oder einen Vertrag?",
+        "antwort": "Das Gesetz verlangt weder Rechnung noch Vertrag, es geht um voraussichtliche Kosten. Welchen Nachweis Ihrer Absicht das Finanzamt sehen will, klärt Ihr Steuerberater."
+      },
+      {
+        "frage": "Kann ich den Abzug auch nutzen, wenn ich damit einen Verlust erzeuge?",
+        "antwort": "Ja, das Gesetz erlaubt das ausdrücklich (§ 7g Abs. 1 EStG). Ob es für Sie sinnvoll ist, ist eine Frage für den Steuerberater."
+      },
+      {
+        "frage": "Gilt das auch für gebrauchte Maschinen?",
+        "antwort": "Das Gesetz verlangt abnutzbare bewegliche Wirtschaftsgüter. Es unterscheidet im Text nicht zwischen neu und gebraucht. Lassen Sie den Einzelfall prüfen."
+      },
+      {
+        "frage": "Ersetzt dieser Artikel die Steuerberatung?",
+        "antwort": "Nein. Das ist eine allgemeine Information. Setzen Sie den Abzug immer mit Ihrem Steuerberater um."
+      }
+    ],
+    "links": [
+      {
+        "pfad": "/blog",
+        "text": "Alle Beiträge"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      },
+      {
+        "pfad": "/ueber-andre",
+        "text": "Über André Tito"
+      }
+    ],
+    "quellen": [
+      "§ 7g Einkommensteuergesetz, https://www.gesetze-im-internet.de/estg/__7g.html. Abruf: 02.11. und 18.11.2026.",
+      "Abgabenordnung, §§ 233a und 238, https://www.gesetze-im-internet.de/ao_1977/. Abruf: 18.11.2026."
+    ],
+    "cta": {
+      "text": "Sie planen eine Anschaffung? Dann lohnt neben der Steuer auch ein Blick darauf, was an der neuen Maschine oder am neuen Fahrzeug abgesichert sein sollte. SmarterFinanz berät Gewerbetreibende zu Versicherungen und Absicherung. Steuerberatung leisten wir nicht. Schreiben Sie uns über das Formular auf der Website, wir melden uns bei Ihnen. Der erste Überblick ist unverbindlich. **Quellen:** § 7g Einkommensteuergesetz, §§ 233a und 238 Abgabenordnung, gesetze-im-internet.de, abgerufen am 02.11. und 18.11.2026. *Allgemeine Information, keine Steuerberatung. Bitte mit Ihrem Steuerberater umsetzen.*"
+    }
+  },
+  {
+    "typ": "ratgeber",
+    "slug": "versicherungen-beim-hauskauf",
+    "published": true,
+    "title": "Versicherungen beim Hauskauf | Smarter Finanz",
+    "description": "Du kaufst ein Haus? Welche Versicherungen wichtig sind, was beim Eigentümerwechsel passiert und was du vor der Übergabe klären solltest.",
+    "h1": "Welche Versicherungen brauchst du beim Hauskauf?",
+    "kurzname": "Versicherungen beim Hauskauf",
+    "stand": "November 2026",
+    "bilder": [
+      "wohnhaus"
+    ],
+    "einleitung": [
+      "Du hast ein Haus gefunden. Der Notartermin steht. Jetzt fragt dich jemand: \"Und die Versicherungen?\" Die meisten schieben das Thema, bis die Schlüssel in der Hand liegen. Das ist verständlich, aber riskant. Spätestens mit der Übergabe liegt das Risiko bei dir (§ 446 BGB). Dein Eintritt in den Vertrag des Verkäufers hängt dagegen am Eigentum, und das wechselt oft erst mit dem Grundbucheintrag. Dazwischen kann eine Lücke liegen.",
+      "Dieser Text zeigt dir, was wirklich wichtig ist, was eher Zubehör ist und was vor allem für Neubauten gilt. Es ist allgemeine Information. Für deinen Fall lohnt ein Blick auf deine Verträge und deine Finanzierung."
+    ],
+    "kurz": [
+      {
+        "frage": "Ist die Wohngebäudeversicherung Pflicht?",
+        "antwort": "Eine Wohngebäudeversicherung ist nicht gesetzlich vorgeschrieben. Die Verbraucherzentrale nennt sie für Hausbesitzer trotzdem ein \"absolutes Muss\". Ein Brand ohne Schutz kann sehr teuer werden."
+      },
+      {
+        "frage": "Was passiert mit dem Vertrag des Verkäufers?",
+        "antwort": "Mit dem Eigentumserwerb, meist dem Grundbucheintrag, geht die Gebäudeversicherung des Verkäufers automatisch auf dich über (§ 95 VVG). Du darfst sie aber kündigen, und zwar nur kurz nach dem Erwerb (§ 96 VVG)."
+      },
+      {
+        "frage": "Wann kündige ich den alten Vertrag?",
+        "antwort": "Kündige den alten Vertrag erst, wenn der neue schriftlich bestätigt ist. Sonst entsteht eine Lücke. Läuft nach dem Eigentumserwerb noch ein zweiter Vertrag parallel, kündige den alten dann sofort."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "Die wichtigste: Wohngebäudeversicherung"
+      },
+      {
+        "art": "p",
+        "text": "Sie zahlt, wenn das Haus selbst beschädigt wird. Der Grundschutz deckt Feuer, Leitungswasser sowie Sturm und Hagel. Das ist die Basis."
+      },
+      {
+        "art": "p",
+        "text": "Eine allgemeine gesetzliche Pflicht gibt es nicht. Wer das Haus mit einem Kredit finanziert, merkt trotzdem schnell: Viele Banken wollen den Nachweis sehen, bevor sie auszahlen. Das ist Praxis, keine Vorschrift, und es kann sich von Bank zu Bank unterscheiden. Frag bei deiner Bank nach."
+      },
+      {
+        "art": "p",
+        "text": "Zwei Dinge solltest du beim Vergleichen im Blick haben:"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Die Versicherungssumme.** Sie sollte zum Haus passen. Ist sie erheblich zu niedrig, wird im Schadenfall anteilig gekürzt (§ 75 VVG). Bei einer Summe, die nur halb so hoch ist wie der Wert, zahlt die Versicherung dann auch nur etwa die Hälfte des Schadens. Frag nach einem Unterversicherungsverzicht. Moderne Verträge rechnen oft nach der Wohnfläche.",
+          "**Der Preis hängt von vielem ab.** Zum Beispiel von der Bauart, dem Dach, der Wohnfläche, der Lage und davon, wie viel Selbstbehalt du übernimmst."
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Elementarschäden: Überschwemmung, Rückstau, Erdrutsch"
+      },
+      {
+        "art": "p",
+        "text": "Starkregen und Hochwasser gehören nicht immer zum Grundschutz. Dafür gibt es einen Zusatzbaustein, den \"Elementarschutz\". Er deckt zum Beispiel Überschwemmung, Rückstau, Erdsenkung, Erdrutsch und Schneedruck."
+      },
+      {
+        "art": "p",
+        "text": "Nicht jedes Haus bekommt diesen Schutz zu jeder Bedingung. In Lagen nahe an Flüssen kann ein Versicherer ablehnen oder Auflagen machen. Manchmal verlangt er zum Beispiel eine Rückstauklappe im Keller."
+      },
+      {
+        "art": "p",
+        "text": "Die Verbraucherzentrale empfiehlt (Seitenstand 10. August 2026), Elementarschutz in jede Wohngebäudeversicherung mit aufzunehmen. Mehr Schutz kostet allerdings mehr Beitrag, und nicht jedes Haus bekommt ihn zu jeder Bedingung."
+      },
+      {
+        "art": "p",
+        "text": "Stand 9. November 2026: Das Bundesjustizministerium und das Bundesfinanzministerium haben am 21. Oktober 2026 ein Diskussionspapier vorgelegt, Stellungnahmen sind bis 2. Dezember 2026 möglich. Es geht darum, Elementarschutz zum Standard in neuen Wohngebäudeversicherungen zu machen. Ein Gesetz gibt es noch nicht. Heute entscheidest du noch selbst, ob du den Schutz mit einschließt."
+      },
+      {
+        "art": "h2",
+        "text": "Was beim Kauf mit dem Vertrag des Verkäufers passiert"
+      },
+      {
+        "art": "p",
+        "text": "Das überrascht viele: Wenn du ein Haus kaufst, das schon versichert ist, trittst du mit dem Eigentumserwerb automatisch in den Vertrag des Verkäufers ein (§ 95 VVG). Du musst nichts unterschreiben. Für die gerade laufende Beitragsperiode haften Verkäufer und du zusammen."
+      },
+      {
+        "art": "p",
+        "text": "Der Versicherer muss den Wechsel aber erst gelten lassen, wenn er davon weiß. Gib ihm also zeitnah Bescheid."
+      },
+      {
+        "art": "p",
+        "text": "Du bist an diesen Vertrag nicht gebunden. Nach dem Gesetz darfst du ihn sofort oder zum Ende der laufenden Versicherungsperiode kündigen, und zwar innerhalb eines Monats nach dem Erwerb (§ 96 Abs. 2 VVG). Wusstest du vom Vertrag nichts, läuft der Monat erst ab dem Moment, in dem du davon erfährst. Danach erlischt das Recht. Auch der Versicherer darf dir kündigen, mit einem Monat Frist, innerhalb eines Monats, nachdem er vom Verkauf erfahren hat (§ 96 Abs. 1 VVG). Wird gekündigt, zahlt der Verkäufer die Prämie, du haftest dafür nicht (§ 96 Abs. 3 VVG)."
+      },
+      {
+        "art": "p",
+        "text": "Was genau als \"Erwerb\" zählt, steht nicht im Gesetz. Nach Einschätzung der Verbraucherzentrale ist es der Eintrag ins Grundbuch. Rechne die Frist trotzdem eher knapp und lass sie im Zweifel prüfen."
+      },
+      {
+        "art": "p",
+        "text": "**Unser Tipp zur Reihenfolge:** Schließ den neuen Vertrag so ab, dass er spätestens zur Übergabe beginnt. Kündige den alten erst, wenn du den neuen schriftlich hast. Sonst riskierst du eine Zeit ohne Schutz, ausgerechnet nach der Übergabe."
+      },
+      {
+        "art": "h2",
+        "text": "Und die Bank?"
+      },
+      {
+        "art": "p",
+        "text": "Hat die Bank ihre Grundschuld beim Versicherer angemeldet, hat sie bei der Gebäudeversicherung eigene Rechte. Der Versicherer muss sie zum Beispiel informieren, wenn Beiträge nicht gezahlt werden, und er muss ihr auf Nachfrage bestätigen, dass Versicherungsschutz besteht (§§ 142 bis 148 VVG). Gesetzlich ist das für die Gebäudefeuerversicherung geregelt."
+      },
+      {
+        "art": "p",
+        "text": "Hat die Bank ihre Grundschuld angemeldet, wirkt eine Kündigung des Gebäudevertrags nur, wenn die Bank zustimmt oder der Versicherungsnehmer nachweist, dass die Grundschuld erloschen ist (§§ 144, 148 VVG). Die Bank darf ihre Zustimmung nicht ohne ausreichenden Grund verweigern. Dein Sonderkündigungsrecht als Käufer nach § 96 Abs. 2 VVG ist davon im Gesetz ausdrücklich ausgenommen. Die Verbraucherzentrale schreibt trotzdem, dass du das Einverständnis der Bank benötigst. Unser Rat: Hol die Zustimmung deiner Bank vorsorglich ein, bevor du kündigst oder wechselst, und lass dir den neuen Versicherungsschutz bestätigen. Die Frage, wie sich das genau zusammenfügt, ist nicht ganz einfach. Sprich im Zweifel vorher mit deiner Bank oder einer Rechtsberatung."
+      },
+      {
+        "art": "h2",
+        "text": "Was du sonst brauchen kannst"
+      },
+      {
+        "art": "p",
+        "text": "**Private Haftpflicht.** Ob dein selbst bewohntes Haus in deiner privaten Haftpflicht mitversichert ist, steht in den Bedingungen. Prüfe dort den Punkt Haus- und Grundbesitz. Wer vermietet oder ein unbebautes Grundstück besitzt, sollte nach Hinweis der Verbraucherzentrale eine zusätzliche Haftpflicht abschließen."
+      },
+      {
+        "art": "p",
+        "text": "**Bauherrenhaftpflicht und Bauleistungsversicherung.** Das betrifft den Neubau oder große Umbauten, nicht den Kauf eines fertigen Hauses. Baust du, solltest du das mit einem Fachmann besprechen."
+      },
+      {
+        "art": "p",
+        "text": "**Hausrat.** Sie ist nicht vorgeschrieben, aber sie schützt alles, was du ins Haus stellst. Wie bei der Gebäudeversicherung gilt: Zu niedrig versichert heißt oft: im Schaden gekürzt. Beim Umzug ist dein Hausrat für eine Übergangszeit in alter und neuer Wohnung geschützt. Melde den Umzug trotzdem rechtzeitig."
+      },
+      {
+        "art": "p",
+        "text": "**Glas.** Eine eigene Glasversicherung hält die Verbraucherzentrale in der Regel für verzichtbar."
+      },
+      {
+        "art": "h2",
+        "text": "Die Finanzierung absichern"
+      },
+      {
+        "art": "p",
+        "text": "Ein Haus kostet oft mehr, als man zurücklegen konnte. Darum wirft ein Todesfall oder eine lange Krankheit gleich zwei Fragen auf: Wer zahlt die Raten, und was passiert mit den Kindern?"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "**Risikolebensversicherung.** Sie zahlt im Todesfall eine vereinbarte Summe aus. Die Verbraucherzentrale nennt sie als Weg, Hinterbliebene und ein Darlehen abzusichern. Die Summe kann mit der Restschuld sinken. Die Gesundheitsfragen im Antrag musst du vollständig und wahrheitsgemäß beantworten (§ 19 VVG). Bei falschen Angaben kann der Versicherer je nach Verschulden zurücktreten, kündigen oder den Vertrag ändern, im Schadenfall unter Umständen nicht zahlen (§§ 19, 21 VVG).",
+          "**Berufsunfähigkeitsversicherung.** Sie sichert das Einkommen, wenn du nicht mehr arbeiten kannst. Je früher du dich darum kümmerst, desto besser stehen die Chancen. Gesundheitsfragen sind oft die Hürde.",
+          "**Restschuldversicherung.** Die Verbraucherzentrale rät meist ab. Sie ist oft teuer, und die Leistung ist an viele Bedingungen geknüpft. Bei Konsumentenkrediten darf die Bank sie seit Anfang 2025 nicht mehr verlangen. Bei Immobilienkrediten darf sie das laut BaFin weiterhin, dann muss sie die Kosten im effektiven Jahreszins berücksichtigen. Lass dir in dem Fall den Unterschied zu einer eigenen Risikolebensversicherung erklären."
+        ]
+      },
+      {
+        "art": "p",
+        "text": "Ob eine Bank für deinen Kredit eine Risikolebensversicherung verlangt, ist von Fall zu Fall verschieden. Frag nach, bevor du unterschreibst."
+      },
+      {
+        "art": "h2",
+        "text": "Für wen dieser Text nicht reicht"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Du kaufst eine Eigentumswohnung. Dort läuft die Gebäudeversicherung in der Regel über die Eigentümergemeinschaft, und für dich gelten andere Fragen.",
+          "Du baust neu. Dann stehen die Bauversicherungen im Vordergrund.",
+          "Du vermietest. Dann kommen Haftpflicht und Mietausfall dazu."
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Checkliste vor der Übergabe"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Hat die Bank einen Nachweis der Gebäudeversicherung verlangt, und bis wann?",
+          "Besteht eine Gebäudeversicherung des Verkäufers? Welche Summe, welcher Selbstbehalt, ist Elementar dabei?",
+          "Ist ein neuer Vertrag so geplant, dass er spätestens zur Übergabe beginnt?",
+          "Hast du die Monatsfrist zur Kündigung im Kalender?",
+          "Kennt der Versicherer den Eigentümerwechsel?",
+          "Deckt deine private Haftpflicht das Haus ab?",
+          "Hausrat zur neuen Adresse gemeldet?",
+          "Ist die Familie finanziell abgesichert, falls etwas passiert?"
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Dieser Text ist eine allgemeine Information und ersetzt keine individuelle Beratung. Stand: 18. November 2026."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "frage": "Muss ich ein Haus versichern?",
+        "antwort": "Gesetzlich ist die Wohngebäudeversicherung nicht vorgeschrieben. Wer finanziert, braucht sie in der Praxis meist trotzdem, weil die Bank den Nachweis verlangt."
+      },
+      {
+        "frage": "Kann ich den Vertrag des Verkäufers behalten?",
+        "antwort": "Ja, er geht automatisch auf dich über. Prüfe vorher, ob Summe und Leistungen zu deinem Haus passen."
+      },
+      {
+        "frage": "Wie lange darf ich kündigen?",
+        "antwort": "Nach dem Gesetz sofort oder zum Ende der Versicherungsperiode, aber nur innerhalb eines Monats nach dem Erwerb. Rechne die Frist lieber knapp."
+      },
+      {
+        "frage": "Ist Elementarschutz Pflicht?",
+        "antwort": "Heute nicht. Der Bund diskutiert eine Änderung (Diskussionspapier vom 21. Oktober 2026), beschlossen ist nichts."
+      },
+      {
+        "frage": "Brauche ich eine Risikolebensversicherung?",
+        "antwort": "Das hängt davon ab, wer von deinem Einkommen abhängt. Wenn die Familie die Raten ohne dich nicht tragen könnte, lohnt sich das Gespräch."
+      }
+    ],
+    "links": [
+      {
+        "pfad": "/privat/ratgeber",
+        "text": "Alle Ratgeber"
+      },
+      {
+        "pfad": "/privat",
+        "text": "Beratung für Privatpersonen"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      }
+    ],
+    "quellen": [
+      "Versicherungsvertragsgesetz (VVG), §§ 19, 95, 96 und 142 bis 149, und Bürgerliches Gesetzbuch (BGB), § 446, gesetze-im-internet.de, abgerufen am 9. November 2026.",
+      "Verbraucherzentrale: Wohngebäudeversicherung, Private Haftpflichtversicherung, Hausratversicherung, Restschuldversicherung, Risikolebensversicherung, abgerufen am 9. November 2026.",
+      "BaFin: Restschuldversicherung, abgerufen am 9. November 2026.",
+      "Bundesjustizministerium: Pressemitteilung Nr. 71/2026 vom 21. Oktober 2026 und Diskussionspunktepapier von BMJV und BMF zur Elementarschadenversicherung, https://www.bmjv.de/SharedDocs/Pressemitteilungen/DE/2026/1021_Elementarschadenversicherung.html, abgerufen am 18. November 2026.",
+      "Interhyp: Wohngebäudeversicherung bei der Baufinanzierung, abgerufen am 9. November 2026."
+    ],
+    "cta": {
+      "text": "Der Notartermin steht, die Schlüssel kommen bald? Jetzt ist der beste Zeitpunkt, die Absicherung zu klären. Schick uns deine Verträge und die Daten zum Haus. Als Versicherungsmakler sehen wir sie uns an und sagen dir, was wir für sinnvoll halten und was nicht. Zur Immobilienfinanzierung beraten und vermitteln wir ebenfalls. Melde dich über das Formular, der erste Überblick ist unverbindlich. Wie wir als Versicherungs- und Immobiliardarlehensvermittler vergütet werden, steht in der [Erstinformation](/erstinformation)."
+    }
+  },
+  {
+    "typ": "beitrag",
+    "slug": "jahresende-betrieb-versicherungen-pruefen",
+    "published": true,
+    "title": "Jahresende im Betrieb: Verträge prüfen | Smarter Finanz",
+    "description": "Acht Fragen an Ihre Verträge zum Jahresende: Summe, Tätigkeiten, Fahrzeuge, Frist, Cyber, Geräte und Mieträume. Planen Sie dafür eine Stunde ein.",
+    "h1": "Jahresende im Betrieb: Acht Fragen an Ihre Versicherungen",
+    "kurzname": "Jahresende im Betrieb: Verträge prüfen",
+    "stand": "November 2026",
+    "bilder": [
+      "werkstatt"
+    ],
+    "einleitung": [
+      "Beispiel: Zwischen Weihnachtskarten und Inventurlisten liegt der Ordner mit den Versicherungsscheinen. Sie nehmen ihn zum Jahresende zum ersten Mal wieder in die Hand. Die Verträge sind vor Jahren abgeschlossen worden. Seitdem haben Sie neue Maschinen gekauft, einen Mitarbeiter eingestellt und vielleicht einen zweiten Standort gemietet. Ob der Vertrag das alles noch abbildet, sieht man ihm nicht an.",
+      "Die Versicherer stellen ihre Bedingungen selbst zusammen. Der Versichererverband GDV (Gesamtverband der Deutschen Versicherungswirtschaft) veröffentlicht dazu unverbindliche Musterbedingungen. Ihr Vertrag kann davon abweichen. Was bei Ihnen gilt, steht in Ihrem Versicherungsschein, in den Nachträgen und in Ihren Bedingungen."
+    ],
+    "kurz": [
+      {
+        "frage": "Wie viel Zeit brauche ich?",
+        "antwort": "Planen Sie etwa eine Stunde ein."
+      },
+      {
+        "frage": "Was vergleiche ich?",
+        "antwort": "Ihre Versicherungsscheine mit der Wirklichkeit im Betrieb: Was haben Sie heute, was tun Sie heute, wen beschäftigen Sie heute?"
+      },
+      {
+        "frage": "Was, wenn etwas nicht mehr passt?",
+        "antwort": "Melden Sie es Ihrem Versicherer so, dass Sie es nachweisen können."
+      }
+    ],
+    "abschnitte": [
+      {
+        "art": "h2",
+        "text": "1. Stimmt die Summe für meine Einrichtung und meine Ware noch?"
+      },
+      {
+        "art": "p",
+        "text": "Die Summe im Vertrag soll dem Wert Ihrer Sachen entsprechen, sonst kann der Versicherer im Schadenfall anteilig kürzen."
+      },
+      {
+        "art": "p",
+        "text": "Die Versicherungssumme ist der Betrag, den Sie mit dem Versicherer vereinbart haben. Nach den Musterbedingungen für die Feuerversicherung soll sie dem Wert Ihrer versicherten Sachen entsprechen und bei einer Versicherung zum Neuwert, Zeitwert oder gemeinen Wert während der Vertragszeit angepasst werden (AFB 2010 § 7 Nr. 4). Neuwert heißt: Was kostet es, Sachen gleicher Art und Güte heute neu zu kaufen? Bei Vorräten zählt nach dem Muster der niedrigere Betrag, den Sie für Wiederbeschaffung oder Neuherstellung gleicher Art und Güte aufwenden müssten, höchstens aber der erzielbare Verkaufspreis (AFB 2010 § 7 Nr. 2 b)."
+      },
+      {
+        "art": "p",
+        "text": "Das Gesetz knüpft die Kürzung an eine erhebliche Unterversicherung (§ 75 VVG). Die Musterbedingungen des GDV haben diese Schwelle nicht: Ist die Summe niedriger als der Wert unmittelbar vor dem Schaden, wird die Entschädigung nach einer Formel gekürzt (AFB 2010 § 8 Nr. 4 a). Die Formel lautet: Schadenbetrag mal Summe, geteilt durch Wert. Beispiel: Ihre Sachen sind 200.000 Euro wert, versichert sind 100.000 Euro. Bei einem Schaden von 20.000 Euro zahlt der Versicherer nach dem Muster 20.000 mal 100.000 geteilt durch 200.000, also 10.000 Euro. Ist die Summe dagegen deutlich höher als der Wert, können Sie sie auf Verlangen herabsetzen lassen, der Beitrag sinkt dann (§ 74 VVG). Verlassen Sie sich deshalb nicht darauf, dass ein kleiner Abstand folgenlos bleibt. Ob Ihr Vertrag eine Schwelle kennt oder die Summe als Erstes Risiko versichert ist, steht in Ihren Bedingungen."
+      },
+      {
+        "art": "p",
+        "text": "Der Wert zählt unmittelbar vor dem Schaden. Wer einen stark schwankenden Warenbestand hat, schaut deshalb nicht nur auf den Tag der Inventur."
+      },
+      {
+        "art": "p",
+        "text": "**Prüfen Sie:** Wann wurde die Summe zuletzt neu berechnet? Gab es Neuanschaffungen? Steht im Vertrag etwas zur Anpassung der Summe?"
+      },
+      {
+        "art": "h2",
+        "text": "2. Passt die Betriebsbeschreibung noch zu dem, was wir tun?"
+      },
+      {
+        "art": "p",
+        "text": "Versichert ist der Betrieb, wie er im Versicherungsschein und in den Nachträgen steht (AVB BHV A1-1). Legen Sie die Beschreibung neben Ihre Rechnungen des Jahres. Fehlt eine Tätigkeit, die Sie erbracht haben, melden Sie sie Ihrem Versicherer."
+      },
+      {
+        "art": "p",
+        "text": "Die Musterbedingungen der Betriebshaftpflicht versichern Erhöhungen und Erweiterungen des Risikos mit. Ausgenommen sind unter anderem Risiken aus versicherungspflichtigen Kraft-, Luft- und Wasserfahrzeugen (A1-8.1, A1-9.3). Neue Risiken sind im Rahmen des Vertrags zunächst mitversichert. Der Versicherer kann Sie auffordern, jedes neue Risiko innerhalb eines Monats anzuzeigen, auch mit der Beitragsrechnung. Zeigen Sie nicht rechtzeitig an, entfällt der Schutz für das neue Risiko nach dem Muster rückwirkend. Das gilt auch, wenn Sie sich mit dem Versicherer nicht binnen eines Monats nach der Anzeige über den Beitrag für das neue Risiko einigen (A1-9.1). Bis zu einer Einigung kann der Schutz für neue Risiken in der Summe begrenzt sein (A1-9.2)."
+      },
+      {
+        "art": "p",
+        "text": "Das Gesetz kennt außerdem die Gefahrerhöhung, also den Fall, dass Ihr Betrieb nach Vertragsschluss gefährlicher wird. Ohne Einwilligung des Versicherers dürfen Sie sie nicht vornehmen, erkennen Sie sie erst später, zeigen Sie sie unverzüglich an (§ 23 VVG). Das Gesetz nimmt unerhebliche Gefahrerhöhungen und solche aus, die als mitversichert anzusehen sind (§ 27 VVG). Mögliche Folgen einer nicht erlaubten, nicht angezeigten Gefahrerhöhung sind Kündigung, höherer Beitrag oder Ausschluss der höheren Gefahr, bei Vorsatz in der Regel auch völlige Leistungsfreiheit, bei grober Fahrlässigkeit Kürzung (§§ 24 bis 26 VVG). Erkennen Sie später, dass Ihr Betrieb ohne Ihr Zutun gefährlicher geworden ist, zeigen Sie das ebenfalls unverzüglich an (§ 23 Abs. 3 VVG). Ob eine bestimmte neue Tätigkeit eine Gefahrerhöhung ist, hängt vom Einzelfall und von Ihrem Vertrag ab. Im Zweifel fragen Sie Ihren Versicherer oder Makler."
+      },
+      {
+        "art": "p",
+        "text": "Mehr dazu: [Muss ich jede Tätigkeit in der Betriebshaftpflicht aufführen?](/blog/betriebsbeschreibung-betriebshaftpflicht)"
+      },
+      {
+        "art": "h2",
+        "text": "3. Haben sich Umsatz oder Mitarbeiterzahl geändert, und muss ich etwas melden?"
+      },
+      {
+        "art": "p",
+        "text": "Ob Sie Umsatz oder Mitarbeiterzahl regelmäßig melden müssen, steht in Ihrem Vertrag. Das Gesetz sieht eine solche Jahresmeldung nicht allgemein vor."
+      },
+      {
+        "art": "p",
+        "text": "Schauen Sie im Versicherungsschein nach, welche Angaben Ihrem Beitrag zugrunde liegen. Das können zum Beispiel Umsatz oder Zahl der Mitarbeiter sein. Nach den Musterbedingungen der Betriebshaftpflicht müssen Sie auf Aufforderung des Versicherers mitteilen, ob und welche Änderungen des versicherten Risikos eingetreten sind. Die Aufforderung kann auch als Hinweis auf der Beitragsrechnung kommen, die Angaben sind innerhalb eines Monats zu machen und auf Wunsch nachzuweisen. Der Beitrag wird dann angepasst. Machen Sie die Angaben nicht rechtzeitig, kann der Versicherer nach dem Muster eine Nachzahlung in Höhe des für den Zeitraum bereits berechneten Beitrags verlangen. Bei unrichtigen Angaben zu seinem Nachteil sieht das Muster eine Vertragsstrafe in dreifacher Höhe des Beitragsunterschieds vor, wenn Sie die Unrichtigkeit zu vertreten haben (AVB BHV A(GB)-2.1 bis A(GB)-2.3). Ob und wie Ihr Vertrag das regelt, steht in Ihren Bedingungen."
+      },
+      {
+        "art": "h2",
+        "text": "4. Stimmt die Fahrzeugliste?"
+      },
+      {
+        "art": "p",
+        "text": "Vergleichen Sie die Liste Ihres Versicherers mit den Fahrzeugen, die Sie heute tatsächlich haben."
+      },
+      {
+        "art": "p",
+        "text": "Gemeint ist hier die Fahrzeugliste Ihrer Kfz-Versicherung, nicht der Betriebshaftpflicht. Legen Sie die Liste neben die Fahrzeugscheine. Fehlen Fahrzeuge? Stehen noch Fahrzeuge darauf, die Sie verkauft oder abgemeldet haben? Eine Liste, die nicht mehr stimmt, ist keine gute Grundlage für Ihren Vertrag und Ihre Beiträge."
+      },
+      {
+        "art": "p",
+        "text": "Die Betriebshaftpflicht deckt zulassungspflichtige Fahrzeuge nach den Musterbedingungen nicht über die Vorsorge für neue Risiken mit (A1-9.3 a), und versicherungspflichtige Fahrzeuge sind von der Mitversicherung von Risikoerhöhungen ausgenommen (A1-8.1). Dafür gibt es die Kfz-Versicherung."
+      },
+      {
+        "art": "h2",
+        "text": "5. Wann läuft der Vertrag ab, und wie funktioniert eine Kündigung?"
+      },
+      {
+        "art": "p",
+        "text": "Das Ablaufdatum steht im Versicherungsschein. Das Jahresende ist nicht automatisch das richtige Datum."
+      },
+      {
+        "art": "p",
+        "text": "Wird im Voraus vereinbart, dass sich ein befristeter Vertrag verlängert, wenn niemand kündigt, gilt das nur jeweils für höchstens ein Jahr (§ 11 Abs. 1 VVG). Die Kündigungsfrist ist für beide Seiten gleich und beträgt mindestens einen und höchstens drei Monate (§ 11 Abs. 3 VVG). Die Musterbedingungen der Betriebshaftpflicht nennen drei Monate vor Ablauf und stellen auf den Zugang der Kündigung ab (B2-1.2). Ihr Vertrag kann eine andere Frist haben."
+      },
+      {
+        "art": "p",
+        "text": "Das Gesetz schreibt für die Kündigung keine Form vor. Die Musterbedingungen verlangen für Erklärungen an den Versicherer die Textform, zum Beispiel E-Mail, Fax oder Brief (B4-2.1). Textform heißt: lesbar, mit Ihrem Namen, und so, dass der Empfänger sie speichern kann, etwa als E-Mail oder Brief (§ 126b BGB). Senden Sie so, dass Sie den Zugang belegen können. Ist der Vertrag für mehr als drei Jahre geschlossen, können Sie ihn zum Ende des dritten und jedes folgenden Jahres mit drei Monaten Frist kündigen (§ 11 Abs. 4 VVG, B2-1.4). Die Frist läuft unabhängig davon, ob Sie schon einen neuen Vertrag haben. Klären Sie deshalb früh, ob ein neuer Schutz zum Ablaufdatum bereitsteht, damit keine Lücke entsteht, und lassen Sie die Kündigungsfrist nicht verstreichen, um erst noch Angebote zu sammeln."
+      },
+      {
+        "art": "h2",
+        "text": "6. Erfüllen wir noch, was unsere Cyber-Police von uns verlangt?"
+      },
+      {
+        "art": "p",
+        "text": "Das betrifft nur Betriebe, die eine Cyberversicherung haben. Prüfen Sie, ob Sie die Sicherheitspflichten aus Ihrem Vertrag noch einhalten."
+      },
+      {
+        "art": "p",
+        "text": "Die Cyber-Musterbedingungen des GDV nennen Pflichten, die Sie vor einem Schaden erfüllen sollen (AVB Cyber A1-16). Dazu gehören laut Muster zum Beispiel eigene Zugänge für jeden Nutzer, Schutz gegen Schadsoftware, zeitnahe Sicherheitsupdates, zusätzlicher Schutz für Server und mobile Geräte und eine mindestens wöchentliche Datensicherung. Die Sicherung soll so angelegt sein, dass kein System Original und Kopie gleichzeitig verändern oder löschen kann, und ihre Funktion soll regelmäßig nach einem festgelegten Turnus geprüft werden (A1-16.1)."
+      },
+      {
+        "art": "p",
+        "text": "Verletzen Sie eine solche Pflicht vorsätzlich, ist der Versicherer nach dem Muster ganz von der Leistung frei. Bei grober Fahrlässigkeit kann er seine Leistung nach der Schwere des Verschuldens kürzen. Außerdem kann er fristlos kündigen (B3-4.1, B3-4.2.1). Weisen Sie nach, dass die Pflichtverletzung nicht grob fahrlässig oder nicht ursächlich war, bleibt er zur Leistung verpflichtet. Das gilt nicht, wenn Sie die Pflicht arglistig verletzt haben (B3-4.2.3). Ihr Vertrag kann strengere oder andere Pflichten enthalten."
+      },
+      {
+        "art": "p",
+        "text": "**Fragen zum Jahresende:** Wer hat welchen Zugang? Wann wurde die letzte Sicherung getestet? Sind die Updates eingespielt?"
+      },
+      {
+        "art": "p",
+        "text": "Mehr dazu: [Brauche ich als Kleinbetrieb eine Cyberversicherung?](/blog/cyberangriff-im-betrieb-versicherung)"
+      },
+      {
+        "art": "h2",
+        "text": "7. Sind meine Geräte mit der richtigen Summe versichert?"
+      },
+      {
+        "art": "p",
+        "text": "Auch bei Elektronik soll die Summe dem Wert entsprechen, und Ihre Geräteliste ändert sich mit jeder Anschaffung."
+      },
+      {
+        "art": "p",
+        "text": "In der Elektronikversicherung ist der Versicherungswert nach den Musterbedingungen der Neuwert: der Kauf- oder Lieferpreis im Neuzustand plus Bezugskosten wie Fracht, Zölle und Montage (ABE 2020 A2-1.1). Die Summe soll dem Wert entsprechen und angepasst werden, auch wenn Sie ein Gerät aufrüsten (A2-1.2). Liegt sie zur Zeit des Schadens niedriger, liegt Unterversicherung vor, und es wird nur der Teil ersetzt, der dem Verhältnis von Summe zu Wert entspricht (A2-1.3, A3-1.7)."
+      },
+      {
+        "art": "p",
+        "text": "Gleichen Sie Ihre Geräteliste mit dem Vertrag ab: neue Geräte, ausgemusterte Geräte, neue Standorte."
+      },
+      {
+        "art": "h2",
+        "text": "8. Sind gemietete Räume in der Betriebshaftpflicht mitgedacht?"
+      },
+      {
+        "art": "p",
+        "text": "Wenn Sie Räume oder Hallen für den Betrieb gemietet haben, lohnt der Blick, ob Schäden an diesen Räumen im Vertrag stehen und mit welcher Summe."
+      },
+      {
+        "art": "p",
+        "text": "Ein Mietsachschaden ist ein Schaden an Sachen, die Sie gemietet oder gepachtet haben (A1-6.6). Nach den Musterbedingungen sind ausschließlich Schäden an Gebäuden und Räumen versichert, die Sie zu betrieblichen Zwecken gemietet oder gepachtet haben (A1-6.6.1). Einrichtungen und Produktionsanlagen gehören nicht dazu. Ausgeschlossen sind unter anderem Abnutzung und Verschleiß sowie Schäden an Heizungs-, Maschinen- und Elektrogeräten, außer sie entstehen durch Brand, Explosion, Leitungswasser oder Abwasser (A1-6.6.1). Für Mietsachschäden kann im Vertrag eine eigene Summe stehen."
+      },
+      {
+        "art": "p",
+        "text": "Haben Sie in diesem Jahr neue Räume gemietet oder einen Standort verlegt? Dann fragen Sie, ob der Standort im Vertrag steht."
+      },
+      {
+        "art": "h2",
+        "text": "Checkliste zum Abhaken"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Summe Inhalt und Ware: zuletzt geprüft, passt zum heutigen Neuwert",
+          "Betriebsbeschreibung: alle Tätigkeiten dieses Jahres enthalten",
+          "Umsatz und Mitarbeiter: Angaben im Vertrag geprüft, Mitteilungsfristen auf Beitragsrechnung und Post notiert",
+          "Fahrzeugliste: stimmt mit den Fahrzeugscheinen überein",
+          "Ablaufdatum und Kündigungsfrist: aus dem Versicherungsschein notiert",
+          "Cyber: Sicherheitspflichten erfüllt, Sicherung getestet",
+          "Elektronik: Geräteliste und Summe aktuell",
+          "Mieträume: Standort und Mietsachschaden im Vertrag"
+        ]
+      },
+      {
+        "art": "h2",
+        "text": "Gut zu wissen"
+      },
+      {
+        "art": "ul",
+        "punkte": [
+          "Allgemeine Informationen, Stand 18. November 2026. Der Artikel ersetzt nicht die Prüfung Ihrer Verträge im Einzelfall. Was in Ihrem Vertrag steht, entscheidet im Einzelfall."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "frage": "Muss ich zum Jahresende etwas melden?",
+        "antwort": "Das Gesetz kennt keine Jahresmeldung für alle. Ob Ihr Vertrag eine vorsieht, steht in Ihren Bedingungen. Änderungen am Betrieb sollten Sie Ihrem Versicherer so mitteilen, dass Sie es nachweisen können."
+      },
+      {
+        "frage": "Reicht ein Anruf beim Versicherer?",
+        "antwort": "Die Musterbedingungen verlangen für Erklärungen und Anzeigen die Textform (B4-2.1). Halten Sie die Änderung deshalb in Textform fest, zum Beispiel per E-Mail. Einen Anruf bestätigen Sie am besten sofort per E-Mail."
+      },
+      {
+        "frage": "Zahlt der Versicherer nicht, wenn die Summe zu niedrig ist?",
+        "antwort": "Er kann anteilig kürzen. Das Gesetz spricht von einer erheblich zu niedrigen Summe (§ 75 VVG), die Musterbedingungen des GDV kürzen schon bei jeder zu niedrigen Summe (AFB 2010 § 8 Nr. 4 a). Wie Ihr Vertrag das regelt, steht in Ihren Bedingungen."
+      },
+      {
+        "frage": "Kann ich jetzt einfach kündigen?",
+        "antwort": "Das hängt vom Ablaufdatum und von der Frist in Ihrem Vertrag ab (§ 11 VVG). Prüfen Sie beides, bevor Sie handeln."
+      }
+    ],
+    "links": [
+      {
+        "pfad": "/blog",
+        "text": "Alle Beiträge"
+      },
+      {
+        "pfad": "/erstinformation",
+        "text": "Erstinformation"
+      },
+      {
+        "pfad": "/ueber-andre",
+        "text": "Über André Tito"
+      }
+    ],
+    "quellen": [
+      "Versicherungsvertragsgesetz (VVG), §§ 11, 23 bis 27, 75, https://www.gesetze-im-internet.de/vvg_2008/. Abruf: 16.11.2026.",
+      "Bürgerliches Gesetzbuch (BGB), § 126b, https://www.gesetze-im-internet.de/bgb/__126b.html. Abruf: 16.11.2026.",
+      "GDV, Musterbedingungen Betriebs- und Berufshaftpflichtversicherung (AVB BHV, Stand laut Deckblatt: Oktober 2026, unverbindliche Bekanntgabe zur fakultativen Verwendung), https://www.gdv.de/resource/blob/6240/36855b2e54b41955ef52c9cfe1190ee5/02-avb-betriebs-und-berufshaftpflichtversicherung-2020-data.pdf. Abruf: 16.11.2026.",
+      "GDV, Allgemeine Bedingungen für die Feuerversicherung (AFB 2010), § 7 und § 8, https://www.gdv.de/resource/blob/6066/fac7f18cb40b22a072cfe665774abfcc/01-allgemeine-bedingungen-fuer-die-feuerversicherung-afb-2010--data.pdf. Abruf: 16.11.2026.",
+      "GDV, Allgemeine Bedingungen für die Elektronikversicherung (ABE 2020), A2-1, A3-1.7, https://www.gdv.de/resource/blob/6154/8f0941c9e332346b9c8e593c69ffba14/05-allgemeine-bedingungen-fuer-die-elektronikversicherung-abe-2020--data.pdf. Abruf: 16.11.2026.",
+      "GDV, Allgemeine Versicherungsbedingungen für die Cyberrisiko-Versicherung (AVB Cyber, Stand: Februar 2024), A1-16, B3-4, https://www.gdv.de/resource/blob/6100/a0fed56c4947751cdc20b5206c171d98/01-allgemeine-versicherungsbedingungen-fuer-die-cyberrisiko-versicherung-avb-cyber--data.pdf. Abruf: 16.11.2026."
+    ],
+    "cta": {
+      "text": "Sie möchten die Stunde nicht allein über Policen sitzen? Schicken Sie uns Ihre Versicherungsscheine. Wir gehen die acht Fragen mit Ihnen durch und sagen Ihnen, wo etwas nicht mehr zum Betrieb passt. Der erste Überblick ist unverbindlich. Wie wir als Versicherungsmakler vergütet werden, steht in der [Erstinformation](/erstinformation)."
     }
   }
 ];
