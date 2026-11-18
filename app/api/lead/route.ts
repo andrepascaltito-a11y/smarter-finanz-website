@@ -121,11 +121,14 @@ export async function POST(req: Request) {
     );
   }
 
+  // Gewerbekunden werden gesiezt, Privatpersonen geduzt (wie im Formular).
+  const sie = body.art === "gewerbe";
+
   const ip = clientIp(req);
   const allowed = await checkRateLimit(ip);
   if (!allowed) {
     return NextResponse.json(
-      { ok: false, message: "Zu viele Anfragen. Bitte versuche es in einer Minute erneut." },
+      { ok: false, message: sie ? "Zu viele Anfragen. Bitte versuchen Sie es in einer Minute erneut." : "Zu viele Anfragen. Bitte versuche es in einer Minute erneut." },
       { status: 429 },
     );
   }
@@ -145,7 +148,7 @@ export async function POST(req: Request) {
   const errors = validate(body);
   if (errors.length > 0) {
     return NextResponse.json(
-      { ok: false, message: "Bitte ueberpruefe deine Eingaben.", errors },
+      { ok: false, message: sie ? "Bitte überprüfen Sie Ihre Eingaben." : "Bitte überprüfe deine Eingaben.", errors },
       { status: 400 },
     );
   }
